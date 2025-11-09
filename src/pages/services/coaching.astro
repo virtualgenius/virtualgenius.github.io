@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
+import TestimonialCard from '../../components/TestimonialCard.astro';
 
 const title = 'Coaching & Consulting - Virtual Genius';
 const description = 'Ongoing support for pilot projects, code reviews, design walkthroughs, and implementation coaching for Domain-Driven Design and EventStorming.';
@@ -263,6 +264,41 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 						Design bounded contexts and service boundaries effectively
 					</p>
 				</div>
+			</div>
+		</Section>
+
+		<!-- Testimonials -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				What Clients Say
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				<TestimonialCard
+					quote="Paul's coaching helped our team successfully implement bounded contexts in our legacy system. His guidance during code reviews was invaluable for maintaining design integrity."
+					role="Product Owner"
+					industry="E-commerce"
+					rating={9}
+					workshop="DDD Implementation Coaching"
+				/>
+				<TestimonialCard
+					quote="Working with Paul on our pilot project gave us the confidence to roll out DDD practices across the organization. His hands-on approach made all the difference."
+					role="Senior Developer"
+					industry="Banking"
+					rating={10}
+					workshop="Pilot Project Coaching"
+				/>
+				<TestimonialCard
+					quote="Paul's strategic guidance helped us avoid costly mistakes during our microservices migration. His context mapping expertise was critical."
+					role="System Architect"
+					industry="Insurance"
+					rating={10}
+					workshop="Architecture Consulting"
+				/>
+			</div>
+			<div class="text-center mt-8">
+				<a href="/testimonials" class="text-vg-red hover:text-vg-red-light font-semibold text-lg">
+					View All Testimonials →
+				</a>
 			</div>
 		</Section>
 

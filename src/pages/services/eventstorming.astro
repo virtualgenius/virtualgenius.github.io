@@ -5,6 +5,7 @@ import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
 import Section from '../../components/Section.astro';
+import TestimonialCard from '../../components/TestimonialCard.astro';
 
 const title = 'EventStorming Workshops - Virtual Genius';
 const description = '2-day facilitated EventStorming workshops for exploring complex business domains and designing better software solutions collaboratively.';
@@ -246,6 +247,41 @@ const description = '2-day facilitated EventStorming workshops for exploring com
 						</div>
 					</div>
 				</div>
+			</div>
+		</Section>
+
+		<!-- Testimonials -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				What Clients Say
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				<TestimonialCard
+					quote="Paul helped us navigate a complex modernization effort. His EventStorming workshop revealed critical bottlenecks we'd been blind to for years. The strategic clarity alone paid for itself."
+					role="Engineering Director"
+					industry="Financial Services"
+					rating={10}
+					workshop="Strategic EventStorming Workshop"
+				/>
+				<TestimonialCard
+					quote="The workshop was transformative. We finally got business and tech teams aligned on what we're building and why. Paul's facilitation kept us focused on what mattered."
+					role="Product Manager"
+					industry="InsurTech"
+					rating={10}
+					workshop="Big Picture EventStorming"
+				/>
+				<TestimonialCard
+					quote="Best workshop investment we've made. The hot spots Paul identified became our roadmap for the next 6 months. Clear priorities, clear ownership."
+					role="Tech Lead"
+					industry="E-commerce"
+					rating={9}
+					workshop="EventStorming Workshop"
+				/>
+			</div>
+			<div class="text-center mt-8">
+				<a href="/testimonials" class="text-vg-red hover:text-vg-red-light font-semibold text-lg">
+					View All Testimonials →
+				</a>
 			</div>
 		</Section>
 

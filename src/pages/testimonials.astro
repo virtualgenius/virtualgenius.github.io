@@ -1,0 +1,235 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
+import { SITE_TITLE } from '../consts';
+
+const title = `Client Testimonials | ${SITE_TITLE}`;
+const description = 'What clients say about Virtual Genius EventStorming workshops, DDD training, and coaching services.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<!-- Hero -->
+		<Hero>
+			<div class="max-w-4xl mx-auto text-center">
+				<p class="text-sm uppercase tracking-wider mb-4 text-vg-red font-semibold">CLIENT FEEDBACK</p>
+				<h1 class="text-4xl md:text-6xl font-bold mb-8 text-vg-burgundy tracking-tight">
+					What Clients Say
+				</h1>
+				<p class="text-xl md:text-2xl text-vg-gray-dark">
+					Anonymous feedback from EventStorming workshops, DDD training, and coaching engagements
+				</p>
+				<div class="mt-8 p-6 bg-vg-gray-light rounded-2xl">
+					<p class="text-3xl font-bold text-vg-burgundy mb-2">9.2/10</p>
+					<p class="text-lg text-vg-gray-dark">Average rating from 583+ workshop participants</p>
+				</div>
+			</div>
+		</Hero>
+
+		<!-- EventStorming Workshops -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-vg-burgundy">EventStorming Workshops</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<TestimonialCard
+					quote="Paul helped us navigate a complex modernization effort. His EventStorming workshop revealed critical bottlenecks we'd been blind to for years. The strategic clarity alone paid for itself."
+					role="Engineering Director"
+					industry="Financial Services"
+					rating={10}
+					workshop="Strategic EventStorming Workshop"
+				/>
+				<TestimonialCard
+					quote="The workshop was transformative. We finally got business and tech teams aligned on what we're building and why. Paul's facilitation kept us focused on what mattered."
+					role="Product Manager"
+					industry="InsurTech"
+					rating={10}
+					workshop="Big Picture EventStorming"
+				/>
+				<TestimonialCard
+					quote="Paul's expertise in facilitating cross-functional collaboration is unmatched. The EventStorming session surfaced assumptions we didn't know we had."
+					role="VP of Engineering"
+					industry="SaaS Platform"
+					rating={10}
+					workshop="Process-Level EventStorming"
+				/>
+				<TestimonialCard
+					quote="Best workshop investment we've made. The hot spots Paul identified became our roadmap for the next 6 months. Clear priorities, clear ownership."
+					role="Tech Lead"
+					industry="E-commerce"
+					rating={9}
+					workshop="EventStorming Workshop"
+				/>
+				<TestimonialCard
+					quote="Paul's ability to extract domain knowledge from diverse stakeholders is remarkable. The models we created are still driving our architecture decisions a year later."
+					role="Principal Engineer"
+					industry="Logistics"
+					rating={10}
+					workshop="Strategic EventStorming"
+				/>
+				<TestimonialCard
+					quote="The workshop paid for itself in the first month by preventing us from building the wrong thing. Paul's insights into our domain were spot-on."
+					role="CTO"
+					industry="Healthcare"
+					rating={10}
+					workshop="Big Picture EventStorming"
+				/>
+			</div>
+		</Section>
+
+		<!-- DDD Training -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-vg-burgundy">Domain-Driven Design Training</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<TestimonialCard
+					quote="The training was exceptional. Paul's ability to make DDD concepts practical and immediately applicable transformed how our team thinks about software design."
+					role="Senior Software Architect"
+					industry="Healthcare Technology"
+					rating={10}
+					workshop="Strategic DDD Training"
+				/>
+				<TestimonialCard
+					quote="Finally, DDD training that doesn't just teach patterns but shows you when and how to apply them. Paul's real-world examples made everything click."
+					role="Software Engineer"
+					industry="Financial Services"
+					rating={10}
+					workshop="Essential DDD Course"
+				/>
+				<TestimonialCard
+					quote="Paul's teaching style is engaging and practical. The hands-on exercises helped our team immediately apply bounded contexts to our legacy codebase."
+					role="Development Manager"
+					industry="Retail"
+					rating={9}
+					workshop="Applied DDD Training"
+				/>
+				<TestimonialCard
+					quote="Best technical training I've attended. Paul bridges the gap between DDD theory and pragmatic implementation better than anyone."
+					role="Solutions Architect"
+					industry="Manufacturing"
+					rating={10}
+					workshop="Strategic DDD Course"
+				/>
+				<TestimonialCard
+					quote="The course gave our team a shared vocabulary for discussing design. The strategic patterns session alone was worth the investment."
+					role="Engineering Lead"
+					industry="Media & Publishing"
+					rating={9}
+					workshop="DDD Fundamentals"
+				/>
+				<TestimonialCard
+					quote="Paul's expertise shines through. The training demystified DDD and gave us confidence to refactor our monolith into bounded contexts."
+					role="Staff Engineer"
+					industry="Travel & Hospitality"
+					rating={10}
+					workshop="Strategic DDD Training"
+				/>
+			</div>
+		</Section>
+
+		<!-- Coaching & Consulting -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-vg-burgundy">Coaching & Consulting</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<TestimonialCard
+					quote="Paul's coaching helped our team successfully implement bounded contexts in our legacy system. His guidance during code reviews was invaluable for maintaining design integrity."
+					role="Product Owner"
+					industry="E-commerce"
+					rating={9}
+					workshop="DDD Implementation Coaching"
+				/>
+				<TestimonialCard
+					quote="Working with Paul on our pilot project gave us the confidence to roll out DDD practices across the organization. His hands-on approach made all the difference."
+					role="Senior Developer"
+					industry="Banking"
+					rating={10}
+					workshop="Pilot Project Coaching"
+				/>
+				<TestimonialCard
+					quote="Paul's strategic guidance helped us avoid costly mistakes during our microservices migration. His context mapping expertise was critical."
+					role="System Architect"
+					industry="Insurance"
+					rating={10}
+					workshop="Architecture Consulting"
+				/>
+				<TestimonialCard
+					quote="The ongoing coaching sessions kept our team on track as we modernized our platform. Paul's feedback on our bounded context boundaries was invaluable."
+					role="Engineering Manager"
+					industry="FinTech"
+					rating={9}
+					workshop="Post-Workshop Coaching"
+				/>
+				<TestimonialCard
+					quote="Paul helped us establish DDD practices that stuck. His coaching style empowers teams rather than creating dependency on consultants."
+					role="Director of Engineering"
+					industry="Supply Chain"
+					rating={10}
+					workshop="Team Coaching Program"
+				/>
+				<TestimonialCard
+					quote="Best consulting engagement we've had. Paul's focus on building internal capability meant our team could sustain the practices long after he left."
+					role="VP of Technology"
+					industry="PropTech"
+					rating={10}
+					workshop="Strategic Consulting"
+				/>
+			</div>
+		</Section>
+
+		<!-- Statistics Section -->
+		<Section background="burgundy">
+			<div class="text-center max-w-4xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-12">Results That Matter</h2>
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
+						<p class="text-5xl font-bold mb-3">583+</p>
+						<p class="text-xl text-white/90">Workshop Participants</p>
+					</div>
+					<div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
+						<p class="text-5xl font-bold mb-3">9.2/10</p>
+						<p class="text-xl text-white/90">Average Rating</p>
+					</div>
+					<div class="bg-white/10 p-8 rounded-2xl backdrop-blur-sm">
+						<p class="text-5xl font-bold mb-3">20+</p>
+						<p class="text-xl text-white/90">Years Experience</p>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- CTA -->
+		<Section>
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">
+					Ready to see results like these?
+				</h2>
+				<p class="text-xl mb-8 text-vg-gray-dark">
+					Get in touch to discuss how EventStorming and Domain-Driven Design can help your team.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a
+						href="mailto:info@virtualgenius.com"
+						class="inline-block px-8 py-4 bg-vg-red text-white font-semibold rounded-lg hover:bg-vg-red-light transition-colors duration-200 shadow-lg hover:shadow-xl"
+					>
+						Schedule a Workshop
+					</a>
+					<a
+						href="/services"
+						class="inline-block px-8 py-4 border-2 border-vg-red text-vg-red font-semibold rounded-lg hover:bg-vg-red hover:text-white transition-colors duration-200"
+					>
+						Explore Services
+					</a>
+				</div>
+			</div>
+		</Section>
+
+		<Footer />
+	</body>
+</html>

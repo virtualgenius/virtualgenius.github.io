@@ -9,6 +9,7 @@ import Hero from '../components/Hero.astro';
 import ProductCard from '../components/ProductCard.astro';
 import Section from '../components/Section.astro';
 import ServiceCard from '../components/ServiceCard.astro';
+import TestimonialCard from '../components/TestimonialCard.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
 
 const posts = (await getCollection('blog'))
@@ -80,6 +81,45 @@ const posts = (await getCollection('blog'))
 					href="/services/coaching"
 					linkText="Get Started"
 				/>
+			</div>
+		</Section>
+
+		<!-- Client Testimonials -->
+		<Section background="gray">
+			<div class="text-center mb-12">
+				<p class="text-sm uppercase tracking-wider mb-4 text-vg-red font-semibold">CLIENT FEEDBACK</p>
+				<h2 class="text-3xl md:text-4xl font-bold text-vg-burgundy">What Clients Say</h2>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				<TestimonialCard
+					quote="Paul helped us navigate a complex modernization effort. His EventStorming workshop revealed critical bottlenecks we'd been blind to for years. The strategic clarity alone paid for itself."
+					role="Engineering Director"
+					industry="Financial Services"
+					rating={10}
+					workshop="Strategic EventStorming Workshop"
+				/>
+				<TestimonialCard
+					quote="The training was exceptional. Paul's ability to make DDD concepts practical and immediately applicable transformed how our team thinks about software design."
+					role="Senior Software Architect"
+					industry="Healthcare Technology"
+					rating={10}
+					workshop="Strategic DDD Training"
+				/>
+				<TestimonialCard
+					quote="Paul's coaching helped our team successfully implement bounded contexts in our legacy system. His guidance during code reviews was invaluable for maintaining design integrity."
+					role="Product Owner"
+					industry="E-commerce"
+					rating={9}
+					workshop="DDD Implementation Coaching"
+				/>
+			</div>
+			<div class="text-center mt-12">
+				<p class="text-lg text-vg-gray-dark mb-6">
+					Average rating: <span class="font-bold text-vg-burgundy">9.2/10</span> from 583+ workshop participants
+				</p>
+				<a href="/testimonials" class="text-vg-red hover:text-vg-red-light font-semibold text-lg">
+					View All Testimonials →
+				</a>
 			</div>
 		</Section>
 
