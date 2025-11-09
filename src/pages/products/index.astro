@@ -1,0 +1,138 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import ProductCard from '../../components/ProductCard.astro';
+import Section from '../../components/Section.astro';
+
+const title = 'Open Source Products - Virtual Genius';
+const description = 'Explore our open source tools for Domain-Driven Design: ContextFlow for context mapping and CodeCohesion for code visualization.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<!-- Hero -->
+		<Hero>
+			<div class="text-center max-w-4xl mx-auto">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
+					Open Source Products
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 text-vg-gray-dark">
+					Free, open-source tools for Domain-Driven Design and software architecture visualization
+				</p>
+			</div>
+		</Hero>
+
+		<!-- Products -->
+		<Section>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+				<!-- ContextFlow -->
+				<div class="space-y-6">
+					<img
+						src="/images/contextflow/context-flow-3.png"
+						alt="ContextFlow Screenshot"
+						class="rounded-lg shadow-lg w-full"
+					/>
+					<ProductCard
+						title="ContextFlow"
+						description="Visual DDD context mapper with Flow + Strategic views for analyzing bounded contexts, their relationships, and code ownership across your system architecture."
+						demoUrl="https://thepaulrayner.com/contextflow/"
+						githubUrl="https://github.com/paulrayner/contextflow"
+						detailsUrl="/products/contextflow"
+					/>
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-lg font-semibold mb-3 text-vg-burgundy">Key Features</h3>
+						<ul class="space-y-2 text-vg-gray-dark">
+							<li>• Dual synchronized views (Flow + Strategic)</li>
+							<li>• DDD relationship patterns</li>
+							<li>• Code ownership tracking</li>
+							<li>• Drag-and-drop editing</li>
+							<li>• Import/export JSON</li>
+							<li>• No backend required</li>
+						</ul>
+					</div>
+				</div>
+
+				<!-- CodeCohesion -->
+				<div class="space-y-6">
+					<img
+						src="/images/codecohesion/timeline-v2-gource.png"
+						alt="CodeCohesion Screenshot"
+						class="rounded-lg shadow-lg w-full"
+					/>
+					<ProductCard
+						title="CodeCohesion"
+						description="3D visualization tool for analyzing code structure, cohesion patterns, and architectural evolution. Watch your codebase evolve commit-by-commit with interactive timeline playback."
+						demoUrl="https://thepaulrayner.com/codecohesion/"
+						githubUrl="https://github.com/paulrayner/codecohesion"
+						detailsUrl="/products/codecohesion"
+					/>
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-lg font-semibold mb-3 text-vg-burgundy">Key Features</h3>
+						<ul class="space-y-2 text-vg-gray-dark">
+							<li>• 3D solar system visualization</li>
+							<li>• Timeline playback (Gource-style)</li>
+							<li>• Cohesion analysis for DDD</li>
+							<li>• Multiple color modes (file type, author, time)</li>
+							<li>• Interactive exploration</li>
+							<li>• Browser-based, TypeScript + Three.js</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Why Open Source? -->
+		<Section background="gray">
+			<div class="max-w-4xl mx-auto text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Why Open Source?</h2>
+				<p class="text-xl text-vg-gray-dark mb-6">
+					These tools were built to solve real problems we encountered while helping teams apply Domain-Driven Design and EventStorming.
+				</p>
+				<p class="text-xl text-vg-gray-dark mb-6">
+					By making them open source, we hope to help the broader DDD community visualize, analyze, and improve their software architectures.
+				</p>
+				<p class="text-lg text-vg-red font-semibold">
+					MIT Licensed - Free to use, modify, and distribute
+				</p>
+			</div>
+		</Section>
+
+		<!-- Get Involved -->
+		<Section>
+			<div class="max-w-3xl mx-auto text-center">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Get Involved</h2>
+				<p class="text-lg text-vg-gray-dark mb-8">
+					Found a bug? Have a feature request? Want to contribute? Visit the GitHub repositories to get involved.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a
+						href="https://github.com/paulrayner/contextflow"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-block px-6 py-3 bg-vg-red text-white font-semibold rounded-lg hover:bg-vg-red-light transition-colors duration-200"
+					>
+						ContextFlow on GitHub
+					</a>
+					<a
+						href="https://github.com/paulrayner/codecohesion"
+						target="_blank"
+						rel="noopener noreferrer"
+						class="inline-block px-6 py-3 bg-vg-red text-white font-semibold rounded-lg hover:bg-vg-red-light transition-colors duration-200"
+					>
+						CodeCohesion on GitHub
+					</a>
+				</div>
+			</div>
+		</Section>
+
+		<Footer />
+	</body>
+</html>
