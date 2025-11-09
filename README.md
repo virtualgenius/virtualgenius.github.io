@@ -1,19 +1,17 @@
-# Astro Starter Kit: Blog
+# Virtual Genius Website
 
-```sh
-npm create astro@latest -- --template blog
-```
+Company website for Virtual Genius - EventStorming & Domain-Driven Design Consulting.
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+Built with Astro, TypeScript, and deployed to GitHub Pages.
 
-Features:
+## Features
 
-- ✅ Minimal styling (make it your own!)
-- ✅ 100/100 Lighthouse performance
+- ✅ TypeScript-native Astro framework
+- ✅ Content collections for blog posts and events
+- ✅ Markdown-based content management
 - ✅ SEO-friendly with canonical URLs and OpenGraph data
-- ✅ Sitemap support
-- ✅ RSS Feed support
-- ✅ Markdown & MDX support
+- ✅ Sitemap and RSS Feed support
+- ✅ Automated deployment via GitHub Actions
 
 ## 🚀 Project Structure
 
