@@ -47,15 +47,6 @@ h3 {
 	font-size: 1.5rem;
 }
 
-a {
-	color: var(--color-vg-red);
-	text-decoration: none;
-}
-
-a:hover {
-	color: var(--color-vg-red-light);
-}
-
 /* Screen reader only utility */
 .sr-only {
 	position: absolute;
