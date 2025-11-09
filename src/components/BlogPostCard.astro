@@ -1,0 +1,27 @@
+---
+import Card from './Card.astro';
+import FormattedDate from './FormattedDate.astro';
+
+interface Props {
+	title: string;
+	description: string;
+	pubDate: Date;
+	href: string;
+}
+
+const { title, description, pubDate, href } = Astro.props;
+---
+
+<Card href={href} class="flex flex-col h-full hover:scale-105 transition-transform duration-200">
+	<div class="text-vg-gray text-sm mb-2">
+		<FormattedDate date={pubDate} />
+	</div>
+	<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">{title}</h3>
+	<p class="text-vg-gray-dark mb-4 flex-grow line-clamp-3">{description}</p>
+	<span class="text-vg-red hover:text-vg-red-light font-semibold inline-flex items-center">
+		Read More
+		<svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+			<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+		</svg>
+	</span>
+</Card>

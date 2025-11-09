@@ -1,0 +1,13 @@
+---
+interface Props {
+	class?: string;
+}
+
+const { class: className = '' } = Astro.props;
+---
+
+<section class={`relative bg-gradient-to-br from-white to-vg-gray-light py-20 md:py-32 ${className}`}>
+	<div class="max-w-screen-xl mx-auto px-6">
+		<slot />
+	</div>
+</section>
