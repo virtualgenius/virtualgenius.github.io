@@ -1,0 +1,244 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Button from '../../components/Button.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+
+const title = 'DDD Training - Virtual Genius';
+const description = 'Essential and Strategic Domain-Driven Design training courses for developers, architects, and product teams.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<!-- Hero -->
+		<Hero>
+			<div class="text-center max-w-4xl mx-auto">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
+					DDD Training
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 text-vg-gray-dark">
+					Essential and Strategic Domain-Driven Design courses for building better software
+				</p>
+				<Button href="mailto:info@virtualgenius.com" variant="primary">
+					Inquire About Training
+				</Button>
+			</div>
+		</Hero>
+
+		<!-- Course Offerings -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				Course Offerings
+			</h2>
+
+			<!-- Essential DDD -->
+			<div class="max-w-5xl mx-auto mb-16">
+				<div class="bg-white border-t-4 border-vg-red rounded-lg shadow-lg p-8">
+					<h3 class="text-3xl font-semibold mb-4 text-vg-burgundy">Essential Domain-Driven Design</h3>
+					<p class="text-lg text-vg-gray-dark mb-6">
+						Foundational patterns and practices for applying Domain-Driven Design to your software projects
+					</p>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+						<div>
+							<h4 class="text-xl font-semibold mb-3 text-vg-red">What You'll Learn</h4>
+							<ul class="space-y-2 text-vg-gray-dark">
+								<li>• Strategic design and bounded contexts</li>
+								<li>• Tactical patterns (Entities, Value Objects, Aggregates)</li>
+								<li>• Domain events and event storming</li>
+								<li>• Ubiquitous language and model-driven design</li>
+								<li>• Context mapping patterns</li>
+								<li>• Hands-on modeling exercises</li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="text-xl font-semibold mb-3 text-vg-red">Who Should Attend</h4>
+							<ul class="space-y-2 text-vg-gray-dark">
+								<li>• Software developers</li>
+								<li>• Architects and technical leads</li>
+								<li>• Product managers</li>
+								<li>• Business analysts</li>
+							</ul>
+							<h4 class="text-xl font-semibold mb-3 mt-6 text-vg-red">Duration</h4>
+							<p class="text-vg-gray-dark">2-3 days (customizable)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Strategic DDD -->
+			<div class="max-w-5xl mx-auto">
+				<div class="bg-white border-t-4 border-vg-red rounded-lg shadow-lg p-8">
+					<h3 class="text-3xl font-semibold mb-4 text-vg-burgundy">Strategic Domain-Driven Design</h3>
+					<p class="text-lg text-vg-gray-dark mb-6">
+						Advanced strategic design techniques for modeling complex systems and organizational boundaries
+					</p>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-6">
+						<div>
+							<h4 class="text-xl font-semibold mb-3 text-vg-red">What You'll Learn</h4>
+							<ul class="space-y-2 text-vg-gray-dark">
+								<li>• Advanced context mapping strategies</li>
+								<li>• Relationship patterns (Customer-Supplier, ACL, etc.)</li>
+								<li>• Core domain identification</li>
+								<li>• Strategic distillation techniques</li>
+								<li>• Large-scale structure patterns</li>
+								<li>• Evolving existing systems</li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="text-xl font-semibold mb-3 text-vg-red">Who Should Attend</h4>
+							<ul class="space-y-2 text-vg-gray-dark">
+								<li>• Senior developers and architects</li>
+								<li>• Technical leads</li>
+								<li>• Engineering managers</li>
+								<li>• System designers</li>
+							</ul>
+							<h4 class="text-xl font-semibold mb-3 mt-6 text-vg-red">Duration</h4>
+							<p class="text-vg-gray-dark">2-3 days (customizable)</p>
+							<h4 class="text-xl font-semibold mb-3 mt-4 text-vg-red">Prerequisites</h4>
+							<p class="text-vg-gray-dark">Essential DDD or equivalent experience</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Custom Workshops -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Custom Workshops
+			</h2>
+			<div class="max-w-4xl mx-auto text-center">
+				<p class="text-lg text-vg-gray-dark mb-6">
+					Need something tailored to your team's specific challenges? We can customize training to focus on:
+				</p>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 text-left">
+					<div class="bg-white p-6 rounded-lg shadow">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Microservices & DDD</h3>
+						<p class="text-vg-gray-dark">
+							Applying bounded contexts to microservice architecture
+						</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Legacy Modernization</h3>
+						<p class="text-vg-gray-dark">
+							Strategies for applying DDD to existing codebases
+						</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Event-Driven Architecture</h3>
+						<p class="text-vg-gray-dark">
+							Domain events, event sourcing, and CQRS patterns
+						</p>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Team Topology & DDD</h3>
+						<p class="text-vg-gray-dark">
+							Aligning team boundaries with bounded contexts
+						</p>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Format Options -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Delivery Formats
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+				<div class="bg-vg-gray-light p-6 rounded-lg text-center">
+					<div class="text-4xl mb-4">🏢</div>
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">In-Person</h3>
+					<p class="text-vg-gray-dark">
+						On-site training at your location with hands-on exercises and real-time collaboration
+					</p>
+				</div>
+				<div class="bg-vg-gray-light p-6 rounded-lg text-center">
+					<div class="text-4xl mb-4">💻</div>
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Remote</h3>
+					<p class="text-vg-gray-dark">
+						Virtual training via video conferencing with interactive exercises and breakout sessions
+					</p>
+				</div>
+				<div class="bg-vg-gray-light p-6 rounded-lg text-center">
+					<div class="text-4xl mb-4">🔄</div>
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Hybrid</h3>
+					<p class="text-vg-gray-dark">
+						Blend of in-person kickoff with follow-up remote sessions for distributed teams
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- What's Included -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				What's Included
+			</h2>
+			<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
+				<div class="flex items-start">
+					<span class="text-vg-red text-2xl mr-3">✓</span>
+					<div>
+						<h3 class="font-semibold text-vg-burgundy mb-1">Course Materials</h3>
+						<p class="text-vg-gray-dark">Slides, handouts, and reference materials</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<span class="text-vg-red text-2xl mr-3">✓</span>
+					<div>
+						<h3 class="font-semibold text-vg-burgundy mb-1">Hands-On Exercises</h3>
+						<p class="text-vg-gray-dark">Real-world modeling and design practice</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<span class="text-vg-red text-2xl mr-3">✓</span>
+					<div>
+						<h3 class="font-semibold text-vg-burgundy mb-1">Code Examples</h3>
+						<p class="text-vg-gray-dark">Sample implementations and patterns</p>
+					</div>
+				</div>
+				<div class="flex items-start">
+					<span class="text-vg-red text-2xl mr-3">✓</span>
+					<div>
+						<h3 class="font-semibold text-vg-burgundy mb-1">Follow-Up Support</h3>
+						<p class="text-vg-gray-dark">Q&A session after the course</p>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Pricing CTA -->
+		<Section background="burgundy">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Invest in Your Team's Skills</h2>
+				<p class="text-xl mb-8 text-vg-gray-light">
+					Contact us to discuss training options for your team. We'll customize content and format to your specific needs and experience level.
+				</p>
+				<div class="mb-6">
+					<p class="text-2xl font-semibold mb-4">Contact for Pricing</p>
+					<a href="mailto:info@virtualgenius.com" class="text-xl hover:text-vg-red-light">
+						info@virtualgenius.com
+					</a>
+				</div>
+				<a
+					href="mailto:info@virtualgenius.com"
+					class="inline-block px-8 py-4 bg-white text-vg-burgundy font-semibold rounded-lg hover:bg-vg-gray-light transition-colors duration-200"
+				>
+					Request Training Information
+				</a>
+			</div>
+		</Section>
+
+		<Footer />
+	</body>
+</html>

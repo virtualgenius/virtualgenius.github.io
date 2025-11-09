@@ -1,0 +1,276 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Button from '../../components/Button.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+
+const title = 'EventStorming Workshops - Virtual Genius';
+const description = '2-day facilitated EventStorming workshops for exploring complex business domains and designing better software solutions collaboratively.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<!-- Hero -->
+		<Hero>
+			<div class="text-center max-w-4xl mx-auto">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
+					EventStorming Workshops
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 text-vg-gray-dark">
+					2-day facilitated sessions for exploring complex business domains and discovering better software solutions together
+				</p>
+				<Button href="mailto:info@virtualgenius.com" variant="primary">
+					Schedule a Workshop
+				</Button>
+			</div>
+		</Hero>
+
+		<!-- What is EventStorming? -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-vg-burgundy">What is EventStorming?</h2>
+			<div class="max-w-4xl">
+				<p class="text-lg mb-6 text-vg-gray-dark">
+					EventStorming is a rapid, collaborative workshop format for exploring complex business domains. By bringing together business experts and technical team members, EventStorming reveals how your business actually works—not how you think it works.
+				</p>
+				<p class="text-lg mb-6 text-vg-gray-dark">
+					Using colored sticky notes on a long wall, participants model business processes as sequences of domain events, uncovering insights, identifying pain points, and discovering opportunities for improvement.
+				</p>
+				<div class="bg-vg-amber/10 border-l-4 border-vg-amber p-6 rounded">
+					<p class="text-lg text-vg-gray-dark italic">
+						"The goal is not to create perfect documentation—it's to create shared understanding and identify what to build next."
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Workshop Format -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Typical 2-Day Workshop Format
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
+				<!-- Day 1 -->
+				<div class="bg-white p-8 rounded-lg shadow-lg">
+					<div class="flex items-center mb-6">
+						<div class="bg-vg-red text-white text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mr-4">
+							1
+						</div>
+						<h3 class="text-2xl font-semibold text-vg-burgundy">Day 1: Exploration</h3>
+					</div>
+					<ul class="space-y-4 text-lg text-vg-gray-dark">
+						<li class="flex items-start">
+							<span class="text-vg-red mr-2">▸</span>
+							<span><strong>Big Picture EventStorming</strong> - Map the entire business process end-to-end</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-2">▸</span>
+							<span><strong>Identify Domain Events</strong> - What happens in your system?</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-2">▸</span>
+							<span><strong>Surface Hot Spots</strong> - Where are the pain points and bottlenecks?</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-2">▸</span>
+							<span><strong>Discover Opportunities</strong> - What could we improve?</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Day 2 -->
+				<div class="bg-white p-8 rounded-lg shadow-lg">
+					<div class="flex items-center mb-6">
+						<div class="bg-vg-red text-white text-2xl font-bold rounded-full w-12 h-12 flex items-center justify-center mr-4">
+							2
+						</div>
+						<h3 class="text-2xl font-semibold text-vg-burgundy">Day 2: Solution Design</h3>
+					</div>
+					<ul class="space-y-4 text-lg text-vg-gray-dark">
+						<li class="flex items-start">
+							<span class="text-vg-red mr-2">▸</span>
+							<span><strong>Process-Level Modeling</strong> - Zoom into specific areas of interest</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-2">▸</span>
+							<span><strong>Identify Bounded Contexts</strong> - Where do natural boundaries exist?</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-2">▸</span>
+							<span><strong>Design Solutions</strong> - How might we address key challenges?</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-2">▸</span>
+							<span><strong>Define Next Steps</strong> - What should we build first?</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Typical Outcomes -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				What You'll Walk Away With
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+				<div class="bg-vg-gray-light p-6 rounded-lg">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Shared Understanding</h3>
+					<p class="text-vg-gray-dark">
+						Business and technical teams aligned on how the system actually works
+					</p>
+				</div>
+				<div class="bg-vg-gray-light p-6 rounded-lg">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Identified Pain Points</h3>
+					<p class="text-vg-gray-dark">
+						Clear picture of bottlenecks, inefficiencies, and areas needing improvement
+					</p>
+				</div>
+				<div class="bg-vg-gray-light p-6 rounded-lg">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Bounded Context Map</h3>
+					<p class="text-vg-gray-dark">
+						Strategic view of system components and their relationships
+					</p>
+				</div>
+				<div class="bg-vg-gray-light p-6 rounded-lg">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Actionable Roadmap</h3>
+					<p class="text-vg-gray-dark">
+						Prioritized list of improvements and next implementation steps
+					</p>
+				</div>
+				<div class="bg-vg-gray-light p-6 rounded-lg">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Documented Model</h3>
+					<p class="text-vg-gray-dark">
+						Photos, time-lapse videos, and digital artifacts from the session
+					</p>
+				</div>
+				<div class="bg-vg-gray-light p-6 rounded-lg">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Team Alignment</h3>
+					<p class="text-vg-gray-dark">
+						Cross-functional collaboration and shared vocabulary
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Who Should Attend? -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Who Should Attend?
+			</h2>
+			<div class="max-w-4xl mx-auto">
+				<p class="text-lg mb-6 text-vg-gray-dark text-center">
+					EventStorming works best with a diverse group of <strong>15-20 participants</strong> including:
+				</p>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div>
+						<h3 class="text-xl font-semibold mb-4 text-vg-red">Business Experts</h3>
+						<ul class="space-y-2 text-vg-gray-dark">
+							<li>• Product managers</li>
+							<li>• Domain experts</li>
+							<li>• Business analysts</li>
+							<li>• Operations staff</li>
+							<li>• Customer support</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-xl font-semibold mb-4 text-vg-red">Technical Team</h3>
+						<ul class="space-y-2 text-vg-gray-dark">
+							<li>• Software developers</li>
+							<li>• Architects</li>
+							<li>• Technical leads</li>
+							<li>• DevOps engineers</li>
+							<li>• QA/testers</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Requirements -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				What You'll Need
+			</h2>
+			<div class="max-w-3xl mx-auto">
+				<div class="space-y-6">
+					<div class="flex items-start">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+							✓
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Wall Space</h3>
+							<p class="text-vg-gray-dark">
+								Long, uninterrupted wall space (minimum 20-30 feet) - the longer the better. Paper roll or whiteboard walls work well.
+							</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+							✓
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Sticky Notes</h3>
+							<p class="text-vg-gray-dark">
+								Multiple colors of square sticky notes (3x3 or 4x4 inches). We'll provide a shopping list of specific colors and quantities.
+							</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+							✓
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Room Setup</h3>
+							<p class="text-vg-gray-dark">
+								Large room with space for participants to stand and move around. Tables pushed to the sides. Good lighting for photos.
+							</p>
+						</div>
+					</div>
+					<div class="flex items-start">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
+							✓
+						</div>
+						<div>
+							<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Time Commitment</h3>
+							<p class="text-vg-gray-dark">
+								Two full days (typically 9am-5pm). Participants should minimize distractions and stay engaged throughout.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Pricing CTA -->
+		<Section background="burgundy">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Get Started?</h2>
+				<p class="text-xl mb-8 text-vg-gray-light">
+					Contact us to discuss your EventStorming workshop. We'll work with you to customize the format and focus area to your specific needs.
+				</p>
+				<div class="mb-6">
+					<p class="text-2xl font-semibold mb-4">Contact for Pricing</p>
+					<a href="mailto:info@virtualgenius.com" class="text-xl hover:text-vg-red-light">
+						info@virtualgenius.com
+					</a>
+				</div>
+				<a
+					href="mailto:info@virtualgenius.com"
+					class="inline-block px-8 py-4 bg-white text-vg-burgundy font-semibold rounded-lg hover:bg-vg-gray-light transition-colors duration-200"
+				>
+					Schedule a Planning Call
+				</a>
+			</div>
+		</Section>
+
+		<Footer />
+	</body>
+</html>

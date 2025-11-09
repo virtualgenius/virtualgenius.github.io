@@ -1,0 +1,256 @@
+---
+import BaseHead from '../../components/BaseHead.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Hero from '../../components/Hero.astro';
+import Section from '../../components/Section.astro';
+import ServiceCard from '../../components/ServiceCard.astro';
+
+const title = 'Services - Virtual Genius';
+const description = 'EventStorming workshops, DDD training, and ongoing coaching to help your team build better software through collaborative design.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<!-- Hero -->
+		<Hero>
+			<div class="text-center max-w-4xl mx-auto">
+				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
+					Services
+				</h1>
+				<p class="text-xl md:text-2xl mb-8 text-vg-gray-dark">
+					Expert guidance in EventStorming, Domain-Driven Design, and collaborative software modeling
+				</p>
+			</div>
+		</Hero>
+
+		<!-- Service Overview Cards -->
+		<Section>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				<ServiceCard
+					title="EventStorming Workshops"
+					description="2-day facilitated sessions for exploring complex business domains and designing better software solutions collaboratively"
+					href="/services/eventstorming"
+					linkText="Learn More"
+				/>
+				<ServiceCard
+					title="DDD Training"
+					description="Essential and Strategic Domain-Driven Design courses for developers, architects, and product teams"
+					href="/services/training"
+					linkText="View Courses"
+				/>
+				<ServiceCard
+					title="Coaching & Consulting"
+					description="Ongoing support for pilot projects, code reviews, design walkthroughs, and implementation guidance"
+					href="/services/coaching"
+					linkText="Get Started"
+				/>
+			</div>
+		</Section>
+
+		<!-- EventStorming Details -->
+		<Section background="gray">
+			<div class="max-w-5xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div class="order-2 lg:order-1">
+						<div class="bg-vg-amber/20 aspect-video rounded-lg flex items-center justify-center">
+							<span class="text-vg-gray-dark text-lg">[Workshop Photo]</span>
+						</div>
+					</div>
+					<div class="order-1 lg:order-2">
+						<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">EventStorming Workshops</h2>
+						<p class="text-lg text-vg-gray-dark mb-4">
+							Rapid, collaborative workshops that bring business and technical teams together to explore complex domains and discover better solutions.
+						</p>
+						<p class="text-lg text-vg-gray-dark mb-6">
+							Using colored sticky notes on a long wall, participants model business processes as sequences of domain events, uncovering insights and identifying opportunities for improvement.
+						</p>
+						<ul class="space-y-3 text-vg-gray-dark mb-6">
+							<li class="flex items-start">
+								<span class="text-vg-red mr-2">✓</span>
+								<span>2-day format (Big Picture + Process-Level modeling)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-vg-red mr-2">✓</span>
+								<span>15-20 participants (business + technical)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-vg-red mr-2">✓</span>
+								<span>Shared understanding and actionable next steps</span>
+							</li>
+						</ul>
+						<a
+							href="/services/eventstorming"
+							class="inline-flex items-center text-vg-red hover:text-vg-red-light font-semibold text-lg"
+						>
+							Learn More About EventStorming
+							<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- DDD Training Details -->
+		<Section>
+			<div class="max-w-5xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div>
+						<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">DDD Training</h2>
+						<p class="text-lg text-vg-gray-dark mb-6">
+							Comprehensive training programs teaching Domain-Driven Design patterns and practices for building maintainable, business-aligned software.
+						</p>
+						<div class="space-y-4 mb-6">
+							<div class="border-l-4 border-vg-red pl-4">
+								<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Essential DDD</h3>
+								<p class="text-vg-gray-dark">
+									Foundational patterns: bounded contexts, tactical patterns, ubiquitous language, and model-driven design
+								</p>
+							</div>
+							<div class="border-l-4 border-vg-red pl-4">
+								<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Strategic DDD</h3>
+								<p class="text-vg-gray-dark">
+									Advanced techniques: context mapping, core domain identification, and large-scale structure
+								</p>
+							</div>
+						</div>
+						<ul class="space-y-3 text-vg-gray-dark mb-6">
+							<li class="flex items-start">
+								<span class="text-vg-red mr-2">✓</span>
+								<span>2-3 day courses (customizable)</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-vg-red mr-2">✓</span>
+								<span>In-person, remote, or hybrid delivery</span>
+							</li>
+							<li class="flex items-start">
+								<span class="text-vg-red mr-2">✓</span>
+								<span>Hands-on exercises and real-world examples</span>
+							</li>
+						</ul>
+						<a
+							href="/services/training"
+							class="inline-flex items-center text-vg-red hover:text-vg-red-light font-semibold text-lg"
+						>
+							Explore Training Options
+							<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+							</svg>
+						</a>
+					</div>
+					<div>
+						<div class="bg-vg-gray-light aspect-video rounded-lg flex items-center justify-center">
+							<span class="text-vg-gray-dark text-lg">[Training Photo]</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Coaching Details -->
+		<Section background="gray">
+			<div class="max-w-5xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div class="order-2 lg:order-1">
+						<div class="bg-white aspect-video rounded-lg flex items-center justify-center shadow-lg">
+							<span class="text-vg-gray-dark text-lg">[Coaching Session Photo]</span>
+						</div>
+					</div>
+					<div class="order-1 lg:order-2">
+						<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Coaching & Consulting</h2>
+						<p class="text-lg text-vg-gray-dark mb-6">
+							Ongoing support to help teams successfully implement EventStorming insights and DDD practices in their software projects.
+						</p>
+						<div class="grid grid-cols-1 gap-4 mb-6">
+							<div class="bg-white p-4 rounded-lg shadow">
+								<h3 class="font-semibold text-vg-burgundy mb-1">Post-Workshop Coaching</h3>
+								<p class="text-sm text-vg-gray-dark">8-15 hours of follow-up support after workshops</p>
+							</div>
+							<div class="bg-white p-4 rounded-lg shadow">
+								<h3 class="font-semibold text-vg-burgundy mb-1">Pilot Project Support</h3>
+								<p class="text-sm text-vg-gray-dark">Embedded coaching (6-week tiger teams)</p>
+							</div>
+							<div class="bg-white p-4 rounded-lg shadow">
+								<h3 class="font-semibold text-vg-burgundy mb-1">Code Reviews & Design Walkthroughs</h3>
+								<p class="text-sm text-vg-gray-dark">Architectural feedback and DDD guidance</p>
+							</div>
+							<div class="bg-white p-4 rounded-lg shadow">
+								<h3 class="font-semibold text-vg-burgundy mb-1">Monthly Retainers</h3>
+								<p class="text-sm text-vg-gray-dark">Ongoing access for continuous guidance</p>
+							</div>
+						</div>
+						<a
+							href="/services/coaching"
+							class="inline-flex items-center text-vg-red hover:text-vg-red-light font-semibold text-lg"
+						>
+							Learn About Coaching Options
+							<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+							</svg>
+						</a>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- How to Get Started -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				How to Get Started
+			</h2>
+			<div class="max-w-4xl mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+					<div class="text-center">
+						<div class="bg-vg-red text-white text-2xl font-bold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+							1
+						</div>
+						<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Get in Touch</h3>
+						<p class="text-vg-gray-dark">
+							Email us to discuss your challenges and goals
+						</p>
+					</div>
+					<div class="text-center">
+						<div class="bg-vg-red text-white text-2xl font-bold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+							2
+						</div>
+						<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Planning Call</h3>
+						<p class="text-vg-gray-dark">
+							We'll customize an approach for your specific needs
+						</p>
+					</div>
+					<div class="text-center">
+						<div class="bg-vg-red text-white text-2xl font-bold rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
+							3
+						</div>
+						<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Start Working Together</h3>
+						<p class="text-vg-gray-dark">
+							Workshop, training, or coaching engagement begins
+						</p>
+					</div>
+				</div>
+
+				<div class="text-center">
+					<p class="text-xl text-vg-gray-dark mb-6">
+						All services are customized to your team's specific context and experience level
+					</p>
+					<a
+						href="mailto:info@virtualgenius.com"
+						class="inline-block px-8 py-4 bg-vg-red text-white font-semibold rounded-lg hover:bg-vg-red-light transition-colors duration-200 shadow-lg"
+					>
+						Contact Us: info@virtualgenius.com
+					</a>
+				</div>
+			</div>
+		</Section>
+
+		<Footer />
+	</body>
+</html>
