@@ -2,53 +2,272 @@
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
+import Hero from '../components/Hero.astro';
+import Section from '../components/Section.astro';
 import { SITE_TITLE } from '../consts';
+
+const title = `About Paul Rayner | ${SITE_TITLE}`;
+const description = 'Paul Rayner is a software design consultant, EventStorming facilitator, DDD expert, and founder of Explore DDD conference.';
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`About | ${SITE_TITLE}`} description="About Paul Rayner and Virtual Genius" />
+		<BaseHead title={title} description={description} />
 	</head>
-	<body>
+	<body class="bg-white">
 		<Header />
-		<main>
-			<h1>About Paul Rayner</h1>
 
-			<p>
-				Paul Rayner is a software design consultant and founder of Virtual Genius,
-				specializing in EventStorming facilitation and Domain-Driven Design.
-			</p>
+		<!-- Hero -->
+		<Hero>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+				<div>
+					<h1 class="text-4xl md:text-5xl font-bold mb-6 text-vg-burgundy">
+						About Paul Rayner
+					</h1>
+					<p class="text-xl mb-6 text-vg-gray-dark">
+						Software design consultant, EventStorming facilitator, and founder of Explore DDD
+					</p>
+					<p class="text-lg text-vg-gray-dark italic">
+						"Leading by design"
+					</p>
+				</div>
+				<div class="flex justify-center">
+					<div class="w-full max-w-md aspect-square bg-vg-gray-light rounded-lg flex items-center justify-center shadow-lg">
+						<span class="text-vg-gray">[Professional Photo]</span>
+					</div>
+				</div>
+			</div>
+		</Hero>
 
-			<section>
-				<h2>Expertise</h2>
-				<ul>
-					<li>EventStorming Workshop Facilitation</li>
-					<li>Domain-Driven Design (DDD)</li>
-					<li>Strategic Design and Context Mapping</li>
-					<li>Software Architecture</li>
-				</ul>
-			</section>
+		<!-- Professional Bio -->
+		<Section>
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-8 text-vg-burgundy">Professional Background</h2>
+				<div class="space-y-6 text-lg text-vg-gray-dark">
+					<p>
+						Paul Rayner is a seasoned software design consultant with over 20 years of experience helping organizations tackle complex software challenges. As founder of Virtual Genius, Paul specializes in EventStorming facilitation and Domain-Driven Design, working with teams worldwide to discover better solutions through collaborative modeling and strategic design.
+					</p>
+					<p>
+						His approach combines deep technical expertise with exceptional facilitation skills, enabling diverse teams—from business stakeholders to developers—to explore complex domains together and align on what to build next. Paul believes the best software solutions emerge from collaborative discovery, not top-down mandates.
+					</p>
+					<p>
+						Through workshops, training, and coaching engagements, Paul has helped organizations from startups to Fortune 500 companies improve their software design practices, modernize legacy systems, and build more maintainable, business-aligned software architectures.
+					</p>
+				</div>
+			</div>
+		</Section>
 
-			<section>
-				<h2>Speaking & Conferences</h2>
-				<p>
-					Paul is a frequent speaker at software conferences worldwide and founder of
-					<a href="https://exploreddd.com">Explore DDD</a>, the premier Domain-Driven Design conference.
+		<!-- Expertise Areas -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">Areas of Expertise</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+				<div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-vg-red">
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">EventStorming Facilitation</h3>
+					<p class="text-vg-gray-dark">
+						Expert facilitator of Big Picture and Process-Level EventStorming workshops
+					</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-vg-red">
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Domain-Driven Design</h3>
+					<p class="text-vg-gray-dark">
+						Strategic and tactical DDD patterns, context mapping, and model-driven design
+					</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-vg-red">
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Collaborative Modeling</h3>
+					<p class="text-vg-gray-dark">
+						Facilitating cross-functional teams to discover and design solutions together
+					</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-vg-red">
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Software Architecture</h3>
+					<p class="text-vg-gray-dark">
+						Strategic design, bounded contexts, microservices, and evolutionary architecture
+					</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-vg-red">
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Legacy Modernization</h3>
+					<p class="text-vg-gray-dark">
+						Applying DDD techniques to improve and evolve existing systems
+					</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow-md border-l-4 border-vg-red">
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Team Coaching</h3>
+					<p class="text-vg-gray-dark">
+						Helping teams adopt DDD practices and improve software design skills
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Explore DDD -->
+		<Section>
+			<div class="max-w-5xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div>
+						<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Founder of Explore DDD</h2>
+						<p class="text-lg text-vg-gray-dark mb-6">
+							In 2017, Paul founded <a href="https://exploreddd.com" class="text-vg-red hover:text-vg-red-light font-semibold">Explore DDD</a>, the premier conference dedicated to Domain-Driven Design. The conference brings together the global DDD community to share knowledge, experiences, and insights.
+						</p>
+						<p class="text-lg text-vg-gray-dark mb-6">
+							Explore DDD features expert speakers, hands-on workshops, and deep-dive sessions covering strategic design, tactical patterns, EventStorming, collaborative modeling, and the social aspects of software development. The conference has become the gathering place for DDD practitioners worldwide.
+						</p>
+						<a
+							href="https://exploreddd.com"
+							target="_blank"
+							rel="noopener noreferrer"
+							class="inline-flex items-center text-vg-red hover:text-vg-red-light font-semibold text-lg"
+						>
+							Visit Explore DDD
+							<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+								<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"></path>
+							</svg>
+						</a>
+					</div>
+					<div>
+						<div class="bg-vg-gray-light aspect-video rounded-lg flex items-center justify-center shadow-lg">
+							<span class="text-vg-gray-dark text-lg">[Explore DDD Conference Photo]</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Speaking & Conferences -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Speaking & Conference Involvement
+			</h2>
+			<div class="max-w-4xl mx-auto">
+				<p class="text-lg text-vg-gray-dark mb-8 text-center">
+					Paul is a frequent speaker at software conferences worldwide, sharing insights on Domain-Driven Design, EventStorming, collaborative modeling, and software architecture.
 				</p>
-			</section>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div class="bg-white p-6 rounded-lg shadow">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Conference Topics</h3>
+						<ul class="space-y-2 text-vg-gray-dark">
+							<li>• EventStorming workshop facilitation techniques</li>
+							<li>• Strategic Domain-Driven Design</li>
+							<li>• Context mapping and bounded contexts</li>
+							<li>• Collaborative modeling practices</li>
+							<li>• Legacy system modernization with DDD</li>
+							<li>• Microservices and DDD alignment</li>
+						</ul>
+					</div>
+					<div class="bg-white p-6 rounded-lg shadow">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Event Types</h3>
+						<ul class="space-y-2 text-vg-gray-dark">
+							<li>• Keynote presentations</li>
+							<li>• Technical deep-dive talks</li>
+							<li>• Hands-on workshops</li>
+							<li>• Panel discussions</li>
+							<li>• Conference organizing and curation</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</Section>
 
-			<section>
-				<h2>Contact</h2>
-				<p>
-					Email: <a href="mailto:paul@virtualgenius.com">paul@virtualgenius.com</a>
+		<!-- Philosophy & Approach -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Philosophy & Approach
+			</h2>
+			<div class="max-w-4xl mx-auto">
+				<div class="bg-vg-burgundy text-white p-8 rounded-lg mb-8">
+					<p class="text-xl italic text-center">
+						"The best software emerges from collaborative discovery between business experts and technical teams. EventStorming and DDD provide the tools and language for that collaboration to flourish."
+					</p>
+				</div>
+				<div class="space-y-6 text-lg text-vg-gray-dark">
+					<p>
+						Paul's approach emphasizes:
+					</p>
+					<ul class="space-y-3">
+						<li class="flex items-start">
+							<span class="text-vg-red mr-3 font-bold">•</span>
+							<span><strong>Collaborative Discovery</strong> - Bringing diverse perspectives together to explore complex domains and discover better solutions</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-3 font-bold">•</span>
+							<span><strong>Strategic Thinking</strong> - Focusing on core domain, bounded contexts, and what truly matters for business success</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-3 font-bold">•</span>
+							<span><strong>Pragmatic Implementation</strong> - Applying DDD patterns where they provide value, not dogmatically</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-3 font-bold">•</span>
+							<span><strong>Continuous Learning</strong> - Evolving models and designs as understanding deepens</span>
+						</li>
+						<li class="flex items-start">
+							<span class="text-vg-red mr-3 font-bold">•</span>
+							<span><strong>Team Empowerment</strong> - Building capability within teams rather than creating dependency on consultants</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Open Source Contributions -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Open Source Contributions
+			</h2>
+			<div class="max-w-4xl mx-auto text-center">
+				<p class="text-lg text-vg-gray-dark mb-8">
+					Paul actively contributes to the software design community through open source tools and resources:
 				</p>
-			</section>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<a
+						href="/products/contextflow"
+						class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 block"
+					>
+						<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">ContextFlow</h3>
+						<p class="text-vg-gray-dark mb-4">
+							Visual DDD context mapper with Flow + Strategic views
+						</p>
+						<span class="text-vg-red font-semibold">Learn More →</span>
+					</a>
+					<a
+						href="/products/codecohesion"
+						class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 block"
+					>
+						<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">CodeCohesion</h3>
+						<p class="text-vg-gray-dark mb-4">
+							3D visualization for code structure and evolution
+						</p>
+						<span class="text-vg-red font-semibold">Learn More →</span>
+					</a>
+				</div>
+			</div>
+		</Section>
 
-			<p>
-				<em>This page is under construction. More details coming soon.</em>
-			</p>
-		</main>
+		<!-- Get in Touch CTA -->
+		<Section background="burgundy">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Let's Work Together</h2>
+				<p class="text-xl mb-8 text-vg-gray-light">
+					Interested in EventStorming, DDD training, or coaching for your team? Get in touch to discuss how we can help.
+				</p>
+				<div class="flex flex-col sm:flex-row gap-4 justify-center">
+					<a
+						href="mailto:info@virtualgenius.com"
+						class="inline-block px-8 py-4 bg-white text-vg-burgundy font-semibold rounded-lg hover:bg-vg-gray-light transition-colors duration-200"
+					>
+						Email: info@virtualgenius.com
+					</a>
+					<a
+						href="/services"
+						class="inline-block px-8 py-4 border-2 border-white text-white font-semibold rounded-lg hover:bg-white hover:text-vg-burgundy transition-colors duration-200"
+					>
+						View Services
+					</a>
+				</div>
+			</div>
+		</Section>
+
 		<Footer />
 	</body>
 </html>
