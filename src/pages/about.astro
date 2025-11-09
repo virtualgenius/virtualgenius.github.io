@@ -1,0 +1,54 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={`About | ${SITE_TITLE}`} description="About Paul Rayner and Virtual Genius" />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>About Paul Rayner</h1>
+
+			<p>
+				Paul Rayner is a software design consultant and founder of Virtual Genius,
+				specializing in EventStorming facilitation and Domain-Driven Design.
+			</p>
+
+			<section>
+				<h2>Expertise</h2>
+				<ul>
+					<li>EventStorming Workshop Facilitation</li>
+					<li>Domain-Driven Design (DDD)</li>
+					<li>Strategic Design and Context Mapping</li>
+					<li>Software Architecture</li>
+				</ul>
+			</section>
+
+			<section>
+				<h2>Speaking & Conferences</h2>
+				<p>
+					Paul is a frequent speaker at software conferences worldwide and founder of
+					<a href="https://exploreddd.com">Explore DDD</a>, the premier Domain-Driven Design conference.
+				</p>
+			</section>
+
+			<section>
+				<h2>Contact</h2>
+				<p>
+					Email: <a href="mailto:paul@virtualgenius.com">paul@virtualgenius.com</a>
+				</p>
+			</section>
+
+			<p>
+				<em>This page is under construction. More details coming soon.</em>
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>

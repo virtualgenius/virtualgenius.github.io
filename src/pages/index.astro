@@ -1,0 +1,46 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION, SITE_TITLE } from '../consts';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>Virtual Genius</h1>
+			<h2>EventStorming & Domain-Driven Design Consulting</h2>
+			<p>
+				Helping teams build better software through collaborative design and strategic domain modeling.
+			</p>
+
+			<section>
+				<h3>Services</h3>
+				<ul>
+					<li><strong>EventStorming Workshops</strong> - 2-day facilitated sessions for exploring complex business domains</li>
+					<li><strong>DDD Training</strong> - Essential and Strategic Domain-Driven Design courses</li>
+					<li><strong>Coaching & Consulting</strong> - Ongoing support for pilot projects and implementation</li>
+				</ul>
+			</section>
+
+			<section>
+				<h3>Open Source Products</h3>
+				<ul>
+					<li><strong>ContextFlow</strong> - Context mapping tool for understanding system boundaries</li>
+					<li><strong>CodeCohesion</strong> - Code analysis for domain model quality</li>
+					<li><strong>EventStormer</strong> - Digital EventStorming collaboration tool</li>
+				</ul>
+			</section>
+
+			<p>
+				<em>This site is under construction. Check back soon for more content.</em>
+			</p>
+		</main>
+		<Footer />
+	</body>
+</html>
