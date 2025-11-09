@@ -25,19 +25,19 @@ const posts = (await getCollection('blog'))
 		<Header />
 
 		<!-- Hero Section -->
-		<Hero>
+		<Hero dark>
 			<div class="text-center max-w-4xl mx-auto">
-				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
+				<h1 class="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight">
 					EventStorming & Domain-Driven Design Consulting
 				</h1>
-				<p class="text-xl md:text-2xl mb-8 text-vg-gray-dark">
+				<p class="text-xl md:text-2xl mb-12 text-white/90">
 					Helping teams build better software through collaborative design and strategic domain modeling
 				</p>
 				<div class="flex flex-col sm:flex-row gap-4 justify-center">
 					<Button href="mailto:info@virtualgenius.com" variant="primary">
 						Schedule a Workshop
 					</Button>
-					<Button href="/services" variant="secondary">
+					<Button href="/services" variant="outlined">
 						Explore Services
 					</Button>
 				</div>

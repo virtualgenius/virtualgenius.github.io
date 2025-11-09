@@ -1,7 +1,7 @@
 ---
 interface Props {
 	href: string;
-	variant?: 'primary' | 'secondary';
+	variant?: 'primary' | 'secondary' | 'outlined';
 	class?: string;
 }
 
@@ -11,6 +11,7 @@ const baseStyles = 'inline-block px-6 py-3 rounded-lg font-semibold transition-a
 const variantStyles = {
 	primary: 'bg-vg-red text-white hover:bg-vg-red-light shadow-lg hover:shadow-xl',
 	secondary: 'border-2 border-vg-red text-vg-red hover:bg-vg-red hover:text-white',
+	outlined: 'border-2 border-white text-white hover:bg-vg-amber hover:border-vg-amber',
 };
 ---
 

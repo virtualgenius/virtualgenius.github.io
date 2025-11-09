@@ -1,13 +1,18 @@
 ---
 interface Props {
 	class?: string;
+	dark?: boolean;
 }
 
-const { class: className = '' } = Astro.props;
+const { class: className = '', dark = false } = Astro.props;
+
+const backgroundStyles = dark
+	? 'bg-vg-burgundy-dark text-white'
+	: 'bg-gradient-to-br from-white to-vg-gray-light';
 ---
 
-<section class={`relative bg-gradient-to-br from-white to-vg-gray-light py-20 md:py-32 ${className}`}>
-	<div class="max-w-screen-xl mx-auto px-6">
+<section class={`relative ${backgroundStyles} py-32 md:py-48 min-h-[600px] flex items-center ${className}`}>
+	<div class="max-w-screen-xl mx-auto px-6 w-full">
 		<slot />
 	</div>
 </section>
