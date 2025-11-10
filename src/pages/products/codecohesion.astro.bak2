@@ -4,7 +4,6 @@ import Button from '../../components/Button.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
-import Icon from '../../components/Icon.astro';
 import Section from '../../components/Section.astro';
 
 const title = 'CodeCohesion - 3D Code Visualization';
@@ -20,7 +19,7 @@ const description = 'Visualize code cohesion and architectural evolution. Open-s
 		<Header />
 
 		<!-- Hero -->
-		<Hero size="compact">
+		<Hero>
 			<div class="text-center max-w-4xl mx-auto">
 				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
 					CodeCohesion
@@ -164,38 +163,38 @@ const description = 'Visualize code cohesion and architectural evolution. Open-s
 					<div>
 						<h3 class="text-2xl font-semibold mb-4 text-vg-red">Core Visualization</h3>
 						<ul class="space-y-2 text-lg text-vg-gray-dark">
-							<li><Icon name="check" size="sm" /> Solar System Layout - Directories as planets, files as moons</li>
-							<li><Icon name="check" size="sm" /> Hierarchical Focus Mode - Drill down while maintaining context</li>
-							<li><Icon name="check" size="sm" /> Adaptive Sizing - File size represents lines of code</li>
-							<li><Icon name="check" size="sm" /> Smart Spacing - Automatic layout prevents overlap</li>
+							<li>✓ Solar System Layout - Directories as planets, files as moons</li>
+							<li>✓ Hierarchical Focus Mode - Drill down while maintaining context</li>
+							<li>✓ Adaptive Sizing - File size represents lines of code</li>
+							<li>✓ Smart Spacing - Automatic layout prevents overlap</li>
 						</ul>
 					</div>
 					<div>
 						<h3 class="text-2xl font-semibold mb-4 text-vg-red">Interactive Exploration</h3>
 						<ul class="space-y-2 text-lg text-vg-gray-dark">
-							<li><Icon name="check" size="sm" /> Orbit Controls - Drag to rotate, scroll to zoom</li>
-							<li><Icon name="check" size="sm" /> Click Navigation - Click directories to focus</li>
-							<li><Icon name="check" size="sm" /> Hover Highlighting - See file relationships</li>
-							<li><Icon name="check" size="sm" /> Smooth Camera - Stable framing without resets</li>
+							<li>✓ Orbit Controls - Drag to rotate, scroll to zoom</li>
+							<li>✓ Click Navigation - Click directories to focus</li>
+							<li>✓ Hover Highlighting - See file relationships</li>
+							<li>✓ Smooth Camera - Stable framing without resets</li>
 						</ul>
 					</div>
 					<div>
 						<h3 class="text-2xl font-semibold mb-4 text-vg-red">Git Metadata</h3>
 						<ul class="space-y-2 text-lg text-vg-gray-dark">
-							<li><Icon name="check" size="sm" /> File Type color mode - 50+ extensions</li>
-							<li><Icon name="check" size="sm" /> Last Modified mode - Adaptive time buckets</li>
-							<li><Icon name="check" size="sm" /> Author mode - Consistent colors per contributor</li>
-							<li><Icon name="check" size="sm" /> Timeline playback with speed controls</li>
-							<li><Icon name="check" size="sm" /> Filter by author, file type, date range</li>
+							<li>✓ File Type color mode - 50+ extensions</li>
+							<li>✓ Last Modified mode - Adaptive time buckets</li>
+							<li>✓ Author mode - Consistent colors per contributor</li>
+							<li>✓ Timeline playback with speed controls</li>
+							<li>✓ Filter by author, file type, date range</li>
 						</ul>
 					</div>
 					<div>
 						<h3 class="text-2xl font-semibold mb-4 text-vg-red">Technology</h3>
 						<ul class="space-y-2 text-lg text-vg-gray-dark">
-							<li><Icon name="check" size="sm" /> TypeScript 5.0 + React + Three.js</li>
-							<li><Icon name="check" size="sm" /> Node.js ≥18 required</li>
-							<li><Icon name="check" size="sm" /> Browser-based, no backend</li>
-							<li><Icon name="check" size="sm" /> MIT licensed, fully open source</li>
+							<li>✓ TypeScript 5.0 + React + Three.js</li>
+							<li>✓ Node.js ≥18 required</li>
+							<li>✓ Browser-based, no backend</li>
+							<li>✓ MIT licensed, fully open source</li>
 						</ul>
 					</div>
 				</div>

@@ -19,7 +19,7 @@ const description = 'Books by Paul Rayner on EventStorming, Domain-Driven Design
 		<Header />
 
 		<!-- Hero -->
-		<Hero>
+		<Hero size="compact">
 			<div class="max-w-4xl mx-auto text-center">
 				<p class="text-sm uppercase tracking-wider mb-4 text-vg-red font-semibold">PUBLICATIONS</p>
 				<h1 class="text-4xl md:text-6xl font-bold mb-8 text-vg-burgundy tracking-tight">
@@ -37,18 +37,11 @@ const description = 'Books by Paul Rayner on EventStorming, Domain-Driven Design
 				<!-- Book Cover -->
 				<div class="order-2 lg:order-1">
 					<div class="relative transform lg:-rotate-2">
-						<div class="aspect-[3/4] bg-gradient-to-br from-vg-burgundy to-vg-burgundy-dark rounded-3xl shadow-2xl flex items-center justify-center p-12">
-							<div class="text-center text-white">
-								<div class="mb-6">
-									<svg class="w-24 h-24 mx-auto opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-									</svg>
-								</div>
-								<h3 class="text-3xl font-bold mb-2">The EventStorming</h3>
-								<h3 class="text-3xl font-bold mb-6">Handbook</h3>
-								<p class="text-lg opacity-90">by Paul Rayner</p>
-							</div>
-						</div>
+						<img
+							src="/images/eventstorming-handbook-cover.png"
+							alt="The EventStorming Handbook by Paul Rayner"
+							class="w-full rounded-3xl shadow-2xl"
+						/>
 					</div>
 				</div>
 
@@ -100,7 +93,7 @@ const description = 'Books by Paul Rayner on EventStorming, Domain-Driven Design
 
 					<div class="flex flex-col sm:flex-row gap-4">
 						<a
-							href="https://leanpub.com/eventstorming-handbook"
+							href="https://leanpub.com/eventstorming_handbook/"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="inline-flex items-center justify-center px-8 py-4 bg-vg-red text-white font-semibold rounded-lg hover:bg-vg-red-light transition-colors duration-200 shadow-lg hover:shadow-xl"
@@ -111,7 +104,7 @@ const description = 'Books by Paul Rayner on EventStorming, Domain-Driven Design
 							</svg>
 						</a>
 						<a
-							href="https://leanpub.com/eventstorming-handbook"
+							href="https://leanpub.com/eventstorming_handbook/"
 							target="_blank"
 							rel="noopener noreferrer"
 							class="inline-flex items-center justify-center px-8 py-4 border-2 border-vg-red text-vg-red font-semibold rounded-lg hover:bg-vg-red hover:text-white transition-colors duration-200"
@@ -129,72 +122,36 @@ const description = 'Books by Paul Rayner on EventStorming, Domain-Driven Design
 				<!-- Book Details -->
 				<div>
 					<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">
-						The Cucumber for Java Book
+						Behavior-Driven Development with Cucumber
 					</h2>
 					<p class="text-xl mb-6 text-vg-gray-dark leading-relaxed">
-						Behavior-Driven Development for Testers and Developers
+						Better Collaboration for Better Software
 					</p>
 					<p class="text-lg mb-6 text-vg-gray-dark leading-relaxed">
-						Co-authored with Seb Rose and Matt Wynne, this book provides a comprehensive guide to Behavior-Driven Development using Cucumber and Java. Learn how to write executable specifications that bring teams together and create living documentation.
+						Co-authored with Richard Lawrence, this book provides a comprehensive guide to using Behavior-Driven Development and Cucumber to improve team collaboration and create better software through executable specifications.
 					</p>
 
-					<h3 class="text-xl font-semibold mb-4 text-vg-burgundy">Key Topics</h3>
-					<ul class="space-y-3 mb-8">
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-vg-red mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							<span class="text-vg-gray-dark">Writing effective Gherkin scenarios</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-vg-red mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							<span class="text-vg-gray-dark">Implementing step definitions in Java</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-vg-red mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							<span class="text-vg-gray-dark">Building maintainable test automation</span>
-						</li>
-						<li class="flex items-start">
-							<svg class="w-6 h-6 text-vg-red mr-3 flex-shrink-0 mt-0.5" fill="currentColor" viewBox="0 0 20 20">
-								<path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-							</svg>
-							<span class="text-vg-gray-dark">Collaborating effectively with stakeholders</span>
-						</li>
-					</ul>
-
 					<a
-						href="https://www.amazon.com/Cucumber-Java-Book-Behaviour-Driven-Development/dp/1941222293"
+						href="https://www.amazon.com/Behavior-Driven-Development-Cucumber-Specification-Example/dp/0321772636"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="inline-flex items-center justify-center px-8 py-4 bg-vg-red text-white font-semibold rounded-lg hover:bg-vg-red-light transition-colors duration-200 shadow-lg hover:shadow-xl"
 					>
-						Buy on Amazon
+						View on Amazon
 						<svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/>
 						</svg>
 					</a>
 				</div>
 
-				<!-- Book Cover Placeholder -->
+				<!-- Book Cover -->
 				<div>
 					<div class="relative transform lg:rotate-2">
-						<div class="aspect-[3/4] bg-gradient-to-br from-vg-gray-dark to-vg-burgundy-dark rounded-3xl shadow-2xl flex items-center justify-center p-12">
-							<div class="text-center text-white">
-								<div class="mb-6">
-									<svg class="w-24 h-24 mx-auto opacity-75" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
-									</svg>
-								</div>
-								<h3 class="text-2xl font-bold mb-2">The Cucumber</h3>
-								<h3 class="text-2xl font-bold mb-2">for Java Book</h3>
-								<p class="text-sm opacity-90 mt-4">Seb Rose, Matt Wynne,</p>
-								<p class="text-sm opacity-90">and Paul Rayner</p>
-							</div>
-						</div>
+						<img
+							src="/images/bdd-cucumber-cover.jpg"
+							alt="Behavior-Driven Development with Cucumber by Richard Lawrence and Paul Rayner"
+							class="w-full rounded-3xl shadow-2xl"
+						/>
 					</div>
 				</div>
 			</div>

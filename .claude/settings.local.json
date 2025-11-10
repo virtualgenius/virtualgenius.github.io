@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run dev:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push:*)",
+      "Read(//Users/paul/Library/CloudStorage/Dropbox/Virtual Genius/Marketing/**)",
+      "Read(//Users/paul/Documents/eventstorming-handbook/images/**)",
+      "Read(//Users/paul/Documents/**)",
+      "Read(//Users/paul/Library/CloudStorage/Dropbox/**)",
+      "Bash(ls:*)",
+      "Read(//Applications/HandBrake.app/Contents/MacOS/**)",
+      "Bash(HandBrakeCLI:*)",
+      "Bash(ffprobe:*)",
+      "Bash(curl -L -A \"Mozilla/5.0\" \"https://virtualgenius.com/events\")"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

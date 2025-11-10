@@ -20,7 +20,7 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 		<Header />
 
 		<!-- Hero -->
-		<Hero size="compact">
+		<Hero>
 			<div class="text-center max-w-4xl mx-auto">
 				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
 					ContextFlow
@@ -161,26 +161,26 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 					<div>
 						<h3 class="text-2xl font-semibold mb-4 text-vg-red">Current</h3>
 						<ul class="space-y-2 text-lg text-vg-gray-dark">
-							<li><Icon name="check" size="sm" /> Visual canvas with pan/zoom and fit-to-map</li>
-							<li><Icon name="check" size="sm" /> Bounded context nodes with strategic classification</li>
-							<li><Icon name="check" size="sm" /> DDD relationship patterns as directed edges</li>
-							<li><Icon name="check" size="sm" /> Flow View with configurable value stream stages</li>
-							<li><Icon name="check" size="sm" /> Strategic View with Wardley evolution bands</li>
-							<li><Icon name="check" size="sm" /> Live view switching with animated transitions</li>
-							<li><Icon name="check" size="sm" /> Full editing (drag, create, delete, multi-select)</li>
-							<li><Icon name="check" size="sm" /> Repo sidebar with drag-to-assign</li>
-							<li><Icon name="check" size="sm" /> Team and ownership details</li>
-							<li><Icon name="check" size="sm" /> Undo/redo for structural changes</li>
-							<li><Icon name="check" size="sm" /> Theme toggle (light/dark mode)</li>
-							<li><Icon name="check" size="sm" /> Import/export project JSON</li>
+							<li>✓ Visual canvas with pan/zoom and fit-to-map</li>
+							<li>✓ Bounded context nodes with strategic classification</li>
+							<li>✓ DDD relationship patterns as directed edges</li>
+							<li>✓ Flow View with configurable value stream stages</li>
+							<li>✓ Strategic View with Wardley evolution bands</li>
+							<li>✓ Live view switching with animated transitions</li>
+							<li>✓ Full editing (drag, create, delete, multi-select)</li>
+							<li>✓ Repo sidebar with drag-to-assign</li>
+							<li>✓ Team and ownership details</li>
+							<li>✓ Undo/redo for structural changes</li>
+							<li>✓ Theme toggle (light/dark mode)</li>
+							<li>✓ Import/export project JSON</li>
 						</ul>
 					</div>
 					<div>
 						<h3 class="text-2xl font-semibold mb-4 text-vg-red">Planned</h3>
 						<ul class="space-y-2 text-lg text-vg-gray-dark">
-							<li><Icon name="check" size="sm" /> Multi-project picker (Miro-style recent boards)</li>
-							<li><Icon name="check" size="sm" /> IndexedDB persistence for better performance</li>
-							<li><Icon name="check" size="sm" /> Enhanced import/export options</li>
+							<li>• Multi-project picker (Miro-style recent boards)</li>
+							<li>• IndexedDB persistence for better performance</li>
+							<li>• Enhanced import/export options</li>
 						</ul>
 					</div>
 				</div>

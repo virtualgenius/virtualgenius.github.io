@@ -21,7 +21,7 @@ const description = 'Essential and Strategic Domain-Driven Design training cours
 		<Header />
 
 		<!-- Hero -->
-		<Hero size="compact">
+		<Hero>
 			<div class="text-center max-w-4xl mx-auto">
 				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
 					DDD Training
@@ -53,21 +53,21 @@ const description = 'Essential and Strategic Domain-Driven Design training cours
 						<div>
 							<h4 class="text-xl font-semibold mb-3 text-vg-red">What You'll Learn</h4>
 							<ul class="space-y-2 text-vg-gray-dark">
-								<li><Icon name="check" size="sm" /> Strategic design and bounded contexts</li>
-								<li><Icon name="check" size="sm" /> Tactical patterns (Entities, Value Objects, Aggregates)</li>
-								<li><Icon name="check" size="sm" /> Domain events and event storming</li>
-								<li><Icon name="check" size="sm" /> Ubiquitous language and model-driven design</li>
-								<li><Icon name="check" size="sm" /> Context mapping patterns</li>
-								<li><Icon name="check" size="sm" /> Hands-on modeling exercises</li>
+								<li>• Strategic design and bounded contexts</li>
+								<li>• Tactical patterns (Entities, Value Objects, Aggregates)</li>
+								<li>• Domain events and event storming</li>
+								<li>• Ubiquitous language and model-driven design</li>
+								<li>• Context mapping patterns</li>
+								<li>• Hands-on modeling exercises</li>
 							</ul>
 						</div>
 						<div>
 							<h4 class="text-xl font-semibold mb-3 text-vg-red">Who Should Attend</h4>
 							<ul class="space-y-2 text-vg-gray-dark">
-								<li><Icon name="check" size="sm" /> Software developers</li>
-								<li><Icon name="check" size="sm" /> Architects and technical leads</li>
-								<li><Icon name="check" size="sm" /> Product managers</li>
-								<li><Icon name="check" size="sm" /> Business analysts</li>
+								<li>• Software developers</li>
+								<li>• Architects and technical leads</li>
+								<li>• Product managers</li>
+								<li>• Business analysts</li>
 							</ul>
 							<h4 class="text-xl font-semibold mb-3 mt-6 text-vg-red">Duration</h4>
 							<p class="text-vg-gray-dark">2-3 days (customizable)</p>
@@ -88,21 +88,21 @@ const description = 'Essential and Strategic Domain-Driven Design training cours
 						<div>
 							<h4 class="text-xl font-semibold mb-3 text-vg-red">What You'll Learn</h4>
 							<ul class="space-y-2 text-vg-gray-dark">
-								<li><Icon name="check" size="sm" /> Advanced context mapping strategies</li>
-								<li><Icon name="check" size="sm" /> Relationship patterns (Customer-Supplier, ACL, etc.)</li>
-								<li><Icon name="check" size="sm" /> Core domain identification</li>
-								<li><Icon name="check" size="sm" /> Strategic distillation techniques</li>
-								<li><Icon name="check" size="sm" /> Large-scale structure patterns</li>
-								<li><Icon name="check" size="sm" /> Evolving existing systems</li>
+								<li>• Advanced context mapping strategies</li>
+								<li>• Relationship patterns (Customer-Supplier, ACL, etc.)</li>
+								<li>• Core domain identification</li>
+								<li>• Strategic distillation techniques</li>
+								<li>• Large-scale structure patterns</li>
+								<li>• Evolving existing systems</li>
 							</ul>
 						</div>
 						<div>
 							<h4 class="text-xl font-semibold mb-3 text-vg-red">Who Should Attend</h4>
 							<ul class="space-y-2 text-vg-gray-dark">
-								<li><Icon name="check" size="sm" /> Senior developers and architects</li>
-								<li><Icon name="check" size="sm" /> Technical leads</li>
-								<li><Icon name="check" size="sm" /> Engineering managers</li>
-								<li><Icon name="check" size="sm" /> System designers</li>
+								<li>• Senior developers and architects</li>
+								<li>• Technical leads</li>
+								<li>• Engineering managers</li>
+								<li>• System designers</li>
 							</ul>
 							<h4 class="text-xl font-semibold mb-3 mt-6 text-vg-red">Duration</h4>
 							<p class="text-vg-gray-dark">2-3 days (customizable)</p>
@@ -189,28 +189,28 @@ const description = 'Essential and Strategic Domain-Driven Design training cours
 			</h2>
 			<div class="max-w-4xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-6">
 				<div class="flex items-start">
-					<span class="text-vg-red text-2xl mr-3"><Icon name="check" size="sm" /></span>
+					<span class="text-vg-red text-2xl mr-3">✓</span>
 					<div>
 						<h3 class="font-semibold text-vg-burgundy mb-1">Course Materials</h3>
 						<p class="text-vg-gray-dark">Slides, handouts, and reference materials</p>
 					</div>
 				</div>
 				<div class="flex items-start">
-					<span class="text-vg-red text-2xl mr-3"><Icon name="check" size="sm" /></span>
+					<span class="text-vg-red text-2xl mr-3">✓</span>
 					<div>
 						<h3 class="font-semibold text-vg-burgundy mb-1">Hands-On Exercises</h3>
 						<p class="text-vg-gray-dark">Real-world modeling and design practice</p>
 					</div>
 				</div>
 				<div class="flex items-start">
-					<span class="text-vg-red text-2xl mr-3"><Icon name="check" size="sm" /></span>
+					<span class="text-vg-red text-2xl mr-3">✓</span>
 					<div>
 						<h3 class="font-semibold text-vg-burgundy mb-1">Code Examples</h3>
 						<p class="text-vg-gray-dark">Sample implementations and patterns</p>
 					</div>
 				</div>
 				<div class="flex items-start">
-					<span class="text-vg-red text-2xl mr-3"><Icon name="check" size="sm" /></span>
+					<span class="text-vg-red text-2xl mr-3">✓</span>
 					<div>
 						<h3 class="font-semibold text-vg-burgundy mb-1">Follow-Up Support</h3>
 						<p class="text-vg-gray-dark">Q&A session after the course</p>
@@ -249,7 +249,7 @@ const description = 'Essential and Strategic Domain-Driven Design training cours
 			</div>
 			<div class="text-center mt-8">
 				<a href="/testimonials" class="text-vg-red hover:text-vg-red-light font-semibold text-lg">
-					View All Testimonials <Icon name="arrow-right" size="sm" />
+					View All Testimonials →
 				</a>
 			</div>
 		</Section>

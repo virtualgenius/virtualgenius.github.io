@@ -21,7 +21,7 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 		<Header />
 
 		<!-- Hero -->
-		<Hero size="compact">
+		<Hero>
 			<div class="text-center max-w-4xl mx-auto">
 				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
 					Coaching & Consulting
@@ -62,11 +62,11 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 					</p>
 					<h4 class="font-semibold text-vg-red mb-2">Includes:</h4>
 					<ul class="space-y-2 text-vg-gray-dark">
-						<li><Icon name="check" size="sm" /> Reviewing and refining workshop outputs</li>
-						<li><Icon name="check" size="sm" /> Breaking down identified work into stories</li>
-						<li><Icon name="check" size="sm" /> Design guidance for bounded contexts</li>
-						<li><Icon name="check" size="sm" /> API and interface design reviews</li>
-						<li><Icon name="check" size="sm" /> Support during initial implementation</li>
+						<li>• Reviewing and refining workshop outputs</li>
+						<li>• Breaking down identified work into stories</li>
+						<li>• Design guidance for bounded contexts</li>
+						<li>• API and interface design reviews</li>
+						<li>• Support during initial implementation</li>
 					</ul>
 				</div>
 
@@ -78,11 +78,11 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 					</p>
 					<h4 class="font-semibold text-vg-red mb-2">Includes:</h4>
 					<ul class="space-y-2 text-vg-gray-dark">
-						<li><Icon name="check" size="sm" /> Regular design review sessions</li>
-						<li><Icon name="check" size="sm" /> Pairing on challenging implementations</li>
-						<li><Icon name="check" size="sm" /> Model refinement as you learn</li>
-						<li><Icon name="check" size="sm" /> Team skill development</li>
-						<li><Icon name="check" size="sm" /> Creating reusable patterns</li>
+						<li>• Regular design review sessions</li>
+						<li>• Pairing on challenging implementations</li>
+						<li>• Model refinement as you learn</li>
+						<li>• Team skill development</li>
+						<li>• Creating reusable patterns</li>
 					</ul>
 				</div>
 
@@ -94,11 +94,11 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 					</p>
 					<h4 class="font-semibold text-vg-red mb-2">Includes:</h4>
 					<ul class="space-y-2 text-vg-gray-dark">
-						<li><Icon name="check" size="sm" /> Architecture and design feedback</li>
-						<li><Icon name="check" size="sm" /> Domain model quality assessment</li>
-						<li><Icon name="check" size="sm" /> Bounded context boundary evaluation</li>
-						<li><Icon name="check" size="sm" /> Tactical pattern application review</li>
-						<li><Icon name="check" size="sm" /> Actionable improvement recommendations</li>
+						<li>• Architecture and design feedback</li>
+						<li>• Domain model quality assessment</li>
+						<li>• Bounded context boundary evaluation</li>
+						<li>• Tactical pattern application review</li>
+						<li>• Actionable improvement recommendations</li>
 					</ul>
 				</div>
 
@@ -110,11 +110,11 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 					</p>
 					<h4 class="font-semibold text-vg-red mb-2">Includes:</h4>
 					<ul class="space-y-2 text-vg-gray-dark">
-						<li><Icon name="check" size="sm" /> Weekly or bi-weekly check-ins</li>
-						<li><Icon name="check" size="sm" /> Q&A and problem-solving sessions</li>
-						<li><Icon name="check" size="sm" /> Collaborative modeling exercises</li>
-						<li><Icon name="check" size="sm" /> Design decision guidance</li>
-						<li><Icon name="check" size="sm" /> Pattern and practice recommendations</li>
+						<li>• Weekly or bi-weekly check-ins</li>
+						<li>• Q&A and problem-solving sessions</li>
+						<li>• Collaborative modeling exercises</li>
+						<li>• Design decision guidance</li>
+						<li>• Pattern and practice recommendations</li>
 					</ul>
 				</div>
 			</div>
@@ -201,9 +201,9 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 						<p class="text-3xl font-bold text-vg-burgundy mb-2">4-6 hours</p>
 						<p class="text-vg-gray-dark mb-4">per month</p>
 						<ul class="text-sm text-vg-gray-dark text-left space-y-2">
-							<li><Icon name="check" size="sm" /> Monthly review session</li>
-							<li><Icon name="check" size="sm" /> Email support</li>
-							<li><Icon name="check" size="sm" /> Design feedback</li>
+							<li>• Monthly review session</li>
+							<li>• Email support</li>
+							<li>• Design feedback</li>
 						</ul>
 					</div>
 					<div class="bg-white p-6 rounded-lg shadow border-2 border-vg-red">
@@ -214,10 +214,10 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 						<p class="text-3xl font-bold text-vg-burgundy mb-2">8-12 hours</p>
 						<p class="text-vg-gray-dark mb-4">per month</p>
 						<ul class="text-sm text-vg-gray-dark text-left space-y-2">
-							<li><Icon name="check" size="sm" /> Bi-weekly sessions</li>
-							<li><Icon name="check" size="sm" /> Code reviews</li>
-							<li><Icon name="check" size="sm" /> Design workshops</li>
-							<li><Icon name="check" size="sm" /> Priority support</li>
+							<li>• Bi-weekly sessions</li>
+							<li>• Code reviews</li>
+							<li>• Design workshops</li>
+							<li>• Priority support</li>
 						</ul>
 					</div>
 					<div class="bg-white p-6 rounded-lg shadow">
@@ -225,10 +225,10 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 						<p class="text-3xl font-bold text-vg-burgundy mb-2">16+ hours</p>
 						<p class="text-vg-gray-dark mb-4">per month</p>
 						<ul class="text-sm text-vg-gray-dark text-left space-y-2">
-							<li><Icon name="check" size="sm" /> Weekly sessions</li>
-							<li><Icon name="check" size="sm" /> Embedded coaching</li>
-							<li><Icon name="check" size="sm" /> Architecture consulting</li>
-							<li><Icon name="check" size="sm" /> Team training</li>
+							<li>• Weekly sessions</li>
+							<li>• Embedded coaching</li>
+							<li>• Architecture consulting</li>
+							<li>• Team training</li>
 						</ul>
 					</div>
 				</div>
@@ -298,7 +298,7 @@ const description = 'Ongoing support for pilot projects, code reviews, design wa
 			</div>
 			<div class="text-center mt-8">
 				<a href="/testimonials" class="text-vg-red hover:text-vg-red-light font-semibold text-lg">
-					View All Testimonials <Icon name="arrow-right" size="sm" />
+					View All Testimonials →
 				</a>
 			</div>
 		</Section>

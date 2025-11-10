@@ -20,7 +20,7 @@ const description = 'Explore our open source tools for Domain-Driven Design: Con
 		<Header />
 
 		<!-- Hero -->
-		<Hero>
+		<Hero size="compact">
 			<div class="text-center max-w-4xl mx-auto">
 				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
 					Open Source Products
@@ -33,118 +33,156 @@ const description = 'Explore our open source tools for Domain-Driven Design: Con
 
 		<!-- Products -->
 		<Section>
-			<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
+			<div class="max-w-6xl mx-auto space-y-24">
 				<!-- ContextFlow -->
-				<div class="space-y-6">
-					<img
-						src="/images/contextflow/context-flow-3.png"
-						alt="ContextFlow Screenshot"
-						class="rounded-lg shadow-lg w-full"
-					/>
-					<ProductCard
-						title="ContextFlow"
-						description="Visual DDD context mapper with Flow + Strategic views for analyzing bounded contexts, their relationships, and code ownership across your system architecture."
-						demoUrl="https://thepaulrayner.com/contextflow/"
-						githubUrl="https://github.com/paulrayner/contextflow"
-						detailsUrl="/products/contextflow"
-					/>
-					<div class="bg-vg-gray-light p-6 rounded-lg">
-						<h3 class="text-lg font-semibold mb-3 text-vg-burgundy">Key Features</h3>
-						<ul class="space-y-2 text-vg-gray-dark">
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Dual synchronized views (Flow + Strategic)</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>DDD relationship patterns</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Code ownership tracking</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Drag-and-drop editing</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Import/export JSON</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>No backend required</span>
-							</li>
-						</ul>
+				<div>
+					<div class="mb-8">
+						<img
+							src="/images/contextflow/context-flow-3.png"
+							alt="ContextFlow Screenshot"
+							class="rounded-lg shadow-xl w-full"
+						/>
+					</div>
+					<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+						<div class="lg:col-span-2">
+							<h2 class="text-3xl font-bold mb-4 text-vg-burgundy">ContextFlow</h2>
+							<p class="text-lg text-vg-gray-dark mb-6">
+								Visual DDD context mapper with Flow + Strategic views for analyzing bounded contexts, their relationships, and code ownership across your system architecture.
+							</p>
+							<div class="flex flex-wrap gap-4 mb-8">
+								<a href="https://thepaulrayner.com/contextflow/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold">
+									View Demo
+									<Icon name="arrow-right" size="sm" />
+								</a>
+								<a href="https://github.com/paulrayner/contextflow" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-gray hover:text-vg-gray-dark font-semibold">
+									<Icon name="github" size="sm" />
+									GitHub
+								</a>
+								<a href="/products/contextflow" class="inline-flex items-center gap-1 text-vg-burgundy hover:text-vg-red font-semibold">
+									Learn More
+									<Icon name="arrow-right" size="sm" />
+								</a>
+							</div>
+						</div>
+						<div>
+							<div class="bg-vg-gray-light p-6 rounded-lg">
+								<h3 class="text-lg font-semibold mb-3 text-vg-burgundy">Key Features</h3>
+								<ul class="space-y-2 text-sm text-vg-gray-dark">
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>Dual synchronized views (Flow + Strategic)</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>DDD relationship patterns</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>Code ownership tracking</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>Drag-and-drop editing</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>Import/export JSON</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>No backend required</span>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- CodeCohesion -->
-				<div class="space-y-6">
-					<img
-						src="/images/codecohesion/timeline-v2-gource.png"
-						alt="CodeCohesion Screenshot"
-						class="rounded-lg shadow-lg w-full"
-					/>
-					<ProductCard
-						title="CodeCohesion"
-						description="3D visualization tool for analyzing code structure, cohesion patterns, and architectural evolution. Watch your codebase evolve commit-by-commit with interactive timeline playback."
-						demoUrl="https://thepaulrayner.com/codecohesion/"
-						githubUrl="https://github.com/paulrayner/codecohesion"
-						detailsUrl="/products/codecohesion"
-					/>
-					<div class="bg-vg-gray-light p-6 rounded-lg">
-						<h3 class="text-lg font-semibold mb-3 text-vg-burgundy">Key Features</h3>
-						<ul class="space-y-2 text-vg-gray-dark">
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>3D solar system visualization</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Timeline playback (Gource-style)</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Cohesion analysis for DDD</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Multiple color modes (file type, author, time)</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Interactive exploration</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Browser-based, TypeScript + Three.js</span>
-							</li>
-						</ul>
+				<div>
+					<div class="mb-8">
+						<img
+							src="/images/codecohesion/timeline-v2-gource.png"
+							alt="CodeCohesion Screenshot"
+							class="rounded-lg shadow-xl w-full"
+						/>
+					</div>
+					<div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+						<div class="lg:col-span-2">
+							<h2 class="text-3xl font-bold mb-4 text-vg-burgundy">CodeCohesion</h2>
+							<p class="text-lg text-vg-gray-dark mb-6">
+								3D visualization tool for analyzing code structure, cohesion patterns, and architectural evolution. Watch your codebase evolve commit-by-commit with interactive timeline playback.
+							</p>
+							<div class="flex flex-wrap gap-4 mb-8">
+								<a href="https://thepaulrayner.com/codecohesion/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold">
+									View Demo
+									<Icon name="arrow-right" size="sm" />
+								</a>
+								<a href="https://github.com/paulrayner/codecohesion" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-gray hover:text-vg-gray-dark font-semibold">
+									<Icon name="github" size="sm" />
+									GitHub
+								</a>
+								<a href="/products/codecohesion" class="inline-flex items-center gap-1 text-vg-burgundy hover:text-vg-red font-semibold">
+									Learn More
+									<Icon name="arrow-right" size="sm" />
+								</a>
+							</div>
+						</div>
+						<div>
+							<div class="bg-vg-gray-light p-6 rounded-lg">
+								<h3 class="text-lg font-semibold mb-3 text-vg-burgundy">Key Features</h3>
+								<ul class="space-y-2 text-sm text-vg-gray-dark">
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>3D solar system visualization</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>Timeline playback (Gource-style)</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>Cohesion analysis for DDD</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>Multiple color modes (file type, author, time)</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>Interactive exploration</span>
+									</li>
+									<li class="flex items-start gap-2">
+										<span class="text-vg-red mt-1 flex-shrink-0">
+											<Icon name="check" size="sm" />
+										</span>
+										<span>Browser-based, TypeScript + Three.js</span>
+									</li>
+								</ul>
+							</div>
+						</div>
 					</div>
 				</div>
 			</div>

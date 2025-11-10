@@ -7,7 +7,7 @@ interface Props {
 
 const { href, variant = 'primary', class: className = '' } = Astro.props;
 
-const baseStyles = 'inline-block rounded-lg font-semibold transition-all duration-200';
+const baseStyles = 'inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200';
 const variantStyles = {
 	primary: 'px-6 py-3 bg-vg-red text-white hover:bg-vg-red-light shadow-lg hover:shadow-xl',
 	secondary: 'px-6 py-3 border-2 border-vg-red text-vg-red hover:bg-vg-red hover:text-white',

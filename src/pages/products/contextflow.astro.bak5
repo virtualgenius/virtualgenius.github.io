@@ -20,7 +20,7 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 		<Header />
 
 		<!-- Hero -->
-		<Hero size="compact">
+		<Hero>
 			<div class="text-center max-w-4xl mx-auto">
 				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
 					ContextFlow
@@ -178,9 +178,9 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 					<div>
 						<h3 class="text-2xl font-semibold mb-4 text-vg-red">Planned</h3>
 						<ul class="space-y-2 text-lg text-vg-gray-dark">
-							<li><Icon name="check" size="sm" /> Multi-project picker (Miro-style recent boards)</li>
-							<li><Icon name="check" size="sm" /> IndexedDB persistence for better performance</li>
-							<li><Icon name="check" size="sm" /> Enhanced import/export options</li>
+							<li>• Multi-project picker (Miro-style recent boards)</li>
+							<li>• IndexedDB persistence for better performance</li>
+							<li>• Enhanced import/export options</li>
 						</ul>
 					</div>
 				</div>

@@ -21,7 +21,7 @@ const description = '2-day facilitated EventStorming workshops for exploring com
 		<Header />
 
 		<!-- Hero -->
-		<Hero size="compact">
+		<Hero>
 			<div class="text-center max-w-4xl mx-auto">
 				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
 					EventStorming Workshops
@@ -413,7 +413,7 @@ const description = '2-day facilitated EventStorming workshops for exploring com
 				<div class="space-y-6">
 					<div class="flex items-start">
 						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-							<Icon name="check" size="md" class="text-white" />
+							✓
 						</div>
 						<div>
 							<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Wall Space</h3>
@@ -424,7 +424,7 @@ const description = '2-day facilitated EventStorming workshops for exploring com
 					</div>
 					<div class="flex items-start">
 						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-							<Icon name="check" size="md" class="text-white" />
+							✓
 						</div>
 						<div>
 							<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Sticky Notes</h3>
@@ -435,7 +435,7 @@ const description = '2-day facilitated EventStorming workshops for exploring com
 					</div>
 					<div class="flex items-start">
 						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-							<Icon name="check" size="md" class="text-white" />
+							✓
 						</div>
 						<div>
 							<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Room Setup</h3>
@@ -446,7 +446,7 @@ const description = '2-day facilitated EventStorming workshops for exploring com
 					</div>
 					<div class="flex items-start">
 						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-4 flex-shrink-0 mt-1">
-							<Icon name="check" size="md" class="text-white" />
+							✓
 						</div>
 						<div>
 							<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Time Commitment</h3>
@@ -488,9 +488,8 @@ const description = '2-day facilitated EventStorming workshops for exploring com
 				/>
 			</div>
 			<div class="text-center mt-8">
-				<a href="/testimonials" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold text-lg">
-					View All Testimonials
-					<Icon name="arrow-right" size="sm" />
+				<a href="/testimonials" class="text-vg-red hover:text-vg-red-light font-semibold text-lg">
+					View All Testimonials →
 				</a>
 			</div>
 		</Section>

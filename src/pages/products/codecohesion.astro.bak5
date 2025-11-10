@@ -20,7 +20,7 @@ const description = 'Visualize code cohesion and architectural evolution. Open-s
 		<Header />
 
 		<!-- Hero -->
-		<Hero size="compact">
+		<Hero>
 			<div class="text-center max-w-4xl mx-auto">
 				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
 					CodeCohesion
