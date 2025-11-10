@@ -129,9 +129,33 @@ const description = 'Paul Rayner is a software design consultant, EventStorming 
 						</a>
 					</div>
 					<div>
-						<div class="bg-vg-gray-light aspect-video rounded-lg flex items-center justify-center shadow-lg">
-							<span class="text-vg-gray-dark text-lg">[Explore DDD Conference Photo]</span>
+						<div class="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+							<img
+								id="eddd-image"
+								src="/images/eddd-2018-crowd.png"
+								alt="Explore DDD Conference"
+								class="w-full h-full object-cover transition-opacity duration-500"
+							/>
 						</div>
+						<script>
+							const images = [
+								'/images/eddd-2018-crowd.png',
+								'/images/eddd-early-bird.jpg'
+							];
+							let currentIndex = 0;
+							const imgElement = document.getElementById('eddd-image');
+
+							setInterval(() => {
+								currentIndex = (currentIndex + 1) % images.length;
+								if (imgElement) {
+									imgElement.style.opacity = '0';
+									setTimeout(() => {
+										imgElement.src = images[currentIndex];
+										imgElement.style.opacity = '1';
+									}, 500);
+								}
+							}, 5000);
+						</script>
 					</div>
 				</div>
 			</div>
