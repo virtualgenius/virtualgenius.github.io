@@ -10,10 +10,37 @@ import HeaderLink from './HeaderLink.astro';
 				<img src="/images/vg-logo-horizontal.png" alt={SITE_TITLE} class="h-10 md:h-12" />
 			</a>
 
-			<!-- Desktop Navigation -->
+				<!-- Desktop Navigation -->
 			<div class="hidden md:flex items-center space-x-8">
 				<HeaderLink href="/services">Services</HeaderLink>
 				<HeaderLink href="/products">Products</HeaderLink>
+
+				<!-- Resources Dropdown -->
+				<div class="relative group">
+					<button class="flex items-center gap-1 text-vg-gray-dark hover:text-vg-red transition-colors duration-200 font-medium">
+						Resources
+						<svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+						</svg>
+					</button>
+					<div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+						<div class="py-2">
+							<a href="/speaking" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors">
+								<div class="font-semibold">Speaking</div>
+								<div class="text-sm opacity-75">Conference talks & workshops</div>
+							</a>
+							<a href="/testimonials" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors">
+								<div class="font-semibold">Testimonials</div>
+								<div class="text-sm opacity-75">Client feedback & ratings</div>
+							</a>
+							<a href="/books" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors">
+								<div class="font-semibold">Books</div>
+								<div class="text-sm opacity-75">Published guides & handbooks</div>
+							</a>
+						</div>
+					</div>
+				</div>
+
 				<HeaderLink href="/about">About</HeaderLink>
 				<HeaderLink href="/blog">Blog</HeaderLink>
 				<HeaderLink href="/contact">Contact</HeaderLink>
@@ -36,6 +63,15 @@ import HeaderLink from './HeaderLink.astro';
 			<div class="flex flex-col space-y-2">
 				<HeaderLink href="/services">Services</HeaderLink>
 				<HeaderLink href="/products">Products</HeaderLink>
+
+				<!-- Resources Section for Mobile -->
+				<div class="border-t border-b border-vg-gray-light py-2 my-2">
+					<div class="text-xs uppercase tracking-wider text-vg-gray mb-2 px-4">Resources</div>
+					<HeaderLink href="/speaking">Speaking</HeaderLink>
+					<HeaderLink href="/testimonials">Testimonials</HeaderLink>
+					<HeaderLink href="/books">Books</HeaderLink>
+				</div>
+
 				<HeaderLink href="/about">About</HeaderLink>
 				<HeaderLink href="/blog">Blog</HeaderLink>
 				<HeaderLink href="/contact">Contact</HeaderLink>
