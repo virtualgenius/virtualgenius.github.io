@@ -1,0 +1,58 @@
+---
+interface Props {
+	name: 'check' | 'arrow-right' | 'external-link' | 'chevron-right';
+	class?: string;
+	size?: 'sm' | 'md' | 'lg';
+}
+
+const { name, class: className = '', size = 'md' } = Astro.props;
+
+const sizeClasses = {
+	sm: 'w-4 h-4',
+	md: 'w-5 h-5',
+	lg: 'w-6 h-6',
+};
+
+const icons = {
+	check: {
+		viewBox: '0 0 20 20',
+		path: 'M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z',
+	},
+	'arrow-right': {
+		viewBox: '0 0 20 20',
+		path: 'M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z',
+	},
+	'chevron-right': {
+		viewBox: '0 0 24 24',
+		path: 'M9 5l7 7-7 7',
+		strokeLinecap: 'round',
+		strokeLinejoin: 'round',
+		strokeWidth: '2',
+	},
+	'external-link': {
+		viewBox: '0 0 24 24',
+		path: 'M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14',
+		strokeLinecap: 'round',
+		strokeLinejoin: 'round',
+		strokeWidth: '2',
+	},
+};
+
+const icon = icons[name];
+const isStroke = name === 'chevron-right' || name === 'external-link';
+---
+
+<svg
+	class={`${sizeClasses[size]} ${className}`}
+	fill={isStroke ? 'none' : 'currentColor'}
+	stroke={isStroke ? 'currentColor' : undefined}
+	viewBox={icon.viewBox}
+	xmlns="http://www.w3.org/2000/svg"
+>
+	<path
+		d={icon.path}
+		stroke-linecap={icon.strokeLinecap}
+		stroke-linejoin={icon.strokeLinejoin}
+		stroke-width={icon.strokeWidth}
+	/>
+</svg>

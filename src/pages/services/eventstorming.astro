@@ -4,6 +4,7 @@ import Button from '../../components/Button.astro';
 import Footer from '../../components/Footer.astro';
 import Header from '../../components/Header.astro';
 import Hero from '../../components/Hero.astro';
+import Icon from '../../components/Icon.astro';
 import Section from '../../components/Section.astro';
 import TestimonialCard from '../../components/TestimonialCard.astro';
 
@@ -163,96 +164,155 @@ const description = '2-day facilitated EventStorming workshops for exploring com
 
 		<!-- Case Study -->
 		<Section background="gray">
-			<div class="max-w-5xl mx-auto">
+			<div class="max-w-6xl mx-auto">
 				<div class="text-center mb-12">
 					<p class="text-sm uppercase tracking-wider mb-4 text-vg-red font-semibold">SUCCESS STORY</p>
 					<h2 class="text-3xl md:text-4xl font-bold text-vg-burgundy">Real Results from EventStorming</h2>
 				</div>
 
 				<div class="bg-white rounded-2xl shadow-xl overflow-hidden">
-					<div class="grid grid-cols-1 lg:grid-cols-2 gap-0">
-						<!-- Left: Client Story -->
-						<div class="p-8 lg:p-12">
-							<div class="mb-6">
+					<!-- Full-width Workshop Image -->
+					<div class="relative overflow-hidden bg-vg-gray-dark">
+						<img
+							src="/images/nussbaum-eventstorming.png"
+							alt="Nussbaum EventStorming workshop - digital board showing process flow with sticky notes and participant roles"
+							class="w-full object-contain"
+						/>
+						<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-vg-burgundy-dark/95 to-transparent p-6">
+							<div class="text-white text-center">
+								<p class="text-3xl font-bold mb-1">11 Process Improvements</p>
+								<p class="text-sm opacity-90">Identified in One Workshop</p>
+							</div>
+						</div>
+					</div>
+
+					<!-- Content Below -->
+					<div class="p-8 lg:p-12">
+						<div class="max-w-4xl mx-auto">
+							<div class="mb-8">
 								<h3 class="text-2xl font-bold text-vg-burgundy mb-3">
 									Nussbaum Transportation
 								</h3>
-								<p class="text-vg-gray-dark mb-4 italic">
+								<p class="text-vg-gray-dark mb-4 italic text-lg">
 									"The problem we are tackling is that as Nussbaum has grown, the knowledge of how and why Nussbaum works has been shared in a way that now there are few people who know 'everything'."
 								</p>
 								<p class="text-sm text-vg-gray">— Ben Virkler, IT Team</p>
 							</div>
 
-							<div class="mb-6">
-								<h4 class="text-lg font-semibold text-vg-burgundy mb-3">The Challenge</h4>
-								<p class="text-vg-gray-dark">
-									A growing transportation and logistics company needed to tackle knowledge silos and process inefficiencies as they scaled.
-								</p>
-							</div>
+							<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+								<div>
+									<h4 class="text-lg font-semibold text-vg-burgundy mb-3">The Challenge</h4>
+									<p class="text-vg-gray-dark">
+										A growing transportation and logistics company needed to tackle knowledge silos and process inefficiencies as they scaled.
+									</p>
+								</div>
 
-							<div class="mb-6">
-								<h4 class="text-lg font-semibold text-vg-burgundy mb-3">The Outcome</h4>
-								<p class="text-vg-gray-dark font-semibold mb-3">
-									11 Process Improvement Opportunities Identified
-								</p>
-
-								<div class="space-y-3 text-sm text-vg-gray-dark">
-									<div>
-										<p class="font-semibold text-vg-red mb-1">Streamline Communication:</p>
-										<ul class="ml-4 space-y-1">
-											<li>• Address damage/injury communication gaps</li>
-											<li>• Simplify trip information for drivers</li>
-											<li>• Improve driver pay information system</li>
-											<li>• Enhance visibility into shop equipment work</li>
-											<li>• Reduce email reliance</li>
-										</ul>
-									</div>
-
-									<div>
-										<p class="font-semibold text-vg-red mb-1">Gain Efficiency:</p>
-										<ul class="ml-4 space-y-1">
-											<li>• Eliminate duplicate permit identification work</li>
-											<li>• Automate manual data collection for bidding</li>
-										</ul>
-									</div>
-
-									<div>
-										<p class="font-semibold text-vg-red mb-1">Increase Profitability:</p>
-										<ul class="ml-4 space-y-1">
-											<li>• Streamline 3PL brokered freight pricing</li>
-											<li>• Improve sales visibility into operational costs</li>
-											<li>• Capture missed accessorial charges</li>
-											<li>• Convert 3PL brokered freight to customer spot freight</li>
-										</ul>
-									</div>
+								<div>
+									<h4 class="text-lg font-semibold text-vg-burgundy mb-3">The Outcome</h4>
+									<p class="text-vg-gray-dark font-semibold">
+										11 Process Improvement Opportunities Identified
+									</p>
 								</div>
 							</div>
 
-							<a
-								href="https://dash.nussbaum.com/11-process-improvement-opportunities-identified-at-nussbaum/"
-								target="_blank"
-								rel="noopener noreferrer"
-								class="inline-flex items-center gap-2 text-vg-red hover:text-vg-red-light font-semibold"
-							>
-								Read the Full Case Study
-								<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-									<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-								</svg>
-							</a>
-						</div>
-
-						<!-- Right: Workshop Image -->
-						<div class="relative overflow-hidden bg-vg-gray-dark">
-							<img
-								src="/images/nussbaum-eventstorming.png"
-								alt="Nussbaum EventStorming workshop - digital board showing process flow with sticky notes and participant roles"
-								class="w-full h-full object-cover"
-							/>
-							<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-vg-burgundy-dark/95 to-transparent p-6">
-								<div class="text-white text-center">
-									<p class="text-3xl font-bold mb-1">11 Process Improvements</p>
-									<p class="text-sm opacity-90">Identified in One Workshop</p>
+							<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+								<div>
+									<p class="font-semibold text-vg-red mb-2">Streamline Communication:</p>
+									<ul class="space-y-1 text-sm text-vg-gray-dark">
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Address damage/injury communication gaps</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Simplify trip information for drivers</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Improve driver pay information system</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Enhance visibility into shop equipment work</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Reduce email reliance</span>
+										</li>
+									</ul>
 								</div>
+
+								<div>
+									<p class="font-semibold text-vg-red mb-2">Gain Efficiency:</p>
+									<ul class="space-y-1 text-sm text-vg-gray-dark">
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Eliminate duplicate permit identification work</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Automate manual data collection for bidding</span>
+										</li>
+									</ul>
+								</div>
+
+								<div>
+									<p class="font-semibold text-vg-red mb-2">Increase Profitability:</p>
+									<ul class="space-y-1 text-sm text-vg-gray-dark">
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Streamline 3PL brokered freight pricing</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Improve sales visibility into operational costs</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Capture missed accessorial charges</span>
+										</li>
+										<li class="flex items-start gap-2">
+											<span class="text-vg-red mt-0.5 flex-shrink-0">
+												<Icon name="check" size="sm" />
+											</span>
+											<span>Convert 3PL brokered freight to customer spot freight</span>
+										</li>
+									</ul>
+								</div>
+							</div>
+
+							<div class="text-center">
+								<a
+									href="https://dash.nussbaum.com/11-process-improvement-opportunities-identified-at-nussbaum/"
+									target="_blank"
+									rel="noopener noreferrer"
+									class="inline-flex items-center gap-2 text-vg-red hover:text-vg-red-light font-semibold"
+								>
+									Read the Full Case Study
+									<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+										<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+									</svg>
+								</a>
 							</div>
 						</div>
 					</div>
@@ -273,21 +333,71 @@ const description = '2-day facilitated EventStorming workshops for exploring com
 					<div>
 						<h3 class="text-xl font-semibold mb-4 text-vg-red">Business Experts</h3>
 						<ul class="space-y-2 text-vg-gray-dark">
-							<li>• Product managers</li>
-							<li>• Domain experts</li>
-							<li>• Business analysts</li>
-							<li>• Operations staff</li>
-							<li>• Customer support</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Product managers</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Domain experts</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Business analysts</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Operations staff</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Customer support</span>
+							</li>
 						</ul>
 					</div>
 					<div>
 						<h3 class="text-xl font-semibold mb-4 text-vg-red">Technical Team</h3>
 						<ul class="space-y-2 text-vg-gray-dark">
-							<li>• Software developers</li>
-							<li>• Architects</li>
-							<li>• Technical leads</li>
-							<li>• DevOps engineers</li>
-							<li>• QA/testers</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Software developers</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Architects</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Technical leads</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>DevOps engineers</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>QA/testers</span>
+							</li>
 						</ul>
 					</div>
 				</div>

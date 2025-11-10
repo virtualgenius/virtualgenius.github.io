@@ -3,6 +3,7 @@ import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
+import Icon from '../components/Icon.astro';
 import Section from '../components/Section.astro';
 import { SITE_TITLE } from '../consts';
 
@@ -147,22 +148,77 @@ const description = 'Paul Rayner is a software design consultant, EventStorming 
 					<div class="bg-white p-6 rounded-lg shadow">
 						<h3 class="text-xl font-semibold mb-3 text-vg-red">Conference Topics</h3>
 						<ul class="space-y-2 text-vg-gray-dark">
-							<li>• EventStorming workshop facilitation techniques</li>
-							<li>• Strategic Domain-Driven Design</li>
-							<li>• Context mapping and bounded contexts</li>
-							<li>• Collaborative modeling practices</li>
-							<li>• Legacy system modernization with DDD</li>
-							<li>• Microservices and DDD alignment</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>EventStorming workshop facilitation techniques</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Strategic Domain-Driven Design</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Context mapping and bounded contexts</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Collaborative modeling practices</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Legacy system modernization with DDD</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Microservices and DDD alignment</span>
+							</li>
 						</ul>
 					</div>
 					<div class="bg-white p-6 rounded-lg shadow">
 						<h3 class="text-xl font-semibold mb-3 text-vg-red">Event Types</h3>
 						<ul class="space-y-2 text-vg-gray-dark">
-							<li>• Keynote presentations</li>
-							<li>• Technical deep-dive talks</li>
-							<li>• Hands-on workshops</li>
-							<li>• Panel discussions</li>
-							<li>• Conference organizing and curation</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Keynote presentations</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Technical deep-dive talks</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Hands-on workshops</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Panel discussions</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Conference organizing and curation</span>
+							</li>
 						</ul>
 					</div>
 				</div>
@@ -185,24 +241,34 @@ const description = 'Paul Rayner is a software design consultant, EventStorming 
 						Paul's approach emphasizes:
 					</p>
 					<ul class="space-y-3">
-						<li class="flex items-start">
-							<span class="text-vg-red mr-3 font-bold">•</span>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
 							<span><strong>Collaborative Discovery</strong> - Bringing diverse perspectives together to explore complex domains and discover better solutions</span>
 						</li>
-						<li class="flex items-start">
-							<span class="text-vg-red mr-3 font-bold">•</span>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
 							<span><strong>Strategic Thinking</strong> - Focusing on core domain, bounded contexts, and what truly matters for business success</span>
 						</li>
-						<li class="flex items-start">
-							<span class="text-vg-red mr-3 font-bold">•</span>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
 							<span><strong>Pragmatic Implementation</strong> - Applying DDD patterns where they provide value, not dogmatically</span>
 						</li>
-						<li class="flex items-start">
-							<span class="text-vg-red mr-3 font-bold">•</span>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
 							<span><strong>Continuous Learning</strong> - Evolving models and designs as understanding deepens</span>
 						</li>
-						<li class="flex items-start">
-							<span class="text-vg-red mr-3 font-bold">•</span>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
 							<span><strong>Team Empowerment</strong> - Building capability within teams rather than creating dependency on consultants</span>
 						</li>
 					</ul>
@@ -228,7 +294,10 @@ const description = 'Paul Rayner is a software design consultant, EventStorming 
 						<p class="text-vg-gray-dark mb-4">
 							Visual DDD context mapper with Flow + Strategic views
 						</p>
-						<span class="text-vg-red font-semibold">Learn More →</span>
+						<span class="inline-flex items-center gap-1 text-vg-red font-semibold">
+							Learn More
+							<Icon name="arrow-right" size="sm" />
+						</span>
 					</a>
 					<a
 						href="/products/codecohesion"
@@ -238,7 +307,10 @@ const description = 'Paul Rayner is a software design consultant, EventStorming 
 						<p class="text-vg-gray-dark mb-4">
 							3D visualization for code structure and evolution
 						</p>
-						<span class="text-vg-red font-semibold">Learn More →</span>
+						<span class="inline-flex items-center gap-1 text-vg-red font-semibold">
+							Learn More
+							<Icon name="arrow-right" size="sm" />
+						</span>
 					</a>
 				</div>
 			</div>

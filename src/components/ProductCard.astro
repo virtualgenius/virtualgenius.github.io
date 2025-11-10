@@ -1,5 +1,6 @@
 ---
 import Card from './Card.astro';
+import Icon from './Icon.astro';
 
 interface Props {
 	title: string;
@@ -17,18 +18,21 @@ const { title, description, demoUrl, githubUrl, detailsUrl } = Astro.props;
 	<p class="text-vg-gray-dark mb-6 flex-grow">{description}</p>
 	<div class="flex flex-wrap gap-3">
 		{demoUrl && (
-			<a href={demoUrl} target="_blank" rel="noopener noreferrer" class="text-vg-red hover:text-vg-red-light font-semibold">
-				View Demo →
+			<a href={demoUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold">
+				View Demo
+				<Icon name="arrow-right" size="sm" />
 			</a>
 		)}
 		{githubUrl && (
-			<a href={githubUrl} target="_blank" rel="noopener noreferrer" class="text-vg-gray hover:text-vg-gray-dark font-semibold">
-				GitHub →
+			<a href={githubUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-gray hover:text-vg-gray-dark font-semibold">
+				GitHub
+				<Icon name="arrow-right" size="sm" />
 			</a>
 		)}
 		{detailsUrl && (
-			<a href={detailsUrl} class="text-vg-burgundy hover:text-vg-red font-semibold">
-				Learn More →
+			<a href={detailsUrl} class="inline-flex items-center gap-1 text-vg-burgundy hover:text-vg-red font-semibold">
+				Learn More
+				<Icon name="arrow-right" size="sm" />
 			</a>
 		)}
 	</div>
