@@ -2,14 +2,8 @@
 
 ### MVP LAUNCH
 
-workshops/
-    hero image section is unreadable
-testimonials/
-    Fictitious quotes <- fix these "review all testimonials to ensure they conform to claude guidelines and fix if they don't. follow guidelines - this is very important"
 services/eventstorming/
     Nussbaum - **check with Ben about featuring this**
-
-About page should have compact hero <- "make the about page hero compact like all the rest of the main pages"
 
 Fill out any placeholder images - Google Drive? what is the source of these?
 

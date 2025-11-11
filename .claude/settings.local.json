@@ -1,4 +1,5 @@
 {
+  "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
       "Bash(npm run dev:*)",
@@ -13,7 +14,11 @@
       "Read(//Applications/HandBrake.app/Contents/MacOS/**)",
       "Bash(HandBrakeCLI:*)",
       "Bash(ffprobe:*)",
-      "Bash(curl -L -A \"Mozilla/5.0\" \"https://virtualgenius.com/events\")"
+      "Bash(curl -L -A \"Mozilla/5.0\" \"https://virtualgenius.com/events\")",
+      "Bash(xattr:*)",
+      "Read(//Volumes/FCP_Projects/**)",
+      "Bash(curl:*)",
+      "Bash(ffmpeg:*)"
     ],
     "deny": [],
     "ask": []
