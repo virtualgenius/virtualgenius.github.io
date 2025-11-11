@@ -2,12 +2,15 @@
 
 ### MVP LAUNCH
 
-Delete redundant email addresses above CTAs
-
 services/eventstorming/
     Nussbaum - **check with Ben about featuring this**
 
-Fill out any placeholder images - Google Drive? what is the source of these?
+Images needed:
+    Remote coaching session photo (Zoom + screen share) for coaching page
+    Training workshop photos for training page (currently has no images)
+    Additional hero images for home page carousel (including DDDEU screenshot of Paul coding)
+    In-person EventStorming timelapse video
+    Additional Explore DDD conference photos for About page carousel
 
 Figure out how to move demo apps over to VG.com/...
     Update GH readme's
