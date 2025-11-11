@@ -2,6 +2,8 @@
 
 ### MVP LAUNCH
 
+Delete redundant email addresses above CTAs
+
 services/eventstorming/
     Nussbaum - **check with Ben about featuring this**
 
@@ -17,9 +19,6 @@ Move DNS over from WIX
 
 ### AFTER LAUNCH
 
-Favicon - needs VG logo
-
-Delete redundant email addresses above CTAs
 
 Add BTI360-related content (get permission)
     https://www.bti360.com/hands-on-with-domain-driven-design/
