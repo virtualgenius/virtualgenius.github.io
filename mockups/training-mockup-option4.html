@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Training Page Mockup - Option 4: Classroom Photo as Hero Background</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		@layer utilities {
+			.text-vg-burgundy { color: #5A1F1C; }
+			.text-vg-red { color: #C8342C; }
+			.text-vg-gray-dark { color: #4B5563; }
+			.bg-vg-gray-light { background-color: #F9FAFB; }
+			.bg-vg-burgundy { background-color: #5A1F1C; }
+			.border-vg-red { border-color: #C8342C; }
+		}
+	</style>
+</head>
+<body class="bg-white">
+	<!-- Simple Header -->
+	<header class="bg-vg-burgundy text-white py-4">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<h1 class="text-2xl font-bold">Virtual Genius</h1>
+		</div>
+	</header>
+
+	<!-- ✨ OPTION 4: HERO WITH CLASSROOM PHOTO AS BACKGROUND ✨ -->
+	<section class="relative w-full overflow-hidden" style="min-height: 500px;">
+		<!-- Background Image -->
+		<div class="absolute inset-0 w-full h-full">
+			<img
+				src="../public/images/bti360-classroom-view.jpg"
+				alt="DDD Training Classroom"
+				class="w-full h-full object-cover object-center"
+				style="filter: brightness(0.6);"
+			/>
+			<!-- Dark overlay for text readability -->
+			<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+		</div>
+
+		<!-- Content Overlay -->
+		<div class="relative z-10 flex items-center justify-center py-16 md:py-24 min-h-[500px]">
+			<div class="max-w-screen-xl mx-auto px-6 w-full">
+				<div class="text-center max-w-4xl mx-auto">
+					<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+						DDD Training
+					</h1>
+					<p class="text-2xl md:text-3xl mb-8 text-white/95 drop-shadow-md">
+						Essential and Strategic Domain-Driven Design courses for building better software
+					</p>
+					<a href="#" class="inline-block px-8 py-4 bg-white text-vg-burgundy font-semibold rounded-lg shadow-xl hover:bg-gray-100 transition-colors">
+						Inquire About Training
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Course Offerings Section -->
+	<section class="py-12 md:py-16 bg-white">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				Course Offerings
+			</h2>
+
+			<!-- Essential DDD Card -->
+			<div class="max-w-5xl mx-auto mb-16">
+				<div class="bg-white border-t-4 border-vg-red rounded-lg shadow-lg p-8">
+					<h3 class="text-3xl font-semibold mb-4 text-vg-burgundy">Essential Domain-Driven Design</h3>
+					<p class="text-lg text-vg-gray-dark mb-6">
+						Foundational patterns and practices for applying Domain-Driven Design to your software projects
+					</p>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div>
+							<h4 class="text-xl font-semibold mb-3 text-vg-red">What You'll Learn</h4>
+							<ul class="space-y-2 text-vg-gray-dark">
+								<li>✓ Strategic design and bounded contexts</li>
+								<li>✓ Tactical patterns (Entities, Value Objects, Aggregates)</li>
+								<li>✓ Domain events and event storming</li>
+								<li>✓ Ubiquitous language and model-driven design</li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="text-xl font-semibold mb-3 text-vg-red">Duration</h4>
+							<p class="text-vg-gray-dark">2-3 days (customizable)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Strategic DDD Card -->
+			<div class="max-w-5xl mx-auto">
+				<div class="bg-white border-t-4 border-vg-red rounded-lg shadow-lg p-8">
+					<h3 class="text-3xl font-semibold mb-4 text-vg-burgundy">Strategic Domain-Driven Design</h3>
+					<p class="text-lg text-vg-gray-dark mb-6">
+						Advanced strategic design techniques for modeling complex systems and organizational boundaries
+					</p>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<div>
+							<h4 class="text-xl font-semibold mb-3 text-vg-red">What You'll Learn</h4>
+							<ul class="space-y-2 text-vg-gray-dark">
+								<li>✓ Advanced context mapping strategies</li>
+								<li>✓ Core domain identification</li>
+								<li>✓ Large-scale structure patterns</li>
+							</ul>
+						</div>
+						<div>
+							<h4 class="text-xl font-semibold mb-3 text-vg-red">Duration</h4>
+							<p class="text-vg-gray-dark">2-3 days (customizable)</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Workshop Photos Section -->
+	<section class="py-12 md:py-16 bg-vg-gray-light">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<div class="text-center mb-12">
+				<p class="text-sm uppercase tracking-wider mb-4 text-vg-red font-semibold">
+					LEARNING IN ACTION
+				</p>
+				<h2 class="text-3xl md:text-4xl font-bold text-vg-burgundy">
+					Collaborative Training Sessions
+				</h2>
+			</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
+				<div class="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+					<img
+						src="../public/images/bti360-participants-collaborating.jpg"
+						alt="Workshop participants collaborating"
+						class="w-full h-full object-cover"
+					/>
+				</div>
+				<div class="relative aspect-video rounded-lg overflow-hidden shadow-lg">
+					<img
+						src="../public/images/bti360-paul-teaching.jpg"
+						alt="Paul Rayner teaching DDD concepts"
+						class="w-full h-full object-cover"
+					/>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Note Section -->
+	<section class="py-8 bg-yellow-50 border-y-4 border-yellow-400">
+		<div class="max-w-screen-xl mx-auto px-6 text-center">
+			<p class="text-lg font-bold text-yellow-900">
+				👆 MOCKUP OPTION 4: Classroom photo as hero background with text overlay
+			</p>
+			<p class="text-yellow-800 mt-2">Creates an immersive, cinematic hero that immediately shows a real training environment. The ultrawide format fills the viewport beautifully.</p>
+		</div>
+	</section>
+
+</body>
+</html>
