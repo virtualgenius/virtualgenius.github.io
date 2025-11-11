@@ -51,12 +51,32 @@ const description = 'Paul Rayner is a software design consultant, EventStorming 
 					</div>
 					<div class="flex justify-center">
 						<img
+							id="about-speaking-image"
 							src="/paul-speaking-ddd-europe.jpg"
 							alt="Paul Rayner speaking at DDD Europe conference"
-							class="w-full max-w-md rounded-lg shadow-lg object-cover"
+							class="w-full max-w-md rounded-lg shadow-lg object-cover transition-opacity duration-500"
 							style="aspect-ratio: 3/4; object-position: 35% center;"
 						/>
 					</div>
+					<script>
+						const speakingImages = [
+							'/paul-speaking-ddd-europe.jpg',
+							'/images/paul-speaking-dddeu2023.jpg'
+						];
+						let speakingCurrentIndex = 0;
+						const speakingImgElement = document.getElementById('about-speaking-image');
+
+						setInterval(() => {
+							speakingCurrentIndex = (speakingCurrentIndex + 1) % speakingImages.length;
+							if (speakingImgElement) {
+								speakingImgElement.style.opacity = '0';
+								setTimeout(() => {
+									speakingImgElement.src = speakingImages[speakingCurrentIndex];
+									speakingImgElement.style.opacity = '1';
+								}, 500);
+							}
+						}, 5000);
+					</script>
 				</div>
 			</div>
 		</Section>
@@ -142,7 +162,10 @@ const description = 'Paul Rayner is a software design consultant, EventStorming 
 								'/images/eddd-2018-crowd.png',
 								'/images/eddd-early-bird.jpg',
 								'/images/eddd-2017-workshop-2.jpg',
-								'/images/eddd-2018-workshop-3.jpg'
+								'/images/eddd-2017-workshop-3.jpg',
+								'/images/eddd-2018-workshop-3.jpg',
+								'/images/eddd-2018-workshop-4.jpg',
+								'/images/eddd-2018-workshop-5.jpg'
 							];
 							let currentIndex = 0;
 							const imgElement = document.getElementById('eddd-image');
