@@ -19,21 +19,38 @@ const description = 'What clients say about Virtual Genius EventStorming worksho
 	<body class="bg-white">
 		<Header />
 
-		<!-- Hero -->
-		<Hero size="compact">
-			<div class="max-w-4xl mx-auto text-center">
-				<h1 class="text-4xl md:text-6xl font-bold mb-8 text-vg-burgundy tracking-tight">
-					What Clients Say
-				</h1>
-				<p class="text-xl md:text-2xl text-vg-gray-dark">
-					Anonymous feedback from EventStorming workshops, DDD training, and coaching engagements
-				</p>
-				<div class="mt-8 p-6 bg-vg-gray-light rounded-2xl">
-					<p class="text-3xl font-bold text-vg-burgundy mb-2">9.2/10</p>
-					<p class="text-lg text-vg-gray-dark">Average rating from 583+ workshop participants</p>
+		<!-- Hero with Workshop Background -->
+		<section class="relative w-full overflow-hidden" style="height: 360px;">
+			<!-- Background Image -->
+			<div class="absolute inset-0 w-full h-full">
+				<img
+					src="/images/eddd-2018-workshop-1.jpg"
+					alt="Workshop participants collaborating"
+					class="w-full h-full object-cover"
+					style="filter: brightness(0.6); object-position: center 40%;"
+				/>
+				<!-- Dark overlay for text readability -->
+				<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+			</div>
+
+			<!-- Content Overlay -->
+			<div class="relative z-10 flex items-center justify-center h-full">
+				<div class="max-w-screen-xl mx-auto px-6 w-full">
+					<div class="text-center max-w-4xl mx-auto">
+						<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+							What Clients Say
+						</h1>
+						<p class="text-2xl md:text-3xl mb-6 text-white/95 drop-shadow-md">
+							Anonymous feedback from EventStorming workshops, DDD training, and coaching engagements
+						</p>
+						<div class="mt-4 p-6 bg-black/40 backdrop-blur-sm rounded-2xl inline-block">
+							<p class="text-3xl font-bold text-white mb-2">9.2/10</p>
+							<p class="text-lg text-white/90">Average rating from 580+ workshop participants</p>
+						</div>
+					</div>
 				</div>
 			</div>
-		</Hero>
+		</section>
 
 		<!-- EventStorming Workshops -->
 		<Section>
@@ -54,7 +71,7 @@ const description = 'What clients say about Virtual Genius EventStorming worksho
 					workshop="EventStorming Workshop"
 				/>
 				<TestimonialCard
-					quote="I really liked. It is hard to get engamente in a virtual workshop and you did it very well. Also, it is one of that workshops/training that you can already leave it with ideas of where to apply it. awesome experience."
+					quote="I really liked. It is hard to get engagement in a virtual workshop and you did it very well. Also, it is one of that workshops/training that you can already leave it with ideas of where to apply it. awesome experience."
 					role="Workshop Participant"
 					industry="Technology"
 					rating={10}
@@ -96,14 +113,14 @@ const description = 'What clients say about Virtual Genius EventStorming worksho
 					workshop="Essential DDD"
 				/>
 				<TestimonialCard
-					quote="these sessions were really valuable for me, not only for my work at Xendit, but for my career as a whole. i feel great to be able to see things from a new perspective and gain insights from such a talented teacher."
+					quote="these sessions were really valuable for me, not only for my work at ____, but for my career as a whole. i feel great to be able to see things from a new perspective and gain insights from such a talented teacher."
 					role="Software Developer"
 					industry="Technology"
 					rating={10}
 					workshop="Essential DDD"
 				/>
 				<TestimonialCard
-					quote="Above all, great introduction to DDD - will help me architect and model domains. This class socialized the names of important DDD concepts, and will improve how we talk about DDD within DHI."
+					quote="Above all, great introduction to DDD - will help me architect and model domains. This class socialized the names of important DDD concepts, and will improve how we talk about DDD within ___."
 					role="Workshop Participant"
 					industry="Technology"
 					rating={10}

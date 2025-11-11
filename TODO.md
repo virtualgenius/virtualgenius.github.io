@@ -15,8 +15,6 @@ Images needed:
 Figure out how to move demo apps over to VG.com/...
     Update GH readme's
 
-Add GA to site
-
 Check VG for any other missing content
 Move DNS over from WIX
 

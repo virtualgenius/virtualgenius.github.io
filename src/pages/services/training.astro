@@ -20,20 +20,37 @@ const description = 'Essential and Strategic Domain-Driven Design training cours
 	<body class="bg-white">
 		<Header />
 
-		<!-- Hero -->
-		<Hero size="compact">
-			<div class="text-center max-w-4xl mx-auto">
-				<h1 class="text-4xl md:text-6xl font-bold mb-6 text-vg-burgundy">
-					DDD Training
-				</h1>
-				<p class="text-xl md:text-2xl mb-8 text-vg-gray-dark">
-					Essential and Strategic Domain-Driven Design courses for building better software
-				</p>
-				<Button href="mailto:info@virtualgenius.com" variant="primary">
-					Inquire About Training
-				</Button>
+		<!-- Hero with Classroom Background -->
+		<section class="relative w-full overflow-hidden" style="height: 360px;">
+			<!-- Background Image -->
+			<div class="absolute inset-0 w-full h-full">
+				<img
+					src="/images/bti360-classroom-view.jpg"
+					alt="DDD Training Classroom"
+					class="w-full h-full object-cover"
+					style="filter: brightness(0.6); object-position: center 40%;"
+				/>
+				<!-- Dark overlay for text readability -->
+				<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
 			</div>
-		</Hero>
+
+			<!-- Content Overlay -->
+			<div class="relative z-10 flex items-center justify-center h-full">
+				<div class="max-w-screen-xl mx-auto px-6 w-full">
+					<div class="text-center max-w-4xl mx-auto">
+						<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+							DDD Training
+						</h1>
+						<p class="text-2xl md:text-3xl mb-8 text-white/95 drop-shadow-md">
+							Essential and Strategic Domain-Driven Design courses for building better software
+						</p>
+						<Button href="mailto:info@virtualgenius.com" variant="primary">
+							Inquire About Training
+						</Button>
+					</div>
+				</div>
+			</div>
+		</section>
 
 		<!-- Course Offerings -->
 		<Section>
@@ -127,15 +144,15 @@ const description = 'Essential and Strategic Domain-Driven Design training cours
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
 				<div class="relative aspect-video rounded-lg overflow-hidden shadow-lg">
 					<img
-						src="/images/training-workshop-1.jpg"
-						alt="Workshop participants collaborating during DDD training"
+						src="/images/bti360-participants-collaborating.jpg"
+						alt="Workshop participants collaborating during DDD training at BTI360"
 						class="w-full h-full object-cover"
 					/>
 				</div>
 				<div class="relative aspect-video rounded-lg overflow-hidden shadow-lg">
 					<img
-						src="/images/training-workshop-2.jpg"
-						alt="Hands-on modeling exercises during training session"
+						src="/images/bti360-paul-teaching.jpg"
+						alt="Paul Rayner teaching DDD concepts during BTI360 workshop"
 						class="w-full h-full object-cover"
 					/>
 				</div>
