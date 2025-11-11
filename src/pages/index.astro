@@ -49,15 +49,56 @@ const posts = (await getCollection('blog'))
 
 				<!-- Right: Workshop Visual -->
 				<div class="relative lg:block hidden">
-					<div class="relative transform lg:rotate-2">
+					<div id="hero-container" class="relative transform lg:rotate-2 transition-none">
 						<img
+							id="hero-workshop-image"
 							src="/images/paul-facilitating.jpg"
 							alt="Paul Rayner facilitating an EventStorming workshop"
-							class="w-full aspect-[4/3] object-cover rounded-3xl shadow-2xl border border-white/10"
+							class="w-full aspect-[4/3] object-cover rounded-3xl shadow-2xl border border-white/10 transition-opacity duration-500"
 						/>
 					</div>
 				</div>
 			</div>
+			<script>
+				const heroImages = [
+					'/images/paul-facilitating.jpg',
+					'/images/eddd-workshop.jpg',
+					'/images/dddeu2020-4.jpg',
+					'/images/dddeu2023-talk.png'
+				];
+				let heroCurrentIndex = 0;
+				const heroImgElement = document.getElementById('hero-workshop-image');
+				const heroContainerElement = document.getElementById('hero-container');
+
+				// Debug: check computed transition on container
+				if (heroContainerElement) {
+					const computedStyle = window.getComputedStyle(heroContainerElement);
+					console.log('Container transition property:', computedStyle.transition);
+					console.log('Container transition-property:', computedStyle.transitionProperty);
+					console.log('Container transition-duration:', computedStyle.transitionDuration);
+				}
+
+				setInterval(() => {
+					heroCurrentIndex = (heroCurrentIndex + 1) % heroImages.length;
+					if (heroImgElement && heroContainerElement) {
+						console.log('Starting image change to index:', heroCurrentIndex);
+						heroImgElement.style.opacity = '0';
+
+						// Wait for image to fade out completely, THEN rotate and change image
+						setTimeout(() => {
+							// Alternate rotation direction using inline style (no transition)
+							const rotation = heroCurrentIndex % 2 === 0 ? 'rotate(2deg)' : 'rotate(-2deg)';
+							console.log('Setting rotation to:', rotation);
+							heroContainerElement.style.transform = rotation;
+
+							// Change image immediately and fade in
+							heroImgElement.src = heroImages[heroCurrentIndex];
+							heroImgElement.style.opacity = '1';
+							console.log('Image changed and faded in');
+						}, 500);
+					}
+				}, 5000);
+			</script>
 		</Hero>
 
 		<!-- Services Overview -->
@@ -179,13 +220,34 @@ const posts = (await getCollection('blog'))
 				<div class="relative">
 					<div class="relative transform lg:-rotate-2">
 						<img
-							src="/images/eddd-workshop.jpg"
-							alt="Paul Rayner at Explore DDD conference"
-							class="w-full aspect-video object-cover rounded-3xl shadow-2xl"
+							id="homepage-eddd-image"
+							src="/images/eddd-2017-workshop-1.jpg"
+							alt="Explore DDD conference workshop"
+							class="w-full aspect-video object-cover rounded-3xl shadow-2xl transition-opacity duration-500"
 						/>
 					</div>
 				</div>
 			</div>
+			<script>
+				const homepageImages = [
+					'/images/eddd-2017-workshop-1.jpg',
+					'/images/eddd-2018-workshop-1.jpg',
+					'/images/eddd-2018-workshop-2.jpg'
+				];
+				let homepageCurrentIndex = 0;
+				const homepageImgElement = document.getElementById('homepage-eddd-image');
+
+				setInterval(() => {
+					homepageCurrentIndex = (homepageCurrentIndex + 1) % homepageImages.length;
+					if (homepageImgElement) {
+						homepageImgElement.style.opacity = '0';
+						setTimeout(() => {
+							homepageImgElement.src = homepageImages[homepageCurrentIndex];
+							homepageImgElement.style.opacity = '1';
+						}, 500);
+					}
+				}, 5000);
+			</script>
 		</Section>
 
 		<!-- Open Source Products -->

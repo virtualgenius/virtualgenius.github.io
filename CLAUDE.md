@@ -22,6 +22,29 @@ This is the Virtual Genius company website - a static site for EventStorming & D
 - The remaining quote must still make sense and represent the speaker's point accurately
 - This follows standard AP Style and Chicago Manual of Style guidelines for quotations
 
+## Debugging and Problem-Solving Protocol
+
+**CRITICAL - GATHER DATA, DON'T GUESS:**
+
+When encountering unexpected behavior (especially CSS/JavaScript issues):
+
+1. **Add debug logging first** - Insert console.log statements to capture:
+   - Computed styles (window.getComputedStyle())
+   - Element properties and values
+   - Execution timing and sequence
+   - State changes
+
+2. **Inspect actual browser behavior**:
+   - Check browser console output using dev server
+   - Ask user to share console logs/screenshots
+   - Verify what CSS is actually being applied (not what you assume)
+
+3. **Form hypothesis from data** - Only make changes after understanding root cause from actual data
+
+4. **Never guess at solutions** - Making blind changes wastes time and frustrates users
+
+**Example**: For CSS animation issues, log computed transition properties, timing, and execution order to understand what's actually happening before proposing fixes.
+
 ## Development Commands
 
 ```bash
