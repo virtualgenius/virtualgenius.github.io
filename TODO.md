@@ -1,43 +1,70 @@
 ## TODO
 
+### MVP LAUNCH
+
+workshops/
+    hero image section is unreadable
 testimonials/
-    Fictitious
-    about - Explore DDD photo
+    Fictitious quotes <- fix these "review all testimonials to ensure they conform to claude guidelines and fix if they don't. follow guidelines - this is very important"
+services/eventstorming/
+    Nussbaum - **check with Ben about featuring this**
+
+About page should have compact hero <- "make the about page hero compact like all the rest of the main pages"
+
+Fill out any placeholder images - Google Drive? what is the source of these?
+
+Figure out how to move demo apps over to VG.com/...
+    Update GH readme's
 
 Add GA to site
+
+Check VG for any other missing content
+Move DNS over from WIX
+
+### AFTER LAUNCH
+
+Favicon - needs VG logo
+
+Delete redundant email addresses above CTAs
+
+Add BTI360-related content (get permission)
+    https://www.bti360.com/hands-on-with-domain-driven-design/
+        client description of 1-day Intro to DDD workshop
+        VG/Clients/BTI360/Proposal
+        LI Post: https://www.linkedin.com/posts/bti360_we-had-a-great-time-diving-into-domain-driven-activity-7326323413638156288-6_0N
+
 Add CodeCohesion announcement to blog
-
-https://www.bti360.com/hands-on-with-domain-driven-design/
-    client description of 1-day Intro to DDD workshop
-    VG/Clients/BTI360/Proposal
-    LI Post: https://www.linkedin.com/posts/bti360_we-had-a-great-time-diving-into-domain-driven-activity-7326323413638156288-6_0N
-
 
 still too much vertical space, especially in Mobile (check responsive design). Even in compact hero
 
-About page should have compact hero
-Add more images
-
-services/
-    Fix component border around video
-    coaching and consulting photo?
-
-services/eventstorming
-    Fix Typical 2-Day Workshop Format agenda
-    Nussbaum - check with Ben about featuring this
-    What You'll Need - clarify this (we provide...)
-    testimonials probably fake
-    show timelapse of in-person too
-
-services/facilitation? *****
+Add more images/videos throughout site
+    - EDDD
+    - maybe hero sections?
 
 services/training
     checkbox bullets are badly formatted for workshops
     Custom Workshops are made up
     Get rid of emojis!!!
 
+testimonials/
+    animated areas
+
 services/coaching
     checkbox bullets are badly formatted
+
+services/
+    Fix component border around video
+    coaching and consulting photo?
+
+Add Agentic Flow post to blog, and CTA for coaching - figure this out
+
+services/eventstorming
+    Fix Typical 2-Day Workshop Format agenda
+    What You'll Need - clarify this (we provide...)
+    show timelapse of in-person too
+
+Home page hero
+    Make animated caurosel of several images (include DDDEU screenshot of me coding)
 
 Make email info@virtualgenius.com have a prefilled subject
 
@@ -47,22 +74,10 @@ Books
     Include TOC (or at least topics?)/sample PDF on page?
     Heading has redundant "PUBLICATIONS" text
 
-Favicon - needs VG logo
-
-Check VG 
-Move DNS over from WIX
-Move demo apps over to VG.com/...
-    Update GH readme's
-
-
 Products page
     CTA buttons at the bottom need GH logo
 
 NEW
-
-Add Agentic Flow materials - figure this out
-Add Claude Agents post to blog
-
 
 EventStorming workshop timelapse video in Eventstorming section of the services page has a blank section on the right hand side now. adding debug borders seemed to help.
 
