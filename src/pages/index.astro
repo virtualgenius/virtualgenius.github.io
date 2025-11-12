@@ -28,13 +28,13 @@ const posts = (await getCollection('blog'))
 
 		<!-- Hero Section -->
 		<Hero dark id="main-content">
-			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
 				<!-- Left: Text Content -->
 				<div>
-					<h1 class="text-5xl md:text-7xl font-bold mb-8 text-white tracking-tight leading-tight">
+					<h1 class="text-5xl md:text-7xl font-bold mb-6 md:mb-8 text-white tracking-tight leading-tight">
 						EventStorming & Domain-Driven Design Consulting
 					</h1>
-					<p class="text-2xl md:text-3xl mb-12 text-white/90">
+					<p class="text-2xl md:text-3xl mb-8 md:mb-12 text-white/90">
 						Helping teams build better software through collaborative design and strategic domain modeling
 					</p>
 					<div class="flex flex-col sm:flex-row gap-4">
@@ -156,7 +156,7 @@ const posts = (await getCollection('blog'))
 					workshop="Applied DDD"
 				/>
 			</div>
-			<div class="text-center mt-12">
+			<div class="text-center mt-8 md:mt-12">
 				<p class="text-lg text-vg-gray-dark mb-6">
 					Average rating: <span class="font-bold text-vg-burgundy">9.2/10</span> from 580+ workshop participants
 				</p>
@@ -177,7 +177,7 @@ const posts = (await getCollection('blog'))
 						About Paul Rayner
 					</h2>
 					<p class="text-xl mb-6 text-vg-gray-dark leading-relaxed">
-						Paul Rayner is a seasoned software design consultant, trainer, and founder of Explore DDD. With over 20 years of experience helping organizations tackle complex software challenges, Paul brings deep expertise in EventStorming, Domain-Driven Design, and collaborative modeling.
+						Paul Rayner is a seasoned software design consultant, trainer, and founder of Explore DDD. With over 35 years of experience helping organizations tackle complex software challenges, Paul brings deep expertise in EventStorming, Domain-Driven Design, and collaborative modeling.
 					</p>
 					<p class="text-xl mb-8 text-vg-gray-dark leading-relaxed">
 						His approach combines technical excellence with facilitation skills to help teams discover better solutions together.
@@ -188,12 +188,12 @@ const posts = (await getCollection('blog'))
 				</div>
 
 				<!-- Right: Photo with Steamhaus-style treatment -->
-				<div class="relative lg:sticky lg:top-32">
-					<div class="relative transform lg:rotate-2">
+				<div class="relative lg:sticky lg:top-32 flex justify-center">
+					<div class="relative transform lg:rotate-2 w-2/3">
 						<img
 							src="/images/paul-portrait.jpg"
 							alt="Paul Rayner"
-							class="w-full aspect-[4/5] object-cover rounded-3xl shadow-2xl"
+							class="w-full aspect-[4/3] object-cover rounded-3xl shadow-2xl"
 							loading="lazy"
 						/>
 					</div>

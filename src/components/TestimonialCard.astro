@@ -14,12 +14,12 @@ const { quote, role, industry, rating, workshop, class: className = '' } = Astro
 const stars = Array.from({ length: 10 }, (_, i) => i < rating);
 ---
 
-<div class={`bg-white p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
+<div class={`bg-white p-6 md:p-8 rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300 ${className}`}>
 	<div class="mb-6">
 		<svg class="w-12 h-12 text-vg-red mb-4" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 			<path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
 		</svg>
-		<p class="text-lg md:text-xl text-vg-gray-dark leading-relaxed italic">
+		<p class="text-base md:text-lg text-vg-gray-dark leading-relaxed italic">
 			"{quote}"
 		</p>
 	</div>

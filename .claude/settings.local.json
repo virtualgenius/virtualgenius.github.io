@@ -33,7 +33,9 @@
       "Bash(do [ -f \"$img\" ])",
       "Bash(du:*)",
       "Bash(done)",
-      "Bash(cwebp:*)"
+      "Bash(cwebp:*)",
+      "Bash(npm run build:*)",
+      "Bash(test:*)"
     ],
     "deny": [],
     "ask": []

@@ -4,7 +4,6 @@
 
 **Pre-launch tasks:**
 - Test site thoroughly on mobile/tablet/desktop
-- Verify all links work
 - Test contact email functionality
 
 **DNS Migration:**
