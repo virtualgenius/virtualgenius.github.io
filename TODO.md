@@ -2,18 +2,20 @@
 
 ### MVP LAUNCH
 
-**Pre-launch tasks:**
+**✅ SITE IS LIVE!** - https://virtualgenius.com
 
-**DNS Migration:**
-- Move DNS from Wix to GitHub Pages
-- Add CNAME file to repo
-- Update DNS A records at registrar
-- Enable HTTPS on GitHub Pages
-- Monitor for 24-48 hours after switch
-- Cancel/downgrade Wix after confirmation
+**DNS Migration:** ✅ COMPLETED (Nov 12, 2025)
+- ✅ Move DNS from Wix to GitHub Pages
+- ✅ Add CNAME file to repo
+- ✅ Update DNS A records at registrar (4 GitHub Pages IPs)
+- ✅ Add www CNAME record
+- ✅ Enable HTTPS on GitHub Pages
+- ⏳ Monitor for 24-48 hours after switch (in progress)
+- ⏳ Cancel/downgrade Wix after confirmation (waiting for monitoring period)
 
 **Demo Apps:**
 - Figure out how to move demo apps over to VG.com/...
+  - Current: flow.virtualgenius.com (Heroku) - preserved during migration
 - Update GitHub README files
 
 ---
@@ -38,7 +40,7 @@
 - Explore button has orange hover (verify if intentional or fix)
 
 **Books page:**
-- Consider including TOC or sample PDF
+- ✅ Sample PDFs added (EventStorming Handbook & BDD with Cucumber)
 
 **Email configuration:**
 - Make info@virtualgenius.com have prefilled subject line
