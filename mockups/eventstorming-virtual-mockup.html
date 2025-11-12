@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>EventStorming Page Mockup - Virtual Workshop Image Integration</title>
+	<script src="https://cdn.tailwindcss.com"></script>
+	<style>
+		@layer utilities {
+			.text-vg-burgundy { color: #5A1F1C; }
+			.text-vg-red { color: #C8342C; }
+			.text-vg-gray-dark { color: #4B5563; }
+			.text-vg-gray { color: #6B7280; }
+			.text-vg-amber { color: #F59E0B; }
+			.bg-vg-gray-light { background-color: #F9FAFB; }
+			.bg-vg-burgundy { background-color: #5A1F1C; }
+			.bg-vg-amber\/10 { background-color: rgba(245, 158, 11, 0.1); }
+			.border-vg-red { border-color: #C8342C; }
+			.border-vg-amber { border-color: #F59E0B; }
+		}
+	</style>
+</head>
+<body class="bg-white">
+	<!-- Simple Header -->
+	<header class="bg-vg-burgundy text-white py-4">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<h1 class="text-2xl font-bold">Virtual Genius - EventStorming Workshops</h1>
+		</div>
+	</header>
+
+	<!-- Hero with EventStorming Wall Background -->
+	<section class="relative w-full overflow-hidden" style="height: 360px;">
+		<div class="absolute inset-0 w-full h-full">
+			<img
+				src="../public/images/eventstorming-wall.png"
+				alt="EventStorming wall with sticky notes"
+				class="w-full h-full object-cover"
+				style="filter: brightness(0.6); object-position: center 40%;"
+			/>
+			<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+		</div>
+		<div class="relative z-10 flex items-center justify-center h-full">
+			<div class="max-w-screen-xl mx-auto px-6 w-full">
+				<div class="text-center max-w-4xl mx-auto">
+					<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+						EventStorming Workshops
+					</h1>
+					<p class="text-2xl md:text-3xl mb-8 text-white/95 drop-shadow-md">
+						Facilitated workshops for exploring complex business domains
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- What is EventStorming Section -->
+	<section class="py-12 md:py-16 bg-white">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+				<div>
+					<h2 class="text-3xl md:text-4xl font-bold mb-8 text-vg-burgundy">What is EventStorming?</h2>
+					<p class="text-lg mb-6 text-vg-gray-dark">
+						EventStorming is a rapid, collaborative workshop format for exploring complex business domains. By bringing together business experts and technical team members, EventStorming reveals how your business actually works—not how you think it works.
+					</p>
+					<p class="text-lg mb-6 text-vg-gray-dark">
+						Using colored sticky notes on a long wall, participants model business processes as sequences of domain events, uncovering insights, identifying pain points, and discovering opportunities for improvement.
+					</p>
+					<div class="bg-vg-amber/10 border-l-4 border-vg-amber p-6 rounded">
+						<p class="text-lg text-vg-gray-dark italic">
+							"The goal is not to create perfect documentation—it's to create shared understanding and identify what to build next."
+						</p>
+					</div>
+				</div>
+				<div>
+					<video autoplay loop muted playsinline width="100%" class="rounded-lg shadow-xl">
+						<source src="../public/videos/es-timelapse2-cropped.mp4" type="video/mp4">
+						Your browser does not support the video tag.
+					</video>
+					<p class="text-sm text-vg-gray text-center mt-2 italic">
+						In-person EventStorming workshop timelapse
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- ✨ DELIVERY FORMATS SECTION WITH VIRTUAL WORKSHOP IMAGE ✨ -->
+	<section class="py-12 md:py-16 bg-vg-gray-light">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Delivery Formats
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+				<!-- In-Person Card -->
+				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">In-Person</h3>
+					<p class="text-vg-gray-dark mb-4">
+						2-day intensive format with physical wall space and sticky notes for high-energy collaborative exploration
+					</p>
+					<p class="text-sm text-vg-gray">
+						<strong>Best for:</strong> Co-located teams, greenfield exploration, team building
+					</p>
+				</div>
+
+				<!-- Virtual Card with Image -->
+				<div class="bg-white rounded-lg shadow-lg border-t-4 border-vg-red overflow-hidden">
+					<!-- Image at top -->
+					<div class="relative h-48 overflow-hidden">
+						<img
+							src="virtual-workshop-zoom.png"
+							alt="Virtual EventStorming workshop on Zoom"
+							class="w-full h-full object-cover"
+						/>
+					</div>
+					<!-- Content below -->
+					<div class="p-8">
+						<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">Virtual</h3>
+						<p class="text-vg-gray-dark mb-4">
+							4-6 sessions of 2-3 hours each using Miro collaborative whiteboard and Zoom for distributed teams
+						</p>
+						<p class="text-sm text-vg-gray">
+							<strong>Best for:</strong> Remote teams, complex domains, flexible scheduling
+						</p>
+					</div>
+				</div>
+
+				<!-- Hybrid Card -->
+				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">Hybrid</h3>
+					<p class="text-vg-gray-dark mb-4">
+						Virtual facilitation with team co-located or distributed, using Miro to include all participants
+					</p>
+					<p class="text-sm text-vg-gray">
+						<strong>Best for:</strong> Teams with some remote members
+					</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Yellow Banner Note -->
+	<section class="py-8 bg-yellow-50 border-y-4 border-yellow-400">
+		<div class="max-w-screen-xl mx-auto px-6 text-center">
+			<p class="text-lg font-bold text-yellow-900">
+				👆 MOCKUP: Virtual workshop Zoom image added to the "Virtual" delivery format card
+			</p>
+			<p class="text-yellow-800 mt-2">
+				The image shows an engaged virtual EventStorming workshop with Paul and participants, demonstrating what remote workshops actually look like.
+			</p>
+			<p class="text-yellow-800 mt-2 text-sm">
+				<strong>Alternative placement:</strong> Could also be shown in a separate "Virtual Workshops in Action" section with a larger display.
+			</p>
+		</div>
+	</section>
+
+	<!-- Alternative: Full-Width Virtual Workshop Showcase Section -->
+	<section class="py-12 md:py-16 bg-white">
+		<div class="max-w-screen-xl mx-auto px-6">
+			<div class="text-center mb-12">
+				<p class="text-sm uppercase tracking-wider mb-4 text-vg-red font-semibold">
+					ALTERNATIVE PLACEMENT
+				</p>
+				<h2 class="text-3xl md:text-4xl font-bold text-vg-burgundy">
+					Virtual Workshops in Action
+				</h2>
+				<p class="text-lg text-vg-gray-dark mt-4">
+					Our virtual EventStorming workshops bring the same energy and collaboration as in-person sessions
+				</p>
+			</div>
+			<div class="max-w-4xl mx-auto">
+				<div class="relative rounded-xl overflow-hidden shadow-2xl">
+					<img
+						src="virtual-workshop-zoom.png"
+						alt="Virtual EventStorming workshop with engaged participants"
+						class="w-full"
+					/>
+					<div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6">
+						<p class="text-white text-lg font-semibold">Public EventStorming Workshop - October 2023</p>
+						<p class="text-white/90">Live virtual session with participants from around the world</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Note about Alternative -->
+	<section class="py-8 bg-blue-50 border-y-4 border-blue-400">
+		<div class="max-w-screen-xl mx-auto px-6 text-center">
+			<p class="text-lg font-bold text-blue-900">
+				👆 ALTERNATIVE: Dedicated "Virtual Workshops in Action" section
+			</p>
+			<p class="text-blue-800 mt-2">
+				Gives more prominence to the virtual workshop format with a larger, featured image display.
+			</p>
+		</div>
+	</section>
+
+</body>
+</html>
