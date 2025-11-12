@@ -2,17 +2,6 @@
 
 ### MVP LAUNCH
 
-**Images needed:**
-- Remote coaching session photo (Zoom + screen share) for coaching page
-- Additional hero images for home page carousel (including DDDEU screenshot of Paul coding)
-- In-person EventStorming timelapse video (if available)
-- Additional Explore DDD conference photos for About page carousel
-
-**Content review:**
-- Check VG for any other missing content
-- Verify all service descriptions are complete
-- Review testimonials for placement/completeness
-
 **Pre-launch tasks:**
 - Test site thoroughly on mobile/tablet/desktop
 - Verify all links work
@@ -43,27 +32,17 @@
 - Add CodeCohesion announcement to blog
 - Add Agentic Flow post to blog with CTA for coaching
 
-**Services/training page:**
-- Consider removing emojis (if deemed unprofessional)
-- Review workshop bullet formatting
-
 **Services/coaching page:**
 - Consider adjusting checkbox bullet formatting
 
 **Services/eventstorming page:**
-- Fix Typical 2-Day Workshop Format agenda (if needed)
 - Clarify "What You'll Need" section (what VG provides vs. client provides)
-- Show in-person timelapse if available
 
 **Home page:**
 - Explore button has orange hover (verify if intentional or fix)
 
 **Books page:**
 - Consider including TOC or sample PDF
-- Remove redundant "PUBLICATIONS" heading text (if present)
-
-**Products page:**
-- Add GitHub logo to CTA buttons at bottom
 
 **Email configuration:**
 - Make info@virtualgenius.com have prefilled subject line
@@ -77,12 +56,7 @@
 - Review vertical spacing (especially in mobile view)
 - Check responsive design across all pages
 
-**Additional images/videos:**
-- Add more EventStorming photos throughout
-- Consider more hero section images on various pages
-
 **Services page:**
-- Fix component border around video (if still present)
 - Add coaching and consulting photos
 
 **Testimonials page:**
@@ -91,14 +65,6 @@
 **Contact forms:**
 - Implement functional contact form (vs. mailto link)
 - Set up form handling service
-
-**EventStorming page video debug:**
-- Blank section on right side of timelapse video
-- Debug borders were added to diagnose
-- Video is 1280×1080 but reports as 16:9 aspect ratio
-- Actual ratio: 1.185 ≈ 32:27
-- Cropped ratio (90% width): 1.067 ≈ 16:15
-- May need aspect ratio adjustment in code
 
 ---
 
