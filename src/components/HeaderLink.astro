@@ -12,10 +12,9 @@ const isActive = href === pathname || href === '/' + (subpath?.[0] || '');
 <a
 	href={href}
 	class:list={[
-		'block py-2 md:py-0 text-vg-gray-dark hover:text-vg-red font-medium transition-colors duration-200',
+		'block py-2 md:py-0 text-vg-gray-dark hover:text-vg-red transition-colors duration-200 uppercase tracking-wider text-sm font-normal',
 		{
-			'text-vg-red border-b-2 border-vg-red': isActive,
-			'border-b-2 border-transparent hover:border-vg-red-light': !isActive,
+			'text-vg-red': isActive,
 		},
 	]}
 >

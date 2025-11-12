@@ -19,7 +19,7 @@ import HeaderLink from './HeaderLink.astro';
 			</a>
 
 				<!-- Desktop Navigation -->
-			<div class="hidden md:flex items-center space-x-8">
+			<div class="hidden md:flex items-center flex-1 justify-center gap-10">
 				<HeaderLink href="/services">Services</HeaderLink>
 				<HeaderLink href="/products">Products</HeaderLink>
 				<HeaderLink href="/workshops">Workshops</HeaderLink>
@@ -28,7 +28,7 @@ import HeaderLink from './HeaderLink.astro';
 				<div class="relative" id="resources-dropdown">
 					<button
 						id="resources-button"
-						class="flex items-center gap-1 text-vg-gray-dark hover:text-vg-red transition-colors duration-200 font-medium"
+						class="flex items-center gap-1 text-vg-gray-dark hover:text-vg-red transition-colors duration-200 uppercase tracking-wider text-sm font-normal"
 						aria-expanded="false"
 						aria-haspopup="true"
 						aria-label="Resources menu"
@@ -66,8 +66,16 @@ import HeaderLink from './HeaderLink.astro';
 				</div>
 
 				<HeaderLink href="/about">About</HeaderLink>
-				<HeaderLink href="/contact">Contact</HeaderLink>
 			</div>
+
+			<!-- Contact Button (Far Right) -->
+			<a href="/contact" class="hidden md:flex items-center gap-2 px-6 py-2 border-2 border-vg-gray-dark text-vg-gray-dark hover:border-vg-red hover:text-vg-red transition-colors duration-200 rounded uppercase tracking-wider text-sm font-normal">
+				Contact
+				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+					<polyline points="15 10 20 15 15 20" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					<path d="M4 4v7a4 4 0 0 0 4 4h12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+				</svg>
+			</a>
 
 			<!-- Mobile Menu Button -->
 			<button
@@ -98,7 +106,13 @@ import HeaderLink from './HeaderLink.astro';
 				</div>
 
 				<HeaderLink href="/about">About</HeaderLink>
-				<HeaderLink href="/contact">Contact</HeaderLink>
+				<a href="/contact" class="flex items-center justify-center gap-2 py-2 px-6 my-2 border-2 border-vg-gray-dark text-vg-gray-dark hover:border-vg-red hover:text-vg-red transition-colors duration-200 rounded uppercase tracking-wider text-sm font-normal">
+					Contact
+					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+						<polyline points="15 10 20 15 15 20" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+						<path d="M4 4v7a4 4 0 0 0 4 4h12" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+					</svg>
+				</a>
 			</div>
 		</div>
 	</nav>
