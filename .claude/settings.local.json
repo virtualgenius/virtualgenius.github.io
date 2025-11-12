@@ -18,7 +18,13 @@
       "Bash(curl -s https://www.bti360.com/hands-on-with-domain-driven-design/)",
       "Bash(curl:*)",
       "Bash(mkdir:*)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Read(//Users/paul/Documents/consulting-media/**)",
+      "Bash(md5:*)",
+      "Bash(npx @anthropic-ai/mcp-client-cli list-tools)",
+      "Bash(env)",
+      "Bash(sort:*)",
+      "Bash(awk:*)"
     ],
     "deny": [],
     "ask": []
