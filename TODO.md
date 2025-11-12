@@ -2,6 +2,12 @@
 
 ### MVP LAUNCH
 
+**Content migration from old site:**
+- ✅ Migrate articles (Featured Articles now on Books page)
+- ✅ Migrate podcast appearances (all added to Speaking page)
+- ✅ Add missing conference talks (SATURN 2017, YOW! Melbourne/Perth 2016)
+- ✅ UX audit and accessibility improvements completed
+
 **Pre-launch tasks:**
 - Test site thoroughly on mobile/tablet/desktop
 - Verify all links work
