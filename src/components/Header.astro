@@ -17,28 +17,39 @@ import HeaderLink from './HeaderLink.astro';
 				<HeaderLink href="/workshops">Workshops</HeaderLink>
 
 				<!-- Resources Dropdown -->
-				<div class="relative group">
-					<button class="flex items-center gap-1 text-vg-gray-dark hover:text-vg-red transition-colors duration-200 font-medium">
+				<div class="relative" id="resources-dropdown">
+					<button
+						id="resources-button"
+						class="flex items-center gap-1 text-vg-gray-dark hover:text-vg-red transition-colors duration-200 font-medium"
+						aria-expanded="false"
+						aria-haspopup="true"
+						aria-label="Resources menu"
+					>
 						Resources
-						<svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+						<svg id="resources-arrow" class="w-4 h-4 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
 							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
 						</svg>
 					</button>
-					<div class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+					<div
+						id="resources-menu"
+						class="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-xl opacity-0 invisible transition-all duration-200 z-50"
+						role="menu"
+						aria-labelledby="resources-button"
+					>
 						<div class="py-2">
-							<a href="/speaking" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors">
+							<a href="/speaking" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors focus:bg-vg-gray-light focus:text-vg-red focus:outline-none" role="menuitem">
 								<div class="font-semibold">Speaking</div>
 								<div class="text-sm opacity-75">Conference talks & workshops</div>
 							</a>
-							<a href="/blog" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors">
+							<a href="/blog" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors focus:bg-vg-gray-light focus:text-vg-red focus:outline-none" role="menuitem">
 								<div class="font-semibold">Blog</div>
 								<div class="text-sm opacity-75">Articles & insights</div>
 							</a>
-							<a href="/testimonials" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors">
+							<a href="/testimonials" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors focus:bg-vg-gray-light focus:text-vg-red focus:outline-none" role="menuitem">
 								<div class="font-semibold">Testimonials</div>
 								<div class="text-sm opacity-75">Client feedback & ratings</div>
 							</a>
-							<a href="/books" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors">
+							<a href="/books" class="block px-4 py-3 text-vg-gray-dark hover:bg-vg-gray-light hover:text-vg-red transition-colors focus:bg-vg-gray-light focus:text-vg-red focus:outline-none" role="menuitem">
 								<div class="font-semibold">Books</div>
 								<div class="text-sm opacity-75">Published guides & handbooks</div>
 							</a>
@@ -86,10 +97,105 @@ import HeaderLink from './HeaderLink.astro';
 </header>
 
 <script>
+	// Mobile menu toggle
 	const mobileMenuButton = document.getElementById('mobile-menu-button');
 	const mobileMenu = document.getElementById('mobile-menu');
 
 	mobileMenuButton?.addEventListener('click', () => {
 		mobileMenu?.classList.toggle('hidden');
+	});
+
+	// Resources dropdown with keyboard navigation
+	const resourcesButton = document.getElementById('resources-button');
+	const resourcesMenu = document.getElementById('resources-menu');
+	const resourcesArrow = document.getElementById('resources-arrow');
+	const menuItems = resourcesMenu?.querySelectorAll('[role="menuitem"]');
+	let isOpen = false;
+	let currentIndex = -1;
+
+	function openMenu() {
+		isOpen = true;
+		resourcesMenu?.classList.remove('opacity-0', 'invisible');
+		resourcesMenu?.classList.add('opacity-100', 'visible');
+		resourcesArrow?.classList.add('rotate-180');
+		resourcesButton?.setAttribute('aria-expanded', 'true');
+	}
+
+	function closeMenu() {
+		isOpen = false;
+		resourcesMenu?.classList.add('opacity-0', 'invisible');
+		resourcesMenu?.classList.remove('opacity-100', 'visible');
+		resourcesArrow?.classList.remove('rotate-180');
+		resourcesButton?.setAttribute('aria-expanded', 'false');
+		currentIndex = -1;
+	}
+
+	function focusMenuItem(index: number) {
+		if (menuItems && index >= 0 && index < menuItems.length) {
+			(menuItems[index] as HTMLElement).focus();
+			currentIndex = index;
+		}
+	}
+
+	// Button click and keyboard events
+	resourcesButton?.addEventListener('click', (e) => {
+		e.stopPropagation();
+		if (isOpen) {
+			closeMenu();
+		} else {
+			openMenu();
+		}
+	});
+
+	resourcesButton?.addEventListener('keydown', (e) => {
+		if (e.key === 'Enter' || e.key === ' ') {
+			e.preventDefault();
+			if (isOpen) {
+				closeMenu();
+			} else {
+				openMenu();
+				focusMenuItem(0);
+			}
+		} else if (e.key === 'ArrowDown') {
+			e.preventDefault();
+			if (!isOpen) {
+				openMenu();
+			}
+			focusMenuItem(0);
+		} else if (e.key === 'Escape') {
+			closeMenu();
+			resourcesButton?.focus();
+		}
+	});
+
+	// Menu keyboard navigation
+	resourcesMenu?.addEventListener('keydown', (e) => {
+		if (e.key === 'ArrowDown') {
+			e.preventDefault();
+			const nextIndex = currentIndex < (menuItems?.length || 0) - 1 ? currentIndex + 1 : 0;
+			focusMenuItem(nextIndex);
+		} else if (e.key === 'ArrowUp') {
+			e.preventDefault();
+			const prevIndex = currentIndex > 0 ? currentIndex - 1 : (menuItems?.length || 0) - 1;
+			focusMenuItem(prevIndex);
+		} else if (e.key === 'Escape') {
+			e.preventDefault();
+			closeMenu();
+			resourcesButton?.focus();
+		} else if (e.key === 'Tab') {
+			closeMenu();
+		}
+	});
+
+	// Hover behavior (maintain for mouse users)
+	const dropdown = document.getElementById('resources-dropdown');
+	dropdown?.addEventListener('mouseenter', openMenu);
+	dropdown?.addEventListener('mouseleave', closeMenu);
+
+	// Close on click outside
+	document.addEventListener('click', (e) => {
+		if (isOpen && !dropdown?.contains(e.target as Node)) {
+			closeMenu();
+		}
 	});
 </script>

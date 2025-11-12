@@ -105,7 +105,7 @@ const posts = (await getCollection('blog'))
 		<!-- Services Overview -->
 		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">Services</h2>
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 				<ServiceCard
 					title="EventStorming Workshops"
 					description="Facilitated sessions for exploring complex business domains—in-person, virtual, or hybrid"
@@ -139,7 +139,7 @@ const posts = (await getCollection('blog'))
 				<p class="text-sm uppercase tracking-wider mb-4 text-vg-red font-semibold">CLIENT FEEDBACK</p>
 				<h2 class="text-3xl md:text-4xl font-bold text-vg-burgundy">What Clients Say</h2>
 			</div>
-			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
 				<TestimonialCard
 					quote="Paul certainly knew his material. He broke down processes in such a way that both technical/non-technical employees were able to digest the same material and apply it to their domain ... The course was intended to enhance the symbiotic relationship between business and tech and that it did."
 					role="Workshop Participant"
@@ -285,7 +285,7 @@ const posts = (await getCollection('blog'))
 		{posts.length > 0 && (
 			<Section background="gray">
 				<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">Recent Writing</h2>
-				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+				<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
 					{posts.map((post) => (
 						<BlogPostCard
 							title={post.data.title}

@@ -56,32 +56,26 @@ const description = 'Visualize code cohesion and architectural evolution. Open-s
 			</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
 				<div class="bg-white p-6 rounded-lg border-2 border-vg-red">
-					<div class="text-3xl mb-4">🌍</div>
 					<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">3D Spatial Visualization</h3>
 					<p class="text-vg-gray-dark">Solar system metaphor for intuitive architecture understanding</p>
 				</div>
 				<div class="bg-white p-6 rounded-lg border-2 border-vg-red">
-					<div class="text-3xl mb-4">⏱️</div>
 					<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Live Timeline Playback</h3>
 					<p class="text-vg-gray-dark">Watch your codebase evolve commit-by-commit</p>
 				</div>
 				<div class="bg-white p-6 rounded-lg border-2 border-vg-red">
-					<div class="text-3xl mb-4">🔗</div>
 					<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Cohesion Analysis</h3>
 					<p class="text-vg-gray-dark">Detect bounded contexts through temporal coupling</p>
 				</div>
 				<div class="bg-white p-6 rounded-lg border-2 border-vg-red">
-					<div class="text-3xl mb-4">🎯</div>
 					<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">DDD-Focused</h3>
 					<p class="text-vg-gray-dark">Built for Domain-Driven Design and monolith decomposition</p>
 				</div>
 				<div class="bg-white p-6 rounded-lg border-2 border-vg-red">
-					<div class="text-3xl mb-4">🚀</div>
 					<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Open Source</h3>
 					<p class="text-vg-gray-dark">Free, transparent, extensible</p>
 				</div>
 				<div class="bg-white p-6 rounded-lg border-2 border-vg-red">
-					<div class="text-3xl mb-4">🌐</div>
 					<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Browser-Based</h3>
 					<p class="text-vg-gray-dark">No installation, runs anywhere</p>
 				</div>
@@ -106,11 +100,26 @@ const description = 'Visualize code cohesion and architectural evolution. Open-s
 						CodeCohesion turns git history into an interactive 3D visualization that reveals:
 					</p>
 					<ul class="space-y-3 text-lg text-vg-gray-dark">
-						<li><strong>🔗 Cohesion Patterns</strong> - Which files belong together (bounded contexts)</li>
-						<li><strong>🔥 Coupling Hotspots</strong> - Files that change together frequently</li>
-						<li><strong>🏗️ Architecture</strong> - Hierarchical structure at a glance</li>
-						<li><strong>⏳ Evolution</strong> - How your codebase grew and changed over time</li>
-						<li><strong>👥 Ownership</strong> - Who works on what parts of the code</li>
+						<li class="flex items-start gap-2">
+							<Icon name="check" class="text-vg-red mt-1 flex-shrink-0" />
+							<span><strong>Cohesion Patterns</strong> - Which files belong together (bounded contexts)</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<Icon name="check" class="text-vg-red mt-1 flex-shrink-0" />
+							<span><strong>Coupling Hotspots</strong> - Files that change together frequently</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<Icon name="check" class="text-vg-red mt-1 flex-shrink-0" />
+							<span><strong>Architecture</strong> - Hierarchical structure at a glance</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<Icon name="check" class="text-vg-red mt-1 flex-shrink-0" />
+							<span><strong>Evolution</strong> - How your codebase grew and changed over time</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<Icon name="check" class="text-vg-red mt-1 flex-shrink-0" />
+							<span><strong>Ownership</strong> - Who works on what parts of the code</span>
+						</li>
 					</ul>
 				</div>
 			</div>
@@ -121,31 +130,31 @@ const description = 'Visualize code cohesion and architectural evolution. Open-s
 			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">Use Cases</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<div class="bg-vg-gray-light p-6 rounded-lg">
-					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">📚 DDD & Bounded Contexts</h3>
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">DDD & Bounded Contexts</h3>
 					<p class="text-vg-gray-dark">
 						Discover natural domain boundaries through cohesion analysis
 					</p>
 				</div>
 				<div class="bg-vg-gray-light p-6 rounded-lg">
-					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">🔍 Monolith Decomposition</h3>
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Monolith Decomposition</h3>
 					<p class="text-vg-gray-dark">
 						Identify where to split based on temporal coupling
 					</p>
 				</div>
 				<div class="bg-vg-gray-light p-6 rounded-lg">
-					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">🎓 Developer Onboarding</h3>
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Developer Onboarding</h3>
 					<p class="text-vg-gray-dark">
 						Give new team members a visual architectural tour
 					</p>
 				</div>
 				<div class="bg-vg-gray-light p-6 rounded-lg">
-					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">📽️ Retrospectives</h3>
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Retrospectives</h3>
 					<p class="text-vg-gray-dark">
 						Watch timeline playback of how features evolved
 					</p>
 				</div>
 				<div class="bg-vg-gray-light p-6 rounded-lg">
-					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">💰 Technical Debt</h3>
+					<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Technical Debt</h3>
 					<p class="text-vg-gray-dark">
 						Find legacy hotspots and coupling issues
 					</p>

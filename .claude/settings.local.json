@@ -24,7 +24,16 @@
       "Bash(npx @anthropic-ai/mcp-client-cli list-tools)",
       "Bash(env)",
       "Bash(sort:*)",
-      "Bash(awk:*)"
+      "Bash(awk:*)",
+      "Bash(git log:*)",
+      "Bash(ls:*)",
+      "Bash(for img in \"bti360-participants-modeling-close.jpg\" \"training-workshop-1.jpg\" \"training-workshop-2.jpg\" \"bti360-paul-teaching-flipchart.jpg\")",
+      "Bash(do echo \"=== $img ===\" grep -r \"$img\" src/pages --include=\"*.astro\")",
+      "Bash(for img in public/images/*.jpg public/images/*.png)",
+      "Bash(do [ -f \"$img\" ])",
+      "Bash(du:*)",
+      "Bash(done)",
+      "Bash(cwebp:*)"
     ],
     "deny": [],
     "ask": []

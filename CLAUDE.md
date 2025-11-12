@@ -22,6 +22,38 @@ This is the Virtual Genius company website - a static site for EventStorming & D
 - The remaining quote must still make sense and represent the speaker's point accurately
 - This follows standard AP Style and Chicago Manual of Style guidelines for quotations
 
+## Visual Design Guidelines
+
+**CRITICAL - PROFESSIONAL APPEARANCE:**
+
+1. **NO EMOJIS ALLOWED** - Emojis are not professional and must NEVER be used anywhere on the site
+   - Use custom SVG icons from [src/components/Icon.astro](src/components/Icon.astro) instead
+   - All icons must be consistent with brand styling
+   - Available icons: check, arrow-right, external-link, chevron-right, github, office, laptop, refresh
+   - To add new icons: extend the Icon.astro component with properly styled SVGs
+
+2. **Image Optimization Requirements**:
+   - All images must be web-optimized before use
+   - Hero images: Maximum 300KB, preferably WebP format
+   - Card images: Maximum 150KB
+   - Use Astro's `<Image>` component for automatic optimization when possible
+   - Implement lazy loading for images below the fold
+   - Provide responsive srcsets for different screen sizes
+
+3. **Icon Consistency**:
+   - Always use the Icon component for UI icons
+   - Maintain consistent sizing: `sm` (w-4 h-4), `md` (w-5 h-5), `lg` (w-6 h-6)
+   - Use brand colors for icon fills: `text-vg-red`, `text-vg-burgundy`, etc.
+   - Ensure all decorative SVGs have `aria-hidden="true"`
+   - Ensure all functional icons have proper ARIA labels
+
+4. **Accessibility Standards**:
+   - All interactive elements must be keyboard accessible
+   - All images must have descriptive alt text
+   - All icon-only buttons must have `aria-label` attributes
+   - Color contrast must meet WCAG AA standards (4.5:1 for text)
+   - Focus states must be clearly visible
+
 ## Debugging and Problem-Solving Protocol
 
 **CRITICAL - GATHER DATA, DON'T GUESS:**
