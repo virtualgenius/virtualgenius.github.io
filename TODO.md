@@ -3,8 +3,6 @@
 ### MVP LAUNCH
 
 **Pre-launch tasks:**
-- Test site thoroughly on mobile/tablet/desktop
-- Test contact email functionality
 
 **DNS Migration:**
 - Move DNS from Wix to GitHub Pages
