@@ -2,88 +2,132 @@
 
 ### MVP LAUNCH
 
-services/eventstorming/
-    Nussbaum - **check with Ben about featuring this**
+**Images needed:**
+- Remote coaching session photo (Zoom + screen share) for coaching page
+- Additional hero images for home page carousel (including DDDEU screenshot of Paul coding)
+- In-person EventStorming timelapse video (if available)
+- Additional Explore DDD conference photos for About page carousel
 
-Images needed:
-    Remote coaching session photo (Zoom + screen share) for coaching page
-    Training workshop photos for training page (currently has no images)
-    Additional hero images for home page carousel (including DDDEU screenshot of Paul coding)
-    In-person EventStorming timelapse video
-    Additional Explore DDD conference photos for About page carousel
+**Content review:**
+- Check VG for any other missing content
+- Verify all service descriptions are complete
+- Review testimonials for placement/completeness
 
-Figure out how to move demo apps over to VG.com/...
-    Update GH readme's
+**Pre-launch tasks:**
+- Test site thoroughly on mobile/tablet/desktop
+- Verify all links work
+- Test contact email functionality
+- Run accessibility audit
 
-Check VG for any other missing content
-Move DNS over from WIX
+**DNS Migration:**
+- Move DNS from Wix to GitHub Pages
+- Add CNAME file to repo
+- Update DNS A records at registrar
+- Enable HTTPS on GitHub Pages
+- Monitor for 24-48 hours after switch
+- Cancel/downgrade Wix after confirmation
+
+**Demo Apps:**
+- Figure out how to move demo apps over to VG.com/...
+- Update GitHub README files
+
+---
 
 ### AFTER LAUNCH
 
+**Content additions:**
+- Add BTI360-related content (get permission first)
+  - Client description of 1-day Intro to DDD workshop
+  - Reference: https://www.bti360.com/hands-on-with-domain-driven-design/
+  - LinkedIn post: https://www.linkedin.com/posts/bti360_we-had-a-great-time-diving-into-domain-driven-activity-7326323413638156288-6_0N
+- Add CodeCohesion announcement to blog
+- Add Agentic Flow post to blog with CTA for coaching
 
-Add BTI360-related content (get permission)
-    https://www.bti360.com/hands-on-with-domain-driven-design/
-        client description of 1-day Intro to DDD workshop
-        VG/Clients/BTI360/Proposal
-        LI Post: https://www.linkedin.com/posts/bti360_we-had-a-great-time-diving-into-domain-driven-activity-7326323413638156288-6_0N
+**Services/training page:**
+- Consider removing emojis (if deemed unprofessional)
+- Review workshop bullet formatting
 
-Add CodeCohesion announcement to blog
+**Services/coaching page:**
+- Consider adjusting checkbox bullet formatting
 
-still too much vertical space, especially in Mobile (check responsive design). Even in compact hero
+**Services/eventstorming page:**
+- Fix Typical 2-Day Workshop Format agenda (if needed)
+- Clarify "What You'll Need" section (what VG provides vs. client provides)
+- Show in-person timelapse if available
 
-Add more images/videos throughout site
-    - EDDD
-    - maybe hero sections?
+**Home page:**
+- Explore button has orange hover (verify if intentional or fix)
 
-services/training
-    checkbox bullets are badly formatted for workshops
-    Custom Workshops are made up
-    Get rid of emojis!!!
+**Books page:**
+- Consider including TOC or sample PDF
+- Remove redundant "PUBLICATIONS" heading text (if present)
 
-testimonials/
-    animated areas
+**Products page:**
+- Add GitHub logo to CTA buttons at bottom
 
-services/coaching
-    checkbox bullets are badly formatted
+**Email configuration:**
+- Make info@virtualgenius.com have prefilled subject line
 
-services/
-    Fix component border around video
-    coaching and consulting photo?
+**Newsletter:**
+- Set up newsletter platform (ConvertKit/Beehiiv/Substack)
+- Integrate signup form on site
+- Plan publishing cadence
 
-Add Agentic Flow post to blog, and CTA for coaching - figure this out
+**Mobile optimization:**
+- Review vertical spacing (especially in mobile view)
+- Check responsive design across all pages
 
-services/eventstorming
-    Fix Typical 2-Day Workshop Format agenda
-    What You'll Need - clarify this (we provide...)
-    show timelapse of in-person too
+**Additional images/videos:**
+- Add more EventStorming photos throughout
+- Consider more hero section images on various pages
 
-Home page hero
-    Make animated caurosel of several images (include DDDEU screenshot of me coding)
+**Services page:**
+- Fix component border around video (if still present)
+- Add coaching and consulting photos
 
-Make email info@virtualgenius.com have a prefilled subject
+**Testimonials page:**
+- Add animated areas (if desired)
 
-Home page
-    Explore Button has orange hover
-Books
-    Include TOC (or at least topics?)/sample PDF on page?
-    Heading has redundant "PUBLICATIONS" text
+**Contact forms:**
+- Implement functional contact form (vs. mailto link)
+- Set up form handling service
 
-Products page
-    CTA buttons at the bottom need GH logo
+**EventStorming page video debug:**
+- Blank section on right side of timelapse video
+- Debug borders were added to diagnose
+- Video is 1280×1080 but reports as 16:9 aspect ratio
+- Actual ratio: 1.185 ≈ 32:27
+- Cropped ratio (90% width): 1.067 ≈ 16:15
+- May need aspect ratio adjustment in code
 
-NEW
+---
 
-EventStorming workshop timelapse video in Eventstorming section of the services page has a blank section on the right hand side now. adding debug borders seemed to help.
+### FUTURE ENHANCEMENTS
 
-    debug borders:
-    Red border = container boundary (what we're trying to size correctly)
-    Blue border = video element boundary (the actual video scaled and shifted)
-    Check the page now. This will show us:
-    If the video is overflowing the container on the right
-    If the container itself is creating the blank space
-    Whether the aspect ratio calculation is correct
-    Also tell me: Can you check the video file properties? What's the original resolution and aspect ratio of /videos/eventstorming-timelapse.mp4?
+**Case studies:**
+- Expand with more client success stories (anonymized where needed)
 
-    Used FFprobe
-    The video is 1280×1080 but reports as 16:9 aspect ratio. Let me calculate the actual aspect ratio: 1280/1080 = 1.185 ≈ 32:27 (not 16:9!) So when we crop to show 90% of width:
-    Cropped ratio: 1.185 × 0.9 = 1.067 ≈ 16:15
+**SEO:**
+- Submit sitemap to Google Search Console
+- Update Google Business Profile (if exists)
+- Reach out to sites linking to old Wix URL for updates
+
+**Social media:**
+- Update LinkedIn profile link
+- Update Twitter/X bio link
+- Update conference speaker profiles
+
+**Analytics:**
+- Set up conversion tracking
+- Monitor traffic sources monthly
+- Track contact form submissions
+
+**Products:**
+- Define open core monetization strategy
+- Launch Pro tiers when ready
+- Add documentation/getting started guides
+
+**Platform integration:**
+- Booking calendar integration
+- Payment processing for workshops
+- Customer portal for clients
