@@ -1,4 +1,5 @@
 ---
+import ArticleCard from '../components/ArticleCard.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
@@ -170,6 +171,34 @@ const description = 'Books by Paul Rayner on EventStorming, Domain-Driven Design
 						/>
 					</div>
 				</div>
+			</div>
+		</Section>
+
+		<!-- Featured Articles -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">Featured Articles</h2>
+			<p class="text-lg text-vg-gray-dark mb-12 text-center max-w-3xl mx-auto">
+				In-depth articles on Domain-Driven Design patterns, refactoring techniques, and collaborative modeling practices.
+			</p>
+			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+				<ArticleCard
+					title="DDD in Practice"
+					publication="InfoQ eMag"
+					description="Refactoring to a Deeper Model - chapter in InfoQ's Domain-Driven Design ebook compilation"
+					url="https://www.infoq.com/minibooks/emag-domain-driven-design/"
+				/>
+				<ArticleCard
+					title="Refactoring to a Deeper Model"
+					publication="InfoQ"
+					description="There are three levels of refactorings: Code-level, micro refactorings; Refactoring to patterns; and refactoring to a deeper model"
+					url="https://www.infoq.com/articles/refactoring-deeper-model/"
+				/>
+				<ArticleCard
+					title="Domain-Driven Design as a Centered Set"
+					publication="DDD Europe - The First 15 Years"
+					description="Guest article exploring DDD as a centered set in the DDD Europe 15 Years retrospective ebook"
+					url="https://dddeurope.com/15years/"
+				/>
 			</div>
 		</Section>
 
