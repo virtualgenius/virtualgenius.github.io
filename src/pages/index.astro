@@ -27,7 +27,7 @@ const posts = (await getCollection('blog'))
 		<Header />
 
 		<!-- Hero Section -->
-		<Hero dark>
+		<Hero dark id="main-content">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 				<!-- Left: Text Content -->
 				<div>
@@ -60,45 +60,39 @@ const posts = (await getCollection('blog'))
 				</div>
 			</div>
 			<script>
-				const heroImages = [
-					'/images/paul-facilitating.jpg',
-					'/images/eddd-workshop.jpg',
-					'/images/dddeu2020-4.jpg',
-					'/images/dddeu2023-talk.png',
-					'/images/bti360-participants-collaborating.jpg'
-				];
-				let heroCurrentIndex = 0;
-				const heroImgElement = document.getElementById('hero-workshop-image');
-				const heroContainerElement = document.getElementById('hero-container');
+				// Check for reduced motion preference
+				const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-				// Debug: check computed transition on container
-				if (heroContainerElement) {
-					const computedStyle = window.getComputedStyle(heroContainerElement);
-					console.log('Container transition property:', computedStyle.transition);
-					console.log('Container transition-property:', computedStyle.transitionProperty);
-					console.log('Container transition-duration:', computedStyle.transitionDuration);
+				if (!prefersReducedMotion) {
+					const heroImages = [
+						'/images/paul-facilitating.jpg',
+						'/images/eddd-workshop.jpg',
+						'/images/dddeu2020-4.jpg',
+						'/images/dddeu2023-talk.png',
+						'/images/bti360-participants-collaborating.jpg'
+					];
+					let heroCurrentIndex = 0;
+					const heroImgElement = document.getElementById('hero-workshop-image');
+					const heroContainerElement = document.getElementById('hero-container');
+
+					setInterval(() => {
+						heroCurrentIndex = (heroCurrentIndex + 1) % heroImages.length;
+						if (heroImgElement && heroContainerElement) {
+							heroImgElement.style.opacity = '0';
+
+							// Wait for image to fade out completely, THEN rotate and change image
+							setTimeout(() => {
+								// Alternate rotation direction using inline style (no transition)
+								const rotation = heroCurrentIndex % 2 === 0 ? 'rotate(2deg)' : 'rotate(-2deg)';
+								heroContainerElement.style.transform = rotation;
+
+								// Change image immediately and fade in
+								heroImgElement.src = heroImages[heroCurrentIndex];
+								heroImgElement.style.opacity = '1';
+							}, 500);
+						}
+					}, 5000);
 				}
-
-				setInterval(() => {
-					heroCurrentIndex = (heroCurrentIndex + 1) % heroImages.length;
-					if (heroImgElement && heroContainerElement) {
-						console.log('Starting image change to index:', heroCurrentIndex);
-						heroImgElement.style.opacity = '0';
-
-						// Wait for image to fade out completely, THEN rotate and change image
-						setTimeout(() => {
-							// Alternate rotation direction using inline style (no transition)
-							const rotation = heroCurrentIndex % 2 === 0 ? 'rotate(2deg)' : 'rotate(-2deg)';
-							console.log('Setting rotation to:', rotation);
-							heroContainerElement.style.transform = rotation;
-
-							// Change image immediately and fade in
-							heroImgElement.src = heroImages[heroCurrentIndex];
-							heroImgElement.style.opacity = '1';
-							console.log('Image changed and faded in');
-						}, 500);
-					}
-				}, 5000);
 			</script>
 		</Hero>
 
@@ -200,6 +194,7 @@ const posts = (await getCollection('blog'))
 							src="/images/paul-portrait.jpg"
 							alt="Paul Rayner"
 							class="w-full aspect-[4/5] object-cover rounded-3xl shadow-2xl"
+							loading="lazy"
 						/>
 					</div>
 				</div>
@@ -231,32 +226,38 @@ const posts = (await getCollection('blog'))
 							src="/images/eddd-2017-workshop-1.jpg"
 							alt="Explore DDD conference workshop"
 							class="w-full aspect-video object-cover rounded-3xl shadow-2xl transition-opacity duration-500"
+							loading="lazy"
 						/>
 					</div>
 				</div>
 			</div>
 			<script>
-				const homepageImages = [
-					'/images/eddd-2017-workshop-1.jpg',
-					'/images/eddd-2017-workshop-3.jpg',
-					'/images/eddd-2018-workshop-1.jpg',
-					'/images/eddd-2018-workshop-2.jpg',
-					'/images/eddd-2018-workshop-4.jpg',
-					'/images/eddd-2018-workshop-5.jpg'
-				];
-				let homepageCurrentIndex = 0;
-				const homepageImgElement = document.getElementById('homepage-eddd-image');
+				// Check for reduced motion preference
+				const prefersReducedMotionHomepage = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-				setInterval(() => {
-					homepageCurrentIndex = (homepageCurrentIndex + 1) % homepageImages.length;
-					if (homepageImgElement) {
-						homepageImgElement.style.opacity = '0';
-						setTimeout(() => {
-							homepageImgElement.src = homepageImages[homepageCurrentIndex];
-							homepageImgElement.style.opacity = '1';
-						}, 500);
-					}
-				}, 5000);
+				if (!prefersReducedMotionHomepage) {
+					const homepageImages = [
+						'/images/eddd-2017-workshop-1.jpg',
+						'/images/eddd-2017-workshop-3.jpg',
+						'/images/eddd-2018-workshop-1.jpg',
+						'/images/eddd-2018-workshop-2.jpg',
+						'/images/eddd-2018-workshop-4.jpg',
+						'/images/eddd-2018-workshop-5.jpg'
+					];
+					let homepageCurrentIndex = 0;
+					const homepageImgElement = document.getElementById('homepage-eddd-image');
+
+					setInterval(() => {
+						homepageCurrentIndex = (homepageCurrentIndex + 1) % homepageImages.length;
+						if (homepageImgElement) {
+							homepageImgElement.style.opacity = '0';
+							setTimeout(() => {
+								homepageImgElement.src = homepageImages[homepageCurrentIndex];
+								homepageImgElement.style.opacity = '1';
+							}, 500);
+						}
+					}, 5000);
+				}
 			</script>
 		</Section>
 

@@ -1,0 +1,41 @@
+---
+import Icon from './Icon.astro';
+---
+
+<button
+	id="back-to-top"
+	class="fixed bottom-6 right-6 z-40 p-3 bg-vg-red text-white rounded-full shadow-lg opacity-0 invisible transition-all duration-300 hover:bg-vg-red-light hover:scale-110 focus:outline-none focus:ring-2 focus:ring-vg-red focus:ring-offset-2"
+	aria-label="Back to top"
+>
+	<svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+		<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+	</svg>
+</button>
+
+<script>
+	const backToTopButton = document.getElementById('back-to-top');
+
+	function toggleBackToTop() {
+		if (window.scrollY > 300) {
+			backToTopButton?.classList.remove('opacity-0', 'invisible');
+			backToTopButton?.classList.add('opacity-100', 'visible');
+		} else {
+			backToTopButton?.classList.add('opacity-0', 'invisible');
+			backToTopButton?.classList.remove('opacity-100', 'visible');
+		}
+	}
+
+	// Show/hide on scroll
+	window.addEventListener('scroll', toggleBackToTop);
+
+	// Scroll to top on click
+	backToTopButton?.addEventListener('click', () => {
+		window.scrollTo({
+			top: 0,
+			behavior: 'smooth'
+		});
+	});
+
+	// Initial check
+	toggleBackToTop();
+</script>

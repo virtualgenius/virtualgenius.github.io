@@ -1,0 +1,33 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+	items: { label: string; href?: string }[];
+}
+
+const { items } = Astro.props;
+---
+
+<nav aria-label="Breadcrumb" class="max-w-screen-xl mx-auto px-6 py-4">
+	<ol class="flex items-center gap-2 text-sm text-vg-gray-dark">
+		{items.map((item, index) => (
+			<li class="flex items-center gap-2">
+				{index > 0 && (
+					<Icon name="chevron-right" size="sm" class="text-vg-gray" aria-hidden="true" />
+				)}
+				{item.href ? (
+					<a
+						href={item.href}
+						class="hover:text-vg-red transition-colors"
+					>
+						{item.label}
+					</a>
+				) : (
+					<span class="font-semibold text-vg-burgundy" aria-current="page">
+						{item.label}
+					</span>
+				)}
+			</li>
+		))}
+	</ol>
+</nav>

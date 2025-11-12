@@ -3,6 +3,14 @@ import { SITE_TITLE } from '../consts';
 import HeaderLink from './HeaderLink.astro';
 ---
 
+<!-- Skip to main content link for screen readers -->
+<a
+	href="#main-content"
+	class="sr-only focus:not-sr-only focus:absolute focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-vg-red focus:text-white focus:rounded focus:shadow-lg"
+>
+	Skip to main content
+</a>
+
 <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">
 	<nav class="max-w-screen-xl mx-auto px-6 py-4">
 		<div class="flex items-center justify-between">
