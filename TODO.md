@@ -6,7 +6,6 @@
 - Test site thoroughly on mobile/tablet/desktop
 - Verify all links work
 - Test contact email functionality
-- Run accessibility audit
 
 **DNS Migration:**
 - Move DNS from Wix to GitHub Pages
