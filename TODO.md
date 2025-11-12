@@ -18,6 +18,10 @@
   - Current: flow.virtualgenius.com (Heroku) - preserved during migration
 - Update GitHub README files
 
+Nussbaum
+
+- get approval from Ben Virkler for case study
+
 ---
 
 ### AFTER LAUNCH
@@ -30,18 +34,6 @@
 - Add CodeCohesion announcement to blog
 - Add Agentic Flow post to blog with CTA for coaching
 
-**Services/coaching page:**
-- Consider adjusting checkbox bullet formatting
-
-**Services/eventstorming page:**
-- Clarify "What You'll Need" section (what VG provides vs. client provides)
-
-**Home page:**
-- Explore button has orange hover (verify if intentional or fix)
-
-**Books page:**
-- ✅ Sample PDFs added (EventStorming Handbook & BDD with Cucumber)
-
 **Email configuration:**
 - Make info@virtualgenius.com have prefilled subject line
 
@@ -50,19 +42,13 @@
 - Integrate signup form on site
 - Plan publishing cadence
 
-**Mobile optimization:**
-- Review vertical spacing (especially in mobile view)
-- Check responsive design across all pages
-
-**Services page:**
-- Add coaching and consulting photos
-
-**Testimonials page:**
-- Add animated areas (if desired)
-
 **Contact forms:**
 - Implement functional contact form (vs. mailto link)
 - Set up form handling service
+
+**Blog**
+- Updated team flow EventStorming blog post
+- New context mapping blog post
 
 ---
 
@@ -74,12 +60,6 @@
 **SEO:**
 - Submit sitemap to Google Search Console
 - Update Google Business Profile (if exists)
-- Reach out to sites linking to old Wix URL for updates
-
-**Social media:**
-- Update LinkedIn profile link
-- Update Twitter/X bio link
-- Update conference speaker profiles
 
 **Analytics:**
 - Set up conversion tracking
@@ -93,5 +73,3 @@
 
 **Platform integration:**
 - Booking calendar integration
-- Payment processing for workshops
-- Customer portal for clients
