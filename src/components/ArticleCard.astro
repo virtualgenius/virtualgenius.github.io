@@ -9,8 +9,8 @@ interface Props {
 const { title, description, url, publication } = Astro.props;
 ---
 
-<div class="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-	<div class="p-6">
+<div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+	<div class="p-6 relative">
 		<div class="flex items-center gap-2 mb-3">
 			<span class="bg-vg-red text-white text-xs font-semibold px-3 py-1 rounded-full">
 				Article
@@ -18,7 +18,14 @@ const { title, description, url, publication } = Astro.props;
 		</div>
 
 		<h3 class="text-xl font-bold text-vg-burgundy mb-2">
-			{title}
+			<a
+				href={url}
+				target="_blank"
+				rel="noopener noreferrer"
+				class="after:absolute after:inset-0 hover:text-vg-red transition-colors"
+			>
+				{title}
+			</a>
 		</h3>
 
 		{publication && (
@@ -32,17 +39,12 @@ const { title, description, url, publication } = Astro.props;
 		</p>
 
 		<div class="mt-4 pt-4 border-t border-vg-gray-light">
-			<a
-				href={url}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="text-vg-red hover:text-vg-red-light font-semibold text-sm inline-flex items-center gap-2"
-			>
+			<span class="text-vg-red group-hover:text-vg-red-light font-semibold text-sm inline-flex items-center gap-2 pointer-events-none" aria-hidden="true">
 				Read Article
 				<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
 					<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
 				</svg>
-			</a>
+			</span>
 		</div>
 	</div>
 </div>

@@ -1,17 +1,14 @@
 ---
 interface Props {
 	class?: string;
-	href?: string;
 }
 
-const { class: className = '', href } = Astro.props;
+const { class: className = '' } = Astro.props;
 
 const baseStyles = 'bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200';
 const accentStyles = 'border-t-4 border-vg-red';
-
-const Component = href ? 'a' : 'div';
 ---
 
-<Component href={href} class={`${baseStyles} ${accentStyles} ${className} p-6`}>
+<div class={`${baseStyles} ${accentStyles} ${className} p-6`}>
 	<slot />
-</Component>
+</div>

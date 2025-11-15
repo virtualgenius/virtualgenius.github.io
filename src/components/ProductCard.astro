@@ -18,19 +18,19 @@ const { title, description, demoUrl, githubUrl, detailsUrl } = Astro.props;
 	<p class="text-vg-gray-dark mb-6 flex-grow">{description}</p>
 	<div class="flex flex-wrap gap-3">
 		{demoUrl && (
-			<a href={demoUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold">
+			<a href={demoUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold py-2">
 				View Demo
 				<Icon name="arrow-right" size="sm" />
 			</a>
 		)}
 		{githubUrl && (
-			<a href={githubUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-gray hover:text-vg-gray-dark font-semibold">
+			<a href={githubUrl} target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-gray hover:text-vg-gray-dark font-semibold py-2">
 				GitHub
 				<Icon name="arrow-right" size="sm" />
 			</a>
 		)}
 		{detailsUrl && (
-			<a href={detailsUrl} class="inline-flex items-center gap-1 text-vg-burgundy hover:text-vg-red font-semibold">
+			<a href={detailsUrl} class="inline-flex items-center gap-1 text-vg-burgundy hover:text-vg-red font-semibold py-2">
 				Learn More
 				<Icon name="arrow-right" size="sm" />
 			</a>

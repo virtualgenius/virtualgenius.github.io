@@ -54,6 +54,13 @@ This is the Virtual Genius company website - a static site for EventStorming & D
    - Color contrast must meet WCAG AA standards (4.5:1 for text)
    - Focus states must be clearly visible
 
+5. **Clickable Card Pattern** (WCAG AAA 44×44px touch targets):
+   - Single-action cards: Use stretched link pattern - `<h3><a href="..." class="after:absolute after:inset-0">Title</a></h3>` with `relative` on container
+   - Keep "Learn More" text as visual indicator with `pointer-events-none aria-hidden="true"`
+   - Multi-action cards: Separate links with `py-2` minimum padding
+   - NEVER wrap entire card in `<a>` tag (screen reader accessibility issue)
+   - See ServiceCard.astro, BlogPostCard.astro for reference implementation
+
 ## Debugging and Problem-Solving Protocol
 
 **CRITICAL - GATHER DATA, DON'T GUESS:**
