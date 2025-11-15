@@ -1,0 +1,97 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Icon from '../components/Icon.astro';
+import Section from '../components/Section.astro';
+import { SITE_TITLE } from '../consts';
+
+const title = `Page Not Found | ${SITE_TITLE}`;
+const description = 'The page you are looking for could not be found.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<Section>
+			<div class="text-center max-w-3xl mx-auto py-16">
+				<h1 class="text-6xl md:text-8xl font-bold mb-6 text-vg-burgundy">404</h1>
+				<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Page Not Found</h2>
+				<p class="text-xl mb-12 text-vg-gray-dark">
+					The page you're looking for doesn't exist or has been moved. We recently redesigned our website, so some URLs have changed.
+				</p>
+
+				<div class="bg-vg-gray-light rounded-lg p-8 mb-12">
+					<h3 class="text-2xl font-bold mb-6 text-vg-burgundy">Try one of these pages instead:</h3>
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-4 text-left">
+						<a href="/" class="flex items-start gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow duration-200">
+							<span class="text-vg-red mt-1">
+								<Icon name="chevron-right" size="sm" />
+							</span>
+							<div>
+								<div class="font-semibold text-vg-burgundy">Home</div>
+								<div class="text-sm text-vg-gray-dark">EventStorming & DDD consulting</div>
+							</div>
+						</a>
+						<a href="/services" class="flex items-start gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow duration-200">
+							<span class="text-vg-red mt-1">
+								<Icon name="chevron-right" size="sm" />
+							</span>
+							<div>
+								<div class="font-semibold text-vg-burgundy">Services</div>
+								<div class="text-sm text-vg-gray-dark">Training, facilitation & coaching</div>
+							</div>
+						</a>
+						<a href="/workshops" class="flex items-start gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow duration-200">
+							<span class="text-vg-red mt-1">
+								<Icon name="chevron-right" size="sm" />
+							</span>
+							<div>
+								<div class="font-semibold text-vg-burgundy">Workshops</div>
+								<div class="text-sm text-vg-gray-dark">Public EventStorming & DDD workshops</div>
+							</div>
+						</a>
+						<a href="/books" class="flex items-start gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow duration-200">
+							<span class="text-vg-red mt-1">
+								<Icon name="chevron-right" size="sm" />
+							</span>
+							<div>
+								<div class="font-semibold text-vg-burgundy">Books</div>
+								<div class="text-sm text-vg-gray-dark">The EventStorming Handbook & more</div>
+							</div>
+						</a>
+						<a href="/about" class="flex items-start gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow duration-200">
+							<span class="text-vg-red mt-1">
+								<Icon name="chevron-right" size="sm" />
+							</span>
+							<div>
+								<div class="font-semibold text-vg-burgundy">About</div>
+								<div class="text-sm text-vg-gray-dark">About Paul Rayner</div>
+							</div>
+						</a>
+						<a href="/contact" class="flex items-start gap-3 p-4 bg-white rounded-lg hover:shadow-md transition-shadow duration-200">
+							<span class="text-vg-red mt-1">
+								<Icon name="chevron-right" size="sm" />
+							</span>
+							<div>
+								<div class="font-semibold text-vg-burgundy">Contact</div>
+								<div class="text-sm text-vg-gray-dark">Get in touch</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<p class="text-vg-gray-dark">
+					Need help finding something? <a href="mailto:info@virtualgenius.com" class="text-vg-red hover:underline font-semibold">Contact us</a>
+				</p>
+			</div>
+		</Section>
+
+		<Footer />
+	</body>
+</html>
