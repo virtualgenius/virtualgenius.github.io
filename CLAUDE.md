@@ -33,28 +33,39 @@ This is the Virtual Genius company website - a static site for EventStorming & D
    - To add new icons: extend the Icon.astro component with properly styled SVGs
 
 2. **Image Optimization Requirements**:
-   - All images must be web-optimized before use
-   - Hero images: Maximum 300KB, preferably WebP format
+   - All images must be in WebP format
+   - Hero images: Maximum 300KB
    - Card images: Maximum 150KB
    - Use Astro's `<Image>` component for automatic optimization when possible
    - Implement lazy loading for images below the fold
    - Provide responsive srcsets for different screen sizes
 
-3. **Icon Consistency**:
+3. **Image Conversion from HEIC (CRITICAL)**:
+   - HEIC files contain EXIF orientation metadata that must be preserved
+   - `sips` does NOT auto-rotate when converting HEIC→PNG
+   - **Required process**:
+     1. Read EXIF orientation: `exiftool -Orientation -b file.HEIC`
+     2. Convert to PNG: `sips -s format png file.HEIC --out temp.png`
+     3. Apply rotation if needed: `sips -r 180 temp.png` (when orientation=3)
+     4. Convert to WebP: `cwebp -q 85 temp.png -o output.webp`
+   - EXIF orientation values: 1=normal, 3=rotate 180°, 6=rotate 90° CW, 8=rotate 90° CCW
+   - See `/tmp/convert_adaconf.sh` for reference implementation
+
+4. **Icon Consistency**:
    - Always use the Icon component for UI icons
    - Maintain consistent sizing: `sm` (w-4 h-4), `md` (w-5 h-5), `lg` (w-6 h-6)
    - Use brand colors for icon fills: `text-vg-red`, `text-vg-burgundy`, etc.
    - Ensure all decorative SVGs have `aria-hidden="true"`
    - Ensure all functional icons have proper ARIA labels
 
-4. **Accessibility Standards**:
+5. **Accessibility Standards**:
    - All interactive elements must be keyboard accessible
    - All images must have descriptive alt text
    - All icon-only buttons must have `aria-label` attributes
    - Color contrast must meet WCAG AA standards (4.5:1 for text)
    - Focus states must be clearly visible
 
-5. **Clickable Card Pattern** (WCAG AAA 44×44px touch targets):
+6. **Clickable Card Pattern** (WCAG AAA 44×44px touch targets):
    - Single-action cards: Use stretched link pattern - `<h3><a href="..." class="after:absolute after:inset-0">Title</a></h3>` with `relative` on container
    - Keep "Learn More" text as visual indicator with `pointer-events-none aria-hidden="true"`
    - Multi-action cards: Separate links with `py-2` minimum padding
@@ -150,6 +161,42 @@ Automated via GitHub Actions ([.github/workflows/deploy.yml](.github/workflows/d
 - Builds with Node 20 (`npm ci && npm run build`)
 - Deploys `./dist/` to GitHub Pages
 
+### Pre-Deployment Verification Protocol
+
+**MANDATORY CHECKS - Before ANY commit or push:**
+
+1. **Build Verification**:
+   - Run `npm run build` and verify it completes without errors
+   - NEVER commit or push if build fails
+
+2. **Runtime Verification**:
+   - Start dev server (`npm run dev`)
+   - Manually verify all affected pages render correctly
+   - Check browser DevTools console for errors (must be zero errors)
+
+3. **Content Changes Checklist**:
+   - All image files exist at specified paths
+   - All images are WebP format and under size limits (hero: 300KB, cards: 150KB)
+   - All video files exist in `/public/videos/` before referencing
+   - All internal links point to valid pages
+   - All external links are tested and work
+
+4. **Code Changes Checklist**:
+   - TypeScript compilation succeeds with no errors
+   - No console errors in browser
+   - No runtime exceptions
+   - Responsive behavior verified (mobile/tablet/desktop)
+
+5. **Common Build Failures**:
+   - Missing images referenced in blog posts (check paths carefully)
+   - Malformed frontmatter in content collections
+   - Invalid MDX syntax in blog posts
+   - TypeScript type errors
+   - Import path errors
+   - Missing or incorrect heroImage paths
+
+**If ANY check fails, fix the issue before committing. Never push broken code.**
+
 ## Content Guidelines
 
 When creating blog posts or events, follow the schema defined in [src/content.config.ts](src/content.config.ts). Use existing content in `src/content/blog/` as templates.
@@ -164,10 +211,12 @@ When creating blog posts or events, follow the schema defined in [src/content.co
 ### Video Blog Posts: Hero Images
 
 - Videos: `/public/videos/`
-- Hero images: `/src/assets/`
-- Extract frame: `ffmpeg -ss {midpoint} -i {video} -vframes 1 -q:v 2 {output.jpg}`
-- Get duration: `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 {video}`
-- Hero image path: `'../../assets/{filename}.jpg'`
+- Hero images: `/src/assets/` in WebP format
+- Extract frame and convert to WebP:
+  1. Get duration: `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 {video}`
+  2. Extract frame at midpoint: `ffmpeg -ss {midpoint} -i {video} -vframes 1 -q:v 2 /tmp/{output}.jpg`
+  3. Convert to WebP: `cwebp -q 85 /tmp/{output}.jpg -o {output}.webp`
+- Hero image path: `'../../assets/{filename}.webp'`
 
 ### Video Accessibility (W3C WCAG 2.1 Compliance)
 
