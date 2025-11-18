@@ -168,10 +168,25 @@ When creating blog posts or events, follow the schema defined in [src/content.co
 - Extract frame: `ffmpeg -ss {midpoint} -i {video} -vframes 1 -q:v 2 {output.jpg}`
 - Get duration: `ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 {video}`
 - Hero image path: `'../../assets/{filename}.jpg'`
-- Video embed:
-  ```html
-  <video controls width="100%" style="max-width: 800px; margin: 2rem auto; display: block;">
-    <source src="/videos/{filename}.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  ```
+
+### Video Accessibility (W3C WCAG 2.1 Compliance)
+
+**Required attributes for all embedded videos:**
+- `controls` - Required by WCAG 2.1 SC 2.2.2 (Pause, Stop, Hide) so users can control playback
+- `aria-label="Detailed description of visual content"` - Required for screen reader accessibility; describe what viewers see
+- `muted` - Required if using `autoplay` (browsers block unmuted autoplay)
+- `playsinline` - Prevents fullscreen on mobile devices
+
+**Do NOT add:**
+- Visible text captions above videos - redundant with aria-label and clutters design
+- `.vtt` description tracks - unnecessary for short promotional/timelapse videos
+
+**Example:**
+```html
+<video controls autoplay loop muted playsinline
+       aria-label="Timelapse of workshop participants collaborating on EventStorming, placing sticky notes on a wall and discussing domain events"
+       width="100%" style="max-width: 800px; margin: 2rem auto; display: block;">
+  <source src="/videos/{filename}.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+```
