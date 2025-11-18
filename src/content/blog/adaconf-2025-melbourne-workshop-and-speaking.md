@@ -5,7 +5,7 @@ pubDate: 'Nov 17 2025'
 heroImage: '../../assets/adaconf-2025-workshop.jpg'
 ---
 
-Last week, I had the privilege of running an EventStorming workshop with [Andrea Magnorsky](https://www.linkedin.com/in/magnorsky) and leading a "Baking Domain Concepts Into Code" 2hr hands-on session at [ADAConf 2025](https://adaconf.org) in Melbourne. The experience reminded me why I love this work - bringing people together to discover how collaborative modeling creates something special that no individual working alone can achieve.
+Last week, I had the privilege of running an EventStorming workshop with [Andrea Magnorsky](https://www.linkedin.com/in/magnorsky) and leading a "Baking Domain Concepts Into Code" 2-hour hands-on session at [ADAConf 2025](https://adaconf.org) in Melbourne. The experience reminded me why I love this work - bringing people together to discover how collaborative modeling creates something special that no individual working alone can achieve.
 
 ## Thursday: Full-Day EventStorming Workshop
 
@@ -30,6 +30,12 @@ Some key moments:
   Your browser does not support the video tag.
 </video>
 
+The EventStorming workshop reinforced some core truths about effective software design:
+
+- **Collaboration beats individual brilliance.** The best insights came from diverse perspectives working together, not from any single expert.
+- **Visualization creates shared understanding.** Putting domain events on a timeline made complexity tangible and discussable.
+- **An incremental approach builds confidence.** By introducing only one concept/practice at a time, participants never felt lost and stayed confident throughout the workshop.
+
 ## Friday: ADAConf Hands-On Session
 
 [ADAConf's](https://adaconf.org) theme this year was "Architectural Change" - perfectly aligned with EventStorming's strength in helping teams understand and respond to change in their organizations. My 2-hour hands-on session focused on practical techniques for connecting domain modeling using EventStorming with baking design concepts deeply into code.
@@ -47,12 +53,18 @@ Another participant called it [their biggest takeaway](https://www.linkedin.com/
 
 > "My absolute biggest takeaway? The event storming workshop with Paul Rayner. It was a masterclass in demonstrating the immense power of integrating domain concepts into code, drastically improving readability, maintainability, and testability. This is something I'm excited to implement more broadly!"
 
-Rather than just presenting concepts, we worked through exercises that participants could take back to their teams. The conference's focus on socio-technical systems thinking, evolutionary architecture, and collaborative design made it an ideal venue for exploring how EventStorming bridges technical and organizational change and baking domain concepts into code creates software that is more amenable to supporting that change.
+Rather than just presenting concepts, we worked through exercises that participants could take back to their teams. The conference's focus on socio-technical systems thinking, evolutionary architecture, and collaborative design made it an ideal venue for exploring how EventStorming helps teams navigate technical and organizational change, and baking domain concepts into code creates software that is more amenable to supporting that change.
+
+## Communities Matter
+
+The Australian DDD community's commitment to learning and sharing creates opportunities for everyone to grow.
 
 The Australian DDD community is vibrant and engaged. [ADAConf](https://adaconf.org), which grew out of the Domain-Driven Design Australia meetup, exemplifies what happens when a community focuses on building software that's:
 - More valuable for users and owners
 - More pleasant for builders and maintainers
 - More collaborative in conception and design
+
+Thanks to everyone who attended the workshop, came to my [ADAConf](https://adaconf.org) session, and made this first Australian teaching experience memorable. Special thanks to the conference organizers — [Chris Simon](https://www.linkedin.com/in/chrissimon-au/), [Sonal Premi](https://www.linkedin.com/in/sonalpremi/), and [Alicia Cheah](https://www.linkedin.com/in/aliciacheah/) — and volunteers for creating such a welcoming venue for the community. The energy and curiosity of the Melbourne software community has me already looking forward to returning.
 
 ## Coming to APAC: Virtual Workshop in December
 
@@ -60,29 +72,17 @@ If you're in the APAC region and want this kind of hands-on learning experience,
 
 **December 2-5, 2025**
 4 sessions × 3 hours each
-$1,650 USD
 
 This intensive 12-hour virtual workshop covers:
+
 - Big Picture EventStorming for discovering domain knowledge and system boundaries
 - Process Modeling EventStorming for detailed workflow analysis and bottleneck identification
 - Software Design techniques for applying EventStorming to feature discovery, design, and architecture decisions
 
 The format is the same camera-on, participatory style that has worked so well in past virtual workshops. Small cohorts ensure direct interaction and personalized feedback. No prior EventStorming or DDD experience required.
 
-[Register for APAC Workshop →](https://ti.to/EDDD/eventstorming-facilitation-virtual-workshop-dec-2025)
-
-## Lessons from Down Under
-
-Melbourne reinforced some core truths about effective software design:
-
-**Collaboration beats individual brilliance.** The best insights came from diverse perspectives working together, not from any single expert.
-
-**Visualization creates shared understanding.** Putting domain events on a timeline made complexity tangible and discussable.
-
-**Practice builds confidence.** Participants who were hesitant at first became confident participants by the end of the workshop.
-
-**Communities matter.** The Australian DDD community's commitment to learning and sharing creates opportunities for everyone to grow.
-
-Thanks to everyone who attended the workshop, came to my [ADAConf](https://adaconf.org) session, and made this first Australian teaching experience memorable. Special thanks to the conference organizers—Chris Simon, Sonal Premi, and Alicia Cheah—for creating such a welcoming venue for the community. The energy and curiosity of the Melbourne software community has me already looking forward to returning.
+<div style="text-align: center; margin: 2rem 0;">
+  <a href="https://ti.to/EDDD/eventstorming-facilitation-virtual-workshop-dec-2025" class="inline-block px-6 py-3 bg-vg-red font-semibold rounded-lg transition-colors duration-200 no-underline" style="color: white !important; text-decoration: none !important; background-color: #C8342C;">Register for APAC Workshop</a>
+</div>
 
 **Interested in EventStorming for your team?** Whether you want to bring a workshop to your organization or attend a future public session, I'd love to discuss your challenges. [Contact me via email →](mailto:info@virtualgenius.com)
