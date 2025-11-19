@@ -239,3 +239,31 @@ When creating blog posts or events, follow the schema defined in [src/content.co
   Your browser does not support the video tag.
 </video>
 ```
+
+## CTA (Call-to-Action) Guidelines
+
+**Anti-Pattern - Redundant Text:**
+❌ Body text: "Get in touch to discuss..." + Button: "Get in Touch"
+✅ Body text: "Contact us to discuss your needs" + Button: "Schedule a Call"
+
+**Anti-Pattern - Redundant Mechanisms:**
+❌ Email address display + Email button (both do same thing)
+❌ Multiple buttons for same action
+✅ Single clear CTA per action (one button OR one email link, not both)
+
+**Rules:**
+1. **Never repeat** the same phrase in body text and button text
+2. **Never show multiple CTAs** for the same action (remove redundant email/phone displays above buttons)
+3. **Body text** = what they'll discuss (specific value)
+4. **Button text** = concrete action verb (Schedule, Contact, Explore, View)
+
+**Component Standards:**
+- Primary CTAs: Use `<Button>` component (not raw `<a>` tags)
+- Card CTAs: Use stretched link pattern from ServiceCard.astro/BlogPostCard.astro
+- Arrows: Use `<Icon name="arrow-right">` (not inline SVG)
+
+**Card CTA Text (Standard):**
+- Service/info cards: "Learn More"
+- Blog posts: "Read More"
+- Products: "View Demo", "View Details"
+- Coaching/engagement: "Get Started"
