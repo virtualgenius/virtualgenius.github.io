@@ -79,6 +79,7 @@ const { title, dates, format, description, registrationUrl, price, duration, tar
 			target="_blank"
 			rel="noopener noreferrer"
 			class="inline-block w-full text-center px-6 py-3 bg-vg-red text-white font-semibold rounded-lg hover:bg-vg-burgundy transition-colors duration-200"
+			onclick={`if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${title}', 'workshop_date': '${dates}', 'link_location': 'workshops_page', 'value': ${parseFloat(price.replace(/[$,]/g, '').split(' ')[0])} }); }`}
 		>
 			View Details & Register
 		</a>

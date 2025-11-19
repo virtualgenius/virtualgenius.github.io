@@ -154,6 +154,62 @@ All brand colors available as Tailwind utilities (e.g., `text-vg-red`, `bg-vg-bu
 - **Integrations**: MDX, Sitemap
 - **Site constants**: `SITE_TITLE` and `SITE_DESCRIPTION` in [src/consts.ts](src/consts.ts)
 
+### Analytics
+
+Google Analytics 4 is configured for the site:
+- **Tracking ID**: Set in `.env` as `PUBLIC_GA_ID=G-ST954G5FLN`
+- **Implementation**: [src/components/BaseHead.astro](src/components/BaseHead.astro) (lines 57-68)
+- **Access analytics**: Sign in to [analytics.google.com](https://analytics.google.com) with the Google account that owns property `G-ST954G5FLN`
+- **Data available**: Page views, traffic sources, user demographics, popular pages, engagement metrics
+
+#### Workshop Registration Funnel Tracking
+
+Custom event tracking is implemented for workshop registrations:
+
+**Custom Events:**
+- Event name: `workshop_registration_click`
+- Parameters tracked:
+  - `workshop_name`: Title of the workshop
+  - `workshop_date`: Date range of the workshop
+  - `link_location`: Where the link was clicked (e.g., `workshops_page`, `adaconf_blog_post`)
+  - `value`: Workshop price in USD (for conversion value tracking)
+
+**UTM Parameters:**
+All workshop registration links include UTM parameters to track traffic sources:
+- Workshops page → Ti.to: `utm_source=website&utm_medium=workshop_page&utm_campaign={workshop_id}`
+- Blog posts → Ti.to: `utm_source=website&utm_medium=blog&utm_campaign={post_id}`
+
+**Viewing Funnel Data in GA4:**
+
+1. **Event Reports**:
+   - Go to Reports → Engagement → Events
+   - Look for `workshop_registration_click` event
+   - View by `link_location` to see which pages drive registrations
+
+2. **Mark as Conversion**:
+   - Go to Admin → Events → Mark `workshop_registration_click` as conversion
+   - Now visible in Conversions report
+
+3. **Create Funnel Analysis**:
+   - Go to Explore → Funnel exploration
+   - Set up steps:
+     1. Page view: `/` (homepage) or `/workshops`
+     2. Event: `workshop_registration_click`
+   - Add breakdown by `link_location` to compare performance
+
+4. **UTM Tracking**:
+   - Go to Reports → Acquisition → Traffic acquisition
+   - Filter by campaigns to see workshop-specific traffic
+   - UTM parameters appear in Ti.to dashboard as referrer data
+
+**Validation Checklist:**
+- [ ] Open GA4 Real-time report
+- [ ] Visit virtualgenius.com in incognito window
+- [ ] Navigate to `/workshops` and click a registration button
+- [ ] Confirm `workshop_registration_click` event appears in Real-time
+- [ ] Verify event parameters are populated correctly
+- [ ] Check that outbound link to Ti.to completes successfully
+
 ### Deployment
 
 Automated via GitHub Actions ([.github/workflows/deploy.yml](.github/workflows/deploy.yml)):
