@@ -13,7 +13,7 @@ interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/images/bti360-classroom-view.jpg' } = Astro.props;
+const { title, description, image = '/images/bti360-classroom-view.webp' } = Astro.props;
 const imageUrl = typeof image === 'string' ? image : image.src;
 ---
 
