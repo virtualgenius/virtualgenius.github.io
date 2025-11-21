@@ -7,9 +7,6 @@
 - Mark workshop_registration_click as conversion in GA4 Admin
 - Verify cross-domain tracking to Ti.to is working
 
-**Demo Apps:**
-- Update GitHub README files for ContextFlow and CodeCohesion with new demo URLs
-
 **Content additions:**
 - Add CodeCohesion announcement to blog
 - Add Agentic Flow post to blog with CTA for coaching
@@ -87,3 +84,4 @@
 - ✅ ContextFlow migrated to contextflow.virtualgenius.com
 - ✅ CodeCohesion migrated to codecohesion.virtualgenius.com
 - ✅ All website demo links updated to new virtualgenius.com subdomains
+- ✅ GitHub README files for ContextFlow and CodeCohesion updated with new demo URLs
