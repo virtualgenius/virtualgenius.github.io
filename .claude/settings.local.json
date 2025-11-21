@@ -2,25 +2,16 @@
   "includeCoAuthoredBy": false,
   "permissions": {
     "allow": [
-      "Bash(for:*)",
-      "Bash(do echo \"=== $f ===\")",
-      "Bash(do echo \"Workshop timelapse $num:\")",
-      "Bash(do echo \"Hands-on $num:\")",
+      "Bash([ -f \"$img\" ])",
+      "Bash(npm run build:*)",
       "Bash(git add:*)",
-      "Bash(git commit:*)",
+      "Bash(git commit -m \"$(cat <<''EOF''\nconfig: add CTA guidelines and fix redundant CTAs across site\n\nAdded comprehensive CTA (Call-to-Action) guidelines to CLAUDE.md to prevent\nredundant text and mechanisms in CTAs. Fixed all instances of redundancy\nacross the site.\n\nChanges:\n- Add CTA guidelines section to CLAUDE.md with anti-patterns and rules\n- Fix redundant \"Get in touch\" + \"Get in Touch\" patterns\n- Remove redundant email displays above email buttons\n- Standardize all CTAs to use Button component instead of raw <a> tags\n- Update ADAConf blog post with Miro board link\n\nPages fixed:\n- Homepage: Remove email display, change button to \"Contact Us\"\n- About: Change \"Email: info@...\" to \"Get in Touch\"\n- Services index: Change \"Contact Us: info@...\" to \"Contact Us\"\n- Workshops: Remove \"Get in touch\" from body text\n- Testimonials: Convert to Button component\n- All service pages: Convert to Button component\nEOF\n)\")",
       "Bash(git push:*)",
-      "Bash(npm run dev:*)",
-      "Bash(curl:*)",
-      "Bash(gh run list:*)",
-      "Bash(ffprobe:*)",
-      "Read(//Users/paul/Downloads/**)",
-      "Bash(ffmpeg:*)",
-      "Bash(do magick:*)",
-      "Bash(done)",
-      "Bash(do ffmpeg -i \"$file\" -vf \"scale=''min(1920,iw)'':min(1440,ih):force_original_aspect_ratio=decrease\" -q:v 85 \"/Users/paul/Documents/virtualgenius.github.io/public/images/adaconf-2025/$file%.HEIC.jpg\")",
-      "Bash(sips:*)",
-      "Bash(do sips:*)",
-      "Bash(npx playwright-mcp screenshot:*)"
+      "Bash(git commit:*)",
+      "Read(//Users/paul/Downloads/adaconf/**)",
+      "Bash(cwebp:*)",
+      "Bash(git restore:*)",
+      "Bash(gh run list:*)"
     ],
     "deny": [],
     "ask": []
