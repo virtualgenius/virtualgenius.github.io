@@ -2,6 +2,11 @@
 
 ### ACTIVE - NEXT ACTIONS
 
+**Analytics Testing:**
+- Test GA4 workshop registration funnel tracking (see GA4-WORKSHOP-FUNNEL-TESTING.md)
+- Mark workshop_registration_click as conversion in GA4 Admin
+- Verify cross-domain tracking to Ti.to is working
+
 **Demo Apps:**
 - Update GitHub README files for ContextFlow and CodeCohesion with new demo URLs
 
