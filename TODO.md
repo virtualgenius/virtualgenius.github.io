@@ -3,9 +3,7 @@
 ### ACTIVE - NEXT ACTIONS
 
 **Demo Apps:**
-- Figure out how to move demo apps over to VG.com/...
-  - Current: flow.virtualgenius.com (Heroku) - preserved during migration
-- Update GitHub README files
+- Update GitHub README files for ContextFlow and CodeCohesion with new demo URLs
 
 **Content additions:**
 - Add CodeCohesion announcement to blog
@@ -73,3 +71,8 @@
   - Client description of 1-day Intro to DDD workshop
   - Reference: https://www.bti360.com/hands-on-with-domain-driven-design/
   - LinkedIn post: https://www.linkedin.com/posts/bti360_we-had-a-great-time-diving-into-domain-driven-activity-7326323413638156288-6_0N
+
+**Demo Apps Migration:**
+- ✅ ContextFlow migrated to contextflow.virtualgenius.com
+- ✅ CodeCohesion migrated to codecohesion.virtualgenius.com
+- ✅ All website demo links updated to new virtualgenius.com subdomains
