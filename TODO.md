@@ -50,6 +50,12 @@
 **Platform integration:**
 - Booking calendar integration
 
+**Pre-MVP Products (Future Migration):**
+- Flowline (flow.virtualgenius.com) - Currently on Heroku, personal GitHub account
+  - Migrate to VG GitHub organization when ready for OSS release
+- EventStormer - Currently on personal GitHub account
+  - Migrate to VG GitHub organization when ready for OSS release
+
 ---
 
 ### COMPLETED ✅
