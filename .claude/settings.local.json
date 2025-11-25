@@ -11,7 +11,8 @@
       "Read(//Users/paul/Downloads/adaconf/**)",
       "Bash(cwebp:*)",
       "Bash(git restore:*)",
-      "Bash(gh run list:*)"
+      "Bash(gh run list:*)",
+      "Bash(sips:*)"
     ],
     "deny": [],
     "ask": []

@@ -1,4 +1,5 @@
 ---
+import { Image } from 'astro:assets';
 import ArticleCard from '../components/ArticleCard.astro';
 import BaseHead from '../components/BaseHead.astro';
 import Footer from '../components/Footer.astro';
@@ -6,6 +7,7 @@ import Header from '../components/Header.astro';
 import Hero from '../components/Hero.astro';
 import Section from '../components/Section.astro';
 import { SITE_TITLE } from '../consts';
+import userStoriesCover from '../assets/user-stories-reference-guide-cover.webp';
 
 const title = `Books & Publications | ${SITE_TITLE}`;
 const description = 'Books by Paul Rayner on EventStorming, Domain-Driven Design, and Behavior-Driven Development.';
@@ -190,14 +192,11 @@ const description = 'Books by Paul Rayner on EventStorming, Domain-Driven Design
 				<!-- Resource Cover/Preview -->
 				<div class="order-2 lg:order-1">
 					<div class="relative transform lg:-rotate-2">
-						<div class="bg-gradient-to-br from-vg-burgundy to-vg-red rounded-3xl shadow-2xl p-12 text-white aspect-[8.5/11] flex flex-col justify-center items-center">
-							<div class="text-center">
-								<div class="text-sm font-semibold uppercase tracking-wider mb-4 opacity-80">Free Download</div>
-								<h3 class="text-3xl md:text-4xl font-bold mb-4 leading-tight">User Stories Reference Guide</h3>
-								<div class="w-16 h-1 bg-white/40 mx-auto mb-4"></div>
-								<p class="text-lg opacity-90">Quick Reference for Writing Effective User Stories</p>
-							</div>
-						</div>
+						<Image
+							src={userStoriesCover}
+							alt="User Stories Reference Guide - a quick reference for writing effective user stories"
+							class="rounded-xl shadow-2xl"
+						/>
 					</div>
 				</div>
 
