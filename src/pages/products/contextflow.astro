@@ -8,7 +8,7 @@ import Icon from '../../components/Icon.astro';
 import Section from '../../components/Section.astro';
 
 const title = 'ContextFlow - Visual DDD Context Mapper';
-const description = 'Map reality, not aspiration. Visual DDD context mapper with Flow + Strategic views for analyzing bounded contexts, relationships, and code ownership.';
+const description = 'Map reality, not aspiration. Visual DDD context mapper with Value Stream, Distillation, and Strategic views for analyzing bounded contexts, relationships, and code ownership.';
 ---
 
 <!doctype html>
@@ -29,7 +29,7 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 					Map reality, not aspiration.
 				</p>
 				<p class="text-xl mb-8 text-vg-gray-dark">
-					Visual DDD context mapper for analyzing bounded contexts, their relationships, and code ownership across two synchronized views
+					Visual DDD context mapper for analyzing bounded contexts, their relationships, and code ownership across three complementary views
 				</p>
 				<div class="flex flex-col sm:flex-row gap-4 justify-center">
 					<Button href="https://contextflow.virtualgenius.com/" variant="primary">
@@ -56,65 +56,94 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 				<ul class="list-disc list-inside space-y-2 text-lg text-vg-gray-dark mb-6">
 					<li><strong>Bounded contexts</strong> with strategic classification (core/supporting/generic), boundary integrity (strong/moderate/weak), and visual properties</li>
 					<li><strong>DDD relationship patterns</strong> between contexts (customer-supplier, conformist, anti-corruption layer, open-host service, shared kernel, partnership, etc.)</li>
+					<li><strong>Wardley Map value chain</strong> with actors, user needs, and contexts showing complete problem-to-solution flow</li>
 					<li><strong>Code ownership</strong> linking repositories to contexts and teams via drag-and-drop</li>
 					<li><strong>Team topology</strong> connecting teams to their boards and responsibilities</li>
-					<li><strong>Capability groups</strong> as visual clusters of related contexts</li>
+					<li><strong>Capability groups</strong> as organic blob-shaped visual clusters using Catmull-Rom smoothing</li>
+					<li><strong>Temporal evolution</strong> showing how your architecture changes over time with keyframes and timeline playback</li>
 				</ul>
 				<p class="text-xl font-semibold text-vg-red">
-					The key differentiator: two views of the same system.
+					The key differentiator: three models of your sociotechnical system.
 				</p>
 			</div>
 		</Section>
 
-		<!-- Flow View -->
+		<!-- Value Stream View -->
 		<Section background="gray">
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 				<div>
-					<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Flow View</h2>
+					<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Value Stream View</h2>
+					<p class="text-lg text-vg-gray-dark mb-4">
+						<strong>Context mapping:</strong> Shows how value and data move left-to-right through your system. Map bounded contexts and visualize how work flows between them.
+					</p>
 					<p class="text-lg text-vg-gray-dark">
-						Shows how value and data move left-to-right through your system. Stages are configurable per project: e.g., "Discovery → Selection → Purchase → Fulfillment → Post-Sale" for e-commerce, or "Ingest → Normalize → Analyze → Publish" for data pipelines.
+						Stages are configurable per project: e.g., "Discovery → Selection → Purchase → Fulfillment → Post-Sale" for e-commerce, or "Ingest → Normalize → Analyze → Publish" for data pipelines.
 					</p>
 				</div>
 				<div>
 					<img
 						src="/images/contextflow/context-flow-1.webp"
-						alt="Flow View"
+						alt="Value Stream View"
 						class="rounded-lg shadow-lg"
 					/>
 				</div>
 			</div>
 		</Section>
 
-		<!-- Strategic View -->
+		<!-- Distillation View -->
 		<Section>
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 				<div class="order-2 lg:order-1">
+					<img
+						src="/images/contextflow/context-flow-4.webp"
+						alt="Distillation View"
+						class="rounded-lg shadow-lg"
+					/>
+				</div>
+				<div class="order-1 lg:order-2">
+					<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Distillation View</h2>
+					<p class="text-lg text-vg-gray-dark mb-4">
+						<strong>Domain classification:</strong> Classify bounded contexts using Nick Tune's Core Domain Chart. Position contexts by Business Differentiation (Y-axis) and Model Complexity (X-axis) to identify your core domains vs supporting/generic capabilities.
+					</p>
+					<p class="text-lg text-vg-gray-dark">
+						This helps prioritize strategic investment and identify what should be core vs commodity.
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Strategic View -->
+		<Section background="gray">
+			<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+				<div>
+					<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Strategic View</h2>
+					<p class="text-lg text-vg-gray-dark mb-4">
+						<strong>Wardley mapping:</strong> Shows the complete Wardley Map value chain with three layers:
+					</p>
+					<ul class="list-disc list-inside space-y-2 text-lg text-vg-gray-dark mb-4">
+						<li><strong>Actors</strong> - Users of the map</li>
+						<li><strong>User Needs</strong> - Problems to solve (connecting actors to contexts)</li>
+						<li><strong>Contexts</strong> - Solution components positioned on the evolution axis</li>
+					</ul>
+					<p class="text-lg text-vg-gray-dark mb-4">
+						All positioned along the evolution axis: Genesis → Custom-built → Product/Rental → Commodity/Utility.
+					</p>
+					<p class="text-lg text-vg-gray-dark">
+						Includes 2-hop connection highlighting showing complete value chains. Switch between views live — same contexts, same relationships, different strategic insights.
+					</p>
+				</div>
+				<div>
 					<img
 						src="/images/contextflow/context-flow-2.webp"
 						alt="Strategic View"
 						class="rounded-lg shadow-lg"
 					/>
 				</div>
-				<div class="order-1 lg:order-2">
-					<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Strategic View</h2>
-					<p class="text-lg text-vg-gray-dark mb-4">
-						Shows where each capability sits on the Wardley evolution axis:
-					</p>
-					<ul class="list-disc list-inside space-y-2 text-lg text-vg-gray-dark">
-						<li><strong>Genesis</strong> - Novel, uncertain</li>
-						<li><strong>Custom-built</strong> - Bespoke solutions</li>
-						<li><strong>Product/Rental</strong> - Productized offerings</li>
-						<li><strong>Commodity/Utility</strong> - Standardized services</li>
-					</ul>
-					<p class="text-lg text-vg-gray-dark mt-4">
-						Switch between views live. Same contexts, same relationships — different conversations.
-					</p>
-				</div>
 			</div>
 		</Section>
 
 		<!-- Why ContextFlow? -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">Why ContextFlow?</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<div>
@@ -124,11 +153,11 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 					</p>
 				</div>
 				<div>
-					<h3 class="text-2xl font-semibold mb-4 text-vg-red">Two views of the same system</h3>
+					<h3 class="text-2xl font-semibold mb-4 text-vg-red">Three models of your sociotechnical system</h3>
 					<p class="text-lg text-vg-gray-dark">
-						<strong>Flow View</strong> resonates with delivery teams: "Here's how work moves across our pipeline."<br/><br/>
-						<strong>Strategic View</strong> resonates with leadership: "Here's what's core vs commodity."<br/><br/>
-						Both use the same underlying model. That's the unlock.
+						<strong>Value Stream View</strong> — Start here. Map contexts and how work flows through your system.<br/><br/>
+						<strong>Distillation View</strong> — Classify your contexts using Nick Tune's Core Domain Chart.<br/><br/>
+						<strong>Strategic View</strong> — Complete the strategic picture with actors, user needs, and Wardley mapping.
 					</p>
 				</div>
 				<div>
@@ -137,7 +166,7 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 						<li>Browser-based, no backend required</li>
 						<li>Import/export as JSON</li>
 						<li>Drag repos onto contexts, link teams to boards</li>
-						<li>Full editing with undo/redo</li>
+						<li>Full editing with autosave and undo/redo</li>
 						<li>Light/dark theme support</li>
 					</ul>
 				</div>
@@ -151,7 +180,7 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 		</Section>
 
 		<!-- Features -->
-		<Section>
+		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">Features</h2>
 			<div class="max-w-5xl mx-auto">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -180,13 +209,19 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 								<span class="text-vg-red mt-1 flex-shrink-0">
 									<Icon name="check" size="sm" />
 								</span>
-								<span>Flow View with configurable value stream stages</span>
+								<span>Value Stream View with configurable flow stages</span>
 							</li>
 							<li class="flex items-start gap-2">
 								<span class="text-vg-red mt-1 flex-shrink-0">
 									<Icon name="check" size="sm" />
 								</span>
-								<span>Strategic View with Wardley evolution bands</span>
+								<span>Distillation View with Nick Tune's Core Domain Chart</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Strategic View with Wardley Map value chain (actors, user needs, contexts)</span>
 							</li>
 							<li class="flex items-start gap-2">
 								<span class="text-vg-red mt-1 flex-shrink-0">
@@ -198,7 +233,19 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 								<span class="text-vg-red mt-1 flex-shrink-0">
 									<Icon name="check" size="sm" />
 								</span>
+								<span>Temporal evolution with timeline slider and keyframes</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
 								<span>Full editing (drag, create, delete, multi-select)</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Multi-project support with project switcher</span>
 							</li>
 							<li class="flex items-start gap-2">
 								<span class="text-vg-red mt-1 flex-shrink-0">
@@ -210,13 +257,13 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 								<span class="text-vg-red mt-1 flex-shrink-0">
 									<Icon name="check" size="sm" />
 								</span>
-								<span>Team and ownership details</span>
+								<span>CodeCohesion API integration for repository statistics</span>
 							</li>
 							<li class="flex items-start gap-2">
 								<span class="text-vg-red mt-1 flex-shrink-0">
 									<Icon name="check" size="sm" />
 								</span>
-								<span>Undo/redo for structural changes</span>
+								<span>IndexedDB persistence with autosave</span>
 							</li>
 							<li class="flex items-start gap-2">
 								<span class="text-vg-red mt-1 flex-shrink-0">
@@ -239,19 +286,19 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 								<span class="text-vg-red mt-1 flex-shrink-0">
 									<Icon name="check" size="sm" />
 								</span>
-								<span>Multi-project picker (Miro-style recent boards)</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>IndexedDB persistence for better performance</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
 								<span>Enhanced import/export options</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Accessibility improvements</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Keyboard shortcuts documentation overlay</span>
 							</li>
 						</ul>
 					</div>
@@ -260,7 +307,7 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 		</Section>
 
 		<!-- Getting Started -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">Getting Started</h2>
 			<div class="max-w-3xl mx-auto">
 				<div class="bg-vg-burgundy-dark text-white p-6 rounded-lg font-mono mb-6">
@@ -272,7 +319,7 @@ const description = 'Map reality, not aspiration. Visual DDD context mapper with
 						Try Live Demo
 					</Button>
 					<a
-						href="https://github.com/paulrayner/contextflow"
+						href="https://github.com/virtualgenius/contextflow"
 						target="_blank"
 						rel="noopener noreferrer"
 						class="inline-flex items-center gap-2 text-vg-gray-dark hover:text-vg-red transition-colors"
