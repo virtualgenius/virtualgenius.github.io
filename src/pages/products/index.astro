@@ -15,6 +15,14 @@ const description = 'Explore our open source tools for Domain-Driven Design: Con
 <html lang="en">
 	<head>
 		<BaseHead title={title} description={description} />
+		<script is:inline async defer src="https://buttons.github.io/buttons.js"></script>
+		<style>
+			.github-button-wrapper {
+				display: inline-flex;
+				align-items: center;
+				transform: translateY(3px);
+			}
+		</style>
 	</head>
 	<body class="bg-white">
 		<Header />
@@ -66,19 +74,21 @@ const description = 'Explore our open source tools for Domain-Driven Design: Con
 							<p class="text-lg text-vg-gray-dark mb-6">
 								Visual DDD context mapper with Flow + Strategic views for analyzing bounded contexts, their relationships, and code ownership across your system architecture.
 							</p>
-							<div class="flex flex-wrap gap-4 mb-8">
+							<div class="flex flex-wrap items-center gap-4 mb-8">
 								<a href="https://contextflow.virtualgenius.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold">
 									View Demo
-									<Icon name="arrow-right" size="sm" />
 								</a>
-								<a href="https://github.com/paulrayner/contextflow" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-gray hover:text-vg-gray-dark font-semibold">
-									<Icon name="github" size="sm" />
-									GitHub
-								</a>
-								<a href="/products/contextflow" class="inline-flex items-center gap-1 text-vg-burgundy hover:text-vg-red font-semibold">
+								<a href="/products/contextflow" class="text-vg-burgundy hover:text-vg-red font-semibold">
 									Learn More
-									<Icon name="arrow-right" size="sm" />
 								</a>
+								<span class="inline-flex items-center gap-2">
+									<a href="https://github.com/paulrayner/contextflow" target="_blank" rel="noopener noreferrer" aria-label="ContextFlow on GitHub">
+										<Icon name="github" size="sm" class="text-vg-gray-dark hover:text-vg-gray" />
+									</a>
+									<span class="github-button-wrapper">
+										<a class="github-button" href="https://github.com/paulrayner/contextflow" data-icon="octicon-star" data-show-count="true" aria-label="Star paulrayner/contextflow on GitHub">Star</a>
+									</span>
+								</span>
 							</div>
 						</div>
 						<div>
@@ -142,19 +152,21 @@ const description = 'Explore our open source tools for Domain-Driven Design: Con
 							<p class="text-lg text-vg-gray-dark mb-6">
 								3D visualization tool for analyzing code structure, cohesion patterns, and architectural evolution. Watch your codebase evolve commit-by-commit with interactive timeline playback.
 							</p>
-							<div class="flex flex-wrap gap-4 mb-8">
+							<div class="flex flex-wrap items-center gap-4 mb-8">
 								<a href="https://codecohesion.virtualgenius.com/" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold">
 									View Demo
-									<Icon name="arrow-right" size="sm" />
 								</a>
-								<a href="https://github.com/paulrayner/codecohesion" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-1 text-vg-gray hover:text-vg-gray-dark font-semibold">
-									<Icon name="github" size="sm" />
-									GitHub
-								</a>
-								<a href="/products/codecohesion" class="inline-flex items-center gap-1 text-vg-burgundy hover:text-vg-red font-semibold">
+								<a href="/products/codecohesion" class="text-vg-burgundy hover:text-vg-red font-semibold">
 									Learn More
-									<Icon name="arrow-right" size="sm" />
 								</a>
+								<span class="inline-flex items-center gap-2">
+									<a href="https://github.com/paulrayner/codecohesion" target="_blank" rel="noopener noreferrer" aria-label="CodeCohesion on GitHub">
+										<Icon name="github" size="sm" class="text-vg-gray-dark hover:text-vg-gray" />
+									</a>
+									<span class="github-button-wrapper">
+										<a class="github-button" href="https://github.com/paulrayner/codecohesion" data-icon="octicon-star" data-show-count="true" aria-label="Star paulrayner/codecohesion on GitHub">Star</a>
+									</span>
+								</span>
 							</div>
 						</div>
 						<div>
