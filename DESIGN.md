@@ -84,7 +84,7 @@ All pages in `src/pages/` map directly to URLs:
 **Resources Dropdown:**
 - [workshops.astro](src/pages/workshops.astro) - Public workshop listings
 - [speaking.astro](src/pages/speaking.astro) - Speaking engagements, videos
-- [books.astro](src/pages/books.astro) - Published books
+- [publications.astro](src/pages/publications.astro) - Published books & guides
 - [testimonials.astro](src/pages/testimonials.astro) - Client testimonials
 - [blog/index.astro](src/pages/blog/index.astro) - Blog post listings
 

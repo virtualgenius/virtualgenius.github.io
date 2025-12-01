@@ -10,6 +10,9 @@ import tailwindcss from '@tailwindcss/vite';
 export default defineConfig({
   site: 'https://virtualgenius.com',
   integrations: [mdx(), sitemap()],
+  redirects: {
+    '/books': '/publications',
+  },
 
   vite: {
     plugins: [tailwindcss()],
