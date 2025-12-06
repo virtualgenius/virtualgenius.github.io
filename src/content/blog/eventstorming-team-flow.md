@@ -93,3 +93,7 @@ I also introduced this technique at last year's EventStorming Summit in Bologna.
 If you map an entire value stream flow from "concept to cash" it is common to notice how small the development team part of the process is, and it is possible that the most damaging queues in terms of economic impact are upstream or downstream from the team. Once everything is mapped out, for non-trivial flows a common comment I hear is: "I had no idea we had so many queues."
 
 I'd be interested in hearing about anyone experimenting with this approach, such as for a team retrospective or workshop. I haven't tried to be comprehensive here, as I'm interested in learning what questions/feedback others have.
+
+---
+
+**Update:** I presented on this topic at two conferences in 2018: [Fighting the Invisible Enemy](/speaking) (NewCrafts 2018 keynote) and [Modeling Team Flow](/speaking) (Explore DDD 2018). Both talks are available on my [speaking page](/speaking).
