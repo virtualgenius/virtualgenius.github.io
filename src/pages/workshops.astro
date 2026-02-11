@@ -11,7 +11,7 @@ import { SITE_TITLE } from "../consts";
 
 const title = `Public Workshops | ${SITE_TITLE}`;
 const description =
-  "Join our live virtual EventStorming and Domain-Driven Design workshops. Hands-on training with expert facilitation, small cohorts, and practical exercises you can apply immediately.";
+  "Join our live virtual EventStorming and Domain-Driven Design workshops. Hands-on training in EventStorming facilitation, Essential DDD, and Strategic DDD with small cohorts and practical exercises.";
 ---
 
 <!doctype html>
@@ -58,12 +58,12 @@ const description =
           Upcoming Workshops
         </h2>
         <p class="text-lg text-vg-gray-dark max-w-3xl mx-auto">
-          Interactive virtual sessions where you'll practice EventStorming and
-          Domain-Driven Design techniques with real scenarios
+          Interactive virtual sessions covering EventStorming facilitation,
+          Essential DDD, and Strategic DDD with real scenarios and hands-on exercises
         </p>
       </div>
       <div
-        class="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto mb-12"
+        class="grid grid-cols-1 lg:grid-cols-3 gap-6 lg:gap-8 max-w-7xl mx-auto mb-12"
       >
         <WorkshopCard
           title="EventStorming Facilitation Virtual Workshop"
@@ -80,6 +80,38 @@ const description =
           ]}
           registrationUrl="https://ti.to/EDDD/eventstorming-facilitation-virtual-workshop-apr-2026?utm_source=website&utm_medium=workshop_page&utm_campaign=apr_2026"
           earlyBirdDeadline="March 13, 2026"
+        />
+        <WorkshopCard
+          title="Essential DDD Virtual Workshop"
+          dates="May 5-8, 2026"
+          format="Virtual"
+          price="$1,550 USD"
+          duration="12 hours total (4 sessions × 3 hours each)"
+          targetAudience="Developers, architects, product managers, and business analysts"
+          description="Foundational DDD patterns and practices covering strategic design, tactical patterns, and collaborative modeling. Camera-on participatory format with hands-on exercises. No prior DDD experience needed."
+          learningOutcomes={[
+            "Apply strategic design with bounded contexts and ubiquitous language to decompose complex domains",
+            "Use tactical patterns (Entities, Value Objects, Aggregates, Domain Events) to model business logic",
+            "Practice context mapping patterns to understand and manage system boundaries"
+          ]}
+          registrationUrl="https://ti.to/EDDD/essential-ddd-virtual-workshop-may-2026?utm_source=website&utm_medium=workshop_page&utm_campaign=may_2026_eddd"
+          earlyBirdDeadline="April 3, 2026"
+        />
+        <WorkshopCard
+          title="Strategic DDD Virtual Workshop"
+          dates="May 12-15, 2026"
+          format="Virtual"
+          price="$1,550 USD"
+          duration="12 hours total (4 sessions × 3 hours each)"
+          targetAudience="Senior developers, architects, technical leads, and engineering managers"
+          description="Advanced strategic design techniques for modeling complex systems and organizational boundaries. Camera-on participatory format. Essential DDD or equivalent experience recommended."
+          learningOutcomes={[
+            "Master advanced context mapping strategies and relationship patterns (Customer-Supplier, ACL, Open Host)",
+            "Apply core domain identification and strategic distillation to prioritize design investment",
+            "Design large-scale structure patterns for evolving existing systems"
+          ]}
+          registrationUrl="https://ti.to/EDDD/strategic-ddd-virtual-workshop-may-2026?utm_source=website&utm_medium=workshop_page&utm_campaign=may_2026_sddd"
+          earlyBirdDeadline="April 10, 2026"
         />
       </div>
 
