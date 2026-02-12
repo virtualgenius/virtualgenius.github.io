@@ -296,6 +296,49 @@ When creating blog posts or events, follow the schema defined in [src/content.co
 </video>
 ```
 
+## Writing Style Guidelines
+
+**Voice**: Thoughtful practitioner and reflective experimenter. Authoritative without being arrogant, knowledgeable but still learning, genuinely interested in helping others understand complex ideas.
+
+### Tone
+- Conversational yet professional — not stuffy or academic, but not overly casual either
+- Balance expertise with humility and relatability
+- Use rhetorical questions to engage readers: "Isn't it better to focus on the problems we *can* see?"
+
+### Point of View
+- First person ("I") for personal experiences and experiments: "I've been experimenting with..."
+- "We" for community perspectives or inclusive explanations: "If we think of X, then..."
+- Address readers as peers, not students — speak *to* them, not *at* them
+
+### Structure
+- **Openings**: Start with curiosity-driven questions or relatable problem statements, not topic announcements
+  - ✅ "Most development teams remain blissfully unaware of the negative impact..."
+  - ✅ "We've all been there..."
+  - ❌ "In this post, I will discuss..."
+- **Body**: Use blockquotes from authoritative sources to anchor arguments. Include citations and references to build credibility while staying readable.
+- **Closings**: End with forward-looking invitations for engagement, not definitive conclusions
+  - ✅ "I'd be interested in hearing about anyone experimenting with this approach."
+  - ✅ "Anyone else using AI for large-scale cleanup tasks like this?"
+  - ❌ "In conclusion, we have seen that..."
+
+### Language
+- Explain technical terms contextually without over-simplifying
+- Use plain language analogies to make abstract concepts concrete
+- Avoid jargon overload; define specialized terms when introducing them
+
+### Distinctive Patterns
+- Signal practical experience: "I've been experimenting with...", "I learned there that..."
+- Reference conferences and talks when relevant
+- Be transparent about process and mistakes: "Claude Code made mistakes and went down wrong paths, but worked through..."
+- Use self-deprecating humor sparingly: "like all babies it's currently lacking in abilities"
+- Include the "why" and "how" of discovering ideas, not just the "what"
+
+### What to Avoid
+- Definitive, closed conclusions — leave room for continued learning and dialogue
+- Top-down instructional tone — frame as collaborative discovery
+- Overly academic language or excessive formality
+- Generic blog post patterns ("In this post...", "In conclusion...")
+
 ## CTA (Call-to-Action) Guidelines
 
 **Anti-Pattern - Redundant Text:**
