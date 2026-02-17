@@ -156,11 +156,18 @@ All brand colors available as Tailwind utilities (e.g., `text-vg-red`, `bg-vg-bu
 
 ### Analytics
 
-Google Analytics 4 is configured for the site:
+**Google Analytics 4:**
 - **Tracking ID**: Set in `.env` as `PUBLIC_GA_ID=G-ST954G5FLN`
-- **Implementation**: [src/components/BaseHead.astro](src/components/BaseHead.astro) (lines 57-68)
+- **Implementation**: [src/components/BaseHead.astro](src/components/BaseHead.astro)
 - **Access analytics**: Sign in to [analytics.google.com](https://analytics.google.com) with the Google account that owns property `G-ST954G5FLN`
 - **Data available**: Page views, traffic sources, user demographics, popular pages, engagement metrics
+
+**PostHog:**
+- **API Key**: Set in `.env` as `PUBLIC_POSTHOG_KEY`
+- **Implementation**: [src/components/BaseHead.astro](src/components/BaseHead.astro)
+- **Host**: `https://us.i.posthog.com` (US cloud)
+- **Person profiles**: `identified_only` (anonymous pageviews, only creates person profiles when explicitly identified)
+- **Data available**: Product analytics, session replay, feature flags, funnels
 
 #### Workshop Registration Funnel Tracking
 
