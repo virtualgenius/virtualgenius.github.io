@@ -1,0 +1,436 @@
+---
+import BackToTop from '../../components/BackToTop.astro';
+import BaseHead from '../../components/BaseHead.astro';
+import Button from '../../components/Button.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Icon from '../../components/Icon.astro';
+import Section from '../../components/Section.astro';
+import TestimonialCard from '../../components/TestimonialCard.astro';
+import { SITE_TITLE } from '../../consts';
+import { strategicDdd, registrationUrl } from '../../data/workshops';
+
+const title = `Strategic DDD Workshop | ${SITE_TITLE}`;
+const description = 'Advanced strategic design techniques for modeling complex systems and organizational boundaries. Context mapping, core domain identification, and large-scale structure patterns. Virtual, instructor-led with hands-on exercises.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<!-- Hero -->
+		<section class="relative w-full overflow-hidden" style="height: 360px;">
+			<div class="absolute inset-0 w-full h-full">
+				<img
+					src="/images/bti360-paul-teaching.webp"
+					alt="Paul Rayner teaching a workshop"
+					class="w-full h-full object-cover"
+					style="filter: brightness(0.6); object-position: center 40%;"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+			</div>
+
+			<div class="relative z-10 flex items-center justify-center h-full">
+				<div class="max-w-screen-xl mx-auto px-6 w-full">
+					<div class="text-center max-w-4xl mx-auto">
+						<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+							Strategic DDD Workshop
+						</h1>
+						<p class="text-2xl md:text-3xl mb-8 text-white/95 drop-shadow-md">
+							Strategic design for complex systems and organizations
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Upcoming Dates -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Upcoming Dates
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+				{strategicDdd.instances.map((instance) => (
+					<div class="bg-white rounded-xl shadow-lg border-t-4 border-vg-red p-8">
+						<h3 class="text-2xl font-bold text-vg-burgundy mb-4">{instance.dates}</h3>
+						<div class="space-y-3 text-vg-gray-dark mb-6">
+							<div class="flex items-center gap-2">
+								<Icon name="laptop" size="sm" class="text-vg-red" />
+								<span>{strategicDdd.format} - {strategicDdd.duration}</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="check" size="sm" class="text-vg-red" />
+								<span>Early bird: <strong class="text-vg-burgundy">{instance.earlyBirdPrice}</strong> <span class="text-sm text-vg-gray">(until {instance.earlyBirdDeadline})</span></span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="check" size="sm" class="text-vg-red" />
+								<span>Regular: {instance.regularPrice}</span>
+							</div>
+						</div>
+						<Button
+							href={registrationUrl(instance, 'workshop_detail')}
+							variant="primary"
+							class="w-full text-center"
+							onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${strategicDdd.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${strategicDdd.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
+						>
+							Register <Icon name="arrow-right" size="sm" />
+						</Button>
+					</div>
+				))}
+			</div>
+		</Section>
+
+		<!-- What You Will Learn -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				What You Will Learn
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
+							1
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Context Mapping</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Advanced context mapping strategies for understanding system relationships</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Relationship patterns: Customer-Supplier, Conformist, Anti-Corruption Layer, Open Host Service</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Mapping organizational boundaries to technical boundaries</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
+							2
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Core Domain Identification</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Strategic distillation techniques to identify what matters most</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Distinguishing core, supporting, and generic subdomains</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Prioritizing design investment where it creates competitive advantage</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
+							3
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Large-Scale Structure</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Patterns for organizing systems at scale</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Responsibility layers, evolving order, and system metaphor</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Applying structure patterns to existing systems</span>
+						</li>
+					</ul>
+				</div>
+
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
+							4
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Strategic Design in Practice</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Evolving legacy systems using strategic DDD patterns</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Integration strategies for complex system landscapes</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Building a strategic design roadmap for your organization</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Who Should Attend -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-vg-burgundy">
+				Who Should Attend
+			</h2>
+			<div class="max-w-4xl mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+					<div>
+						<h3 class="text-xl font-semibold mb-4 text-vg-red">Ideal Participants</h3>
+						<ul class="space-y-2 text-vg-gray-dark">
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Senior developers</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Software architects</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Technical leads</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Engineering managers</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>System designers</span>
+							</li>
+						</ul>
+					</div>
+					<div>
+						<h3 class="text-xl font-semibold mb-4 text-vg-red">Prerequisites</h3>
+						<p class="text-vg-gray-dark">
+							Essential DDD or equivalent experience is recommended. You should be comfortable with foundational DDD concepts such as bounded contexts, entities, value objects, and aggregates. This workshop builds on those foundations to explore strategic-level design decisions.
+						</p>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Workshop Format -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Workshop Format
+			</h2>
+			<div class="max-w-4xl mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+					<div class="bg-white rounded-xl shadow-md p-8">
+						<div class="flex items-start gap-3 mb-4">
+							<Icon name="laptop" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+							<div>
+								<h3 class="text-xl font-bold text-vg-burgundy">Virtual Delivery</h3>
+								<p class="text-vg-gray-dark">4 sessions of 3 hours each, spread over 4 consecutive days</p>
+							</div>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl shadow-md p-8">
+						<div class="flex items-start gap-3 mb-4">
+							<Icon name="refresh" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+							<div>
+								<h3 class="text-xl font-bold text-vg-burgundy">Interactive Format</h3>
+								<p class="text-vg-gray-dark">Small cohort, camera-on participatory format with collaborative exercises</p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-white rounded-xl shadow-md p-8">
+						<div class="flex items-start gap-3 mb-4">
+							<Icon name="office" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+							<div>
+								<h3 class="text-xl font-bold text-vg-burgundy">Tools</h3>
+								<p class="text-vg-gray-dark">Zoom for video conferencing and Miro for collaborative exercises. All software is free to use.</p>
+							</div>
+						</div>
+					</div>
+					<div class="bg-white rounded-xl shadow-md p-8">
+						<div class="flex items-start gap-3 mb-4">
+							<Icon name="check" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+							<div>
+								<h3 class="text-xl font-bold text-vg-burgundy">Certificate</h3>
+								<p class="text-vg-gray-dark">Certificate of completion included for all participants who attend the full workshop.</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Testimonials -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				What Participants Say
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				<TestimonialCard
+					quote="DDD can be a tool to identify and maximize ROI in different domains and subdomains. It also lets you realize as developers the big picture. Which of the areas needs attention, resources and are we on to the path that serves more value than liabilities. It organizes thought processes of engineers in regards of which parts should we work most on rather than just coding and coding stuff we don't know could impact the business."
+					role="Software Developer"
+					industry="Technology"
+					rating={10}
+					workshop="Strategic DDD"
+				/>
+				<TestimonialCard
+					quote="business + tech conversations are so important for mental models, language and alignment - they should not be under-estimated / under-valued; context mapping could be a really valuable starting point for figuring out where to start and having everyone understand priorities according to core vs supporting vs generic; we need to practise and not expect to get it right the first time"
+					role="Workshop Participant"
+					industry="Technology"
+					rating={10}
+					workshop="Strategic DDD"
+				/>
+				<TestimonialCard
+					quote="Understanding the value of context mapping and more advanced of Event storming (especially on defining timelines and policy)"
+					role="Software Developer"
+					industry="Technology"
+					rating={10}
+					workshop="Strategic DDD"
+				/>
+			</div>
+			<div class="text-center mt-8">
+				<a href="/testimonials" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold text-lg">
+					View All Testimonials
+					<Icon name="arrow-right" size="sm" />
+				</a>
+			</div>
+		</Section>
+
+		<!-- Your Instructor -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Your Instructor
+			</h2>
+			<div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8">
+				<div class="flex-shrink-0">
+					<img
+						src="/images/paul-portrait.webp"
+						alt="Paul Rayner"
+						class="w-36 h-36 rounded-full object-cover shadow-lg"
+					/>
+				</div>
+				<div>
+					<h3 class="text-2xl font-bold text-vg-burgundy mb-1">Paul Rayner</h3>
+					<p class="text-vg-red font-semibold mb-4">Software Design Consultant & DDD Practitioner</p>
+					<p class="text-vg-gray-dark mb-4">
+						35+ years in software development. Creator of Explore DDD conference. Trained 580+ workshop participants with a 9.2/10 average rating. Author and speaker on Domain-Driven Design, EventStorming, and collaborative software design.
+					</p>
+					<a href="/about" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold">
+						Full Bio <Icon name="arrow-right" size="sm" />
+					</a>
+				</div>
+			</div>
+		</Section>
+
+		<!-- FAQ -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Frequently Asked Questions
+			</h2>
+			<div class="max-w-3xl mx-auto space-y-8">
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						Do I need to take Essential DDD first?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Essential DDD or equivalent experience is recommended. You should be familiar with basic DDD concepts like bounded contexts, entities, and value objects.
+					</p>
+				</div>
+
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						Is this workshop suitable for non-developers?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Yes, engineering managers and system designers will benefit from the strategic perspective, though some sessions include technical examples.
+					</p>
+				</div>
+
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						How is this different from Essential DDD?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Essential DDD covers foundational patterns and tactical building blocks. Strategic DDD focuses on organizational boundaries, context mapping, and making design investment decisions at system scale.
+					</p>
+				</div>
+
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						What materials do I receive?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Certificate of completion, course slides, context mapping templates, Miro boards, and reference materials.
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Final CTA -->
+		<Section background="burgundy">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">
+					Ready to Think Strategically About Software Design?
+				</h2>
+				<p class="text-xl mb-8 text-vg-gray-light">
+					Join the next cohort and learn how to make strategic design decisions that align your technical architecture with business priorities.
+				</p>
+				<Button href={registrationUrl(strategicDdd.instances[0], 'workshop_detail')} variant="outlined">
+					Register Now <Icon name="arrow-right" size="sm" />
+				</Button>
+			</div>
+		</Section>
+
+		<BackToTop />
+		<Footer />
+	</body>
+</html>

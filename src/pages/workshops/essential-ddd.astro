@@ -1,0 +1,434 @@
+---
+import BackToTop from '../../components/BackToTop.astro';
+import BaseHead from '../../components/BaseHead.astro';
+import Button from '../../components/Button.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Icon from '../../components/Icon.astro';
+import Section from '../../components/Section.astro';
+import TestimonialCard from '../../components/TestimonialCard.astro';
+import { SITE_TITLE } from '../../consts';
+import { essentialDdd, registrationUrl } from '../../data/workshops';
+
+const title = `${essentialDdd.title} | ${SITE_TITLE}`;
+const description = 'Learn domain-driven design from the ground up. Domain modeling foundations, collaborative modeling with EventStorming, tactical building blocks, and hands-on code refactoring in this 4-session virtual workshop.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<!-- Hero -->
+		<section class="relative w-full overflow-hidden" style="height: 360px;">
+			<div class="absolute inset-0 w-full h-full">
+				<img
+					src="/images/bti360-classroom-view.webp"
+					alt="Workshop classroom with participants at tables"
+					class="w-full h-full object-cover"
+					style="filter: brightness(0.6); object-position: center 40%;"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+			</div>
+			<div class="relative z-10 flex items-center justify-center h-full">
+				<div class="max-w-screen-xl mx-auto px-6 w-full">
+					<div class="text-center max-w-4xl mx-auto">
+						<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+							Essential DDD Workshop
+						</h1>
+						<p class="text-2xl md:text-3xl mb-8 text-white/95 drop-shadow-md">
+							Build better software through domain modeling
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Upcoming Dates -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Upcoming Dates
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+				{essentialDdd.instances.map((instance) => (
+					<div class="bg-white rounded-xl shadow-lg border-t-4 border-vg-red p-8 text-center">
+						<p class="text-2xl font-bold text-vg-burgundy mb-4">{instance.dates}</p>
+						<div class="space-y-2 mb-6">
+							<p class="text-lg text-vg-gray-dark">
+								<span class="font-semibold text-vg-red">{instance.earlyBirdPrice}</span>
+								<span class="text-sm text-vg-gray ml-1">earlybird</span>
+							</p>
+							<p class="text-sm text-vg-gray">
+								{instance.regularPrice} after {instance.earlyBirdDeadline}
+							</p>
+						</div>
+						<a
+							href={registrationUrl(instance, 'workshop_detail')}
+							class="inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 px-6 py-3 bg-vg-red text-white hover:bg-vg-red-light shadow-lg hover:shadow-xl"
+							onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${essentialDdd.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${essentialDdd.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
+						>
+							Register
+							<Icon name="arrow-right" size="sm" class="ml-2" />
+						</a>
+					</div>
+				))}
+			</div>
+		</Section>
+
+		<!-- What You Will Learn -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				What You Will Learn
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<!-- Session 1 -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
+							1
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Domain Modeling Foundations</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Introduction to domain-driven design principles</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Collaborative modeling with EventStorming to discover business processes</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Growing shared domain language (Ubiquitous Language)</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Session 2 -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
+							2
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Tactical Building Blocks</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Entities, Value Objects, and Domain Events in practice</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Understanding invariants and consistency boundaries</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Hands-on code refactoring exercises</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Session 3 -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
+							3
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Bounded Contexts</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Identifying natural module and context boundaries</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Domain modules and the role of connascence</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Managing dependencies between contexts</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Session 4 -->
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
+							4
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Putting It All Together</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Refactoring a codebase using DDD building blocks</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Integrating EventStorming discoveries into design decisions</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Practical patterns for applying DDD on Monday morning</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Who Should Attend -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Who Should Attend?
+			</h2>
+			<div class="max-w-4xl mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Software developers</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Architects and technical leads</span>
+						</li>
+					</ul>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Product managers</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Business analysts</span>
+						</li>
+					</ul>
+				</div>
+				<p class="text-center text-vg-gray-dark text-lg">
+					No prior DDD experience needed. Some software development background helpful but not required.
+				</p>
+			</div>
+		</Section>
+
+		<!-- Workshop Format -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				Workshop Format
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<div class="bg-vg-red text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5">
+							<Icon name="laptop" size="sm" class="text-white" />
+						</div>
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Virtual Delivery</h3>
+							<p class="text-vg-gray-dark">4 sessions x 3 hours each over 4 days</p>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<div class="bg-vg-red text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5">
+							<Icon name="refresh" size="sm" class="text-white" />
+						</div>
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Tools</h3>
+							<p class="text-vg-gray-dark">Zoom for video + Miro for collaborative exercises</p>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<div class="bg-vg-red text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5">
+							<Icon name="check" size="sm" class="text-white" />
+						</div>
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Participatory Format</h3>
+							<p class="text-vg-gray-dark">Small cohort, camera-on for interactive learning</p>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<div class="bg-vg-red text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5">
+							<Icon name="arrow-right" size="sm" class="text-white" />
+						</div>
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Certificate Included</h3>
+							<p class="text-vg-gray-dark">Certificate of completion provided to all participants</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Testimonials -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				What Participants Say
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				<TestimonialCard
+					quote="that some of these practices I've learned through experience as a software dev. But the workshop has not just helped re-inforce it but also tied it to concrete terms I can use. Makes it easier to bring these terms up during team discussions rather than just the vague concepts."
+					role="Software Developer"
+					industry="Technology"
+					rating={10}
+					workshop="Essential DDD"
+				/>
+				<TestimonialCard
+					quote="these sessions were really valuable for me, not only for my work at ____, but for my career as a whole. i feel great to be able to see things from a new perspective and gain insights from such a talented teacher."
+					role="Software Developer"
+					industry="Technology"
+					rating={10}
+					workshop="Essential DDD"
+				/>
+				<TestimonialCard
+					quote="it is valuable and necessary for PM's to be involved in designing concepts that go into the codebase; it helps to map entities, values, events visually before tackling a refactor so you can see the relationships and dependencies clearly"
+					role="Product Manager"
+					industry="Technology"
+					rating={10}
+					workshop="Essential DDD"
+				/>
+			</div>
+			<div class="text-center mt-8">
+				<a href="/testimonials" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold text-lg">
+					View All Testimonials
+					<Icon name="arrow-right" size="sm" />
+				</a>
+			</div>
+		</Section>
+
+		<!-- Your Instructor -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				Your Instructor
+			</h2>
+			<div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+				<div class="flex-shrink-0">
+					<img
+						src="/images/paul-portrait.webp"
+						alt="Paul Rayner"
+						class="w-36 h-36 rounded-full object-cover shadow-lg"
+						loading="lazy"
+					/>
+				</div>
+				<div>
+					<h3 class="text-2xl font-bold text-vg-burgundy mb-1">Paul Rayner</h3>
+					<p class="text-vg-red font-semibold mb-4">Software Design Consultant & DDD Practitioner</p>
+					<p class="text-vg-gray-dark mb-4">
+						35+ years in software development. Creator of Explore DDD conference. Trained 580+ workshop participants with a 9.2/10 average rating. Author and speaker on Domain-Driven Design, EventStorming, and collaborative software design.
+					</p>
+					<a href="/about" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold">
+						Full Bio
+						<Icon name="arrow-right" size="sm" />
+					</a>
+				</div>
+			</div>
+		</Section>
+
+		<!-- FAQ -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Frequently Asked Questions
+			</h2>
+			<div class="max-w-3xl mx-auto space-y-8">
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						Do I need DDD experience?
+					</h3>
+					<p class="text-vg-gray-dark">
+						No, this is a foundations course that teaches DDD from the ground up. The workshop is designed for participants at all levels, whether you are new to domain-driven design or looking to solidify your understanding.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						Is there coding involved?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Yes, Sessions 2 and 4 include hands-on code refactoring exercises. Examples are language-agnostic but implementation is in Java/C#.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						How is this different from Strategic DDD?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Essential DDD covers foundational patterns and tactical building blocks. Strategic DDD (which builds on Essential DDD) focuses on organizational boundaries and large-scale design. If you are new to DDD, start here.
+					</p>
+				</div>
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						What materials do I receive?
+					</h3>
+					<p class="text-vg-gray-dark">
+						All participants receive a certificate of completion, course slides, code examples, Miro templates, and reference materials.
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Final CTA -->
+		<Section background="burgundy">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">
+					Ready to Level Up Your Design Skills?
+				</h2>
+				<p class="text-xl mb-8 text-vg-gray-light">
+					Join the next Essential DDD workshop and start applying domain modeling techniques to your projects.
+				</p>
+				{essentialDdd.instances.length > 0 && (
+					<a
+						href={registrationUrl(essentialDdd.instances[0], 'workshop_detail')}
+						class="inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 px-8 py-4 border-2 border-white text-white hover:bg-vg-amber hover:border-vg-amber"
+						onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${essentialDdd.title}', 'workshop_date': '${essentialDdd.instances[0].dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(essentialDdd.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${essentialDdd.title}', 'workshop_date': '${essentialDdd.instances[0].dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(essentialDdd.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
+					>
+						Register Now
+						<Icon name="arrow-right" size="sm" class="ml-2" />
+					</a>
+				)}
+			</div>
+		</Section>
+
+		<BackToTop />
+		<Footer />
+	</body>
+</html>

@@ -1,13 +1,14 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Button from "../components/Button.astro";
-import Footer from "../components/Footer.astro";
-import Header from "../components/Header.astro";
-import Hero from "../components/Hero.astro";
-import Section from "../components/Section.astro";
-import TestimonialCard from "../components/TestimonialCard.astro";
-import WorkshopCard from "../components/WorkshopCard.astro";
-import { SITE_TITLE } from "../consts";
+import BaseHead from "../../components/BaseHead.astro";
+import Button from "../../components/Button.astro";
+import Footer from "../../components/Footer.astro";
+import Header from "../../components/Header.astro";
+import Icon from "../../components/Icon.astro";
+import Section from "../../components/Section.astro";
+import TestimonialCard from "../../components/TestimonialCard.astro";
+import WorkshopCard from "../../components/WorkshopCard.astro";
+import { SITE_TITLE } from "../../consts";
+import { eventstorming, essentialDdd, strategicDdd, registrationUrl } from "../../data/workshops";
 
 const title = `Public Workshops | ${SITE_TITLE}`;
 const description =
@@ -56,80 +57,119 @@ const description =
       <div
         class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-6xl mx-auto"
       >
-        <WorkshopCard
-          title="EventStorming Facilitation Virtual Workshop"
-          dates="April 14-17, 2026"
-          format="Virtual"
-          price="$1,450 USD"
-          regularPrice="$1,650 USD"
-          duration="12 hours total (4 sessions × 3 hours each)"
-          targetAudience="Software and product professionals"
-          description="Intensive workshop covering Big Picture EventStorming, Process Modeling, and Software Design. Camera-on participatory format. No prior EventStorming experience needed."
-          learningOutcomes={[
-            "Master Big Picture EventStorming for discovering domain knowledge and system boundaries",
-            "Learn Process Modeling EventStorming for detailed workflow analysis and bottleneck identification",
-            "Apply EventStorming facilitation techniques to software design and architecture decisions"
-          ]}
-          registrationUrl="https://ti.to/EDDD/eventstorming-facilitation-virtual-workshop-apr-2026?utm_source=website&utm_medium=workshop_page&utm_campaign=apr_2026"
-          earlyBirdDeadline="March 13, 2026"
-        />
-        <WorkshopCard
-          title="Essential DDD Virtual Workshop"
-          dates="May 5-8, 2026"
-          format="Virtual"
-          price="$1,450 USD"
-          regularPrice="$1,650 USD"
-          duration="12 hours total (4 sessions × 3 hours each)"
-          targetAudience="Developers, architects, product managers, and business analysts"
-          description="Domain modeling foundations, collaborative modeling with EventStorming, and tactical building block patterns through hands-on code refactoring. Camera-on participatory format. No prior DDD experience needed."
-          learningOutcomes={[
-            "Use EventStorming to collaboratively discover business processes and grow shared domain language",
-            "Apply tactical building block patterns (entities, values, domain events) by refactoring code",
-            "Identify and manage bounded context boundaries using domain modules and connascence"
-          ]}
-          registrationUrl="https://ti.to/EDDD/essential-ddd-virtual-workshop-may-2026?utm_source=website&utm_medium=workshop_page&utm_campaign=may_2026_eddd"
-          earlyBirdDeadline="April 3, 2026"
-        />
-        <WorkshopCard
-          title="Strategic DDD Virtual Workshop"
-          dates="May 12-15, 2026"
-          format="Virtual"
-          price="$1,450 USD"
-          regularPrice="$1,650 USD"
-          duration="12 hours total (4 sessions × 3 hours each)"
-          targetAudience="Senior developers, architects, technical leads, and engineering managers"
-          description="Advanced strategic design techniques for modeling complex systems and organizational boundaries. Camera-on participatory format. Essential DDD or equivalent experience recommended."
-          learningOutcomes={[
-            "Master advanced context mapping strategies and relationship patterns (Customer-Supplier, ACL, Open Host)",
-            "Apply core domain identification and strategic distillation to prioritize design investment",
-            "Design large-scale structure patterns for evolving existing systems"
-          ]}
-          registrationUrl="https://ti.to/EDDD/strategic-ddd-virtual-workshop-may-2026?utm_source=website&utm_medium=workshop_page&utm_campaign=may_2026_sddd"
-          earlyBirdDeadline="April 10, 2026"
-        />
-        <WorkshopCard
-          title="Strategic DDD Virtual Workshop"
-          dates="Oct 5-8, 2026"
-          format="Virtual"
-          price="$1,450 USD"
-          regularPrice="$1,650 USD"
-          duration="12 hours total (4 sessions × 3 hours each)"
-          targetAudience="Senior developers, architects, technical leads, and engineering managers"
-          description="Advanced strategic design techniques for modeling complex systems and organizational boundaries. Camera-on participatory format. Essential DDD or equivalent experience recommended."
-          learningOutcomes={[
-            "Master advanced context mapping strategies and relationship patterns (Customer-Supplier, ACL, Open Host)",
-            "Apply core domain identification and strategic distillation to prioritize design investment",
-            "Design large-scale structure patterns for evolving existing systems"
-          ]}
-          registrationUrl="https://ti.to/EDDD/strategic-ddd-virtual-workshop-oct-2026?utm_source=website&utm_medium=workshop_page&utm_campaign=oct_2026_sddd"
-          earlyBirdDeadline="September 4, 2026"
-        />
+        {eventstorming.instances.map((instance) => (
+          <WorkshopCard
+            title={eventstorming.title}
+            dates={instance.dates}
+            format={eventstorming.format}
+            price={instance.earlyBirdPrice}
+            regularPrice={instance.regularPrice}
+            duration={eventstorming.duration}
+            targetAudience={eventstorming.targetAudience}
+            description="Intensive workshop covering Big Picture EventStorming, Process Modeling, and Software Design. Camera-on participatory format. No prior EventStorming experience needed."
+            learningOutcomes={[]}
+            registrationUrl={registrationUrl(instance, "workshop_page")}
+            earlyBirdDeadline={instance.earlyBirdDeadline}
+            detailUrl={`/workshops/${eventstorming.slug}`}
+          />
+        ))}
+        {essentialDdd.instances.map((instance) => (
+          <WorkshopCard
+            title={essentialDdd.title}
+            dates={instance.dates}
+            format={essentialDdd.format}
+            price={instance.earlyBirdPrice}
+            regularPrice={instance.regularPrice}
+            duration={essentialDdd.duration}
+            targetAudience={essentialDdd.targetAudience}
+            description="Domain modeling foundations, collaborative modeling with EventStorming, and tactical building block patterns through hands-on code refactoring. Camera-on participatory format. No prior DDD experience needed."
+            learningOutcomes={[]}
+            registrationUrl={registrationUrl(instance, "workshop_page")}
+            earlyBirdDeadline={instance.earlyBirdDeadline}
+            detailUrl={`/workshops/${essentialDdd.slug}`}
+          />
+        ))}
+        {strategicDdd.instances.map((instance) => (
+          <WorkshopCard
+            title={strategicDdd.title}
+            dates={instance.dates}
+            format={strategicDdd.format}
+            price={instance.earlyBirdPrice}
+            regularPrice={instance.regularPrice}
+            duration={strategicDdd.duration}
+            targetAudience={strategicDdd.targetAudience}
+            description="Advanced strategic design techniques for modeling complex systems and organizational boundaries. Camera-on participatory format. Essential DDD or equivalent experience recommended."
+            learningOutcomes={[]}
+            registrationUrl={registrationUrl(instance, "workshop_page")}
+            earlyBirdDeadline={instance.earlyBirdDeadline}
+            detailUrl={`/workshops/${strategicDdd.slug}`}
+          />
+        ))}
       </div>
+    </Section>
 
+    <!-- Which Workshop Is Right for Me? -->
+    <Section background="gray">
+      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+        Which Workshop Is Right for Me?
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-vg-burgundy mb-4">EventStorming Facilitation</h3>
+          <div class="space-y-3 text-sm text-vg-gray-dark flex-grow">
+            <div>
+              <span class="font-semibold text-vg-burgundy">Focus:</span> Learning to facilitate collaborative domain discovery workshops
+            </div>
+            <div>
+              <span class="font-semibold text-vg-burgundy">Experience:</span> No prerequisites. Open to all roles.
+            </div>
+            <div>
+              <span class="font-semibold text-vg-burgundy">Key outcome:</span> Confidently run EventStorming sessions with your own teams
+            </div>
+          </div>
+          <a href="/workshops/eventstorming" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-burgundy font-semibold mt-4">
+            View Details <Icon name="arrow-right" size="sm" />
+          </a>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-vg-burgundy mb-4">Essential DDD</h3>
+          <div class="space-y-3 text-sm text-vg-gray-dark flex-grow">
+            <div>
+              <span class="font-semibold text-vg-burgundy">Focus:</span> Domain modeling foundations, tactical patterns, and hands-on code refactoring
+            </div>
+            <div>
+              <span class="font-semibold text-vg-burgundy">Experience:</span> No DDD experience needed. Some development background helpful.
+            </div>
+            <div>
+              <span class="font-semibold text-vg-burgundy">Key outcome:</span> Apply DDD building blocks to real projects with confidence
+            </div>
+          </div>
+          <a href="/workshops/essential-ddd" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-burgundy font-semibold mt-4">
+            View Details <Icon name="arrow-right" size="sm" />
+          </a>
+        </div>
+        <div class="bg-white rounded-xl shadow-md p-6 flex flex-col">
+          <h3 class="text-xl font-bold text-vg-burgundy mb-4">Strategic DDD</h3>
+          <div class="space-y-3 text-sm text-vg-gray-dark flex-grow">
+            <div>
+              <span class="font-semibold text-vg-burgundy">Focus:</span> Context mapping, core domain identification, and strategic design for complex systems
+            </div>
+            <div>
+              <span class="font-semibold text-vg-burgundy">Experience:</span> Essential DDD or equivalent experience recommended.
+            </div>
+            <div>
+              <span class="font-semibold text-vg-burgundy">Key outcome:</span> Make strategic investment decisions about where to focus design effort
+            </div>
+          </div>
+          <a href="/workshops/strategic-ddd" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-burgundy font-semibold mt-4">
+            View Details <Icon name="arrow-right" size="sm" />
+          </a>
+        </div>
+      </div>
     </Section>
 
     <!-- Why Attend -->
-    <Section background="gray">
+    <Section>
       <h2
         class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy"
       >

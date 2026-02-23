@@ -11,9 +11,14 @@ interface Props {
 	targetAudience: string;
 	learningOutcomes: string[];
 	earlyBirdDeadline?: string;
+	detailUrl?: string;
 }
 
-const { title, dates, format, price, regularPrice, registrationUrl, targetAudience, earlyBirdDeadline } = Astro.props;
+const { title, dates, format, price, regularPrice, registrationUrl, targetAudience, earlyBirdDeadline, detailUrl } = Astro.props;
+
+const linkHref = detailUrl || registrationUrl;
+const linkText = detailUrl ? "View Details" : "View Details & Register";
+const isExternal = !detailUrl;
 ---
 
 <div class="bg-white rounded-xl shadow-md border border-vg-gray-light overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
@@ -54,13 +59,13 @@ const { title, dates, format, price, regularPrice, registrationUrl, targetAudien
 
 		<div class="mt-auto">
 			<a
-				href={registrationUrl}
-				target="_blank"
-				rel="noopener noreferrer"
+				href={linkHref}
+				target={isExternal ? "_blank" : undefined}
+				rel={isExternal ? "noopener noreferrer" : undefined}
 				class="inline-block w-full text-center px-4 py-2 bg-vg-red text-white text-sm font-semibold rounded-lg hover:bg-vg-burgundy transition-colors duration-200"
-				onclick={`if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${title}', 'workshop_date': '${dates}', 'link_location': 'workshops_page', 'value': ${parseFloat(Astro.props.price.replace(/[$,]/g, '').split(' ')[0])} }); }`}
+				onclick={isExternal ? `if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${title}', 'workshop_date': '${dates}', 'link_location': 'workshops_page', 'value': ${parseFloat(Astro.props.price.replace(/[$,]/g, '').split(' ')[0])} }); }` : undefined}
 			>
-				View Details & Register
+				{linkText}
 			</a>
 		</div>
 	</div>
