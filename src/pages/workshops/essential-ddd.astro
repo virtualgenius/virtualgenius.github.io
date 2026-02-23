@@ -47,39 +47,61 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 			</div>
 		</section>
 
-		<!-- Upcoming Dates -->
+		<!-- Overview -->
 		<Section>
-			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+			<div class="max-w-3xl mx-auto text-center">
+				<p class="text-xl text-vg-gray-dark leading-relaxed">
+					Domain-Driven Design gives your team a shared language and a set of modeling techniques for building software that reflects how your business actually works. This workshop covers the foundations: collaborative modeling with EventStorming, tactical building blocks like Entities and Value Objects, and hands-on code refactoring. No prior DDD experience needed.
+				</p>
+			</div>
+		</Section>
+
+		<!-- Upcoming Dates -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				Upcoming Dates
 			</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 				{essentialDdd.instances.map((instance) => (
-					<div class="bg-white rounded-xl shadow-lg border-t-4 border-vg-red p-8 text-center">
-						<p class="text-2xl font-bold text-vg-burgundy mb-4">{instance.dates}</p>
-						<div class="space-y-2 mb-6">
-							<p class="text-lg text-vg-gray-dark">
-								<span class="font-semibold text-vg-red">{instance.earlyBirdPrice}</span>
-								<span class="text-sm text-vg-gray ml-1">earlybird</span>
-							</p>
-							<p class="text-sm text-vg-gray">
-								{instance.regularPrice} after {instance.earlyBirdDeadline}
-							</p>
+					<div class="bg-white rounded-xl shadow-lg border-t-4 border-vg-red p-8">
+						<h3 class="text-2xl font-bold text-vg-burgundy mb-4">{instance.dates}</h3>
+						<div class="space-y-3 text-vg-gray-dark mb-6">
+							<div class="flex items-center gap-2">
+								<Icon name="laptop" size="sm" class="text-vg-red" />
+								<span>{essentialDdd.format} - {essentialDdd.duration}</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="refresh" size="sm" class="text-vg-red" />
+								<span>{essentialDdd.schedule}</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="check" size="sm" class="text-vg-red" />
+								<span>Limited to 25 participants</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="check" size="sm" class="text-vg-red" />
+								<span>Early bird: <strong class="text-vg-burgundy">{instance.earlyBirdPrice}</strong> <span class="text-sm text-vg-gray">(until {instance.earlyBirdDeadline})</span></span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="check" size="sm" class="text-vg-red" />
+								<span>Regular: {instance.regularPrice}</span>
+							</div>
 						</div>
-						<a
+						<Button
 							href={registrationUrl(instance, 'workshop_detail')}
-							class="inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 px-6 py-3 bg-vg-red text-white hover:bg-vg-red-light shadow-lg hover:shadow-xl"
+							variant="primary"
+							class="w-full text-center"
 							onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${essentialDdd.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${essentialDdd.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
 						>
-							Register
-							<Icon name="arrow-right" size="sm" class="ml-2" />
-						</a>
+							Register <Icon name="arrow-right" size="sm" />
+						</Button>
 					</div>
 				))}
 			</div>
 		</Section>
 
 		<!-- What You Will Learn -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
 				What You Will Learn
 			</h2>
@@ -97,19 +119,19 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Introduction to domain-driven design principles</span>
+							<span>Identify when DDD is the right approach for your project</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Collaborative modeling with EventStorming to discover business processes</span>
+							<span>Use EventStorming to discover business processes collaboratively</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Growing shared domain language (Ubiquitous Language)</span>
+							<span>Build a shared domain language that aligns code with how the business thinks</span>
 						</li>
 					</ul>
 				</div>
@@ -127,19 +149,19 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Entities, Value Objects, and Domain Events in practice</span>
+							<span>Model domain concepts using Entities, Value Objects, and Domain Events</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Understanding invariants and consistency boundaries</span>
+							<span>Define clear consistency boundaries that prevent invalid state</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Hands-on code refactoring exercises</span>
+							<span>Refactor existing code to express domain concepts directly</span>
 						</li>
 					</ul>
 				</div>
@@ -157,19 +179,19 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Identifying natural module and context boundaries</span>
+							<span>Find natural boundaries where language and models change</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Domain modules and the role of connascence</span>
+							<span>Structure modules using connascence to minimize coupling</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Managing dependencies between contexts</span>
+							<span>Manage dependencies between contexts without creating a tangled monolith</span>
 						</li>
 					</ul>
 				</div>
@@ -187,19 +209,19 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Refactoring a codebase using DDD building blocks</span>
+							<span>Apply DDD building blocks to refactor a real codebase</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Integrating EventStorming discoveries into design decisions</span>
+							<span>Turn EventStorming discoveries into concrete design decisions</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Practical patterns for applying DDD on Monday morning</span>
+							<span>Leave with practical patterns you can apply on Monday morning</span>
 						</li>
 					</ul>
 				</div>
@@ -207,9 +229,9 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 		</Section>
 
 		<!-- Who Should Attend -->
-		<Section>
-			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
-				Who Should Attend?
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				Who Should Attend
 			</h2>
 			<div class="max-w-4xl mx-auto">
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
@@ -218,13 +240,13 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Software developers</span>
+							<span><strong>Software developers</strong> who want to write code that reflects the business domain</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Architects and technical leads</span>
+							<span><strong>Architects and technical leads</strong> looking for practical modeling techniques</span>
 						</li>
 					</ul>
 					<ul class="space-y-3 text-vg-gray-dark">
@@ -232,13 +254,13 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Product managers</span>
+							<span><strong>Product managers</strong> who want to bridge the gap between business and technical teams</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Business analysts</span>
+							<span><strong>Business analysts</strong> who want to contribute directly to software design decisions</span>
 						</li>
 					</ul>
 				</div>
@@ -249,16 +271,14 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 		</Section>
 
 		<!-- Workshop Format -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
 				Workshop Format
 			</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-start gap-3 mb-4">
-						<div class="bg-vg-red text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5">
-							<Icon name="laptop" size="sm" class="text-white" />
-						</div>
+						<Icon name="laptop" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
 						<div>
 							<h3 class="text-lg font-bold text-vg-burgundy">Virtual Delivery</h3>
 							<p class="text-vg-gray-dark">4 sessions x 3 hours each over 4 days</p>
@@ -267,34 +287,28 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 				</div>
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-start gap-3 mb-4">
-						<div class="bg-vg-red text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5">
-							<Icon name="refresh" size="sm" class="text-white" />
-						</div>
+						<Icon name="refresh" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
 						<div>
 							<h3 class="text-lg font-bold text-vg-burgundy">Tools</h3>
-							<p class="text-vg-gray-dark">Zoom for video + Miro for collaborative exercises</p>
+							<p class="text-vg-gray-dark">Zoom for video conferencing and Miro for collaborative exercises</p>
 						</div>
 					</div>
 				</div>
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-start gap-3 mb-4">
-						<div class="bg-vg-red text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5">
-							<Icon name="check" size="sm" class="text-white" />
-						</div>
+						<Icon name="office" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
 						<div>
-							<h3 class="text-lg font-bold text-vg-burgundy">Participatory Format</h3>
-							<p class="text-vg-gray-dark">Small cohort, camera-on for interactive learning</p>
+							<h3 class="text-lg font-bold text-vg-burgundy">Interactive Format</h3>
+							<p class="text-vg-gray-dark">Small cohort, camera-on participatory format with collaborative exercises</p>
 						</div>
 					</div>
 				</div>
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-start gap-3 mb-4">
-						<div class="bg-vg-red text-white rounded-full w-8 h-8 flex items-center justify-center flex-shrink-0 mt-0.5">
-							<Icon name="arrow-right" size="sm" class="text-white" />
-						</div>
+						<Icon name="check" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
 						<div>
-							<h3 class="text-lg font-bold text-vg-burgundy">Certificate Included</h3>
-							<p class="text-vg-gray-dark">Certificate of completion provided to all participants</p>
+							<h3 class="text-lg font-bold text-vg-burgundy">Certificate</h3>
+							<p class="text-vg-gray-dark">Certificate of completion included for all participants who attend the full workshop</p>
 						</div>
 					</div>
 				</div>
@@ -302,7 +316,7 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 		</Section>
 
 		<!-- Testimonials -->
-		<Section>
+		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
 				What Participants Say
 			</h2>
@@ -338,7 +352,7 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 		</Section>
 
 		<!-- Your Instructor -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
 				Your Instructor
 			</h2>
@@ -366,7 +380,7 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 		</Section>
 
 		<!-- FAQ -->
-		<Section>
+		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				Frequently Asked Questions
 			</h2>
@@ -403,6 +417,14 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 						All participants receive a certificate of completion, course slides, code examples, Miro templates, and reference materials.
 					</p>
 				</div>
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						Do you offer team discounts?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Yes, discounts are available for teams of 3 or more. <a href="mailto:paul@virtualgenius.com" class="text-vg-red hover:underline">Contact us</a> to arrange group pricing.
+					</p>
+				</div>
 			</div>
 		</Section>
 
@@ -416,14 +438,13 @@ const description = 'Learn domain-driven design from the ground up. Domain model
 					Join the next Essential DDD workshop and start applying domain modeling techniques to your projects.
 				</p>
 				{essentialDdd.instances.length > 0 && (
-					<a
+					<Button
 						href={registrationUrl(essentialDdd.instances[0], 'workshop_detail')}
-						class="inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 px-8 py-4 border-2 border-white text-white hover:bg-vg-amber hover:border-vg-amber"
+						variant="outlined"
 						onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${essentialDdd.title}', 'workshop_date': '${essentialDdd.instances[0].dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(essentialDdd.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${essentialDdd.title}', 'workshop_date': '${essentialDdd.instances[0].dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(essentialDdd.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
 					>
-						Register Now
-						<Icon name="arrow-right" size="sm" class="ml-2" />
-					</a>
+						Register Now <Icon name="arrow-right" size="sm" />
+					</Button>
 				)}
 			</div>
 		</Section>

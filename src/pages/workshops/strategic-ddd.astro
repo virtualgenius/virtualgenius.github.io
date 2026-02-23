@@ -48,8 +48,17 @@ const description = 'Advanced strategic design techniques for modeling complex s
 			</div>
 		</section>
 
-		<!-- Upcoming Dates -->
+		<!-- Overview -->
 		<Section>
+			<div class="max-w-3xl mx-auto text-center">
+				<p class="text-xl text-vg-gray-dark leading-relaxed">
+					When systems grow beyond what one team can hold in their heads, design decisions become organizational decisions. This workshop teaches you to map relationships between systems and teams, identify where to invest in design quality, and structure large-scale systems for sustainable evolution. Builds on the foundations covered in Essential DDD.
+				</p>
+			</div>
+		</Section>
+
+		<!-- Upcoming Dates -->
+		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				Upcoming Dates
 			</h2>
@@ -61,6 +70,14 @@ const description = 'Advanced strategic design techniques for modeling complex s
 							<div class="flex items-center gap-2">
 								<Icon name="laptop" size="sm" class="text-vg-red" />
 								<span>{strategicDdd.format} - {strategicDdd.duration}</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="refresh" size="sm" class="text-vg-red" />
+								<span>{strategicDdd.schedule}</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="check" size="sm" class="text-vg-red" />
+								<span>Limited to 25 participants</span>
 							</div>
 							<div class="flex items-center gap-2">
 								<Icon name="check" size="sm" class="text-vg-red" />
@@ -85,14 +102,14 @@ const description = 'Advanced strategic design techniques for modeling complex s
 		</Section>
 
 		<!-- What You Will Learn -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				What You Will Learn
 			</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-center mb-4">
-						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
 							1
 						</div>
 						<h3 class="text-xl font-bold text-vg-burgundy">Context Mapping</h3>
@@ -102,26 +119,26 @@ const description = 'Advanced strategic design techniques for modeling complex s
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Advanced context mapping strategies for understanding system relationships</span>
+							<span>Map the relationships between systems and teams in your organization</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Relationship patterns: Customer-Supplier, Conformist, Anti-Corruption Layer, Open Host Service</span>
+							<span>Choose the right integration pattern for each relationship</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Mapping organizational boundaries to technical boundaries</span>
+							<span>Align technical boundaries with organizational reality</span>
 						</li>
 					</ul>
 				</div>
 
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-center mb-4">
-						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
 							2
 						</div>
 						<h3 class="text-xl font-bold text-vg-burgundy">Core Domain Identification</h3>
@@ -131,26 +148,26 @@ const description = 'Advanced strategic design techniques for modeling complex s
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Strategic distillation techniques to identify what matters most</span>
+							<span>Identify which parts of your system deserve the most design investment</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Distinguishing core, supporting, and generic subdomains</span>
+							<span>Distinguish core, supporting, and generic subdomains in your landscape</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Prioritizing design investment where it creates competitive advantage</span>
+							<span>Focus engineering effort where it creates competitive advantage</span>
 						</li>
 					</ul>
 				</div>
 
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-center mb-4">
-						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
 							3
 						</div>
 						<h3 class="text-xl font-bold text-vg-burgundy">Large-Scale Structure</h3>
@@ -160,26 +177,26 @@ const description = 'Advanced strategic design techniques for modeling complex s
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Patterns for organizing systems at scale</span>
+							<span>Apply patterns for organizing systems beyond individual team boundaries</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Responsibility layers, evolving order, and system metaphor</span>
+							<span>Use responsibility layers and evolving order to manage complexity</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Applying structure patterns to existing systems</span>
+							<span>Evolve existing systems toward better large-scale structure</span>
 						</li>
 					</ul>
 				</div>
 
 				<div class="bg-white rounded-xl shadow-md p-8">
 					<div class="flex items-center mb-4">
-						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
 							4
 						</div>
 						<h3 class="text-xl font-bold text-vg-burgundy">Strategic Design in Practice</h3>
@@ -189,19 +206,19 @@ const description = 'Advanced strategic design techniques for modeling complex s
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Evolving legacy systems using strategic DDD patterns</span>
+							<span>Plan incremental modernization of legacy systems using strategic patterns</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Integration strategies for complex system landscapes</span>
+							<span>Design integration strategies that reduce coupling across system landscapes</span>
 						</li>
 						<li class="flex items-start gap-2">
 							<span class="text-vg-red mt-1 flex-shrink-0">
 								<Icon name="check" size="sm" />
 							</span>
-							<span>Building a strategic design roadmap for your organization</span>
+							<span>Build a strategic design roadmap you can take back to your organization</span>
 						</li>
 					</ul>
 				</div>
@@ -209,100 +226,92 @@ const description = 'Advanced strategic design techniques for modeling complex s
 		</Section>
 
 		<!-- Who Should Attend -->
-		<Section>
-			<h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-vg-burgundy">
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				Who Should Attend
 			</h2>
 			<div class="max-w-4xl mx-auto">
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-					<div>
-						<h3 class="text-xl font-semibold mb-4 text-vg-red">Ideal Participants</h3>
-						<ul class="space-y-2 text-vg-gray-dark">
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Senior developers</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Software architects</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Technical leads</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Engineering managers</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>System designers</span>
-							</li>
-						</ul>
-					</div>
-					<div>
-						<h3 class="text-xl font-semibold mb-4 text-vg-red">Prerequisites</h3>
-						<p class="text-vg-gray-dark">
-							Essential DDD or equivalent experience is recommended. You should be comfortable with foundational DDD concepts such as bounded contexts, entities, value objects, and aggregates. This workshop builds on those foundations to explore strategic-level design decisions.
-						</p>
-					</div>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>Senior developers</strong> ready to think beyond individual services</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>Software architects</strong> making system-wide boundary decisions</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>Technical leads</strong> responsible for cross-team integration</span>
+						</li>
+					</ul>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>Engineering managers</strong> aligning team structure with system architecture</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>System designers</strong> working on large-scale modernization</span>
+						</li>
+					</ul>
 				</div>
+				<p class="text-center text-vg-gray-dark text-lg">
+					Essential DDD or equivalent experience is recommended. You should be comfortable with foundational DDD concepts such as bounded contexts, entities, value objects, and aggregates.
+				</p>
 			</div>
 		</Section>
 
 		<!-- Workshop Format -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				Workshop Format
 			</h2>
-			<div class="max-w-4xl mx-auto">
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
-					<div class="bg-white rounded-xl shadow-md p-8">
-						<div class="flex items-start gap-3 mb-4">
-							<Icon name="laptop" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
-							<div>
-								<h3 class="text-xl font-bold text-vg-burgundy">Virtual Delivery</h3>
-								<p class="text-vg-gray-dark">4 sessions of 3 hours each, spread over 4 consecutive days</p>
-							</div>
-						</div>
-					</div>
-					<div class="bg-white rounded-xl shadow-md p-8">
-						<div class="flex items-start gap-3 mb-4">
-							<Icon name="refresh" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
-							<div>
-								<h3 class="text-xl font-bold text-vg-burgundy">Interactive Format</h3>
-								<p class="text-vg-gray-dark">Small cohort, camera-on participatory format with collaborative exercises</p>
-							</div>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<Icon name="laptop" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Virtual Delivery</h3>
+							<p class="text-vg-gray-dark">4 sessions of 3 hours each, spread over 4 consecutive days</p>
 						</div>
 					</div>
 				</div>
-				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-					<div class="bg-white rounded-xl shadow-md p-8">
-						<div class="flex items-start gap-3 mb-4">
-							<Icon name="office" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
-							<div>
-								<h3 class="text-xl font-bold text-vg-burgundy">Tools</h3>
-								<p class="text-vg-gray-dark">Zoom for video conferencing and Miro for collaborative exercises. All software is free to use.</p>
-							</div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<Icon name="refresh" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Interactive Format</h3>
+							<p class="text-vg-gray-dark">Small cohort, camera-on participatory format with collaborative exercises</p>
 						</div>
 					</div>
-					<div class="bg-white rounded-xl shadow-md p-8">
-						<div class="flex items-start gap-3 mb-4">
-							<Icon name="check" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
-							<div>
-								<h3 class="text-xl font-bold text-vg-burgundy">Certificate</h3>
-								<p class="text-vg-gray-dark">Certificate of completion included for all participants who attend the full workshop.</p>
-							</div>
+				</div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<Icon name="office" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Tools</h3>
+							<p class="text-vg-gray-dark">Zoom for video conferencing and Miro for collaborative exercises. All software is free to use.</p>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<Icon name="check" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Certificate</h3>
+							<p class="text-vg-gray-dark">Certificate of completion included for all participants who attend the full workshop.</p>
 						</div>
 					</div>
 				</div>
@@ -310,7 +319,7 @@ const description = 'Advanced strategic design techniques for modeling complex s
 		</Section>
 
 		<!-- Testimonials -->
-		<Section>
+		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				What Participants Say
 			</h2>
@@ -346,16 +355,17 @@ const description = 'Advanced strategic design techniques for modeling complex s
 		</Section>
 
 		<!-- Your Instructor -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				Your Instructor
 			</h2>
-			<div class="max-w-3xl mx-auto flex flex-col md:flex-row items-center gap-8">
+			<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-8">
 				<div class="flex-shrink-0">
 					<img
 						src="/images/paul-portrait.webp"
 						alt="Paul Rayner"
 						class="w-36 h-36 rounded-full object-cover shadow-lg"
+						loading="lazy"
 					/>
 				</div>
 				<div>
@@ -372,7 +382,7 @@ const description = 'Advanced strategic design techniques for modeling complex s
 		</Section>
 
 		<!-- FAQ -->
-		<Section>
+		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				Frequently Asked Questions
 			</h2>
@@ -412,6 +422,15 @@ const description = 'Advanced strategic design techniques for modeling complex s
 						Certificate of completion, course slides, context mapping templates, Miro boards, and reference materials.
 					</p>
 				</div>
+
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						Do you offer team discounts?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Yes, discounts are available for teams of 3 or more. <a href="mailto:paul@virtualgenius.com" class="text-vg-red hover:underline">Contact us</a> to arrange group pricing.
+					</p>
+				</div>
 			</div>
 		</Section>
 
@@ -424,9 +443,15 @@ const description = 'Advanced strategic design techniques for modeling complex s
 				<p class="text-xl mb-8 text-vg-gray-light">
 					Join the next cohort and learn how to make strategic design decisions that align your technical architecture with business priorities.
 				</p>
-				<Button href={registrationUrl(strategicDdd.instances[0], 'workshop_detail')} variant="outlined">
-					Register Now <Icon name="arrow-right" size="sm" />
-				</Button>
+				{strategicDdd.instances.length > 0 && (
+					<Button
+						href={registrationUrl(strategicDdd.instances[0], 'workshop_detail')}
+						variant="outlined"
+						onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${strategicDdd.title}', 'workshop_date': '${strategicDdd.instances[0].dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(strategicDdd.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${strategicDdd.title}', 'workshop_date': '${strategicDdd.instances[0].dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(strategicDdd.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
+					>
+						Register Now <Icon name="arrow-right" size="sm" />
+					</Button>
+				)}
 			</div>
 		</Section>
 

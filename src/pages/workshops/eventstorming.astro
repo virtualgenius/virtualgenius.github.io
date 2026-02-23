@@ -11,357 +11,450 @@ import { SITE_TITLE } from '../../consts';
 import { eventstorming, registrationUrl } from '../../data/workshops';
 
 const title = `${eventstorming.title} | ${SITE_TITLE}`;
-const description =
-  "Master the art of collaborative domain discovery. Learn Big Picture EventStorming, Process Modeling, Software Design, and facilitation practice in this hands-on virtual workshop.";
+const description = "Master the art of collaborative domain discovery. Learn Big Picture EventStorming, Process Modeling, Software Design, and facilitation practice in this hands-on virtual workshop.";
 ---
 
 <!doctype html>
 <html lang="en">
-  <head>
-    <BaseHead title={title} description={description} />
-  </head>
-  <body class="bg-white">
-    <Header />
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
 
-    <!-- Hero -->
-    <section class="relative w-full overflow-hidden" style="height: 360px;">
-      <div class="absolute inset-0 w-full h-full">
-        <img
-          src="/images/eventstorming-wall.webp"
-          alt="EventStorming workshop wall covered in sticky notes"
-          class="w-full h-full object-cover"
-          style="filter: brightness(0.6); object-position: center 40%;"
-        />
-        <div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
-      </div>
-      <div class="relative z-10 flex items-center justify-center h-full">
-        <div class="max-w-screen-xl mx-auto px-6 w-full">
-          <div class="text-center max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
-              EventStorming Facilitation Workshop
-            </h1>
-            <p class="text-2xl md:text-3xl mb-8 text-white/95 drop-shadow-md">
-              Master the art of collaborative domain discovery
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
+		<!-- Hero -->
+		<section class="relative w-full overflow-hidden" style="height: 360px;">
+			<div class="absolute inset-0 w-full h-full">
+				<img
+					src="/images/eventstorming-wall.webp"
+					alt="EventStorming workshop wall covered in sticky notes"
+					class="w-full h-full object-cover"
+					style="filter: brightness(0.6); object-position: center 40%;"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+			</div>
+			<div class="relative z-10 flex items-center justify-center h-full">
+				<div class="max-w-screen-xl mx-auto px-6 w-full">
+					<div class="text-center max-w-4xl mx-auto">
+						<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+							EventStorming Facilitation Workshop
+						</h1>
+						<p class="text-2xl md:text-3xl mb-8 text-white/95 drop-shadow-md">
+							Master the art of collaborative domain discovery
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
 
-    <!-- Upcoming Dates -->
-    <Section>
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
-        Upcoming Dates
-      </h2>
-      <div class="max-w-3xl mx-auto space-y-6">
-        {eventstorming.instances.map((instance) => (
-          <div class="bg-white border border-vg-gray-light rounded-2xl shadow-lg p-6 md:p-8">
-            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-6">
-              <div>
-                <h3 class="text-2xl font-bold text-vg-burgundy mb-2">{instance.dates}</h3>
-                <p class="text-vg-gray-dark mb-1">
-                  <span class="font-semibold">Early bird:</span> {instance.earlyBirdPrice}
-                  <span class="text-vg-gray text-sm">(until {instance.earlyBirdDeadline})</span>
-                </p>
-                <p class="text-vg-gray-dark">
-                  <span class="font-semibold">Regular:</span> {instance.regularPrice}
-                </p>
-              </div>
-              <div class="flex-shrink-0">
-                <a
-                  href={registrationUrl(instance, "workshop_detail")}
-                  class="inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 px-6 py-3 bg-vg-red text-white hover:bg-vg-red-light shadow-lg hover:shadow-xl"
-                  onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${eventstorming.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${eventstorming.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
-                >
-                  Register <Icon name="arrow-right" size="sm" class="ml-2" />
-                </a>
-              </div>
-            </div>
-          </div>
-        ))}
-      </div>
-    </Section>
+		<!-- Overview -->
+		<Section>
+			<div class="max-w-3xl mx-auto text-center">
+				<p class="text-xl text-vg-gray-dark leading-relaxed">
+					EventStorming is a collaborative workshop format for rapidly exploring complex business domains. This workshop teaches you how to facilitate your own sessions, from Big Picture exploration through Process Modeling to Software Design. You will leave ready to run EventStorming with your own teams, regardless of your role.
+				</p>
+			</div>
+		</Section>
 
-    <!-- What You Will Learn -->
-    <Section background="gray">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
-        What You Will Learn
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="flex-shrink-0 w-10 h-10 bg-vg-red rounded-full flex items-center justify-center text-white font-bold">1</span>
-            <h3 class="text-xl font-bold text-vg-burgundy">Big Picture EventStorming</h3>
-          </div>
-          <ul class="space-y-3 text-vg-gray-dark">
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Map end-to-end business processes using domain events</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Surface hot spots, bottlenecks, and assumptions</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Build shared understanding across business and technical perspectives</span>
-            </li>
-          </ul>
-        </div>
+		<!-- Upcoming Dates -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Upcoming Dates
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+				{eventstorming.instances.map((instance) => (
+					<div class="bg-white rounded-xl shadow-lg border-t-4 border-vg-red p-8">
+						<h3 class="text-2xl font-bold text-vg-burgundy mb-4">{instance.dates}</h3>
+						<div class="space-y-3 text-vg-gray-dark mb-6">
+							<div class="flex items-center gap-2">
+								<Icon name="laptop" size="sm" class="text-vg-red" />
+								<span>{eventstorming.format} - {eventstorming.duration}</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="refresh" size="sm" class="text-vg-red" />
+								<span>{eventstorming.schedule}</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="check" size="sm" class="text-vg-red" />
+								<span>Limited to 25 participants</span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="check" size="sm" class="text-vg-red" />
+								<span>Early bird: <strong class="text-vg-burgundy">{instance.earlyBirdPrice}</strong> <span class="text-sm text-vg-gray">(until {instance.earlyBirdDeadline})</span></span>
+							</div>
+							<div class="flex items-center gap-2">
+								<Icon name="check" size="sm" class="text-vg-red" />
+								<span>Regular: {instance.regularPrice}</span>
+							</div>
+						</div>
+						<Button
+							href={registrationUrl(instance, 'workshop_detail')}
+							variant="primary"
+							class="w-full text-center"
+							onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${eventstorming.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${eventstorming.title}', 'workshop_date': '${instance.dates}', 'link_location': 'workshop_detail_page', 'value': ${parseFloat(instance.earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
+						>
+							Register <Icon name="arrow-right" size="sm" />
+						</Button>
+					</div>
+				))}
+			</div>
+		</Section>
 
-        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="flex-shrink-0 w-10 h-10 bg-vg-red rounded-full flex items-center justify-center text-white font-bold">2</span>
-            <h3 class="text-xl font-bold text-vg-burgundy">Process Modeling</h3>
-          </div>
-          <ul class="space-y-3 text-vg-gray-dark">
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Zoom into specific areas with commands, actors, and policies</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Identify bounded contexts and integration points</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Analyze detailed workflows for improvement opportunities</span>
-            </li>
-          </ul>
-        </div>
+		<!-- What You Will Learn -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				What You Will Learn
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
+							1
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Big Picture EventStorming</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Map your end-to-end business processes in a single collaborative session</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Surface hidden bottlenecks, hot spots, and untested assumptions</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Build shared understanding between business and technical people</span>
+						</li>
+					</ul>
+				</div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="flex-shrink-0 w-10 h-10 bg-vg-red rounded-full flex items-center justify-center text-white font-bold">3</span>
-            <h3 class="text-xl font-bold text-vg-burgundy">Software Design</h3>
-          </div>
-          <ul class="space-y-3 text-vg-gray-dark">
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Translate discoveries into software architecture decisions</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Apply EventStorming facilitation techniques to solution design</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Identify aggregates, bounded contexts, and integration patterns</span>
-            </li>
-          </ul>
-        </div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
+							2
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Process Modeling</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Drill into specific processes to uncover commands, actors, and policies</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Discover natural service boundaries and integration points</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Identify improvement opportunities in detailed workflows</span>
+						</li>
+					</ul>
+				</div>
 
-        <div class="bg-white rounded-2xl shadow-lg p-6 md:p-8">
-          <div class="flex items-center gap-3 mb-4">
-            <span class="flex-shrink-0 w-10 h-10 bg-vg-red rounded-full flex items-center justify-center text-white font-bold">4</span>
-            <h3 class="text-xl font-bold text-vg-burgundy">Running Your Own Workshop</h3>
-          </div>
-          <ul class="space-y-3 text-vg-gray-dark">
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Key facilitation techniques and how to handle common challenges</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Plan your own EventStorming workshop for back at the office</span>
-            </li>
-            <li class="flex items-start gap-2">
-              <Icon name="check" size="sm" class="text-vg-red mt-1 flex-shrink-0" />
-              <span>Preparation checklist, logistics, and participant selection</span>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </Section>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
+							3
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Software Design</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Translate workshop discoveries into actionable software design</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Bridge the gap between domain exploration and solution architecture</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Identify aggregates, bounded contexts, and integration patterns from your model</span>
+						</li>
+					</ul>
+				</div>
 
-    <!-- Who Should Attend -->
-    <Section>
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-8 text-vg-burgundy">
-        Who Should Attend
-      </h2>
-      <div class="max-w-3xl mx-auto text-center">
-        <p class="text-lg text-vg-gray-dark mb-6">
-          This workshop is designed for software developers, architects, product managers, business analysts, Scrum Masters, and team leads who want to learn collaborative domain discovery techniques.
-        </p>
-        <p class="text-lg text-vg-gray-dark">
-          No prior EventStorming experience needed.
-        </p>
-      </div>
-    </Section>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-center mb-4">
+						<div class="bg-vg-red text-white text-xl font-bold rounded-full w-10 h-10 flex items-center justify-center mr-3 flex-shrink-0">
+							4
+						</div>
+						<h3 class="text-xl font-bold text-vg-burgundy">Running Your Own Workshop</h3>
+					</div>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Handle common facilitation challenges with proven techniques</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Plan your first EventStorming session for back at the office</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Leave with a preparation checklist, logistics plan, and participant selection guide</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</Section>
 
-    <!-- Workshop Format -->
-    <Section background="gray">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
-        Workshop Format
-      </h2>
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
-        <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
-          <div class="w-14 h-14 bg-vg-red rounded-full flex items-center justify-center mx-auto mb-4">
-            <Icon name="laptop" size="lg" class="text-white" />
-          </div>
-          <h3 class="text-lg font-bold text-vg-burgundy mb-2">Virtual</h3>
-          <p class="text-sm text-vg-gray-dark">4 sessions x 3 hours each over 4 days</p>
-        </div>
+		<!-- Who Should Attend -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Who Should Attend
+			</h2>
+			<div class="max-w-4xl mx-auto">
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>Software developers</strong> who want to understand the domain before writing code</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>Architects</strong> looking for a lightweight approach to system-level discovery</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>Product managers</strong> who want to align teams around shared domain understanding</span>
+						</li>
+					</ul>
+					<ul class="space-y-3 text-vg-gray-dark">
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>Business analysts</strong> who want richer domain conversations than requirements documents allow</span>
+						</li>
+						<li class="flex items-start gap-2">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span><strong>Scrum Masters and team leads</strong> looking for facilitation techniques that produce real insights</span>
+						</li>
+					</ul>
+				</div>
+				<p class="text-center text-vg-gray-dark text-lg">
+					No prior EventStorming experience needed.
+				</p>
+			</div>
+		</Section>
 
-        <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
-          <div class="w-14 h-14 bg-vg-red rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-vg-burgundy mb-2">Tools</h3>
-          <p class="text-sm text-vg-gray-dark">Zoom for video + Miro for collaborative exercises</p>
-        </div>
+		<!-- Workshop Format -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Workshop Format
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<Icon name="laptop" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Virtual Delivery</h3>
+							<p class="text-vg-gray-dark">4 sessions x 3 hours each over 4 days</p>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<Icon name="refresh" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Interactive Format</h3>
+							<p class="text-vg-gray-dark">Small cohort, camera-on participatory format with collaborative exercises</p>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<Icon name="office" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Tools</h3>
+							<p class="text-vg-gray-dark">Zoom for video conferencing and Miro for collaborative exercises. All software is free to use.</p>
+						</div>
+					</div>
+				</div>
+				<div class="bg-white rounded-xl shadow-md p-8">
+					<div class="flex items-start gap-3 mb-4">
+						<Icon name="check" size="lg" class="text-vg-red flex-shrink-0 mt-1" />
+						<div>
+							<h3 class="text-lg font-bold text-vg-burgundy">Certificate</h3>
+							<p class="text-vg-gray-dark">Certificate of completion included for all participants who attend the full workshop.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</Section>
 
-        <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
-          <div class="w-14 h-14 bg-vg-red rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-vg-burgundy mb-2">Small Cohort</h3>
-          <p class="text-sm text-vg-gray-dark">Camera-on, participatory format with direct feedback</p>
-        </div>
+		<!-- Testimonials -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				What Participants Say
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+				<TestimonialCard
+					quote="I felt I learnt and refined understanding on event storming as a process, what it can do. And the training emphasized the need for me to continue to embrace chaos. I felt as a facilitator, Paul was kind and non-judgmental, and I liked observing the little things he did in the process."
+					role="Workshop Participant"
+					industry="Public Workshop"
+					rating={10}
+					workshop="EventStorming Facilitation"
+				/>
+				<TestimonialCard
+					quote="Paul has done a great job of making a 4 day training something I looked forward to daily. Not only was the content great to understand, but the exercises reinformed learning and had great opportunity to have discussions."
+					role="Workshop Participant"
+					industry="Financial Services"
+					rating={10}
+					workshop="EventStorming Facilitation"
+				/>
+				<TestimonialCard
+					quote="I gained much clarity on some fuzzy topics, and reinforced some ideas/knowledge I already had about ES. Most importantly I learned how ES can be taught/delivered in an approachable/iterative way."
+					role="Workshop Participant"
+					industry="Public Workshop"
+					rating={10}
+					workshop="EventStorming Facilitation"
+				/>
+			</div>
+			<div class="text-center mt-8">
+				<a href="/testimonials" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold text-lg">
+					View All Testimonials
+					<Icon name="arrow-right" size="sm" />
+				</a>
+			</div>
+		</Section>
 
-        <div class="bg-white rounded-2xl shadow-lg p-6 text-center">
-          <div class="w-14 h-14 bg-vg-red rounded-full flex items-center justify-center mx-auto mb-4">
-            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
-            </svg>
-          </div>
-          <h3 class="text-lg font-bold text-vg-burgundy mb-2">Certificate</h3>
-          <p class="text-sm text-vg-gray-dark">Certificate of completion included</p>
-        </div>
-      </div>
-    </Section>
+		<!-- Your Instructor -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Your Instructor
+			</h2>
+			<div class="flex flex-col md:flex-row items-center gap-8 max-w-4xl mx-auto">
+				<div class="flex-shrink-0">
+					<img
+						src="/images/paul-portrait.webp"
+						alt="Paul Rayner"
+						class="w-36 h-36 rounded-full object-cover shadow-lg"
+						loading="lazy"
+					/>
+				</div>
+				<div>
+					<h3 class="text-2xl font-bold text-vg-burgundy mb-1">Paul Rayner</h3>
+					<p class="text-vg-red font-semibold mb-4">Software Design Consultant & EventStorming Facilitator</p>
+					<p class="text-vg-gray-dark mb-4">
+						35+ years in software development. Creator of Explore DDD conference. Trained 580+ workshop participants with a 9.2/10 average rating. Certified EventStorming facilitator trained by Alberto Brandolini, the creator of EventStorming.
+					</p>
+					<a href="/about" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold">
+						Full Bio <Icon name="arrow-right" size="sm" />
+					</a>
+				</div>
+			</div>
+		</Section>
 
-    <!-- Testimonials -->
-    <Section>
-      <div class="text-center mb-12">
-        <p class="text-sm uppercase tracking-wider mb-4 text-vg-red font-semibold">
-          WHAT PARTICIPANTS SAY
-        </p>
-        <h2 class="text-3xl md:text-4xl font-bold text-vg-burgundy">
-          Workshop Reviews
-        </h2>
-      </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-        <TestimonialCard
-          quote="I felt I learnt and refined understanding on event storming as a process, what it can do. And the training emphasized the need for me to continue to embrace chaos. I felt as a facilitator, Paul was kind and non-judgmental, and I liked observing the little things he did in the process."
-          role="Workshop Participant"
-          industry="Public Workshop"
-          rating={10}
-          workshop="EventStorming Facilitation"
-        />
-        <TestimonialCard
-          quote="Paul has done a great job of making a 4 day training something I looked forward to daily. Not only was the content great to understand, but the exercises reinformed learning and had great opportunity to have discussions."
-          role="Workshop Participant"
-          industry="Financial Services"
-          rating={10}
-          workshop="EventStorming Facilitation"
-        />
-        <TestimonialCard
-          quote="I gained much clarity on some fuzzy topics, and reinforced some ideas/knowledge I already had about ES. Most importantly I learned how ES can be taught/delivered in an approachable/iterative way."
-          role="Workshop Participant"
-          industry="Public Workshop"
-          rating={10}
-          workshop="EventStorming Facilitation"
-        />
-      </div>
-    </Section>
+		<!-- FAQ -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
+				Frequently Asked Questions
+			</h2>
+			<div class="max-w-3xl mx-auto space-y-8">
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						What if I have no EventStorming experience?
+					</h3>
+					<p class="text-vg-gray-dark">
+						No experience needed. The workshop teaches EventStorming from the fundamentals, building up progressively across the four sessions. You will learn by doing, with plenty of guided practice along the way.
+					</p>
+				</div>
 
-    <!-- Your Instructor -->
-    <Section background="gray">
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
-        Your Instructor
-      </h2>
-      <div class="flex flex-col md:flex-row items-center gap-8 max-w-3xl mx-auto">
-        <div class="flex-shrink-0">
-          <img
-            src="/images/paul-portrait.webp"
-            alt="Paul Rayner"
-            class="w-36 h-36 md:w-40 md:h-40 rounded-full object-cover shadow-lg"
-          />
-        </div>
-        <div>
-          <h3 class="text-2xl font-bold text-vg-burgundy mb-1">Paul Rayner</h3>
-          <p class="text-vg-red font-semibold mb-4">Software Design Consultant & EventStorming Facilitator</p>
-          <p class="text-vg-gray-dark mb-4">
-            35+ years in software development. Creator of Explore DDD conference. Trained 580+ workshop participants with a 9.2/10 average rating. Certified EventStorming facilitator trained by Alberto Brandolini, the creator of EventStorming.
-          </p>
-          <a href="/about" class="inline-flex items-center gap-1 text-vg-red hover:text-vg-burgundy font-semibold">
-            Full bio <Icon name="arrow-right" size="sm" />
-          </a>
-        </div>
-      </div>
-    </Section>
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						Will I be able to facilitate sessions after this workshop?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Yes. The workshop builds facilitation skills progressively across all four sessions, combining instruction with hands-on practice. You will leave with the skills and confidence to facilitate sessions with your own teams.
+					</p>
+				</div>
 
-    <!-- FAQ -->
-    <Section>
-      <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
-        Frequently Asked Questions
-      </h2>
-      <div class="max-w-3xl mx-auto space-y-8">
-        <div>
-          <h3 class="text-xl font-bold text-vg-burgundy mb-3">
-            What if I have no EventStorming experience?
-          </h3>
-          <p class="text-vg-gray-dark">
-            No experience needed. The workshop teaches EventStorming from the fundamentals, building up progressively across the four sessions. You will learn by doing, with plenty of guided practice along the way.
-          </p>
-        </div>
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						How is this different from a private EventStorming workshop?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Public workshops teach you the EventStorming facilitation method so you can run sessions yourself. Private workshops apply EventStorming directly to your specific domain and business challenges. If you want to learn the skill, take the public workshop. If you want to solve a specific problem, <a href="/services/eventstorming" class="text-vg-red hover:underline">book a private workshop</a>.
+					</p>
+				</div>
 
-        <div>
-          <h3 class="text-xl font-bold text-vg-burgundy mb-3">
-            Will I be able to facilitate sessions after this workshop?
-          </h3>
-          <p class="text-vg-gray-dark">
-            Yes. The workshop builds facilitation skills progressively across all four sessions, combining instruction with hands-on practice. You will leave with the skills and confidence to facilitate sessions with your own teams.
-          </p>
-        </div>
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						What materials do I receive?
+					</h3>
+					<p class="text-vg-gray-dark">
+						All participants receive a certificate of completion, Miro templates for running your own sessions, a facilitation guide, and reference materials you can use when facilitating EventStorming with your teams.
+					</p>
+				</div>
 
-        <div>
-          <h3 class="text-xl font-bold text-vg-burgundy mb-3">
-            How is this different from a private EventStorming workshop?
-          </h3>
-          <p class="text-vg-gray-dark">
-            Public workshops teach you the EventStorming facilitation method so you can run sessions yourself. Private workshops apply EventStorming directly to your specific domain and business challenges. If you want to learn the skill, take the public workshop. If you want to solve a specific problem, <a href="/services/eventstorming" class="text-vg-red hover:underline">book a private workshop</a>.
-          </p>
-        </div>
+				<div>
+					<h3 class="text-xl font-bold text-vg-burgundy mb-3">
+						Do you offer team discounts?
+					</h3>
+					<p class="text-vg-gray-dark">
+						Yes, discounts are available for teams of 3 or more. <a href="mailto:paul@virtualgenius.com" class="text-vg-red hover:underline">Contact us</a> to arrange group pricing.
+					</p>
+				</div>
+			</div>
+		</Section>
 
-        <div>
-          <h3 class="text-xl font-bold text-vg-burgundy mb-3">
-            What materials do I receive?
-          </h3>
-          <p class="text-vg-gray-dark">
-            All participants receive a certificate of completion, Miro templates for running your own sessions, a facilitation guide, and reference materials you can use when facilitating EventStorming with your teams.
-          </p>
-        </div>
-      </div>
-    </Section>
+		<!-- Final CTA -->
+		<Section background="burgundy">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">
+					Ready to Master EventStorming?
+				</h2>
+				<p class="text-xl mb-8 text-vg-gray-light">
+					Join the next cohort and learn to facilitate collaborative domain discovery workshops with confidence.
+				</p>
+				{eventstorming.instances.length > 0 && (
+					<Button
+						href={registrationUrl(eventstorming.instances[0], 'workshop_detail')}
+						variant="outlined"
+						onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${eventstorming.title}', 'workshop_date': '${eventstorming.instances[0].dates}', 'link_location': 'workshop_detail_page_cta', 'value': ${parseFloat(eventstorming.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${eventstorming.title}', 'workshop_date': '${eventstorming.instances[0].dates}', 'link_location': 'workshop_detail_page_cta', 'value': ${parseFloat(eventstorming.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
+					>
+						Register Now <Icon name="arrow-right" size="sm" />
+					</Button>
+				)}
+			</div>
+		</Section>
 
-    <!-- Final CTA -->
-    <Section background="burgundy">
-      <div class="text-center max-w-3xl mx-auto">
-        <h2 class="text-3xl md:text-4xl font-bold mb-6">
-          Ready to Master EventStorming?
-        </h2>
-        <p class="text-xl mb-8 text-vg-gray-light">
-          Join the next cohort and learn to facilitate collaborative domain discovery workshops with confidence.
-        </p>
-        {eventstorming.instances.length > 0 && (
-          <a
-            href={registrationUrl(eventstorming.instances[0], "workshop_detail")}
-            class="inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 px-8 py-4 border-2 border-white text-white hover:bg-vg-amber hover:border-vg-amber"
-            onclick={`if (window.posthog) { window.posthog.capture('workshop_registration_click', { 'workshop_name': '${eventstorming.title}', 'workshop_date': '${eventstorming.instances[0].dates}', 'link_location': 'workshop_detail_page_cta', 'value': ${parseFloat(eventstorming.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); } if (window.gtag) { gtag('event', 'workshop_registration_click', { 'workshop_name': '${eventstorming.title}', 'workshop_date': '${eventstorming.instances[0].dates}', 'link_location': 'workshop_detail_page_cta', 'value': ${parseFloat(eventstorming.instances[0].earlyBirdPrice.replace(/[$,]/g, '').split(' ')[0])} }); }`}
-          >
-            Register Now <Icon name="arrow-right" size="sm" class="ml-2" />
-          </a>
-        )}
-      </div>
-    </Section>
-
-    <Footer />
-    <BackToTop />
-  </body>
+		<BackToTop />
+		<Footer />
+	</body>
 </html>

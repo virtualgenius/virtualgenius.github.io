@@ -14,6 +14,7 @@ export interface WorkshopType {
   tagline: string;
   format: string;
   duration: string;
+  schedule: string;
   targetAudience: string;
   instances: WorkshopInstance[];
 }
@@ -33,6 +34,7 @@ export const eventstorming: WorkshopType = {
   tagline: "Master the art of collaborative domain discovery",
   format: "Virtual",
   duration: "12 hours total (4 sessions x 3 hours each)",
+  schedule: "9:00am - Noon MDT (UTC-6:00)",
   targetAudience: "Software and product professionals",
   instances: [
     {
@@ -53,6 +55,7 @@ export const essentialDdd: WorkshopType = {
   tagline: "Build better software through domain modeling",
   format: "Virtual",
   duration: "12 hours total (4 sessions x 3 hours each)",
+  schedule: "9:00am - Noon MDT (UTC-6:00)",
   targetAudience: "Developers, architects, product managers, and business analysts",
   instances: [
     {
@@ -73,6 +76,7 @@ export const strategicDdd: WorkshopType = {
   tagline: "Strategic design for complex systems and organizations",
   format: "Virtual",
   duration: "12 hours total (4 sessions x 3 hours each)",
+  schedule: "9:00am - Noon MDT (UTC-6:00)",
   targetAudience: "Senior developers, architects, technical leads, and engineering managers",
   instances: [
     {
