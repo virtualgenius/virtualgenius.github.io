@@ -35,6 +35,7 @@ jobs:
         env:
           PUBLIC_GA_ID: ${{ secrets.PUBLIC_GA_ID }}
           PUBLIC_POSTHOG_KEY: ${{ secrets.PUBLIC_POSTHOG_KEY }}
+          PUBLIC_WEB3FORMS_KEY: ${{ secrets.PUBLIC_WEB3FORMS_KEY }}
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
