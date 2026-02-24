@@ -104,10 +104,10 @@ const posts = (await getCollection('blog'))
 		<!-- Services Overview -->
 		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">Services</h2>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<ServiceCard
 					title="EventStorming Workshops"
-					description="Facilitated sessions for exploring complex business domains—in-person, virtual, or hybrid"
+					description="Facilitated sessions for exploring complex business domains, in-person, virtual, or hybrid"
 					href="/services/eventstorming"
 					linkText="Learn More"
 					image="/images/bti360-participants-modeling-close.webp"
@@ -128,6 +128,14 @@ const posts = (await getCollection('blog'))
 					linkText="Get Started"
 					image="/images/training-workshop-1.webp"
 					imageAlt="Coaching and consulting session with workshop participants"
+				/>
+				<ServiceCard
+					title="Embedded Team Engagements"
+					description="A senior practitioner joining your team part-time to work on real code and real deliverables"
+					href="/services/embedded"
+					linkText="Learn More"
+					image="/images/bti360-discussion-group.webp"
+					imageAlt="Team discussion and collaborative design session"
 				/>
 			</div>
 		</Section>

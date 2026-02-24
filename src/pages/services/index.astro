@@ -9,7 +9,7 @@ import Section from '../../components/Section.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 
 const title = 'Services - Virtual Genius';
-const description = 'EventStorming workshops, DDD training, and ongoing coaching to help your team build better software through collaborative design.';
+const description = 'EventStorming workshops, DDD training, embedded team engagements, and ongoing coaching to help your team build better software through collaborative design.';
 ---
 
 <!doctype html>
@@ -51,7 +51,7 @@ const description = 'EventStorming workshops, DDD training, and ongoing coaching
 
 		<!-- Service Overview Cards -->
 		<Section>
-			<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<ServiceCard
 					title="EventStorming Workshops"
 					description="2-day facilitated sessions for exploring complex business domains and designing better software solutions collaboratively"
@@ -69,6 +69,12 @@ const description = 'EventStorming workshops, DDD training, and ongoing coaching
 					description="Ongoing support for pilot projects, code reviews, design walkthroughs, and implementation guidance"
 					href="/services/coaching"
 					linkText="Get Started"
+				/>
+				<ServiceCard
+					title="Embedded Team Engagements"
+					description="A senior practitioner joining your team part-time to work on real code, real features, and real deadlines"
+					href="/services/embedded"
+					linkText="Learn More"
 				/>
 			</div>
 		</Section>
@@ -241,8 +247,56 @@ const description = 'EventStorming workshops, DDD training, and ongoing coaching
 			</div>
 		</Section>
 
-		<!-- How to Get Started -->
+
+		<!-- Embedded Team Engagements Details -->
 		<Section>
+			<div class="max-w-5xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div>
+						<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Embedded Team Engagements</h2>
+						<p class="text-lg text-vg-gray-dark mb-6">
+							Most consultants advise from the outside. In an embedded engagement, Paul joins your team part-time and works on real code, real features, and real deadlines. Knowledge transfer happens through doing the work together.
+						</p>
+						<ul class="space-y-3 text-vg-gray-dark mb-6">
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>3-6 month engagements at 20-30 hours per week</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Pair programming, mob programming, design reviews</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Team grows stronger and more self-sufficient</span>
+							</li>
+						</ul>
+						<a
+							href="/services/embedded"
+							class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold text-lg"
+						>
+							Learn About Embedded Engagements
+							<Icon name="chevron-right" size="md" />
+						</a>
+					</div>
+					<div>
+						<img
+							src="/images/bti360-discussion-group.webp"
+							alt="Team discussion and collaborative design session"
+							class="w-full aspect-video object-cover rounded-lg shadow-lg"
+						/>
+					</div>
+				</div>
+			</div>
+		</Section>
+		<!-- How to Get Started -->
+		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
 				How to Get Started
 			</h2>
@@ -272,7 +326,7 @@ const description = 'EventStorming workshops, DDD training, and ongoing coaching
 						</div>
 						<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Start Working Together</h3>
 						<p class="text-vg-gray-dark">
-							Workshop, training, or coaching engagement begins
+							Workshop, training, coaching, or embedded engagement begins
 						</p>
 					</div>
 				</div>

@@ -1,0 +1,232 @@
+---
+import BackToTop from '../../components/BackToTop.astro';
+import BaseHead from '../../components/BaseHead.astro';
+import Button from '../../components/Button.astro';
+import Footer from '../../components/Footer.astro';
+import Header from '../../components/Header.astro';
+import Icon from '../../components/Icon.astro';
+import Section from '../../components/Section.astro';
+
+const title = 'Embedded Team Engagements - Virtual Genius';
+const description = 'Part-time, hands-on engagements where Paul joins your team to work on real code, real features, and real deadlines. Pair programming, design reviews, and mentoring from inside the team.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<!-- Hero with Collaboration Background -->
+		<section class="relative w-full overflow-hidden" style="height: 360px;">
+			<!-- Background Image -->
+			<div class="absolute inset-0 w-full h-full">
+				<img
+					src="/images/bti360-participants-collaborating.webp"
+					alt="Team members collaborating on software design"
+					class="w-full h-full object-cover"
+					style="filter: brightness(0.6); object-position: center 40%;"
+				/>
+				<!-- Dark overlay for text readability -->
+				<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+			</div>
+
+			<!-- Content Overlay -->
+			<div class="relative z-10 flex items-center justify-center h-full">
+				<div class="max-w-screen-xl mx-auto px-6 w-full">
+					<div class="text-center max-w-4xl mx-auto">
+						<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+							Embedded Team Engagements
+						</h1>
+						<p class="text-2xl md:text-3xl mb-8 text-white/95 drop-shadow-md">
+							A senior practitioner working alongside your team on real deliverables
+						</p>
+						<Button href="/contact" variant="primary">
+							Discuss an Engagement
+						</Button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Core Proposition -->
+		<Section>
+			<div class="max-w-5xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div>
+						<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Not a Consultant. A Teammate.</h2>
+						<p class="text-lg text-vg-gray-dark mb-4">
+							Most consultants advise from the outside. In an embedded engagement, Paul joins your team part-time and works on real code, real features, and real deadlines. The knowledge transfer happens through doing the work together, not through slide decks or recommendations documents.
+						</p>
+						<p class="text-lg text-vg-gray-dark">
+							Typical engagements run 3-6 months at 20-30 hours per week. Long enough to understand your domain deeply, build trust with the team, and leave lasting improvements in how you design and build software.
+						</p>
+					</div>
+					<div>
+						<img
+							src="/images/bti360-discussion-group.webp"
+							alt="Team discussion and collaborative design session"
+							class="w-full aspect-video object-cover rounded-lg shadow-lg"
+						/>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Day-to-Day -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				What the Day-to-Day Looks Like
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">Pair & Mob Programming</h3>
+					<p class="text-vg-gray-dark">
+						Working side-by-side with your developers on production code. Tackling the hardest problems together, sharing techniques and design thinking in real time.
+					</p>
+				</div>
+				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">Design Reviews</h3>
+					<p class="text-vg-gray-dark">
+						Reviewing architecture decisions, domain models, and bounded context boundaries as part of the team's regular workflow. Catching design issues early, when they're cheap to fix.
+					</p>
+				</div>
+				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">Mentoring & Skill Transfer</h3>
+					<p class="text-vg-gray-dark">
+						Building your team's capabilities in DDD, EventStorming, and software design. The goal is for the team to be self-sufficient after the engagement ends.
+					</p>
+				</div>
+				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">EventStorming as Needed</h3>
+					<p class="text-vg-gray-dark">
+						Running focused EventStorming sessions when the team encounters a new subdomain or needs to rethink an existing model. Lightweight, just-in-time exploration.
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Embedded vs. Advisory -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
+				Embedded vs. Traditional Consulting
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<!-- Traditional -->
+				<div class="bg-gray-100 p-8 rounded-lg">
+					<h3 class="text-2xl font-semibold mb-6 text-vg-gray-dark">Traditional Advisory</h3>
+					<ul class="space-y-4 text-vg-gray-dark">
+						<li class="flex items-start gap-3">
+							<span class="text-gray-400 mt-1 flex-shrink-0">&#8212;</span>
+							<span>Observes from the outside</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-gray-400 mt-1 flex-shrink-0">&#8212;</span>
+							<span>Delivers recommendations</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-gray-400 mt-1 flex-shrink-0">&#8212;</span>
+							<span>Knowledge transfer through documents</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-gray-400 mt-1 flex-shrink-0">&#8212;</span>
+							<span>Short engagements, limited context</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-gray-400 mt-1 flex-shrink-0">&#8212;</span>
+							<span>Team still has to figure out implementation</span>
+						</li>
+					</ul>
+				</div>
+
+				<!-- Embedded -->
+				<div class="bg-white p-8 rounded-lg border-2 border-vg-red shadow-lg">
+					<h3 class="text-2xl font-semibold mb-6 text-vg-red">Embedded Engagement</h3>
+					<ul class="space-y-4 text-vg-gray-dark">
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Works alongside the team on real code</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Ships features and solves problems together</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Knowledge transfer through pairing and practice</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Deep context built over months</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="sm" />
+							</span>
+							<span>Team grows stronger and more self-sufficient</span>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Who This Is For -->
+		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
+				Who This Is For
+			</h2>
+			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+				<div class="bg-white p-6 rounded-lg shadow">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Teams Adopting DDD</h3>
+					<p class="text-vg-gray-dark">
+						Learning Domain-Driven Design from books only goes so far. An experienced practitioner working alongside you accelerates adoption and helps avoid common pitfalls.
+					</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Teams Tackling Complex Domains</h3>
+					<p class="text-vg-gray-dark">
+						When the business logic is genuinely hard, an extra senior perspective on modeling and design decisions makes a real difference in the quality of the solution.
+					</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Teams Modernizing Legacy Systems</h3>
+					<p class="text-vg-gray-dark">
+						Strangler fig patterns, bounded context extraction, and incremental migration are easier with someone who has done it before working in the codebase with you.
+					</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Teams Integrating AI-Assisted Development</h3>
+					<p class="text-vg-gray-dark">
+						When AI generates most code, the work that matters is understanding what to build and why. Design skills become more valuable, not less.
+					</p>
+				</div>
+			</div>
+		</Section>
+
+		<!-- CTA -->
+		<Section background="burgundy">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Interested in Exploring an Embedded Engagement?</h2>
+				<p class="text-xl mb-8 text-vg-gray-light">
+					Every engagement is tailored to the team's situation, domain, and goals. Let's talk about whether this model is a good fit for your team.
+				</p>
+				<Button href="/contact" variant="primary" class="!px-8 !py-4 !bg-white !text-vg-burgundy hover:!bg-vg-gray-light">
+					Schedule a Conversation
+				</Button>
+			</div>
+		</Section>
+
+		<BackToTop />
+		<Footer />
+	</body>
+</html>
