@@ -122,6 +122,8 @@ Content is managed via Astro's type-safe content collections ([src/content.confi
 
 Access collections using `getCollection('blog')` or `getCollection('events')` in `.astro` files.
 
+**CRITICAL**: Astro 5 with the `glob` loader uses `post.id` for URLs, NOT `post.slug`. Always use `/blog/${post.id}/` for blog post links.
+
 ### Styling System
 
 Uses Tailwind CSS 4 via Vite plugin. Custom brand colors defined in [src/styles/global.css](src/styles/global.css):
@@ -373,3 +375,27 @@ When creating blog posts or events, follow the schema defined in [src/content.co
 - Blog posts: "Read More"
 - Products: "View Demo", "View Details"
 - Coaching/engagement: "Get Started"
+
+## Pricing Policy
+
+**Do not add public pricing to service or coaching pages.** Paul uses value-based consulting and does not lead with price. Coaching retainer tiers intentionally omit dollar amounts.
+
+## Social Media Profiles
+
+- **LinkedIn**: https://www.linkedin.com/in/thepaulrayner/
+- **Bluesky**: https://bsky.app/profile/paulrayner.bsky.social
+- **GitHub**: https://github.com/paulrayner
+
+No Twitter/X presence. Do not add Twitter links.
+
+## Mailchimp Integration
+
+Newsletter signup form in Footer.astro posts directly to Mailchimp (no JS required):
+- **Audience**: Virtual Genius (list ID: `3691d3bb43`)
+- **User ID**: `02e9770492ac1e4d472b7e3c6`
+- **Form action**: `https://virtualgenius.us10.list-manage.com/subscribe/post`
+- **API key location**: `~/.config/mailchimp/api_key`
+
+## Code Formatting
+
+`.astro` files use **tabs** for indentation.
