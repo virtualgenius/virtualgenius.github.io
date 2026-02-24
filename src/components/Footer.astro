@@ -5,6 +5,23 @@ const today = new Date();
 
 <footer class="bg-vg-burgundy text-white py-8 md:py-16">
 	<div class="max-w-screen-xl mx-auto px-6">
+		<!-- Newsletter Signup -->
+		<div class="flex flex-col lg:flex-row lg:items-center lg:justify-between gap-6 pb-12 mb-12 border-b border-white/20">
+			<div class="lg:max-w-md">
+				<h3 class="text-lg font-semibold mb-2">Subscribe to the Newsletter</h3>
+				<p class="text-sm text-white/80">Design skills for the AI era. Paul's takes on DDD, EventStorming, and building software that matters.</p>
+			</div>
+			<form action="https://virtualgenius.us10.list-manage.com/subscribe/post" method="POST" class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
+				<input type="hidden" name="u" value="02e9770492ac1e4d472b7e3c6">
+				<input type="hidden" name="id" value="3691d3bb43">
+				<label for="footer-email" class="sr-only">Email address</label>
+				<input type="email" name="EMAIL" id="footer-email"
+					placeholder="your@email.com" required
+					class="px-4 py-3 rounded-lg bg-white/10 border border-white/30 text-white placeholder-white/50 focus:outline-none focus:ring-2 focus:ring-vg-amber focus:border-transparent sm:w-64" />
+				<button type="submit" class="inline-flex items-center justify-center rounded-lg font-semibold transition-all duration-200 px-8 py-3 border-2 border-white text-white hover:bg-vg-amber hover:border-vg-amber">Subscribe</button>
+			</form>
+		</div>
+
 		<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
 			<!-- Column 1: Virtual Genius -->
 			<div>
