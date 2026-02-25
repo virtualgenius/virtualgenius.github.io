@@ -9,7 +9,7 @@ import Section from '../../components/Section.astro';
 import ServiceCard from '../../components/ServiceCard.astro';
 
 const title = 'Services - Virtual Genius';
-const description = 'EventStorming workshops, DDD training, embedded team engagements, and ongoing coaching to help your team build better software through collaborative design.';
+const description = 'Embedded team engagements, EventStorming workshops, DDD training, and coaching. Design skills meet agentic development to help your team build better software.';
 ---
 
 <!doctype html>
@@ -53,6 +53,12 @@ const description = 'EventStorming workshops, DDD training, embedded team engage
 		<Section>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<ServiceCard
+					title="Embedded Team Engagements"
+					description="A senior design practitioner joins your team part-time, pairing deep design skills with agentic development on your code from day one"
+					href="/services/embedded"
+					linkText="Learn More"
+				/>
+				<ServiceCard
 					title="EventStorming Workshops"
 					description="2-day facilitated sessions for exploring complex business domains and designing better software solutions collaboratively"
 					href="/services/eventstorming"
@@ -70,17 +76,59 @@ const description = 'EventStorming workshops, DDD training, embedded team engage
 					href="/services/coaching"
 					linkText="Get Started"
 				/>
-				<ServiceCard
-					title="Embedded Team Engagements"
-					description="A senior practitioner joining your team part-time to work on real code, real features, and real deadlines"
-					href="/services/embedded"
-					linkText="Learn More"
-				/>
+			</div>
+		</Section>
+
+		<!-- Embedded Team Engagements Details -->
+		<Section background="gray">
+			<div class="max-w-5xl mx-auto">
+				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+					<div class="order-2 lg:order-1">
+						<img
+							src="/images/bti360-discussion-group.webp"
+							alt="Team discussion and collaborative design session"
+							class="w-full aspect-video object-cover rounded-lg shadow-lg"
+						/>
+					</div>
+					<div class="order-1 lg:order-2">
+						<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Embedded Team Engagements</h2>
+						<p class="text-lg text-vg-gray-dark mb-6">
+							Deep design skills meet agentic development. Paul joins your team part-time, working on real features using tools like Claude Code, developing the practices that make agentic development actually work. Knowledge transfer happens through doing the work together.
+						</p>
+						<ul class="space-y-3 text-vg-gray-dark mb-6">
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>3-6 month engagements at 20-30 hours per week</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Pair programming, design reviews, and agentic AI workflows</span>
+							</li>
+							<li class="flex items-start gap-2">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
+								<span>Team grows stronger and more self-sufficient</span>
+							</li>
+						</ul>
+						<a
+							href="/services/embedded"
+							class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold text-lg"
+						>
+							Learn About Embedded Engagements
+							<Icon name="chevron-right" size="md" />
+						</a>
+					</div>
+				</div>
 			</div>
 		</Section>
 
 		<!-- EventStorming Details -->
-		<Section background="gray">
+		<Section>
 			<div class="max-w-5xl mx-auto">
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 					<div class="order-2 lg:order-1">
@@ -140,7 +188,7 @@ const description = 'EventStorming workshops, DDD training, embedded team engage
 		</Section>
 
 		<!-- DDD Training Details -->
-		<Section>
+		<Section background="gray">
 			<div class="max-w-5xl mx-auto">
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 					<div>
@@ -202,7 +250,7 @@ const description = 'EventStorming workshops, DDD training, embedded team engage
 		</Section>
 
 		<!-- Coaching Details -->
-		<Section background="gray">
+		<Section>
 			<div class="max-w-5xl mx-auto">
 				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
 					<div class="order-2 lg:order-1">
@@ -215,7 +263,7 @@ const description = 'EventStorming workshops, DDD training, embedded team engage
 					<div class="order-1 lg:order-2">
 						<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Coaching & Consulting</h2>
 						<p class="text-lg text-vg-gray-dark mb-6">
-							Ongoing support to help teams successfully implement EventStorming insights and DDD practices in their software projects.
+							Workshops and training build shared understanding. Coaching helps the team apply it. The most effective engagements combine both: a facilitated EventStorming or DDD training followed by ongoing coaching as the team puts those practices to work on real features.
 						</p>
 						<div class="grid grid-cols-1 gap-4 mb-6">
 							<div class="bg-white p-4 rounded-lg shadow">
@@ -248,53 +296,6 @@ const description = 'EventStorming workshops, DDD training, embedded team engage
 		</Section>
 
 
-		<!-- Embedded Team Engagements Details -->
-		<Section>
-			<div class="max-w-5xl mx-auto">
-				<div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-					<div>
-						<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy">Embedded Team Engagements</h2>
-						<p class="text-lg text-vg-gray-dark mb-6">
-							Most consultants advise from the outside. In an embedded engagement, Paul joins your team part-time and works on real code, real features, and real deadlines. Knowledge transfer happens through doing the work together.
-						</p>
-						<ul class="space-y-3 text-vg-gray-dark mb-6">
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>3-6 month engagements at 20-30 hours per week</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Pair programming, mob programming, design reviews</span>
-							</li>
-							<li class="flex items-start gap-2">
-								<span class="text-vg-red mt-1 flex-shrink-0">
-									<Icon name="check" size="sm" />
-								</span>
-								<span>Team grows stronger and more self-sufficient</span>
-							</li>
-						</ul>
-						<a
-							href="/services/embedded"
-							class="inline-flex items-center gap-1 text-vg-red hover:text-vg-red-light font-semibold text-lg"
-						>
-							Learn About Embedded Engagements
-							<Icon name="chevron-right" size="md" />
-						</a>
-					</div>
-					<div>
-						<img
-							src="/images/bti360-discussion-group.webp"
-							alt="Team discussion and collaborative design session"
-							class="w-full aspect-video object-cover rounded-lg shadow-lg"
-						/>
-					</div>
-				</div>
-			</div>
-		</Section>
 		<!-- How to Get Started -->
 		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
