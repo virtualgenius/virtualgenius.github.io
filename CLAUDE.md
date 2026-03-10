@@ -63,6 +63,7 @@ This is the Virtual Genius company website - a static site for EventStorming & D
    - All images must have descriptive alt text
    - All icon-only buttons must have `aria-label` attributes
    - Color contrast must meet WCAG AA standards (4.5:1 for text)
+   - **`text-vg-gray` is only safe on white backgrounds.** On gray sections (`background="gray"`, `bg-vg-gray-light`, `bg-gray-100`) use `text-vg-gray-dark` instead. When in doubt, default to `text-vg-gray-dark`.
    - Focus states must be clearly visible
 
 6. **Clickable Card Pattern** (WCAG AAA 44×44px touch targets):
