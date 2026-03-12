@@ -64,9 +64,13 @@ const description = 'A senior design practitioner who joins your team to teach a
 						<p class="text-lg text-vg-gray-dark mb-4">
 							AI doesn't replace your team's judgment; it amplifies whatever practices already exist. Strong design discipline plus AI produces remarkable results. Weak practices plus AI produces technical debt at unprecedented speed.<a id="fn1-ref" href="#fn1" style="scroll-margin-top: 6rem;" class="text-vg-red no-underline align-super text-xs font-semibold">1</a> Paul joins your team part-time, working on real features using tools like Claude Code, developing the practices that make agentic development actually work.
 						</p>
-						<p class="text-lg text-vg-gray-dark">
+						<p class="text-lg text-vg-gray-dark mb-4">
 							Most consultants advise from the outside. In an embedded engagement, Paul works on real features and real deadlines alongside your developers. The knowledge transfer happens through doing the work together, not through slide decks or recommendations documents.
 						</p>
+						<div class="bg-vg-red/5 border border-vg-red/20 rounded-lg p-4">
+							<p class="font-semibold text-vg-burgundy mb-1">The metric that matters: Shortest Time to Customer Value.</p>
+							<p class="text-vg-gray-dark text-sm mb-0">Not lines of code. Not velocity points. Not hours estimated vs. hours spent. The goal is compressing the time from "we have an idea" to "a customer is using it and we can see that it's working." Every practice in the engagement, from TDD to observability to domain modeling, serves that outcome.</p>
+						</div>
 					</div>
 					<div class="min-h-[300px]">
 						<img
@@ -81,7 +85,7 @@ const description = 'A senior design practitioner who joins your team to teach a
 				<div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-10 pt-8 border-t border-gray-200">
 					<div>
 						<p class="text-sm font-semibold text-vg-burgundy uppercase tracking-wide mb-1">Duration</p>
-						<p class="text-vg-gray-dark">3-6 months</p>
+						<p class="text-vg-gray-dark">3-6 months (starting with a 1-month pilot)</p>
 					</div>
 					<div>
 						<p class="text-sm font-semibold text-vg-burgundy uppercase tracking-wide mb-1">Commitment</p>
@@ -135,6 +139,12 @@ const description = 'A senior design practitioner who joins your team to teach a
 								<span class="text-vg-red mt-1 flex-shrink-0">
 									<Icon name="check" size="sm" />
 								</span>
+								<span>Focused on delivery from day one. Each feature delivered crystallizes another piece of the repeatable pipeline. The tooling and process emerge from building real features, not from building a platform first and hoping features follow.</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<span class="text-vg-red mt-1 flex-shrink-0">
+									<Icon name="check" size="sm" />
+								</span>
 								<span>Tooling-agnostic: the specific AI tool is a commodity choice. The practices are what matter.</span>
 							</li>
 						</ul>
@@ -150,6 +160,10 @@ const description = 'A senior design practitioner who joins your team to teach a
 							<li class="flex items-start gap-3">
 								<span class="text-gray-400 mt-1 flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></span>
 								<span>"Vibe coding" where nobody looks at what the AI produces</span>
+							</li>
+							<li class="flex items-start gap-3">
+								<span class="text-gray-400 mt-1 flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></span>
+								<span>Months of "building the factory" before delivering anything. The factory emerges from the delivery.</span>
 							</li>
 							<li class="flex items-start gap-3">
 								<span class="text-gray-400 mt-1 flex-shrink-0"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></span>
@@ -219,31 +233,135 @@ const description = 'A senior design practitioner who joins your team to teach a
 			</div>
 		</Section>
 
-		<!-- Day-to-Day -->
+		<!-- How You'll Know It's Working -->
 		<Section background="gray">
+			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-vg-burgundy">
+				How You'll Know It's Working
+			</h2>
+			<p class="text-lg text-vg-gray-dark text-center max-w-3xl mx-auto mb-12">
+				You won't have to wait months to find out. The engagement is designed to produce visible results quickly, so you can make informed decisions about continuing.
+			</p>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">First Week</h3>
+					<p class="text-2xl font-bold text-vg-red mb-3">"Check this out"</p>
+					<p class="text-vg-gray-dark mb-4">
+						The goal is something to show stakeholders early. Not a plan, not a deck, not an estimate. Something tangible you can point at and react to together.
+					</p>
+					<p class="text-vg-gray-dark text-sm">
+						If the approach doesn't produce visible results quickly on your codebase with your team, you'll know immediately.
+					</p>
+				</div>
+				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">First Month</h3>
+					<p class="text-2xl font-bold text-vg-red mb-3">Pipeline clarity</p>
+					<p class="text-vg-gray-dark mb-4">
+						Cycle time from idea to deployed feature. Defect rates. Throughput. These pipeline metrics tell you whether the team is actually moving faster with higher quality, or just feeling faster.
+					</p>
+					<p class="text-vg-gray-dark text-sm">
+						The DORA research<a href="#fn1" class="text-vg-red no-underline align-super text-xs font-semibold">1</a> shows most teams feel faster but deliver less predictably. We measure so you don't have to guess.
+					</p>
+				</div>
+				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Ongoing</h3>
+					<p class="text-2xl font-bold text-vg-red mb-3">Customer signal</p>
+					<p class="text-vg-gray-dark mb-4">
+						Usage analytics, value validation, production observability. Building features that nobody uses is still waste, just faster waste. The engagement includes setting up the feedback loops to verify what's landing with customers.
+					</p>
+					<p class="text-vg-gray-dark text-sm">
+						Most teams have pipeline metrics but no customer observability. Both matter.
+					</p>
+				</div>
+			</div>
+
+			<!-- Two Kinds of ROI -->
+			<div class="max-w-5xl mx-auto mt-12">
+				<h3 class="text-2xl font-bold mb-6 text-center text-vg-burgundy">Two Kinds of ROI</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+					<div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-vg-red">
+						<p class="font-bold text-vg-burgundy mb-2">Direct: Time and cost compression</p>
+						<p class="text-vg-gray-dark">The time and cost to build new capabilities compresses significantly. How much depends on the work, the team, and the starting point, but the difference is measurable and visible early. This is the number your finance team will care about.</p>
+					</div>
+					<div class="bg-white p-8 rounded-lg shadow-lg border-l-4 border-vg-burgundy">
+						<p class="font-bold text-vg-burgundy mb-2">Indirect: Confidence and momentum</p>
+						<p class="text-vg-gray-dark">Faster, higher-quality delivery changes what your team is willing to take on. Projects that seemed too risky or too expensive get reconsidered. Teams that were hesitant about new approaches gain confidence from seeing real results. This kind of ROI is harder to measure but often matters more.</p>
+					</div>
+				</div>
+			</div>
+
+			<!-- By 90 Days -->
+			<div class="max-w-5xl mx-auto mt-10 bg-white border-2 border-vg-burgundy rounded-lg p-8">
+				<h3 class="text-2xl font-bold mb-6 text-center text-vg-burgundy">By 90 Days</h3>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+					<div class="flex items-start gap-3">
+						<span class="text-vg-red mt-1 flex-shrink-0">
+							<Icon name="check" size="sm" />
+						</span>
+						<span class="text-vg-gray-dark">Shipped features built with the new approach, with customer-facing observability proving they're being used</span>
+					</div>
+					<div class="flex items-start gap-3">
+						<span class="text-vg-red mt-1 flex-shrink-0">
+							<Icon name="check" size="sm" />
+						</span>
+						<span class="text-vg-gray-dark">A repeatable discovery-to-delivery pipeline the team can run without Paul</span>
+					</div>
+					<div class="flex items-start gap-3">
+						<span class="text-vg-red mt-1 flex-shrink-0">
+							<Icon name="check" size="sm" />
+						</span>
+						<span class="text-vg-gray-dark">Team members actively using agentic development with TDD in their daily work</span>
+					</div>
+					<div class="flex items-start gap-3">
+						<span class="text-vg-red mt-1 flex-shrink-0">
+							<Icon name="check" size="sm" />
+						</span>
+						<span class="text-vg-gray-dark">Measurable evidence of what's working: pipeline metrics, customer signal, and a clear picture of what to tackle next</span>
+					</div>
+				</div>
+			</div>
+
+			<!-- Why start with one month -->
+			<div class="max-w-4xl mx-auto mt-10 bg-white border border-gray-200 rounded-lg p-6">
+				<div class="flex items-start gap-4">
+					<div class="flex-shrink-0 w-10 h-10 bg-vg-red/10 rounded-full flex items-center justify-center mt-1">
+						<svg class="w-5 h-5 text-vg-red" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+					</div>
+					<div>
+						<p class="text-vg-gray-dark font-semibold mb-1">Why start with one month</p>
+						<p class="text-vg-gray-dark">
+							A month is enough time to prove the model works on your codebase, with your team, on real work. If the results are there, extending to a multi-month engagement is straightforward. If they're not, you've learned something valuable at a bounded cost. The results from the first month inform what comes next.
+						</p>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Day-to-Day -->
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
 				What the Day-to-Day Looks Like
 			</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+				<div class="bg-vg-gray-light p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
 					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">Pair & Mob Programming</h3>
 					<p class="text-vg-gray-dark">
 						Working side-by-side with your developers on production code, using agentic AI tools as part of the workflow. Building the design and testing habits that make AI-generated code trustworthy.
 					</p>
 				</div>
-				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+				<div class="bg-vg-gray-light p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
 					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">Design Reviews</h3>
 					<p class="text-vg-gray-dark">
 						Reviewing architecture decisions, domain models, and bounded context boundaries as part of the team's regular workflow. Catching design issues early, when they're cheap to fix.
 					</p>
 				</div>
-				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+				<div class="bg-vg-gray-light p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
 					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">Mentoring & Skill Transfer</h3>
 					<p class="text-vg-gray-dark">
 						Building your team's capabilities in DDD, EventStorming, and software design. The goal is for the team to be self-sufficient after the engagement ends.
 					</p>
 				</div>
-				<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+				<div class="bg-vg-gray-light p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
 					<h3 class="text-2xl font-semibold mb-4 text-vg-burgundy">EventStorming as Needed</h3>
 					<p class="text-vg-gray-dark">
 						Running focused EventStorming sessions when the team encounters a new subdomain or needs to rethink an existing model. Lightweight, just-in-time exploration.
@@ -253,7 +371,7 @@ const description = 'A senior design practitioner who joins your team to teach a
 		</Section>
 
 		<!-- Embedded vs. Advisory -->
-		<Section>
+		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold mb-12 text-center text-vg-burgundy">
 				Embedded vs. Traditional Consulting
 			</h2>
@@ -325,7 +443,7 @@ const description = 'A senior design practitioner who joins your team to teach a
 		</Section>
 
 		<!-- Past Engagements -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-vg-burgundy">
 				Proven in Practice
 			</h2>
@@ -333,7 +451,7 @@ const description = 'A senior design practitioner who joins your team to teach a
 				Paul has done this work across industries, team sizes, and technology stacks. Today, every engagement includes agentic development practices. Here are two examples from past work.
 			</p>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-				<div class="bg-white p-8 rounded-lg shadow-lg">
+				<div class="bg-vg-gray-light p-8 rounded-lg shadow-lg">
 					<div class="flex items-center gap-3 mb-4">
 						<span class="bg-vg-red/10 text-vg-red text-sm font-semibold px-3 py-1 rounded-full">IoT / Smart Home</span>
 						<span class="text-vg-gray-dark text-sm">Multiple engagements</span>
@@ -352,7 +470,7 @@ const description = 'A senior design practitioner who joins your team to teach a
 						</a>
 					</div>
 				</div>
-				<div class="bg-white p-8 rounded-lg shadow-lg">
+				<div class="bg-vg-gray-light p-8 rounded-lg shadow-lg">
 					<div class="flex items-center gap-3 mb-4">
 						<span class="bg-vg-red/10 text-vg-red text-sm font-semibold px-3 py-1 rounded-full">Financial Services</span>
 						<span class="text-vg-gray-dark text-sm">11 months</span>
@@ -369,33 +487,39 @@ const description = 'A senior design practitioner who joins your team to teach a
 		</Section>
 
 		<!-- Who This Is For -->
-		<Section>
+		<Section background="gray">
 			<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">
 				Who This Is For
 			</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-				<div class="bg-gray-50 p-6 rounded-lg shadow">
+				<div class="bg-white p-6 rounded-lg shadow">
 					<h3 class="text-xl font-semibold mb-3 text-vg-red">Teams Scaling Agentic Development</h3>
 					<p class="text-vg-gray-dark">
 						AI coding tools generate code faster than ever, but speed without design discipline creates instability. Research shows delivery unpredictability increases with every jump in AI adoption.<a href="#fn1" class="text-vg-red no-underline align-super text-xs font-semibold">1</a> The real leverage is in design skills: knowing what to build, structuring code so AI can work with it, and reviewing generated output critically.
 					</p>
 				</div>
-				<div class="bg-gray-50 p-6 rounded-lg shadow">
+				<div class="bg-white p-6 rounded-lg shadow">
 					<h3 class="text-xl font-semibold mb-3 text-vg-red">Teams Tackling Complex Domains</h3>
 					<p class="text-vg-gray-dark">
 						When the business logic is genuinely hard, an extra senior perspective on modeling and design decisions makes a real difference in the quality of the solution.
 					</p>
 				</div>
-				<div class="bg-gray-50 p-6 rounded-lg shadow">
+				<div class="bg-white p-6 rounded-lg shadow">
 					<h3 class="text-xl font-semibold mb-3 text-vg-red">Teams Modernizing Legacy Systems</h3>
 					<p class="text-vg-gray-dark">
 						Strangler fig patterns, bounded context extraction, and incremental migration are easier with someone who has done it before working in the codebase with you.
 					</p>
 				</div>
-				<div class="bg-gray-50 p-6 rounded-lg shadow">
+				<div class="bg-white p-6 rounded-lg shadow">
 					<h3 class="text-xl font-semibold mb-3 text-vg-red">Teams Adopting DDD</h3>
 					<p class="text-vg-gray-dark">
 						Learning Domain-Driven Design from books only goes so far. An experienced practitioner working alongside you accelerates adoption and helps avoid common pitfalls.
+					</p>
+				</div>
+				<div class="bg-white p-6 rounded-lg shadow md:col-span-2">
+					<h3 class="text-xl font-semibold mb-3 text-vg-red">Companies Sitting on Stalled Product Ideas</h3>
+					<p class="text-vg-gray-dark">
+						Some teams have a backlog of product ideas that never got built because traditional estimates made them seem too expensive. Agentic development can change what's feasible, but the only way to know by how much is to try it on a real project. The pilot engagement gives you real evidence before committing further.
 					</p>
 				</div>
 			</div>
@@ -409,16 +533,16 @@ const description = 'A senior design practitioner who joins your team to teach a
 					An embedded engagement is a partnership. It works best when the client side is set up for it.
 				</p>
 				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-					<div class="flex items-start gap-4 bg-gray-50 p-5 rounded-lg">
+					<div class="flex items-start gap-4 bg-white p-5 rounded-lg">
 						<div class="flex-shrink-0 w-8 h-8 bg-vg-red/10 rounded-full flex items-center justify-center mt-0.5">
 							<span class="text-vg-red font-bold text-sm">1</span>
 						</div>
 						<div>
-							<p class="font-semibold text-vg-burgundy mb-1">A dedicated small team</p>
-							<p class="text-vg-gray-dark text-sm">2-4 developers who can focus on the pilot project, not borrowed for an hour between other commitments. This is a tiger team, not a committee.</p>
+							<p class="font-semibold text-vg-burgundy mb-1">A small, dedicated team that wants to learn</p>
+							<p class="text-vg-gray-dark text-sm">2-4 developers who can focus on the pilot project, not borrowed between other commitments. Eagerness to learn matters more than years of experience. The best results come from developers who are hungry to work differently.</p>
 						</div>
 					</div>
-					<div class="flex items-start gap-4 bg-gray-50 p-5 rounded-lg">
+					<div class="flex items-start gap-4 bg-white p-5 rounded-lg">
 						<div class="flex-shrink-0 w-8 h-8 bg-vg-red/10 rounded-full flex items-center justify-center mt-0.5">
 							<span class="text-vg-red font-bold text-sm">2</span>
 						</div>
@@ -427,7 +551,7 @@ const description = 'A senior design practitioner who joins your team to teach a
 							<p class="text-vg-gray-dark text-sm">At least one person who deeply understands your business domain and can make decisions about requirements and priorities without lengthy approval chains.</p>
 						</div>
 					</div>
-					<div class="flex items-start gap-4 bg-gray-50 p-5 rounded-lg">
+					<div class="flex items-start gap-4 bg-white p-5 rounded-lg">
 						<div class="flex-shrink-0 w-8 h-8 bg-vg-red/10 rounded-full flex items-center justify-center mt-0.5">
 							<span class="text-vg-red font-bold text-sm">3</span>
 						</div>
@@ -436,13 +560,13 @@ const description = 'A senior design practitioner who joins your team to teach a
 							<p class="text-vg-gray-dark text-sm">Agentic development changes how developers work. The team needs to be willing to try test-driven workflows, pair programming with AI tools, and shifting from writing code to specifying and reviewing it.</p>
 						</div>
 					</div>
-					<div class="flex items-start gap-4 bg-gray-50 p-5 rounded-lg">
+					<div class="flex items-start gap-4 bg-white p-5 rounded-lg">
 						<div class="flex-shrink-0 w-8 h-8 bg-vg-red/10 rounded-full flex items-center justify-center mt-0.5">
 							<span class="text-vg-red font-bold text-sm">4</span>
 						</div>
 						<div>
-							<p class="font-semibold text-vg-burgundy mb-1">Executive sponsorship</p>
-							<p class="text-vg-gray-dark text-sm">Someone at the leadership level who can protect the pilot from being deprioritized when urgent work competes for the team's attention. Transformation needs air cover.</p>
+							<p class="font-semibold text-vg-burgundy mb-1">Executive sponsorship (with discipline)</p>
+							<p class="text-vg-gray-dark text-sm">Someone at the leadership level who can protect the pilot from being deprioritized. Equally important: trust the team to execute without micromanaging, and resist the temptation to pile on requests once the "art of the possible" opens up. Paul manages scope actively and will say no to protect outcomes.</p>
 						</div>
 					</div>
 				</div>
@@ -450,7 +574,7 @@ const description = 'A senior design practitioner who joins your team to teach a
 		</Section>
 
 		<!-- How We Get Started -->
-		<Section background="gray">
+		<Section>
 			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-vg-burgundy">
 				How We Get Started
 			</h2>
@@ -466,9 +590,14 @@ const description = 'A senior design practitioner who joins your team to teach a
 					</div>
 					<div class="pb-8">
 						<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Discovery Conversation</h3>
-						<p class="text-vg-gray-dark">
+						<p class="text-vg-gray-dark mb-3">
 							We talk about your team's situation, the domain you're working in, and what you're trying to accomplish. No pitch, no demo. The goal is to understand whether this model is a good fit for where your team is right now.
 						</p>
+						<div class="bg-vg-gray-light rounded-lg p-4 border border-gray-200">
+							<p class="text-sm text-vg-gray-dark">
+								<span class="font-semibold text-vg-burgundy">Tailored to your situation:</span> Engagements range from focused delivery on a single project to broader transformation work that includes strategic mapping, architecture guidance, and product thinking. The right depth depends on where your team is and what you're trying to accomplish. We figure that out together in this conversation.
+							</p>
+						</div>
 					</div>
 				</div>
 
@@ -483,7 +612,7 @@ const description = 'A senior design practitioner who joins your team to teach a
 						<p class="text-vg-gray-dark mb-3">
 							Together, we identify the right first project. The sweet spot is a project that's impactful enough that people care about the outcome, but bounded enough that it's not a bet-the-company risk.
 						</p>
-						<div class="bg-white rounded-lg p-4 border border-gray-200">
+						<div class="bg-vg-gray-light rounded-lg p-4 border border-gray-200">
 							<p class="text-sm text-vg-gray-dark">
 								<span class="font-semibold text-vg-burgundy">What makes a good pilot:</span> New feature work or a self-contained module. A clear business outcome. A team that can be dedicated to the effort. Enough complexity to be meaningful, not so much that it takes six months to see results.
 							</p>
@@ -498,9 +627,9 @@ const description = 'A senior design practitioner who joins your team to teach a
 						<div class="w-px h-full bg-gray-300 mx-auto mt-2"></div>
 					</div>
 					<div class="pb-8">
-						<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Onsite Kickoff (2-3 days)</h3>
+						<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Kickoff (2-3 days)</h3>
 						<p class="text-vg-gray-dark">
-							Paul comes to your location for a working kickoff: building relationships with the team, running an initial discovery or EventStorming session on the pilot domain, getting the development environment set up, and establishing the working rhythm. In-person is strongly preferred for establishing trust, even when ongoing work will be remote.
+							A focused kickoff to build relationships with the team, run an initial discovery or EventStorming session on the pilot domain, get the development environment set up, and establish the working rhythm. In-person is preferred where possible for building trust, but for fully remote teams, a remote kickoff works well too.
 						</p>
 					</div>
 				</div>
@@ -516,7 +645,12 @@ const description = 'A senior design practitioner who joins your team to teach a
 						<p class="text-vg-gray-dark mb-3">
 							Paul joins the tiger team and starts contributing from day one. Pair programming, design reviews, and building features together using agentic development practices. No observation phase. Real work, real deadlines, real code.
 						</p>
-						<div class="bg-white rounded-lg p-4 border border-gray-200">
+						<div class="bg-vg-gray-light rounded-lg p-4 border border-gray-200 mb-3">
+							<p class="text-sm text-vg-gray-dark">
+								<span class="font-semibold text-vg-burgundy">Speed of first results:</span> The goal is demonstrable progress within the first week or two, not after months of setup. Something stakeholders can look at and say "show me more." If the approach isn't producing visible results on your codebase with your team, you'll know early.
+							</p>
+						</div>
+						<div class="bg-vg-gray-light rounded-lg p-4 border border-gray-200">
 							<p class="text-sm text-vg-gray-dark">
 								<span class="font-semibold text-vg-burgundy">Distributed teams:</span> Many teams span time zones and geographies. For distributed tiger teams, we establish overlapping core hours for pairing and live collaboration, with async code review and design discussion filling the gaps. The practices work well in this model; agentic development is inherently asynchronous, with AI doing work between human review cycles.
 							</p>
@@ -531,9 +665,14 @@ const description = 'A senior design practitioner who joins your team to teach a
 					</div>
 					<div>
 						<h3 class="text-xl font-semibold mb-2 text-vg-burgundy">Expand & Transfer</h3>
-						<p class="text-vg-gray-dark">
+						<p class="text-vg-gray-dark mb-3">
 							As the pilot team builds capability, those practices spread to the rest of the organization. The tiger team members become internal champions who can coach their peers. The goal is always for the team to be self-sufficient after the engagement ends. These skills are caught, not taught.
 						</p>
+						<div class="bg-vg-gray-light rounded-lg p-4 border border-gray-200">
+							<p class="text-sm text-vg-gray-dark">
+								<span class="font-semibold text-vg-burgundy">Not here to replace your team.</span> Paul shares credit from day one. Every win is the team's win. The tiger team members get the skills, the confidence, and the track record. When the engagement ends, they're the ones who carry it forward, and everyone in the organization knows it. The worst outcome for an embedded engagement is a team that can't function without the outside person. That's a dependency, not a transformation.
+							</p>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -545,7 +684,7 @@ const description = 'A senior design practitioner who joins your team to teach a
 		</Section>
 
 		<!-- Practice Change -->
-		<Section>
+		<Section background="gray">
 			<div class="max-w-4xl mx-auto">
 				<h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-vg-burgundy">
 					This Is a Practice Change, Not Just a Tool Change
@@ -615,6 +754,44 @@ const description = 'A senior design practitioner who joins your team to teach a
 					</div>
 				</div>
 			</div>
+		</Section>
+
+		<!-- Three Pitfalls -->
+		<Section>
+			<h2 class="text-3xl md:text-4xl font-bold mb-4 text-center text-vg-burgundy">
+				Three Pitfalls That Slow Teams Down
+			</h2>
+			<p class="text-lg text-vg-gray-dark text-center max-w-3xl mx-auto mb-12">
+				Most teams adopting agentic development make the same three mistakes. The embedded engagement is designed to catch them early.
+			</p>
+
+			<div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+				<div class="bg-vg-gray-light p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<p class="text-3xl font-bold text-vg-red mb-2">1</p>
+					<h3 class="text-xl font-semibold mb-4 text-vg-burgundy">Building the factory before delivering anything</h3>
+					<p class="text-vg-gray-dark">
+						The instinct is to build infrastructure first: agent orchestration, custom tooling, internal platforms. Then, once the factory is ready, start delivering features. This burns months and budget before producing anything a customer can use. The embedded approach flips this: deliver features from day one, and the repeatable process crystallizes from the delivery work itself.
+					</p>
+				</div>
+				<div class="bg-vg-gray-light p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<p class="text-3xl font-bold text-vg-red mb-2">2</p>
+					<h3 class="text-xl font-semibold mb-4 text-vg-burgundy">Testing after the code is written</h3>
+					<p class="text-vg-gray-dark">
+						The typical pipeline is linear: requirements, design, front-end code, back-end code, then tests, then deploy. Testing at the end means defects accumulate and get caught weeks later in a bug triage. TDD (red-green-refactor) woven into every step catches defects in seconds, not sprints. The test harness grows with the code, not as an afterthought bolted on at the end.
+					</p>
+				</div>
+				<div class="bg-vg-gray-light p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+					<p class="text-3xl font-bold text-vg-red mb-2">3</p>
+					<h3 class="text-xl font-semibold mb-4 text-vg-burgundy">No observability on either end</h3>
+					<p class="text-vg-gray-dark">
+						Most teams lack visibility in two places. <strong>Pipeline observability:</strong> cycle time, defect rates, throughput. Without it, you can't tell if you're actually faster or just feeling faster. <strong>Customer observability:</strong> usage analytics, value validation, production health. Without it, you're deploying features blind. Shipping faster doesn't help if nobody checks whether what you built is actually being used.
+					</p>
+				</div>
+			</div>
+
+			<p class="text-center text-vg-gray-dark mt-8 max-w-3xl mx-auto">
+				These aren't edge cases. They're the default path for most teams, including experienced ones. The embedded engagement builds the habits that prevent them from the start.
+			</p>
 		</Section>
 
 		<!-- Footnotes -->
