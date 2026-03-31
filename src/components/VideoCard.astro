@@ -5,11 +5,12 @@ interface Props {
 	year: number;
 	videoUrl?: string;
 	slidesUrl?: string;
+	thumbnailUrl?: string;
 	type: 'talk' | 'keynote' | 'workshop' | 'interview';
 	description?: string;
 }
 
-const { title, event, year, videoUrl, slidesUrl, type, description } = Astro.props;
+const { title, event, year, videoUrl, slidesUrl, thumbnailUrl, type, description } = Astro.props;
 
 // Extract video ID and platform from URL
 let embedUrl = '';
@@ -45,7 +46,7 @@ const typeLabels = {
 ---
 
 <div class="bg-white rounded-2xl shadow-lg overflow-hidden group hover:shadow-xl transition-shadow duration-300">
-	{videoUrl && embedUrl && (
+	{videoUrl && embedUrl ? (
 		<div class="aspect-video bg-vg-gray-dark">
 			<iframe
 				src={embedUrl}
@@ -56,7 +57,15 @@ const typeLabels = {
 				class="w-full h-full"
 			></iframe>
 		</div>
-	)}
+	) : thumbnailUrl ? (
+		<div class="aspect-video bg-vg-gray-dark">
+			<img
+				src={thumbnailUrl}
+				alt={`${title} - ${event} ${year}`}
+				class="w-full h-full object-cover"
+			/>
+		</div>
+	) : null}
 
 	<div class="p-6 relative">
 		<div class="flex items-center gap-2 mb-3">
