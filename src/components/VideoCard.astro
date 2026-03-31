@@ -4,11 +4,12 @@ interface Props {
 	event: string;
 	year: number;
 	videoUrl?: string;
+	slidesUrl?: string;
 	type: 'talk' | 'keynote' | 'workshop' | 'interview';
 	description?: string;
 }
 
-const { title, event, year, videoUrl, type, description } = Astro.props;
+const { title, event, year, videoUrl, slidesUrl, type, description } = Astro.props;
 
 // Extract video ID and platform from URL
 let embedUrl = '';
@@ -90,14 +91,24 @@ const typeLabels = {
 			</p>
 		)}
 
-		{videoUrl && (
-			<div class="mt-4 pt-4 border-t border-vg-gray-light">
-				<span class="text-vg-red group-hover:text-vg-red-light font-semibold text-sm inline-flex items-center gap-2 pointer-events-none" aria-hidden="true">
-					Watch on {platform === 'youtube' ? 'YouTube' : 'Vimeo'}
-					<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-						<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
-					</svg>
-				</span>
+		{(videoUrl || slidesUrl) && (
+			<div class="mt-4 pt-4 border-t border-vg-gray-light flex items-center gap-4">
+				{videoUrl && (
+					<span class="text-vg-red group-hover:text-vg-red-light font-semibold text-sm inline-flex items-center gap-2 pointer-events-none" aria-hidden="true">
+						Watch on {platform === 'youtube' ? 'YouTube' : 'Vimeo'}
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
+						</svg>
+					</span>
+				)}
+				{slidesUrl && (
+					<a href={slidesUrl} target="_blank" rel="noopener noreferrer" class="relative z-10 text-vg-burgundy hover:text-vg-red font-semibold text-sm inline-flex items-center gap-2 transition-colors">
+						View Slides
+						<svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+							<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/>
+						</svg>
+					</a>
+				)}
 			</div>
 		)}
 	</div>
