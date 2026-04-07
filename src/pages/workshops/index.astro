@@ -8,7 +8,7 @@ import Section from "../../components/Section.astro";
 import TestimonialCard from "../../components/TestimonialCard.astro";
 import WorkshopCard from "../../components/WorkshopCard.astro";
 import { SITE_TITLE } from "../../consts";
-import { eventstorming, essentialDdd, strategicDdd, registrationUrl } from "../../data/workshops";
+import { eventstorming, strategicDdd, registrationUrl } from "../../data/workshops";
 
 const title = `Public Workshops | ${SITE_TITLE}`;
 const description =
@@ -55,7 +55,7 @@ const description =
     <!-- Upcoming Workshops -->
     <Section>
       <div
-        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6 max-w-6xl mx-auto"
+        class="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-6 max-w-4xl mx-auto"
       >
         {eventstorming.instances.map((instance) => (
           <WorkshopCard
@@ -71,22 +71,6 @@ const description =
             registrationUrl={registrationUrl(instance, "workshop_page")}
             earlyBirdDeadline={instance.earlyBirdDeadline}
             detailUrl={`/workshops/${eventstorming.slug}`}
-          />
-        ))}
-        {essentialDdd.instances.map((instance) => (
-          <WorkshopCard
-            title={essentialDdd.title}
-            dates={instance.dates}
-            format={essentialDdd.format}
-            price={instance.earlyBirdPrice}
-            regularPrice={instance.regularPrice}
-            duration={essentialDdd.duration}
-            targetAudience={essentialDdd.targetAudience}
-            description="Domain modeling foundations, collaborative modeling with EventStorming, and tactical building block patterns through hands-on code refactoring. Camera-on participatory format. No prior DDD experience needed."
-            learningOutcomes={[]}
-            registrationUrl={registrationUrl(instance, "workshop_page")}
-            earlyBirdDeadline={instance.earlyBirdDeadline}
-            detailUrl={`/workshops/${essentialDdd.slug}`}
           />
         ))}
         {strategicDdd.instances.map((instance) => (

@@ -57,16 +57,7 @@ export const essentialDdd: WorkshopType = {
   duration: "12 hours total (4 sessions x 3 hours each)",
   schedule: "9:00am - Noon MDT (UTC-6:00)",
   targetAudience: "Developers, architects, product managers, and business analysts",
-  instances: [
-    {
-      dates: "May 5-8, 2026",
-      titoSlug: "essential-ddd-virtual-workshop-may-2026",
-      utmCampaign: "may_2026_eddd",
-      earlyBirdDeadline: "April 3, 2026",
-      earlyBirdPrice: "$1,450 USD",
-      regularPrice: "$1,650 USD",
-    },
-  ],
+  instances: [],
 };
 
 export const strategicDdd: WorkshopType = {
@@ -79,14 +70,6 @@ export const strategicDdd: WorkshopType = {
   schedule: "9:00am - Noon MDT (UTC-6:00)",
   targetAudience: "Senior developers, architects, technical leads, and engineering managers",
   instances: [
-    {
-      dates: "May 12-15, 2026",
-      titoSlug: "strategic-ddd-virtual-workshop-may-2026",
-      utmCampaign: "may_2026_sddd",
-      earlyBirdDeadline: "April 10, 2026",
-      earlyBirdPrice: "$1,450 USD",
-      regularPrice: "$1,650 USD",
-    },
     {
       dates: "Oct 5-8, 2026",
       titoSlug: "strategic-ddd-virtual-workshop-oct-2026",
