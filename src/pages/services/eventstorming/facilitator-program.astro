@@ -1,0 +1,281 @@
+---
+import BackToTop from '../../../components/BackToTop.astro';
+import BaseHead from '../../../components/BaseHead.astro';
+import Button from '../../../components/Button.astro';
+import Footer from '../../../components/Footer.astro';
+import Header from '../../../components/Header.astro';
+import Icon from '../../../components/Icon.astro';
+import Section from '../../../components/Section.astro';
+import TestimonialCard from '../../../components/TestimonialCard.astro';
+
+const title = 'EventStorming Facilitator Program - Virtual Genius';
+const description = 'Build EventStorming facilitation capability inside your team. Paul trains a cohort, co-facilitates on your real work, then hands the room over to your people.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<!-- Hero -->
+		<section class="relative w-full overflow-hidden" style="height: 360px;">
+			<div class="absolute inset-0 w-full h-full">
+				<img
+					src="/images/bti360-team-standing-modeling.webp"
+					alt="Cohort practicing EventStorming facilitation"
+					class="w-full h-full object-cover"
+					style="filter: brightness(0.6); object-position: center 40%;"
+				/>
+				<div class="absolute inset-0 bg-gradient-to-b from-black/40 via-black/30 to-black/50"></div>
+			</div>
+
+			<div class="relative z-10 flex items-center justify-center h-full">
+				<div class="max-w-screen-xl mx-auto px-6 w-full">
+					<div class="text-center max-w-4xl mx-auto">
+						<p class="text-sm uppercase tracking-wider mb-2 text-white/80">
+							<a href="/services/eventstorming" class="hover:text-white underline">EventStorming Services</a> / Facilitator Program
+						</p>
+						<h1 class="text-5xl md:text-7xl font-bold mb-6 text-white drop-shadow-lg">
+							Facilitator Program
+						</h1>
+						<p class="text-2xl md:text-3xl mb-8 text-white/95 drop-shadow-md">
+							Build EventStorming facilitation capability inside your team, so the energy keeps flowing long after Paul steps away
+						</p>
+						<Button href="/contact" variant="primary">
+							Discuss a Program
+						</Button>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- Who this is for -->
+		<Section>
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy text-center">Who This Is For</h2>
+				<p class="text-lg text-vg-gray-dark mb-6 text-center">
+					Teams and consultancies who want EventStorming to become part of how they work, not just a one-time intervention.
+				</p>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Consultancies and Agencies</h3>
+						<p class="text-vg-gray-dark">
+							You want a cohort of your people able to run EventStorming with clients, applying it on real engagements instead of simply referring the work out.
+						</p>
+					</div>
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Product and Platform Teams</h3>
+						<p class="text-vg-gray-dark">
+							You want internal facilitators who can run sessions on your product roadmap, onboarding, or enterprise customer rollouts without booking an outside consultant every time.
+						</p>
+					</div>
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Enablement and CoE Groups</h3>
+						<p class="text-vg-gray-dark">
+							You are building internal tools and value streams that need collaborative modeling, and you want the practice to spread, not stay bottlenecked on one person.
+						</p>
+					</div>
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Transformation Leaders</h3>
+						<p class="text-vg-gray-dark">
+							You want a repeatable way for teams across the organization to surface assumptions, align on language, and discover where to invest next.
+						</p>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- The Arc -->
+		<Section background="gray">
+			<div class="max-w-5xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-4 text-vg-burgundy text-center">The Program Arc</h2>
+				<p class="text-lg text-vg-gray-dark mb-12 text-center max-w-3xl mx-auto">
+					Three phases, each anchored on real work your team cares about. You do not just learn the method, you apply it to your own domain while Paul is in the room.
+				</p>
+
+				<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+					<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+						<div class="bg-vg-red text-white text-2xl font-bold rounded-full w-14 h-14 flex items-center justify-center mb-4">
+							1
+						</div>
+						<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Train</h3>
+						<p class="text-vg-gray-dark mb-4">
+							Two days of intensive EventStorming fundamentals: Big Picture, Process-Level, and Design-Level modeling. Your cohort learns by doing, on a real business process you bring to the room.
+						</p>
+						<p class="text-sm text-vg-gray">
+							<strong>Format:</strong> In-person preferred, virtual possible. 6-12 participants.
+						</p>
+					</div>
+
+					<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+						<div class="bg-vg-red text-white text-2xl font-bold rounded-full w-14 h-14 flex items-center justify-center mb-4">
+							2
+						</div>
+						<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Co-Facilitate</h3>
+						<p class="text-vg-gray-dark mb-4">
+							Day three runs open-space style. Your cohort splits into small groups and each facilitates their own 90-minute session on a process they care about. Paul circulates, coaches in the moment, and leads readouts so the whole room learns from each group.
+						</p>
+						<p class="text-sm text-vg-gray">
+							<strong>Purpose:</strong> Confidence through real facilitation, with a safety net.
+						</p>
+					</div>
+
+					<div class="bg-white p-8 rounded-lg shadow-lg border-t-4 border-vg-red">
+						<div class="bg-vg-red text-white text-2xl font-bold rounded-full w-14 h-14 flex items-center justify-center mb-4">
+							3
+						</div>
+						<h3 class="text-xl font-semibold mb-3 text-vg-burgundy">Practice</h3>
+						<p class="text-vg-gray-dark mb-4">
+							Your newly trained facilitators run sessions on their own, on real internal or client work. Paul stays available for office hours, design reviews, and co-facilitation on higher-stakes sessions, then steps back as the team builds its own rhythm.
+						</p>
+						<p class="text-sm text-vg-gray">
+							<strong>Duration:</strong> Typically 2-3 months of lightweight support.
+						</p>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- What You Get -->
+		<Section>
+			<div class="max-w-5xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-8 text-center text-vg-burgundy">What Your Organization Gets</h2>
+				<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Internal Capability</h3>
+						<p class="text-vg-gray-dark">
+							A cohort of facilitators who can run Big Picture and Process-Level sessions confidently on day one, with the judgment to adapt the method to new contexts.
+						</p>
+					</div>
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Applied to Real Work</h3>
+						<p class="text-vg-gray-dark">
+							Every phase produces output on a process your team actually cares about. You end the program with shared models, not just training certificates.
+						</p>
+					</div>
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">Shared Language</h3>
+						<p class="text-vg-gray-dark">
+							Participants leave speaking the same vocabulary for events, commands, actors, policies, and hot spots, which carries into every future design conversation.
+						</p>
+					</div>
+					<div class="bg-vg-gray-light p-6 rounded-lg">
+						<h3 class="text-xl font-semibold mb-3 text-vg-red">A Repeatable Pattern</h3>
+						<p class="text-vg-gray-dark">
+							Your facilitators take the 2-day plus day-three format and run it on new domains with new groups, turning one program into a scalable internal practice.
+						</p>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Case Study -->
+		<Section background="gray">
+			<div class="max-w-5xl mx-auto">
+				<p class="text-sm uppercase tracking-wider mb-4 text-vg-red font-semibold text-center">SUCCESS STORY</p>
+				<h2 class="text-3xl md:text-4xl font-bold mb-12 text-vg-burgundy text-center">From Trained Cohort to Self-Sufficient Practice</h2>
+
+				<div class="bg-white rounded-2xl shadow-xl p-8 lg:p-12">
+					<div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+						<div>
+							<h3 class="text-sm uppercase tracking-wider mb-2 text-vg-red font-semibold">Client</h3>
+							<p class="text-lg text-vg-gray-dark font-semibold">Global financial services firm</p>
+						</div>
+						<div>
+							<h3 class="text-sm uppercase tracking-wider mb-2 text-vg-red font-semibold">Engagement</h3>
+							<p class="text-lg text-vg-gray-dark font-semibold">Train-Co-facilitate-Practice arc over several quarters</p>
+						</div>
+						<div>
+							<h3 class="text-sm uppercase tracking-wider mb-2 text-vg-red font-semibold">Outcome</h3>
+							<p class="text-lg text-vg-gray-dark font-semibold">Internal team running their own in-person workshops for 25+ participants, independently</p>
+						</div>
+					</div>
+
+					<div class="border-l-4 border-vg-red pl-6 py-2 mb-8">
+						<p class="text-lg text-vg-gray-dark italic mb-2">
+							After training their people and co-facilitating on real client work, the team was running their own virtual and in-person workshops, flying participants in from around the world. When Paul checked in to plan the next year, the answer was, essentially, "we're good."
+						</p>
+						<p class="text-sm text-vg-gray">That is the goal. Capability that outlasts the consultant.</p>
+					</div>
+
+					<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+						<TestimonialCard
+							quote="Paul has done a great job of making a 4 day training something I looked forward to daily. Not only was the content great to understand, but the exercises reinformed learning and had great opportunity to have discussions."
+							role="Workshop Participant"
+							industry="Financial Services"
+							rating={10}
+							workshop="EventStorming Facilitation"
+						/>
+						<TestimonialCard
+							quote="Creating structure in a collaborative way, understanding that points of disagreement are a good place to dig in deeper Building shared understanding of a problem or a process helps set the stage for solutions and next steps."
+							role="Workshop Participant"
+							industry="Financial Services"
+							rating={10}
+							workshop="EventStorming Workshop"
+						/>
+					</div>
+				</div>
+			</div>
+		</Section>
+
+		<!-- Shape of a program -->
+		<Section>
+			<div class="max-w-4xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6 text-vg-burgundy text-center">Shape of a Typical Program</h2>
+				<p class="text-lg text-vg-gray-dark mb-8 text-center">
+					Every engagement is scoped to the team and the customer opportunity it is anchored on. A common shape:
+				</p>
+				<div class="bg-vg-gray-light p-8 rounded-lg">
+					<ul class="space-y-4 text-vg-gray-dark">
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="md" />
+							</span>
+							<span><strong>2 days on-site training</strong> with your cohort on a real process you bring to the room</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="md" />
+							</span>
+							<span><strong>1 day co-facilitation</strong>, open-space style, with small groups running 90-minute sessions and Paul coaching in the moment</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="md" />
+							</span>
+							<span><strong>Ongoing support</strong>: office hours, co-facilitation on higher-stakes sessions, design reviews of models your cohort produces</span>
+						</li>
+						<li class="flex items-start gap-3">
+							<span class="text-vg-red mt-1 flex-shrink-0">
+								<Icon name="check" size="md" />
+							</span>
+							<span><strong>Optional extensions</strong>: context mapping, strategic DDD, embedded coaching as your facilitators take on bigger work</span>
+						</li>
+					</ul>
+				</div>
+				<p class="text-sm text-vg-gray-dark mt-6 text-center italic">
+					In-person delivery is strongly preferred. Virtual and hybrid options are available when geography requires it.
+				</p>
+			</div>
+		</Section>
+
+		<!-- CTA -->
+		<Section background="burgundy">
+			<div class="text-center max-w-3xl mx-auto">
+				<h2 class="text-3xl md:text-4xl font-bold mb-6">Ready to Build the Capability?</h2>
+				<p class="text-xl mb-8 text-vg-gray-light">
+					Tell us about the team, the customer opportunity you want to anchor on, and the timing that works for you. We will scope a program that fits.
+				</p>
+				<Button href="/contact" variant="primary" class="!px-8 !py-4 !bg-white !text-vg-burgundy hover:!bg-vg-gray-light">
+					Schedule a Planning Call
+				</Button>
+			</div>
+		</Section>
+
+		<BackToTop />
+		<Footer />
+	</body>
+</html>
