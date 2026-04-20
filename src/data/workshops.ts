@@ -36,16 +36,7 @@ export const eventstorming: WorkshopType = {
   duration: "12 hours total (4 sessions x 3 hours each)",
   schedule: "9:00am - Noon MDT (UTC-6:00)",
   targetAudience: "Software and product professionals",
-  instances: [
-    {
-      dates: "April 14-17, 2026",
-      titoSlug: "eventstorming-facilitation-virtual-workshop-apr-2026",
-      utmCampaign: "apr_2026",
-      earlyBirdDeadline: "March 13, 2026",
-      earlyBirdPrice: "$1,450 USD",
-      regularPrice: "$1,650 USD",
-    },
-  ],
+  instances: [],
 };
 
 export const essentialDdd: WorkshopType = {

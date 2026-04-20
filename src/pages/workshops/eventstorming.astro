@@ -61,6 +61,17 @@ const description = "Master the art of collaborative domain discovery. Learn Big
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">
 				Upcoming Dates
 			</h2>
+			{eventstorming.instances.length === 0 && (
+				<div class="max-w-2xl mx-auto text-center bg-white rounded-xl shadow-md p-8">
+					<p class="text-lg text-vg-gray-dark mb-6">
+						No public cohorts are currently scheduled. New dates are announced by email, or this workshop can be run privately for your team.
+					</p>
+					<div class="flex flex-col sm:flex-row gap-4 justify-center">
+						<Button href="/contact" variant="primary">Get Notified</Button>
+						<Button href="/services/eventstorming/workshops" variant="outlined">Private Workshop</Button>
+					</div>
+				</div>
+			)}
 			<div class="flex flex-wrap justify-center gap-6 max-w-3xl mx-auto">
 				{eventstorming.instances.map((instance) => (
 					<div class="bg-white rounded-xl shadow-lg border-t-4 border-vg-red p-5 flex-1 min-w-[280px] max-w-sm">
