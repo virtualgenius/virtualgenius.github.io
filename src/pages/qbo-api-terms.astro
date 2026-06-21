@@ -1,0 +1,75 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import { SITE_TITLE } from '../consts';
+
+const title = `QuickBooks API End-User License Agreement | ${SITE_TITLE}`;
+const description = 'End-user license agreement for the Virtual Genius QuickBooks Online integration.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<Section>
+			<div class="max-w-3xl mx-auto prose prose-lg">
+				<h1>QuickBooks API End-User License Agreement</h1>
+				<p class="text-sm text-gray-500">Last updated: June 20, 2026</p>
+
+				<h2>Overview</h2>
+				<p>
+					This end-user license agreement governs use of the "VG" application registered with the Intuit Developer Platform. The application is operated by Virtual Genius LLC and is used solely by Paul Rayner to read Virtual Genius LLC's own QuickBooks Online accounting data. It is a private, internal tool with a single user and no external users.
+				</p>
+
+				<h2>License and Permitted Use</h2>
+				<p>
+					The application is licensed for the exclusive internal use of Virtual Genius LLC. It connects only to the Virtual Genius LLC QuickBooks Online company file and is used to read financial reports and transactions for internal bookkeeping and business review.
+				</p>
+
+				<h2>Restrictions</h2>
+				<ul>
+					<li>The application is not distributed, sold, or made available to any third party</li>
+					<li>The application is not used to access any QuickBooks company other than the owner's</li>
+					<li>Data accessed through the application is not shared with or disclosed to third parties</li>
+				</ul>
+
+				<h2>No Warranty</h2>
+				<p>
+					The application is provided "as is", without warranty of any kind, express or implied. Virtual Genius LLC makes no representations regarding its availability, accuracy, or fitness for any particular purpose.
+				</p>
+
+				<h2>Limitation of Liability</h2>
+				<p>
+					As a private internal tool with a single user (its owner), the application carries no liability to any external party. The owner assumes all responsibility for its operation.
+				</p>
+
+				<h2>Data Handling</h2>
+				<p>
+					Information about how the application accesses, stores, and protects data is described in the
+					<a href="/qbo-api-privacy">QuickBooks API Privacy Policy</a>.
+				</p>
+
+				<h2>Changes to This Agreement</h2>
+				<p>
+					If the scope or functionality of the application changes, this agreement will be updated accordingly. The "last updated" date at the top of this page reflects the most recent revision.
+				</p>
+
+				<h2>Contact</h2>
+				<p>
+					For questions about this agreement, contact:<br />
+					Paul Rayner<br />
+					Virtual Genius LLC<br />
+					<a href="mailto:paul@virtualgenius.com">paul@virtualgenius.com</a>
+				</p>
+			</div>
+		</Section>
+
+		<Footer />
+	</body>
+</html>

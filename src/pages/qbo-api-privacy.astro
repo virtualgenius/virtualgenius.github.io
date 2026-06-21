@@ -1,0 +1,84 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import Section from '../components/Section.astro';
+import { SITE_TITLE } from '../consts';
+
+const title = `QuickBooks API Privacy Policy | ${SITE_TITLE}`;
+const description = 'Privacy policy for the Virtual Genius QuickBooks Online integration.';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+	<body class="bg-white">
+		<Header />
+
+		<Section>
+			<div class="max-w-3xl mx-auto prose prose-lg">
+				<h1>QuickBooks API Privacy Policy</h1>
+				<p class="text-sm text-gray-500">Last updated: June 20, 2026</p>
+
+				<h2>Overview</h2>
+				<p>
+					This privacy policy applies to the "VG" application registered with the Intuit Developer Platform. The application is operated by Virtual Genius LLC and is used solely by Paul Rayner to read Virtual Genius LLC's own QuickBooks Online accounting data.
+				</p>
+
+				<h2>What the Application Does</h2>
+				<p>
+					The application uses the QuickBooks Online Accounting API to read financial reports and transactions from the Virtual Genius LLC company file, so they can be summarized for internal bookkeeping and weekly business review. It is a private, internal tool. It is not available to the public and has no external users.
+				</p>
+
+				<h2>Data Collection</h2>
+				<p>
+					The application reads accounting data belonging only to Virtual Genius LLC (the application owner). Specifically:
+				</p>
+				<ul>
+					<li>No data from any other QuickBooks company is accessed or stored</li>
+					<li>No data is collected from any third party</li>
+					<li>No cookies or tracking technologies are used by the application</li>
+				</ul>
+
+				<h2>Data Stored</h2>
+				<p>The only data stored by the application is:</p>
+				<ul>
+					<li>An OAuth access token and refresh token for authenticating API requests, stored securely on a local machine</li>
+					<li>Copies of the company's own financial reports (Profit &amp; Loss Detail, General Ledger), stored locally for internal review</li>
+				</ul>
+
+				<h2>Data Sharing</h2>
+				<p>
+					No data obtained through the QuickBooks API is shared with, sold to, or disclosed to any third parties.
+				</p>
+
+				<h2>Data Retention and Deletion</h2>
+				<p>
+					OAuth tokens are retained only as long as needed for the application to function and can be revoked at any time from the Intuit account. Locally stored reports are retained for internal recordkeeping and can be deleted at any time.
+				</p>
+
+				<h2>Security</h2>
+				<p>
+					Access credentials are stored securely on an encrypted local filesystem with owner-only permissions and are never committed to version control or transmitted to third parties.
+				</p>
+
+				<h2>Changes to This Policy</h2>
+				<p>
+					If the scope or functionality of the application changes, this policy will be updated accordingly. The "last updated" date at the top of this page reflects the most recent revision.
+				</p>
+
+				<h2>Contact</h2>
+				<p>
+					For questions about this privacy policy or to request data deletion, contact:<br />
+					Paul Rayner<br />
+					Virtual Genius LLC<br />
+					<a href="mailto:paul@virtualgenius.com">paul@virtualgenius.com</a>
+				</p>
+			</div>
+		</Section>
+
+		<Footer />
+	</body>
+</html>
