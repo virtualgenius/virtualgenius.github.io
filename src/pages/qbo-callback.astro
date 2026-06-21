@@ -1,0 +1,43 @@
+---
+// Standalone OAuth redirect target for the private VG QuickBooks CLI.
+// Deliberately minimal: NO BaseHead, NO analytics (GA/PostHog), so the
+// short-lived authorization code in the URL is never sent to any third party.
+// The page shows the landed URL for the operator to paste back into the CLI,
+// then strips the query from the address bar.
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<meta name="robots" content="noindex, nofollow" />
+		<title>QuickBooks Authorization</title>
+		<style>
+			body { font: 17px/1.6 -apple-system, system-ui, sans-serif; max-width: 640px; margin: 3rem auto; padding: 0 1.2rem; color: #1a1a1a; }
+			h1 { font-size: 1.4rem; }
+			code { display: block; word-break: break-all; background: #f4f4f4; border: 1px solid #ddd; border-radius: 8px; padding: 1rem; margin: 1rem 0; font-size: 0.95rem; }
+			button { font: inherit; padding: 0.6rem 1.1rem; border: 0; border-radius: 8px; background: #3D1512; color: #fff; cursor: pointer; }
+			.muted { color: #666; font-size: 0.9rem; }
+		</style>
+	</head>
+	<body>
+		<h1>QuickBooks authorization received</h1>
+		<p>Copy the value below and paste it back into the terminal where the QBO CLI is waiting.</p>
+		<code id="out">Reading the response…</code>
+		<button id="copy">Copy</button>
+		<p class="muted">You can close this tab after copying. This page stores nothing and sends nothing to any server.</p>
+		<script is:inline>
+			const href = window.location.href;
+			try { history.replaceState({}, '', window.location.pathname); } catch (e) {}
+			const out = document.getElementById('out');
+			out.textContent = href;
+			document.getElementById('copy').addEventListener('click', async () => {
+				try {
+					await navigator.clipboard.writeText(href);
+					document.getElementById('copy').textContent = 'Copied';
+				} catch (e) {}
+			});
+		</script>
+	</body>
+</html>
