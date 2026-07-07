@@ -14,6 +14,10 @@ const today = new Date();
 			<form action="https://virtualgenius.us10.list-manage.com/subscribe/post" method="POST" class="flex flex-col sm:flex-row gap-3 w-full lg:w-auto">
 				<input type="hidden" name="u" value="02e9770492ac1e4d472b7e3c6">
 				<input type="hidden" name="id" value="3691d3bb43">
+				<!-- Mailchimp honeypot: bots fill this hidden field, real subscribers never see it -->
+				<div style="position: absolute; left: -5000px;" aria-hidden="true">
+					<input type="text" name="b_02e9770492ac1e4d472b7e3c6_3691d3bb43" tabindex="-1" value="" autocomplete="off">
+				</div>
 				<label for="footer-email" class="sr-only">Email address</label>
 				<input type="email" name="EMAIL" id="footer-email"
 					placeholder="your@email.com" required
