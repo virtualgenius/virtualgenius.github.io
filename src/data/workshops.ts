@@ -36,7 +36,16 @@ export const eventstorming: WorkshopType = {
   duration: "12 hours total (4 sessions x 3 hours each)",
   schedule: "9:00am - Noon MDT (UTC-6:00)",
   targetAudience: "Software and product professionals",
-  instances: [],
+  instances: [
+    {
+      dates: "April 13-16, 2027",
+      titoSlug: "eventstorming-virtual-workshop-apr-2027",
+      utmCampaign: "apr_2027",
+      earlyBirdDeadline: "March 12, 2027",
+      earlyBirdPrice: "$1,450 USD",
+      regularPrice: "$1,650 USD",
+    },
+  ],
 };
 
 export const essentialDdd: WorkshopType = {
@@ -62,10 +71,10 @@ export const strategicDdd: WorkshopType = {
   targetAudience: "Senior developers, architects, technical leads, and engineering managers",
   instances: [
     {
-      dates: "Oct 5-8, 2026",
-      titoSlug: "strategic-ddd-virtual-workshop-oct-2026",
-      utmCampaign: "oct_2026_sddd",
-      earlyBirdDeadline: "September 4, 2026",
+      dates: "May 11-14, 2027",
+      titoSlug: "strategic-ddd-virtual-workshop-may-2027",
+      utmCampaign: "may_2027_sddd",
+      earlyBirdDeadline: "April 9, 2027",
       earlyBirdPrice: "$1,450 USD",
       regularPrice: "$1,650 USD",
     },
