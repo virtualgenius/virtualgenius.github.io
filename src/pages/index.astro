@@ -32,14 +32,14 @@ const posts = (await getCollection('blog'))
 				<!-- Left: Text Content -->
 				<div>
 					<h1 class="text-5xl md:text-7xl font-bold mb-6 md:mb-8 text-white tracking-tight leading-tight">
-						EventStorming & Domain-Driven Design Consulting
+						EventStorming, Domain-Driven Design & Agentic Development
 					</h1>
 					<p class="text-2xl md:text-3xl mb-8 md:mb-12 text-white/90">
-						Helping teams build better software through collaborative design and strategic domain modeling
+						Workshops to start, coaching to keep going. A senior design partner for teams building software with AI.
 					</p>
 					<div class="flex flex-col sm:flex-row gap-4">
-						<Button href="/workshops" variant="primary">
-							View Public Workshops
+						<Button href="/contact" variant="primary">
+							Schedule a Call
 						</Button>
 						<Button href="/services" variant="outlined">
 							Explore Services
@@ -106,6 +106,22 @@ const posts = (await getCollection('blog'))
 			<h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-vg-burgundy">Services</h2>
 			<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
 				<ServiceCard
+					title="Coaching & Consulting"
+					description="A senior design partner on a three-month term: working sessions on your real features, with design review between them"
+					href="/services/coaching"
+					linkText="Get Started"
+					image="/images/training-workshop-1.webp"
+					imageAlt="Coaching and consulting session with workshop participants"
+				/>
+				<ServiceCard
+					title="Embedded Team Engagements"
+					description="A senior practitioner joining your team part-time to work on real code and real deliverables"
+					href="/services/embedded"
+					linkText="Learn More"
+					image="/images/bti360-discussion-group.webp"
+					imageAlt="Team discussion and collaborative design session"
+				/>
+				<ServiceCard
 					title="EventStorming Workshops"
 					description="Facilitated sessions for exploring complex business domains, in-person, virtual, or hybrid"
 					href="/services/eventstorming"
@@ -120,22 +136,6 @@ const posts = (await getCollection('blog'))
 					linkText="View Courses"
 					image="/images/bti360-paul-teaching-flipchart.webp"
 					imageAlt="Paul teaching Domain-Driven Design at flipchart"
-				/>
-				<ServiceCard
-					title="Coaching & Consulting"
-					description="Ongoing support for pilot projects and implementation"
-					href="/services/coaching"
-					linkText="Get Started"
-					image="/images/training-workshop-1.webp"
-					imageAlt="Coaching and consulting session with workshop participants"
-				/>
-				<ServiceCard
-					title="Embedded Team Engagements"
-					description="A senior practitioner joining your team part-time to work on real code and real deliverables"
-					href="/services/embedded"
-					linkText="Learn More"
-					image="/images/bti360-discussion-group.webp"
-					imageAlt="Team discussion and collaborative design session"
 				/>
 			</div>
 		</Section>
